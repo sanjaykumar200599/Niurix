@@ -1,0 +1,50 @@
+.homepage-swipper .swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+    left: 0 !important;
+    width: 100% !important;
+    bottom: 12rem !important;
+}
+.homepage-swipper .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px) !important;
+}
+.homepage-swipper .swiper-pagination-bullet {
+    width: 6% !important;
+    height: 2px !important;
+    background: white !important;
+    border-radius: 10px !important;
+    opacity: 1 !important;
+}
+.homepage-swipper .swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: #ff5b02 !important;
+}
+/*------------------------------------------------------------- tablets--------------------------------------------------------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .homepage-swipper .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+        left: 0 !important;
+        width: 100% !important;
+        bottom: 6rem !important;
+    }
+}
+/* -------------------------------------------------------------Mobile-------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 767px) {
+    .homepage-swipper .swiper-horizontal > .swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        left: 0 !important;
+        width: 100% !important;
+        bottom: 5rem !important;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .homepage-swipper .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+        left: 0 !important;
+        width: 100% !important;
+        bottom: 7% !important;
+    }
+}

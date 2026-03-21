@@ -1,0 +1,47 @@
+import Image from "next/image";
+import HardwareAnimation from "@/components/homepage/HardwareAnimation";
+
+type HardwareSectionProps = {
+  titleHtml: string;
+  items: string[];
+};
+
+export default function HardwareSection({ titleHtml, items }: HardwareSectionProps) {
+  return (
+    <section className="relative w-full overflow-hidden">
+      <div className="relative h-[964px] tablet:h-[80rem] laptop:h-[880px]">
+        <div className="absolute inset-0">
+          <Image src="/assets/homepage/Box section-1.webp" alt="Hardware background" fill className="hidden object-cover laptop:block" />
+          <Image src="/assets/homepage/Box section1-tab.webp" alt="Hardware background" fill className="hidden object-cover tablet:block laptop:hidden" />
+          <Image src="/assets/homepage/mobbackground.png" alt="Hardware background" fill className="object-cover tablet:hidden" />
+        </div>
+
+        <HardwareAnimation />
+
+        <div className="absolute left-1/2 top-[24rem] w-[65%] -translate-x-1/2 tablet:top-1/2 tablet:w-full laptop:left-auto laptop:right-[65px] laptop:top-[8rem] laptop:w-[30%] laptop:translate-x-0 laptop:translate-y-0">
+          <div className="w-[90%] tablet:w-full tablet:px-19.5 laptop:w-full laptop:px-0">
+            <h2
+              className="nx-rich text-center font-display text-[32px] leading-tight text-brand-black tablet:text-[40px] laptop:text-left laptop:text-[28px]"
+              dangerouslySetInnerHTML={{ __html: titleHtml }}
+            />
+          </div>
+
+          <div className="mt-6 grid grid-cols-1 gap-4 tablet:grid-cols-2 tablet:gap-6 tablet:px-19.5 laptop:grid-cols-1 laptop:px-0">
+            {items.map((item) => (
+              <article
+                key={item}
+                className="flex h-[120px] items-center justify-center rounded-tl-[16px] rounded-br-[16px] border border-transparent bg-white px-6 text-center shadow-[0px_3px_15px_#0000001F] transition hover:border-brand-orange laptop:h-[152px]"
+              >
+                <p className="text-[20px] font-sans leading-tight text-brand-black tablet:text-[24px] laptop:text-[20px] [@media(min-width:1025px)_and_(max-width:1366px)]:text-[20px]">
+                  {item}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+

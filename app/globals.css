@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Nunito Regular";
+  src: url("/fonts/Nunito-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito Medium";
+  src: url("/fonts/Nunito-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito SemiBold";
+  src: url("/fonts/Nunito-SemiBold.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito Light";
+  src: url("/fonts/Nunito-Light.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat Regular";
+  src: url("/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat Medium";
+  src: url("/fonts/Montserrat-Medium.ttf") format("truetype");
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "Nunito Regular", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Nunito SemiBold", ui-sans-serif, system-ui, sans-serif;
+  --font-body-light: "Nunito Light", ui-sans-serif, system-ui, sans-serif;
+  --font-number: "Montserrat Regular", ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand-orange: #ff5b02;
+  --color-brand-orange-soft: #ff5b0299;
+  --color-brand-black: #1d1d1d;
+  --color-brand-gray: #ebebeb;
+  --color-brand-muted: #7e7e7e;
+  --color-brand-white: #ffffff;
+
+  --breakpoint-tablet: 48rem;
+  --breakpoint-laptop: 64.0625rem;
+  --breakpoint-wide: 85.4375rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  color: var(--color-brand-black);
+  background: var(--color-brand-white);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.nx-container {
+  width: min(1200px, 92vw);
+  margin-inline: auto;
+}
+
+.nx-section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 1.15rem + 1.8vw, 3rem);
+  line-height: 1.15;
+}
+
+.nx-body {
+  font-family: var(--font-body-light);
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+  line-height: 1.6;
+}
+
+.nx-rich span {
+  color: var(--color-brand-orange);
+}
+
+.nx-gradient-hero {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+.homepage-swiper .swiper-horizontal > .swiper-pagination-bullets,
+.homepage-swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+  left: 0 !important;
+  width: 100% !important;
+  bottom: 12rem !important;
+}
+
+.homepage-swiper .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.homepage-swiper .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 4px !important;
+}
+
+.homepage-swiper .swiper-pagination-bullet {
+  width: 6% !important;
+  height: 2px !important;
+  border-radius: 10px !important;
+  background: #ffffff !important;
+  opacity: 1 !important;
+}
+
+.homepage-swiper .swiper-pagination-bullet-active {
+  background: #ff5b02 !important;
+}
+
+@keyframes box-settle {
+  90% {
+    transform: rotate(-15deg);
+  }
+  95% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 1024px) {
+  .homepage-swiper .swiper-horizontal > .swiper-pagination-bullets,
+  .homepage-swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 7% !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .nx-container {
+    width: min(1200px, 94vw);
+  }
+
+  .homepage-swiper .swiper-horizontal > .swiper-pagination-bullets,
+  .homepage-swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 5rem !important;
+  }
+}

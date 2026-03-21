@@ -1,0 +1,19 @@
+
+
+@keyframes myAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.computer_2 {
+    animation: myAnimation 1s;
+}
+
+.container{
+    cursor: pointer;
+}

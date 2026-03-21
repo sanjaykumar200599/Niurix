@@ -1,0 +1,396 @@
+.video_homepage_wrapper{
+    width: 100%;
+    /* width: 60%; */
+    position: relative;
+    height: 100%;
+    background-image: url("/src/assets/homepage/Box section-1.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.Hardwarecard_section{
+    
+    /* padding: 1rem; */
+    position: relative;
+}
+.datacount_section{
+    /* height: 250px; */
+    height: auto;
+
+    padding: 100px 120px;
+  background-color: #F3F3F3;margin-top: 2rem;
+
+}
+.hardware_whole_content{
+    /* height: 533px; */
+    height: 880px;
+    width: 100%;
+    
+}
+.nuirix_install_wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding-left: 2rem; */
+}
+.products_header_section{
+    font-size: var(--content-header1);
+    font-weight: 200;
+    margin-bottom: 2rem;
+    font-family: var(--content-header1-font);
+}
+.niurixinstall_video_wrapper{
+    /* width: 50%; */
+    width:60%;
+
+}
+.niurixinstall_content_wrapper{
+    width: 40%;
+}
+.install_section_wrapper{
+    padding: 120px;
+   
+    /* padding: 86px; */
+}
+.install_easy_header{
+    /* margin-bottom: 2rem;
+    font-size: var(--content-header2);
+    font-weight: 200; */
+    font-size: var(--content-header1);
+    font-weight: 200;
+    margin-bottom: 2rem;
+    font-family: var(--content-header1-font);
+}
+.easy_install_header{
+    /* color: var(--nuirix-font-color); */
+    color: #FF5B02;
+
+    /* font-weight: bold; */
+}
+.niurix_products{
+    color: #FF5B02;
+}
+.niurix_products_section{
+    /* margin-top: 2rem; */
+    /* padding: 28px; */
+    /* padding: 110px; */
+    padding: 120px;
+}
+
+/* banner */
+.homepage_banner img{
+    width: 100%;
+    height: 100%;
+}
+.homepage_banner{
+    width: 100%;
+    height: 68rem;
+}
+.homepage_title{
+    font-size: var(--banner-header);
+    font-family: var(--banner-heading-font);
+    color: #FFFFFF;
+}
+.homepage_banner_para{
+    font-size: var(--content);
+    font-family: var( --content-font);
+    color: #FFFFFF;
+}
+
+.homepage_banner_content_wrapper{
+    position: absolute;
+    top: 24rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    align-content: stretch;
+    align-items: center;
+    height: 20%;
+}
+.homepage_explore_btn{
+    border: 2px solid #FF5B02;
+    padding: 6px 24px;
+    border-top-left-radius: 10px;
+    /* width: 4%; */
+    border-bottom-right-radius: 10px;
+    background-color: transparent;
+    font-size: var(--content);
+    font-family: var(--subheading-font);
+    /* height: 27%; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+.homepage_explore_btn:hover {
+    background-color:#FF5B02;
+}
+
+.homepage_explore_btn a {
+    text-decoration: none;
+    /* color:#FF5B02; */
+    display: flex;
+    justify-content: center;
+}
+.homepage_explore_btn:hover a {
+    color: black;
+}
+.homepage_explore_btn span{
+    color: #FFFFFF;
+    font-size: var(--content);
+    font-family: var(--content-font);
+}
+
+/** mobile **/
+@media only screen and (max-width: 767px) {
+    .niurix_products_section{
+        padding:  0 36px;
+    }
+    .hardware_whole_content{
+        height: 964px;
+        display: flex;
+    flex-direction: column;
+    }
+    .datacount_section{
+        padding: 0 36px;
+    /* height: 150px; */
+    height: 433px;
+    margin-bottom: 2rem;
+
+    }
+    .install_section_wrapper{
+        padding: 20px;
+        margin-bottom: 1rem;
+    }
+    .install_easy_header{
+        font-size: var(--content-header1-mobile);
+        margin-top: 1rem;
+    }
+    .nuirix_install_wrapper{
+        flex-direction: column;
+    }
+    .niurixinstall_video_wrapper{
+        width: 100%;
+    }
+    .niurixinstall_content_wrapper{
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+/* homepage swiper banner */
+/*-----------------------------------------------------------Semi Desktop----------------------------------------------------------------------- */
+@media only screen and (min-width: 1025px) and (max-width: 1366px) {
+    .homepage_banner{
+        width: 100%;
+        height: 60rem;
+    }
+    .niurixinstall_video_wrapper{
+        /* width: 50%; */
+        width:50%;
+    
+    }
+    .niurixinstall_content_wrapper{
+        width: 50%;
+    }
+}
+/*------------------------------------------------------------- tablets--------------------------------------------------------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .homepage_banner {
+        width: 100%;
+        height: 79rem;
+    }
+    .niurix_products_section{
+        padding: 80px;
+    }
+
+    .nuirix_install_wrapper{
+        flex-direction: column;
+    }
+    .install_section_wrapper{
+        padding: 80px;
+       
+        /* padding: 86px; */
+    }
+    .niurixinstall_video_wrapper{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .niurixinstall_content_wrapper{
+        width: 100%;
+        
+    }
+    .datacount_section{
+        /* height: 250px; */
+      margin: 40px 80px;
+    
+    }
+    .hardware_whole_content{
+        /* height: 533px; */
+        height: 80rem;
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .homepage_banner {
+        width: 100%;
+        height: 67rem;
+    }
+    .datacount_section{
+        height: 250px;
+        padding: 0px 78px;
+  
+    
+    }
+    .products_header_section{
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+ 
+
+
+@media only screen and (min-width: 1025px) and (max-width: 1366px) {
+    .homepage_banner{
+        width: 100%;
+        height: 60rem;
+    }
+    .nuirix_install_wrapper{
+       align-items: unset;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .homepage_banner {
+        width: 100%;
+        /* height: 79rem; */
+        height: 64rem;
+    }
+    .niurix_products_section{
+        padding: 80px;
+    }
+    .homepage_title {
+        font-size: var(--banner-header-tab);
+    }
+    .homepage_banner_para {
+        font-size: var(--content-tab);
+    }
+    .homepage_banner_content_wrapper{
+        top: 27rem;
+        height: 16%;
+    }
+}
+/*------------------------------------------------------------- tablets--------------------------------------------------------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .homepage_banner {
+        width: 100%;
+        /* height: 79rem; */
+        height: 86rem;
+    }
+    .niurix_products_section{
+        padding: 80px;
+    }
+    .homepage_title {
+        font-size: var(--banner-header-tab);
+    }
+    .homepage_banner_para {
+        font-size: var(--content-tab);
+    }
+    .homepage_banner_content_wrapper{
+        top: 38rem;
+        height: 11%;
+    }
+    .video_homepage_wrapper{
+        width: 100%;
+        height: 100%;
+        background-image: unset;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .homepage_banner {
+        width: 100%;
+        /* height: 67rem; */
+        height: 48rem;
+    }
+    .homepage_banner_content_wrapper{
+        position: absolute;
+        top: 20rem;
+    }
+    .homepage_title {
+        font-size: var(--banner-header-tab);
+    }
+    .homepage_banner_para {
+        font-size: var(--content-tab);
+    }
+    .niurix_products_section{
+        padding: 0 78px;
+    }
+    .niurixinstall_content_wrapper{
+        width: 50%;
+    }
+    .niurixinstall_video_wrapper{
+        /* width: 50%; */
+        width:50%;
+    
+    }
+    .video_homepage_wrapper{
+        width: 100%;
+        height: 100%;
+        background-image: unset;
+
+    }
+}
+/* -------------------------------------------------------------Mobile-------------------------------------------------------------------------- */
+ 
+@media only screen and (max-width: 767px) {
+    .homepage_banner{
+        width: 100%;
+        height: 100%;
+    }
+    .homepage_banner_content_wrapper {
+        position: absolute;
+        top: 15rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 88%;
+        align-content: stretch;
+        align-items: center;
+        height: 30%;
+        padding: 0px 26px;
+    }
+    .homepage_title{
+        font-size: 32px;
+    }
+    .homepage_banner_para{
+        font-size: 16px;
+    }
+
+    .homepage_banner{
+        width: 100%;
+        height: 100%;
+    }
+    .homepage_banner_content_wrapper {
+        position: absolute;
+        top: 15rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 88%;
+        align-content: stretch;
+        align-items: center;
+        height: 30%;
+        padding: 0px 26px;
+    }
+    .homepage_title{
+        font-size: 32px;
+    }
+    .homepage_banner_para{
+        font-size: 16px;
+    }
+
+    .products_header_section{
+        font-size: var(--content-header1-mobile);
+      
+    }
+}

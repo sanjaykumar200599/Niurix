@@ -1,0 +1,188 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+} */
+*{
+  margin: 0;
+  padding: 0;
+}
+.App {
+  text-align: center;
+  height: 100%;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+:root{
+  /* --main-heading: 61px;
+  --sub-heading: 35px;
+  --navbar--heading: 1.25rem;
+  --banner--title: 3rem;
+  --banner-desc: 1.25rem;
+  --main-content-heading: 1.5rem;
+  --main-content-desc: 1rem;
+  --main-content-lineheight: 1.5rem;
+  --footer-header: 1rem;
+  --footer-sub-content: 0.875rem;
+  --regular-text: montserrat-regular;
+  --medium-text: montserrat-medium;
+  --semi-bold-text: montserrat-semibold;
+  --bold-text: montserrat-bold;
+  --blogs-banner-heading: 3rem;
+  --blogs-details-title: 2.5rem;
+  --blogs-details-subtitle: 1.75rem;
+  --blog-details-subheading:1.5rem;
+  --blogs-details-content: 1rem;
+  --blogs-details-lineheight: 1.5rem;
+  --blogs-related-blogs: 1.5rem;
+  --blogs-related-title: 1rem;
+  --home-page-title: 2rem; */
+  /* --main-heading: 48px; */
+  --sub-heading-mobile:26px;
+  --footer-menuname-mobile:16px;
+  --footer-content-mobile:14px;
+  --banner-header-mobile: 32px;
+  --content-header1-mobile: 20px;
+  --content-header2-mobile: 18px;
+  --content-mobile:16px;   
+                                                                                                                                
+  --sub-heading-tab:28px;
+  --footer-menuname-tab:18px;
+  --footer-content-tab:16px;
+  --banner-header-tab: 34px;
+  --content-header1-tab: 22px;
+  --content-header2-tab: 20px;
+  --content-tab:18px;
+
+
+
+  --sub-heading:40px;
+  --contact-us-heading:42px;
+  --footer-menuname:20px;
+  --footer-content:16px;
+  --banner-header: 48px;
+  --content-header1: 28px;
+  --content-header2: 24px;
+  --content:20px;
+  --main-content-lineheight: 1.5rem;
+  --banner-heading-font: nunito-semibold;
+  --subheading-font: nunito-regular;
+  --content-header1-font: nunito-medium;
+  --content-font:nunito-light;
+  --nuirix-font-color: #FF5B0299;
+  --niurix-tech-support-box: 0px 3px 30px #FF5B0233;
+  --nuirix-footer-color: #000000;
+  --nuirix-subheading-font: #1D1D1D;
+  --niurix-homepage-products: #EBEBEB;
+  --niurix-blog-dates: #7E7E7E;
+  --niurix-number-font:montserrat-regular;
+  --orange-color:#FF5B02;
+  --white-color:#FFFFFF;
+  --black-color:#1d1d1d;
+  --mobile-font-h1: 32px;
+  --mobile-font-h2: 26px;
+  --mobile-font-h3: 20px;
+  --mobile-font-h4: 18px;
+  --mobile-font-h5: 16px;
+  --mobile-font-h6: 14px;
+
+  --tab-font-h1: 34px;
+  --tab-font-h2: 28px;
+  --tab-font-h3: 22px;
+  --tab-font-h4: 20px;
+  --tab-font-h5: 18px;
+  --tab-font-h6: 16px;
+
+
+}
+.container {
+  position: relative;
+}
+@font-face {
+  font-family: "montserrat-regular";
+  src: url("./fonts/Montserrat-Regular.ttf");
+}
+
+@font-face {
+  font-family: "montserrat-medium";
+  src: url("./fonts/Montserrat-Medium.ttf");
+}
+
+/* @font-face {
+  font-family: "montserrat-semibold";
+  src: url("./fonts/Montserrat-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: "montserrat-bold";
+  src: url("./fonts/Montserrat-Bold.ttf");
+} */
+/** niurix **/
+
+@font-face {
+  font-family: "nunito-semibold";
+  src: url("./fonts/Nunito-SemiBold.ttf");
+}
+@font-face {
+  font-family: "nunito-regular";
+  src: url("./fonts/Nunito-Regular.ttf");
+}
+
+@font-face {
+  font-family: "nunito-medium";
+  src: url("./fonts/Nunito-Medium.ttf");
+}
+
+@font-face {
+  font-family: "nunito-light";
+  src: url("./fonts/Nunito-Light.ttf");
+}
+
+/* @font-face {
+  font-family: "nunito-semibold";
+  src: url("./fonts/Nunito-SemiBold.ttf");
+} */
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}

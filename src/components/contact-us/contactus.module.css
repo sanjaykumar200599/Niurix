@@ -1,0 +1,699 @@
+.contact_us_content {
+    padding: 90px 120px 80px 120px;
+}
+.contact_us_subpart {
+    color: #FF5B02;
+    opacity: 100%;
+}
+.us{
+   color: #1D1D1D; 
+}
+.touch{
+    color: #1D1D1D; 
+  
+}
+.contact_us_main {
+    width: 100%;
+    height: 100%;
+background-image: url("/src/assets/contactus/Contact backgr.webp");    
+margin-bottom: 5rem;
+    position: relative;
+}
+.contact_us_main_heading {
+    margin-bottom: 0.3rem;
+    font-family: var(--subheading-font);
+    font-size: var(--contact-us-heading);
+    opacity: 1;
+}
+.contact_section_banner_content {
+    position: absolute;
+    top: 0;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0 120px;
+    width: 47%;
+    font-family: var(--subheading-font);
+        font-size: var(--banner-header);
+    color: white;
+}
+.contact_details {
+    display: flex;
+    width: 41%;
+    justify-content: space-between;
+    gap: 5%;
+}
+.contact_us_section_banner {
+    width: 100%;
+}
+.contact_us_main_heading_content {
+    margin-bottom: 2rem;
+    width: 43%;
+    font-size: var(--footer-menuname);
+    font-family: var(--content-font);
+}
+
+.contact_us_section_banner img {
+    width: 100%;
+    height: 100%;
+}
+.contact_us_address {
+    margin-bottom: 0.3rem;
+    font-size: var(--content-header2);
+    font-family: var(--content-header1-font);
+}
+/* .contact_us_subdetails1 {
+    width: 12%;
+    margin-right: 4rem;
+} */
+.contact_no {
+    margin-bottom: 0.2rem;
+    font-size: var(--content-header2);
+    font-family: var(--content-header1-font);
+}
+.getintouch_container {
+    display: flex;
+justify-content: space-between;    
+padding: 9% 120px 7%;
+}
+.contact_us_form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.getintouch_subcontainer {
+    width: 70%;
+    border-right: 1px solid #d6d6d6;
+}
+.contact_us_submit {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.submit_btn {
+    background: #ff5b02 0% 0% no-repeat padding-box;
+    border: 2px solid #ff5b02;
+    border-radius: 10px 0px;
+    opacity: 1;
+    padding: 0.7rem 1.3rem 0.7rem 1.3rem;    
+    color: #ffffff;
+cursor: pointer;
+    font-family: var(--subheading-font);
+    font-size: var(--content);
+}
+.contact_us_tech_support {
+    width: 100%;
+    padding: 2rem 4rem;
+
+    /* height: 5rem; */
+    margin: 15% 0;
+    /* padding-left: 5rem; */
+    border: 1px solid #ff5b0299;
+    border-top-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0px 3px 30px #ff5b0233;
+}
+.contact_us_tech_support_heading {
+    display: flex;
+    justify-content: space-between;
+    width: 93%;
+    margin-bottom: 2rem;
+}
+.contact_us_icon_block {
+    width: 50px;
+    height: 46px;
+}
+.contact_us_icon_block img {
+    width: 100%;
+    height: 100%;
+}
+.contactno_main {
+    margin-bottom: 2.7rem;
+}
+.contactus_full_address {
+    font-size: var(--footer-menuname);
+    font-family: var(--content-font);
+    width: 28%;
+}
+.tech_support_main{
+    width: 25%;
+    display: flex;
+}
+.contactno_main span {
+    font-size: var(--footer-menuname);
+    font-family: var(--content-font);
+}
+.emailid_main span {
+    font-size: var(--footer-menuname);
+    font-family: var(--content-font);
+}
+.contact_main_heading_content {
+    font-size: var(--footer-menuname);
+    font-family: var(--content-font);
+    margin-bottom: 2rem;
+    width: 85%;
+}
+.box_img {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    padding: 0 120px;
+}
+.box_img img {
+    width: 100%;
+}
+.name_form {
+    width: 40%;
+    height: 47px;
+    margin-bottom: 2rem;
+}
+.name_input {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #1d1d1d;
+    border-radius: 10px 0px;
+    opacity: 0.3;
+    width: 100%;
+    height: 100%;
+    padding-left: 1rem;
+}
+
+.name_input::placeholder {
+    color: #1d1d1d;
+    font-family: var(--content-font);
+    font-size: var(--content);
+
+  }
+  .message_input::placeholder {
+    color: #1d1d1d;
+    font-family: var(--content-font);
+    font-size: var(--content);
+  }
+.phone_form{
+width: 40%;
+}
+/* .phone_input{
+
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #1D1D1D;
+    border-radius: 10px 0px;
+    opacity: 0.3;
+    width: 365px;
+    height: 37px;
+    padding-left:1rem ;
+
+} */
+
+.message_form {
+    width: 100%;
+    height: 38px;
+    margin-bottom: 3rem;
+}
+.message_input {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border: 1px solid #1d1d1d;
+    border-radius: 10px 0px;
+    opacity: 0.3;
+    width: 98%;
+    height: 100%;
+    padding-left: 1rem;
+    padding-top: 0.7rem;
+}
+.product_img {
+    position: absolute;
+    top: 57%;
+    right: 8%;
+}
+.technical_support {
+    display: flex;
+    align-items: center;
+}
+.technical_support_font {
+    font-size: var(--content-header2);
+    font-family: var(--subheading-font);
+}
+.contact_number {
+    margin-bottom: 1rem;
+}
+.contactno_font {
+    margin-bottom: 0.2rem;
+    font-size: var(--content);
+    font-family: var(--content-header1-font);
+}
+.mail {
+    margin-bottom: 0.2rem;
+    font-size: var(--content);
+    font-family: var(--content-header1-font);
+}
+.number {
+    font-size: var(--content);
+    font-family: var(--content-font);
+}
+.niurix_mail {
+    font-size: var(--content);
+    font-family: var(--content-font);
+}
+.contactus_form {
+    width: 90%;
+}
+@media only screen and (max-width: 767px) {
+.contact_us_content{
+    padding: 3rem 36px;
+    padding-bottom: 33%;
+}
+.contact_us_address{
+    font-size: var(  --footer-menuname-mobile);
+}
+.contact_no {
+    font-size: var(  --footer-menuname-mobile);
+}
+.contact_details{
+    width: unset;
+    justify-content: unset;
+    gap: unset;
+    flex-direction: column;
+}
+.contact_us_main_heading_content{
+    width: 100%;
+    font-size: var(  --footer-menuname-mobile);
+
+}
+.contactno_main span {
+    font-size: var(  --footer-menuname-mobile);
+}
+.emailid_main span {
+    font-size: var(  --footer-menuname-mobile);
+
+}
+.contact_us_main_heading{
+    margin-bottom: 0.7rem;
+    font-size: var(  --sub-heading-mobile);
+}
+.product_img{
+    position: absolute;
+    top: 83%;
+    left: 50%;
+    height: 12rem;
+    transform: translate(-50%);
+    width: 16rem;
+
+}
+.technical_support_font{
+    font-size: var(  --tab-font-h3);
+
+}
+.product_img img{
+width: 100%;
+height: 100%;
+
+}
+.contactno_font {
+    font-size: var(  --footer-menuname-mobile);
+
+}
+
+.contact_section_banner_content{
+    padding: 0 36px;
+    width: unset;
+    font-size: 20px;
+}
+.getintouch_container{
+    padding: 15% 36px 0 36px;
+    flex-direction: column;
+    gap: 1rem;
+}
+.getintouch_subcontainer{
+    width: 100%;
+}
+.contact_us_form{
+    flex-direction: column;
+}
+.phone_form{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.number {
+    font-size: var(  --footer-menuname-mobile);
+
+}
+.mail {
+    font-size: var(  --footer-menuname-mobile);
+
+}
+.number {
+    font-size: var(  --footer-menuname-mobile);
+
+}
+.niurix_mail {
+    font-size: var(  --footer-menuname-mobile);
+
+}
+.contact_us_tech_support{
+    padding: 2rem;
+    width: unset;
+}
+.contact_us_tech_support_heading{
+    width: 90%;
+}
+.box_img{
+    padding: 0 36px;
+}
+.name_form{
+    width: 100%;
+}
+.contact_us_form{
+    width: 100%;
+}
+.getintouch_subcontainer{
+
+    border-right:unset;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #d6d6d6;
+
+
+}
+.contactus_full_address {
+ 
+    width: 44%;
+    font-size: var(   --footer-menuname-mobile);
+}
+.contactno_main{
+    margin-bottom: 1rem;
+}
+.contact_us_subdetails1{
+    margin-bottom: 1rem;
+}
+.contact_us_main{
+    background-image: url("/src/assets/contactus/Contact back g mobile.webp");    
+
+}
+.contactus_form {
+    width: 100%;
+}
+.name_input {
+
+    width: 95%;
+    padding-left: 5%;
+}
+.message_input{
+    width: 95%;
+    padding-left: 5%; 
+}
+.tech_support_main{
+    width: 100%;
+    display: unset;
+}
+.contact_main_heading_content {
+
+    width: 100%;
+    font-size: var(  --footer-menuname-mobile);
+}
+.contact_section_banner_content{
+    font-size: var(--banner-header-mobile);
+}
+.submit{
+    font-size: var(  --footer-menuname-mobile);
+
+}
+
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .contact_us_content{
+        padding: 3rem 80px;
+        padding-bottom: 18%;
+    }
+    .contact_us_address{
+        font-size: var(  --footer-menuname-tab);
+    }
+    .contact_no {
+        font-size: var(  --footer-menuname-tab);
+    }
+    .contact_details{
+        width: unset;
+        justify-content: unset;
+        gap: unset;
+        flex-direction: column;
+    }
+    .contact_us_main_heading_content{
+        width: 100%;
+        font-size: var(  --footer-menuname-tab);
+    
+    }
+    .contact_us_main_heading{
+        margin-bottom: 0.7rem;
+        font-size: var(  --sub-heading-tab);
+    }
+    .product_img{
+        position: absolute;
+        top: 77%;
+        left: 50%;
+        height: 14rem;
+        transform: translate(-50%);
+        width: 19rem;
+    
+    }
+    .technical_support_font{
+        font-size: var(  --sub-heading-mobile);
+    
+    }
+    .product_img img{
+    width: 100%;
+    height: 100%;
+    
+    }
+    .contactno_font {
+        font-size: var(  --footer-menuname-tab);
+    
+    }
+    .contact_us_section_banner{
+        height: 27rem;
+    }
+    .contact_section_banner_content{
+        padding: 0 36px;
+        width: unset;
+        font-size: 20px;
+        top: 12%;
+        height: unset;
+    }
+    .getintouch_container{
+        padding: 0 80px;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .getintouch_subcontainer{
+        width: 100%;
+    }
+    .contact_us_form{
+        flex-direction: column;
+    }
+    .phone_form{
+        width: 97%;
+        margin-bottom: 2rem;
+    }
+    .number {
+        font-size: var(  --footer-menuname-tab);
+    
+    }
+    .mail {
+        font-size: var(  --footer-menuname-tab);
+    
+    }
+    .number {
+        font-size: var(  --footer-menuname-tab);
+    
+    }
+    .niurix_mail {
+        font-size: var(  --footer-menuname-tab);
+    
+    }
+    .contact_us_tech_support{
+        padding: 2rem;
+        width: 45%;
+    }
+    .contact_us_tech_support_heading{
+        width: 90%;
+    }
+    .box_img{
+        padding: 0 80px;
+    }
+    .name_form{
+        width: 100%;
+    }
+    .contact_us_form{
+        width: 100%;
+    }
+    .getintouch_subcontainer{
+    
+        border-right:unset;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #d6d6d6;
+    
+    
+    }
+    .contactus_full_address {
+     
+        width: 44%;
+        font-size: var(   --footer-menuname-tab);
+    }
+    .contactno_main{
+        margin-bottom: 1rem;
+    }
+    .contact_us_subdetails1{
+        margin-bottom: 1rem;
+    }
+    .contact_us_main{
+    margin-bottom: 14%;
+    }
+    .contactus_form {
+        width: 100%;
+    }
+    .name_input {
+    
+        width: 95%;
+        padding-left: 2%;
+    }
+    .message_input{
+        width: 95%;
+        padding-left:2%; 
+    }
+    .tech_support_main{
+        width: 100%;
+        justify-content: center;
+    }
+    .contact_main_heading_content {
+    
+        width: 85%;
+        font-size: var(  --footer-menuname-tab);
+    }
+    .contact_section_banner_content{
+        font-size: var(--banner-header-tab);
+        padding: 0 80px
+    }
+    .contactno_main span {
+        font-size: var(  --footer-menuname-tab);
+    }
+    .emailid_main span {
+        font-size: var(  --footer-menuname-tab);
+    }
+    .submit{
+        font-size: var(  --footer-menuname-tab);
+
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .contact_section_banner_content{
+        width: auto;
+        padding: 0 80px;
+    }
+    .contact_us_main_heading_content{
+        width: 85%;
+    }
+    .contact_details{
+        width: 78%;
+    }
+    .contact_us_content{
+        padding-bottom: 14%;
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    .product_img{
+        position: absolute;
+    top: 69%;
+    height: 20rem;
+    /* width: 30rem; */
+    left: 50%;
+    transform: translate(-50%);
+    }
+    .product_img img{
+        width: 100%;
+        height: 100%;
+    }
+    .getintouch_container{
+        padding: 15% 80px 0 80px;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .getintouch_subcontainer{
+        width: 100%;
+        border-bottom: 1px solid #d6d6d6;
+        border-right: unset;
+    }
+    .contact_us_submit{
+        margin-bottom: 5%;
+    }
+    .tech_support_main{
+        padding: 0 27%;
+        width: auto;
+    }
+    .contact_main_heading_content{
+        width: 100%;
+    }
+    .contactus_form{
+        width: 100%;
+    }
+}
+
+/*Semi Desktop */
+@media only screen and (min-width: 1025px) and (max-width: 1366px) {
+    .product_img{
+        top: 59%;
+        right: 3%;
+    }
+    .getintouch_subcontainer{
+        width: 67%;
+    }
+    .tech_support_main{
+    width: 30%;
+    }
+    .contact_us_tech_support_heading{
+        width: 100%;
+        gap: 0.5rem;
+    }
+    .contact_us_tech_support{
+        padding: 2rem;
+        margin: 44% 0;
+    }
+    .name_form{
+        width:46%;
+    }
+    .phone_form{
+        width: 46%;
+    }
+    .contactus_form{
+        width: 95%;
+    }
+    .message_input{
+        width: 100%;
+    padding-left: 2.4%;
+    }
+    .message_form{
+        width: 97%;
+    }
+    .contact_main_heading_content {
+        width: 97%;
+    }
+    .name_input{
+        padding-left: 5.4%;
+    }
+}
+/* Mid-size Laptop */
+
+@media only screen and (min-width: 1367px) and (max-width: 1600px) {
+    .contact_section_banner_content {
+        height: 60%;
+    }
+    .product_img{
+        top: 60%;
+    right: 3%;
+    }
+    .tech_support_main{
+        width: 28%;
+    }
+    .contact_us_tech_support{
+        padding: 2rem;
+        margin: 32% 0;
+        width: unset;
+    }
+    .tech_support_main{
+        width: 28%;
+    }
+    .contact_us_tech_support_heading{width: 100%;}
+}
