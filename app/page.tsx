@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import HeroBanner from "@/components/homepage/HeroBanner";
 import HardwareSection from "@/components/homepage/HardwareSection";
 import BuildingVideo from "@/components/homepage/BuildingVideo";
@@ -56,9 +57,16 @@ export default function HomePage() {
 
         <div className="grid gap-6 laptop:grid-cols-[60%_40%] laptop:items-center">
           <div className="overflow-hidden rounded-[32px] border border-black/10">
-            <video muted playsInline preload="metadata" className="h-auto w-full" poster="/assets/homepage/Hosp 1 home.webp">
-              <source src="/assets/homepage/Niurixinstall.mp4" type="video/mp4" />
-            </video>
+            <div className="relative aspect-[16/9] w-full">
+              <Image
+                src="/assets/homepage/Box Together.webp"
+                alt="Easy to install GPON kit"
+                fill
+                priority={false}
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 60vw"
+              />
+            </div>
           </div>
           <InstallGuide steps={homeContent.installSteps} />
         </div>

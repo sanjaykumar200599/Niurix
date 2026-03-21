@@ -10,21 +10,34 @@ export const dynamic = "force-static";
 export const dynamicParams = false;
 
 export function generateStaticParams(): Array<{ slug: string }> {
-  return products.map((item) => ({ slug: item.slug }));
+  const slugs = Array.from(
+    new Set(
+      products.flatMap((item) => [
+        item.slug,
+        item.slug.toLowerCase(),
+        ...item.legacySlugs,
+        ...item.legacySlugs.map((legacy) => legacy.toLowerCase()),
+      ]),
+    ),
+  );
+
+  return slugs.map((slug) => ({ slug }));
 }
 
 type ProductPageProps = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
-  const product = getProductBySlug(params.slug);
+  const { slug } = await params;
+  const product = getProductBySlug(slug);
   if (!product) return {};
   return toMetadata({ ...product.seo, canonicalPath: `/products/${product.slug}` });
 }
 
-export default function ProductPage({ params }: ProductPageProps) {
-  const product = getProductBySlug(params.slug);
+export default async function ProductPage({ params }: ProductPageProps) {
+  const { slug } = await params;
+  const product = getProductBySlug(slug);
   if (!product) notFound();
 
   return (

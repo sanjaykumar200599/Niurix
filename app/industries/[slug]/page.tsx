@@ -10,21 +10,34 @@ export const dynamic = "force-static";
 export const dynamicParams = false;
 
 export function generateStaticParams(): Array<{ slug: string }> {
-  return industries.map((item) => ({ slug: item.slug }));
+  const slugs = Array.from(
+    new Set(
+      industries.flatMap((item) => [
+        item.slug,
+        item.slug.toLowerCase(),
+        ...item.legacySlugs,
+        ...item.legacySlugs.map((legacy) => legacy.toLowerCase()),
+      ]),
+    ),
+  );
+
+  return slugs.map((slug) => ({ slug }));
 }
 
 type IndustryPageProps = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateMetadata({ params }: IndustryPageProps): Promise<Metadata> {
-  const industry = getIndustryBySlug(params.slug);
+  const { slug } = await params;
+  const industry = getIndustryBySlug(slug);
   if (!industry) return {};
   return toMetadata(industry.seo);
 }
 
-export default function IndustryPage({ params }: IndustryPageProps) {
-  const industry = getIndustryBySlug(params.slug);
+export default async function IndustryPage({ params }: IndustryPageProps) {
+  const { slug } = await params;
+  const industry = getIndustryBySlug(slug);
   if (!industry) notFound();
 
   return (

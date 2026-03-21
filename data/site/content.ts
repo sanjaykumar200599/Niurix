@@ -528,14 +528,34 @@ export const policyPages: PolicyPageContent[] = [
   }),
 ];
 
-export const getSolutionBySlug = (slug: string) =>
-  solutions.find((item) => item.slug === slug || item.legacySlugs.includes(slug));
+const normalizeSlug = (slug: string) => decodeURIComponent(slug).trim().toLowerCase();
 
-export const getProductBySlug = (slug: string) =>
-  products.find((item) => item.slug === slug || item.legacySlugs.includes(slug));
+export const getSolutionBySlug = (slug: string) => {
+  const normalizedSlug = normalizeSlug(slug);
+  return solutions.find(
+    (item) =>
+      normalizeSlug(item.slug) === normalizedSlug ||
+      item.legacySlugs.some((legacySlug) => normalizeSlug(legacySlug) === normalizedSlug),
+  );
+};
 
-export const getIndustryBySlug = (slug: string) =>
-  industries.find((item) => item.slug === slug || item.legacySlugs.includes(slug));
+export const getProductBySlug = (slug: string) => {
+  const normalizedSlug = normalizeSlug(slug);
+  return products.find(
+    (item) =>
+      normalizeSlug(item.slug) === normalizedSlug ||
+      item.legacySlugs.some((legacySlug) => normalizeSlug(legacySlug) === normalizedSlug),
+  );
+};
+
+export const getIndustryBySlug = (slug: string) => {
+  const normalizedSlug = normalizeSlug(slug);
+  return industries.find(
+    (item) =>
+      normalizeSlug(item.slug) === normalizedSlug ||
+      item.legacySlugs.some((legacySlug) => normalizeSlug(legacySlug) === normalizedSlug),
+  );
+};
 
 export const getPolicyBySlug = (slug: string) =>
   policyPages.find((item) => item.slug === slug);
@@ -618,6 +638,7 @@ export const headerNavigation: {
     },
   ],
 };
+
 
 
 

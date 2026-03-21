@@ -10,21 +10,34 @@ export const dynamic = "force-static";
 export const dynamicParams = false;
 
 export function generateStaticParams(): Array<{ slug: string }> {
-  return solutions.map((item) => ({ slug: item.slug }));
+  const slugs = Array.from(
+    new Set(
+      solutions.flatMap((item) => [
+        item.slug,
+        item.slug.toLowerCase(),
+        ...item.legacySlugs,
+        ...item.legacySlugs.map((legacy) => legacy.toLowerCase()),
+      ]),
+    ),
+  );
+
+  return slugs.map((slug) => ({ slug }));
 }
 
 type SolutionPageProps = {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateMetadata({ params }: SolutionPageProps): Promise<Metadata> {
-  const solution = getSolutionBySlug(params.slug);
+  const { slug } = await params;
+  const solution = getSolutionBySlug(slug);
   if (!solution) return {};
   return toMetadata({ ...solution.seo, canonicalPath: `/solutions/${solution.slug}` });
 }
 
-export default function SolutionPage({ params }: SolutionPageProps) {
-  const solution = getSolutionBySlug(params.slug);
+export default async function SolutionPage({ params }: SolutionPageProps) {
+  const { slug } = await params;
+  const solution = getSolutionBySlug(slug);
   if (!solution) notFound();
 
   return (
