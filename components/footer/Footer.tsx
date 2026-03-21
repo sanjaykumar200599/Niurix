@@ -16,9 +16,9 @@ const sections = [
     title: "Products",
     links: [
       ["P4200R", "/products/ONT-P4200R"],
-      ["G2410", "/products/ONT-G2410"],
-      ["SOLT33-8P", "/products/OLT-SOLT33-8P"],
-      ["SOLT33-16P", "/products/OLT-SOLT33-16P"],
+      ["T2001", "/products/ONT-T2001"],
+      ["SOLT33- 8P", "/products/OLT-SOLT33-8P"],
+      ["MOLT-XGSPON 8P", "/products/OLT-XGSPON-8P"],
     ],
   },
   {
@@ -36,7 +36,6 @@ const sections = [
     links: [
       ["Hospitality", "/industries/hospitality"],
       ["Corporate Workspaces", "/industries/corporate-workspaces"],
-      ["Residential Real Estate", "/industries/residential-real-estate"],
       ["Student Living", "/industries/student-living"],
     ],
   },

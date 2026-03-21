@@ -5,7 +5,7 @@ import type { HomeData } from "@/lib/content/types";
 
 function DotTrail({ active }: { active: boolean }) {
   return (
-    <div className="flex h-10 w-16 items-center justify-center gap-1">
+    <div className="flex h-12 w-16 items-center justify-center gap-[5px]">
       {Array.from({ length: 3 }).map((_, index) => (
         <span key={index} className={`rounded-full ${active ? "h-2 w-2 bg-brand-orange" : "h-1.5 w-1.5 border border-brand-orange"}`} />
       ))}
@@ -18,7 +18,7 @@ export default function InstallGuide({ steps }: { steps: HomeData["installSteps"
 
   return (
     <div className="laptop:ml-20">
-      <div className="flex items-center justify-start">
+      <div className="ml-[0.3rem] flex items-center justify-start">
         {steps.map((_, stepIdx) => (
           <div key={stepIdx} className="flex items-center">
             {stepIdx > 0 ? <DotTrail active={idx >= stepIdx} /> : null}
@@ -35,8 +35,8 @@ export default function InstallGuide({ steps }: { steps: HomeData["installSteps"
         ))}
       </div>
 
-      <div className="mt-4 h-[9rem]">
-        <h3 className="text-[24px] font-display font-light text-brand-black tablet:text-[28px] [@media(min-width:1025px)_and_(max-width:1366px)]:text-[20px]">
+      <div className="h-[9rem] font-body-light">
+        <h3 className="mt-4 text-[24px] font-sans font-light text-brand-black [@media(min-width:1025px)_and_(max-width:1366px)]:text-[20px]">
           {steps[idx]?.title}
         </h3>
         <p className="mt-4 w-full text-[16px] font-body-light text-brand-black tablet:text-[18px] laptop:w-[80%] [@media(min-width:1025px)_and_(max-width:1366px)]:w-full [@media(min-width:1025px)_and_(max-width:1366px)]:text-[20px]">

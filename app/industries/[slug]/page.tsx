@@ -14,19 +14,17 @@ export function generateStaticParams(): Array<{ slug: string }> {
 }
 
 type IndustryPageProps = {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 };
 
 export async function generateMetadata({ params }: IndustryPageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const industry = getIndustryBySlug(slug);
+  const industry = getIndustryBySlug(params.slug);
   if (!industry) return {};
   return toMetadata(industry.seo);
 }
 
-export default async function IndustryPage({ params }: IndustryPageProps) {
-  const { slug } = await params;
-  const industry = getIndustryBySlug(slug);
+export default function IndustryPage({ params }: IndustryPageProps) {
+  const industry = getIndustryBySlug(params.slug);
   if (!industry) notFound();
 
   return (
@@ -36,4 +34,3 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
     </div>
   );
 }
-

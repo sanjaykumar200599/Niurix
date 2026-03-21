@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Squash as Hamburger } from "hamburger-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { headerNavigation, type HeaderNavigationItem } from "@/data/site/content";
@@ -29,15 +28,7 @@ const mobileLinks = {
   industries: headerNavigation.industries,
 };
 
-function isActiveGroup(pathname: string, key: DesktopTab["key"]) {
-  if (key === "software") return pathname.startsWith("/software") || pathname.startsWith("/gpon-software");
-  if (key === "solutions") return pathname.startsWith("/solutions") || pathname.startsWith("/solution");
-  if (key === "products") return pathname.startsWith("/products") || pathname.startsWith("/product");
-  return pathname.startsWith("/industries");
-}
-
 export default function Header() {
-  const pathname = usePathname();
   const shellRef = useRef<HTMLDivElement | null>(null);
   const [scrolled, setScrolled] = useState(false);
   const [activeDesktopMenu, setActiveDesktopMenu] = useState<HeaderMenuKey | null>(null);
@@ -103,25 +94,24 @@ export default function Header() {
         className={`fixed z-50 hidden transition-all duration-500 laptop:block ${
           scrolled
             ? "left-0 right-0 top-0 border-b border-black/10 bg-white shadow-[0px_3px_15px_#00000029]"
-            : "left-[120px] right-[120px] top-[7%] rounded-tl-[10px] rounded-br-[10px] bg-white shadow-[0px_3px_15px_#00000029]"
+            : "left-[clamp(56px,7vw,120px)] right-[clamp(56px,7vw,120px)] top-[7%] rounded-tl-[10px] rounded-br-[10px] bg-white shadow-[0px_3px_15px_#00000029]"
         }`}
       >
-        <div className={`flex items-center justify-between ${scrolled ? "px-[120px] py-6" : "px-[3.35%] py-6"}`}>
+        <div className={`flex items-center justify-between ${scrolled ? "px-[clamp(40px,8vw,120px)] py-6" : "px-[3.35%] py-6"}`}>
           <Link href="/" className="shrink-0" onClick={closeMenus}>
             <Image src="/assets/header/niurixlogo.svg" alt="Niurix" width={81} height={27} priority />
           </Link>
 
-          <nav className="flex items-center gap-0">
+          <nav className="ml-8 flex flex-1 items-baseline justify-end">
             {desktopTabs.map((tab) => {
-              const active = isActiveGroup(pathname, tab.key);
               const open = tab.menuKey ? activeDesktopMenu === tab.menuKey : false;
 
               return (
-                <div key={tab.key} className="relative flex w-32 items-center justify-center">
+                <div key={tab.key} className="relative flex items-center justify-center px-4 [@media(min-width:1025px)_and_(max-width:1280px)]:px-2">
                   {tab.menuKey ? (
                     <button
                       type="button"
-                      className={`text-[20px] font-sans transition ${active || open ? "text-brand-orange" : "text-brand-black hover:text-brand-orange"}`}
+                      className={`whitespace-nowrap text-[clamp(17px,1.2vw,20px)] font-sans transition ${open ? "text-brand-orange" : "text-brand-black hover:text-brand-orange"}`}
                       onClick={() => toggleDesktopMenu(tab.menuKey!)}
                     >
                       {tab.label}
@@ -129,7 +119,7 @@ export default function Header() {
                   ) : (
                     <Link
                       href={tab.href}
-                      className={`text-[20px] font-sans transition ${active ? "text-brand-orange" : "text-brand-black hover:text-brand-orange"}`}
+                      className="whitespace-nowrap text-[clamp(17px,1.2vw,20px)] font-sans text-brand-black transition hover:text-brand-orange"
                       onClick={closeMenus}
                     >
                       {tab.label}
@@ -142,7 +132,7 @@ export default function Header() {
                       alt=""
                       width={33}
                       height={11}
-                      className="pointer-events-none absolute bottom-[-28px] left-1/2 z-10 -translate-x-1/2"
+                      className="pointer-events-none absolute bottom-[-28%] left-1/2 z-10 -translate-x-1/2"
                     />
                   ) : null}
                 </div>
@@ -151,7 +141,7 @@ export default function Header() {
 
             <Link
               href="/contact-us"
-              className="min-w-[180px] rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-[23px] py-[9px] text-center text-[20px] font-sans text-white transition hover:bg-white hover:text-black"
+              className="ml-3 min-w-[150px] rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-5 py-2 text-center text-[clamp(18px,1.2vw,20px)] font-sans text-black transition hover:bg-white hover:text-black [@media(min-width:1025px)_and_(max-width:1280px)]:min-w-[136px] [@media(min-width:1025px)_and_(max-width:1280px)]:px-4"
               onClick={closeMenus}
             >
               Contact Us
@@ -162,12 +152,12 @@ export default function Header() {
         <NavDropdown activeDesktopMenu={activeDesktopMenu} desktopItems={desktopItems} onNavigate={closeMenus} />
       </div>
 
-      <div className="fixed left-0 right-0 top-0 z-50 border-b border-black/10 bg-white px-9 py-4 shadow-[0px_3px_15px_#00000029] laptop:hidden">
+      <div className="fixed left-0 right-0 top-0 z-50 border-b border-black/10 bg-white px-5 py-4 shadow-[0px_3px_15px_#00000029] tablet:px-9 laptop:hidden">
         <div className="flex items-center justify-between">
           <Link href="/" className="shrink-0" onClick={closeMenus}>
             <Image src="/assets/header/niurixlogo.svg" alt="Niurix" width={81} height={27} priority />
           </Link>
-          <Hamburger toggled={mobileOpen} toggle={setMobileOpen} size={24} color="#FF5B02" />
+          <Hamburger toggled={mobileOpen} toggle={setMobileOpen} size={22} color="#FF5B02" />
         </div>
       </div>
 
@@ -181,4 +171,3 @@ export default function Header() {
     </header>
   );
 }
-

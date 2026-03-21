@@ -18,7 +18,7 @@ const layerImages = [
 const zIndexes = ["z-[10]", "z-[9]", "z-[8]", "z-[7]", "z-[6]"] as const;
 
 const stageClasses: Record<Stage, readonly string[]> = {
-  1: ["left-[40%]", "left-[25%]", "left-[17%]", "left-[9%]", "left-[1%]"],
+  1: ["left-[37%]", "left-[22%]", "left-[14%]", "left-[7%]", "left-[2%]"],
   2: ["left-[35%]", "left-[26%]", "left-[22%]", "left-[16%]", "left-[11%]"],
   3: ["left-[33%]", "left-[28%]", "left-[24%]", "left-[18%]", "left-[13%]"],
   4: ["left-[31%]", "left-[29%]", "left-[26%]", "left-[20%]", "left-[16%]"],
@@ -46,19 +46,18 @@ export default function HardwareAnimation() {
   const activeClasses = useMemo(() => stageClasses[stage], [stage]);
 
   return (
-    <div className="pointer-events-none absolute left-[2%] top-[24%] hidden h-[37rem] w-[62%] laptop:block">
+    <div className="pointer-events-none absolute left-0 top-[24%] hidden h-[37rem] w-full laptop:block">
       {layerImages.map((image, index) => (
-        <div key={image} className="absolute inset-0">
-          <Image
-            src={image}
-            alt=""
-            width={700}
-            height={700}
-            className={`absolute top-[-4rem] h-[37rem] w-auto transition-[left,transform] duration-[3000ms] ease-in-out ${zIndexes[index]} ${activeClasses[index]} ${
-              stage === 5 && index === 0 ? "animate-[box-settle_3s_forwards]" : ""
-            }`}
-          />
-        </div>
+        <Image
+          key={image}
+          src={image}
+          alt=""
+          width={700}
+          height={700}
+          className={`absolute w-auto transition-[left,transform] duration-[3000ms] ease-in-out ${zIndexes[index]} ${activeClasses[index]} ${
+            index === 0 ? "top-[-4rem]" : ""
+          } ${stage === 5 && index === 0 ? "animate-[box-settle_3s_forwards]" : ""}`}
+        />
       ))}
     </div>
   );

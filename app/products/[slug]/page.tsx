@@ -14,19 +14,17 @@ export function generateStaticParams(): Array<{ slug: string }> {
 }
 
 type ProductPageProps = {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 };
 
 export async function generateMetadata({ params }: ProductPageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const product = getProductBySlug(slug);
+  const product = getProductBySlug(params.slug);
   if (!product) return {};
   return toMetadata({ ...product.seo, canonicalPath: `/products/${product.slug}` });
 }
 
-export default async function ProductPage({ params }: ProductPageProps) {
-  const { slug } = await params;
-  const product = getProductBySlug(slug);
+export default function ProductPage({ params }: ProductPageProps) {
+  const product = getProductBySlug(params.slug);
   if (!product) notFound();
 
   return (
@@ -36,4 +34,3 @@ export default async function ProductPage({ params }: ProductPageProps) {
     </div>
   );
 }
-
