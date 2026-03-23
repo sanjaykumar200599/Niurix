@@ -31,17 +31,17 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
 
   return (
     <div>
-      <div className="hidden gap-4 px-30 laptop:grid laptop:grid-cols-[58%_20%_20%] [@media(min-width:1367px)]:gap-8">
+      <div className="hidden gap-4 px-30 laptop:grid laptop:grid-cols-[58%_20%_20%] wide:gap-8">
         <div className="relative h-[35rem] overflow-hidden rounded-tl-[35px] rounded-br-[35px]">
           <Image src={active.detailImage} alt={active.title} fill className="object-cover" />
-          <div className="absolute inset-x-0 bottom-0 bg-white/95 px-5 py-5">
-            <h3 className="text-[24px] font-sans text-brand-black [@media(min-width:1367px)]:text-[28px]">{active.title}</h3>
-            <p className="mt-3 text-[17px] font-body-light leading-snug text-brand-black [@media(min-width:1367px)]:mt-4 [@media(min-width:1367px)]:text-[20px]">
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white via-white/96 to-white/78 px-6 pb-6 pt-7 wide:px-7 wide:pb-7">
+            <h3 className="text-[24px] font-sans text-brand-black wide:text-[28px]">{active.title}</h3>
+            <p className="mt-3 max-w-[88%] text-[17px] leading-[1.35] font-body-light text-brand-black wide:mt-4 wide:max-w-[82%] wide:text-[20px]">
               {active.desc}
             </p>
             <Link
               href={`/industries/${active.slug}`}
-              className="mt-4 inline-flex min-w-[150px] items-center justify-center gap-3 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-4 py-2 text-[18px] font-sans text-white transition hover:bg-white hover:text-black [@media(min-width:1367px)]:min-w-[190px] [@media(min-width:1367px)]:text-[20px]"
+              className="mt-5 inline-flex min-w-[220px] items-center justify-center gap-3 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-3 text-[22px] font-sans text-white transition hover:bg-white hover:text-black wide:min-w-[240px] wide:py-3.5"
             >
               <span>Learn More</span>
               <ArrowRightIcon />
@@ -58,7 +58,7 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
           >
             <Image src={item.cardImage} alt={item.title} fill className="object-cover transition duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/45" />
-            <p className="absolute bottom-0 left-4 w-[18rem] origin-top-left -rotate-90 text-left font-body-light text-[26px] leading-none text-white [@media(min-width:1367px)]:text-[28px]">
+            <p className="absolute bottom-0 left-4 w-[18rem] origin-top-left -rotate-90 text-left font-body-light text-[26px] leading-none text-white wide:text-[28px]">
               {item.title}
             </p>
           </button>
@@ -83,9 +83,10 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
                     <p className="mt-3 w-[95%] text-[16px] font-body-light text-brand-black tablet:w-[90%] tablet:text-[18px]">{item.desc}</p>
                     <Link
                       href={`/industries/${item.slug}`}
-                      className="mt-4 inline-flex w-[45%] min-w-[150px] items-center justify-center rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-4 py-2 text-[16px] font-sans text-white tablet:w-[22%] tablet:text-[18px]"
+                      className="mt-4 inline-flex min-w-[170px] items-center justify-center gap-3 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-5 py-2.5 text-[16px] font-sans text-white tablet:text-[18px]"
                     >
-                      Learn More
+                      <span>Learn More</span>
+                      <ArrowRightIcon />
                     </Link>
                   </div>
                 </div>

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import HeroBanner from "@/components/homepage/HeroBanner";
 import HardwareSection from "@/components/homepage/HardwareSection";
 import BuildingVideo from "@/components/homepage/BuildingVideo";
@@ -55,18 +54,20 @@ export default function HomePage() {
           <span className="text-brand-orange">Easy To</span> Install
         </h2>
 
-        <div className="grid gap-6 laptop:grid-cols-[60%_40%] laptop:items-center">
-          <div className="overflow-hidden rounded-[32px] border border-black/10">
-            <div className="relative aspect-[16/9] w-full">
-              <Image
-                src="/assets/homepage/Box Together.webp"
-                alt="Easy to install GPON kit"
-                fill
-                priority={false}
-                className="object-cover"
-                sizes="(max-width: 1024px) 100vw, 60vw"
-              />
-            </div>
+        <div className="grid gap-6 laptop:grid-cols-[60%_40%] laptop:items-center wide:grid-cols-[61%_39%]">
+          <div className="overflow-hidden rounded-[32px] border border-black/10 bg-white">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              preload="auto"
+              poster="/assets/homepage/Box Together.webp"
+              className="aspect-[16/9] w-full bg-white object-contain"
+            >
+              <source src="/assets/homepage/Niurixinstall.mp4" type="video/mp4" />
+              <source src="/assets/homepage/Nurix Home Page Video.mp4" type="video/mp4" />
+            </video>
           </div>
           <InstallGuide steps={homeContent.installSteps} />
         </div>
@@ -76,3 +77,4 @@ export default function HomePage() {
     </div>
   );
 }
+
