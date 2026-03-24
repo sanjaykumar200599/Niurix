@@ -70,21 +70,25 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col border-t border-[#707070] py-5 text-center tablet:py-6 laptop:flex-row laptop:items-center laptop:text-left">
-          <div className="mb-4 w-full text-[16px] font-sans text-black laptop:mb-0 laptop:w-[45%]">&copy; 2026 All rights reserved</div>
+        <div className="border-t border-[#707070] py-5 text-center tablet:py-6 laptop:grid laptop:grid-cols-[45%_35%_20%] laptop:items-center laptop:text-left">
+          <div className="mb-4 text-[16px] font-sans text-black laptop:mb-0">&copy; 2026 All rights reserved</div>
 
-          <div className="flex w-full flex-col items-center gap-4 laptop:w-[55%] laptop:flex-row laptop:justify-between">
-            <div className="flex items-center gap-10 text-[16px] font-sans text-black">
-              <span>Terms & Conditions</span>
-              <span>Privacy Policy</span>
-            </div>
+          <div className="mb-4 flex items-center justify-center gap-10 text-[16px] font-sans text-black laptop:mb-0 laptop:justify-center">
+            <span>Terms & Conditions</span>
+            <span>Privacy Policy</span>
+          </div>
 
-            <div className="flex items-center gap-3 text-[16px] font-sans text-black">
-              <span>Find us on</span>
-              <a href="https://www.linkedin.com/company/niurix/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
-                <Image src="/assets/footer/linkedin.svg" alt="LinkedIn" width={22} height={21} />
-              </a>
-            </div>
+          <div className="flex items-center justify-center gap-2.5 text-[16px] leading-none font-sans text-black laptop:justify-end laptop:pr-1">
+            <span className="inline-flex items-center leading-none">Find us on</span>
+            <a
+              href="https://www.linkedin.com/company/niurix/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+              className="inline-flex h-6 w-6 items-center justify-center"
+            >
+              <Image src="/assets/footer/linkedin.svg" alt="LinkedIn" width={20} height={20} className="h-[20px] w-[20px] object-contain" />
+            </a>
           </div>
         </div>
       </div>

@@ -30,8 +30,10 @@ const mobileLinks = {
 
 export default function Header() {
   const shellRef = useRef<HTMLDivElement | null>(null);
+  const desktopTriggerRefs = useRef<Partial<Record<HeaderMenuKey, HTMLButtonElement | null>>>({});
   const [scrolled, setScrolled] = useState(false);
   const [activeDesktopMenu, setActiveDesktopMenu] = useState<HeaderMenuKey | null>(null);
+  const [dropdownNotchLeft, setDropdownNotchLeft] = useState<number | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileSection, setMobileSection] = useState<HeaderMenuKey | null>(null);
 
@@ -56,11 +58,15 @@ export default function Header() {
       const target = event.target as Node;
       if (shellRef.current && !shellRef.current.contains(target)) {
         setActiveDesktopMenu(null);
+        setDropdownNotchLeft(null);
       }
     };
 
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setActiveDesktopMenu(null);
+      if (event.key === "Escape") {
+        setActiveDesktopMenu(null);
+        setDropdownNotchLeft(null);
+      }
     };
 
     document.addEventListener("pointerdown", onPointerDown);
@@ -72,10 +78,34 @@ export default function Header() {
     };
   }, [activeDesktopMenu]);
 
+  useEffect(() => {
+    if (!activeDesktopMenu) return;
+
+    const updateNotchPosition = () => {
+      const shell = shellRef.current;
+      const trigger = desktopTriggerRefs.current[activeDesktopMenu];
+      if (!shell || !trigger) return;
+
+      const shellBounds = shell.getBoundingClientRect();
+      const triggerBounds = trigger.getBoundingClientRect();
+      setDropdownNotchLeft(triggerBounds.left + triggerBounds.width / 2 - shellBounds.left);
+    };
+
+    updateNotchPosition();
+    window.addEventListener("resize", updateNotchPosition);
+    window.addEventListener("scroll", updateNotchPosition, { passive: true });
+
+    return () => {
+      window.removeEventListener("resize", updateNotchPosition);
+      window.removeEventListener("scroll", updateNotchPosition);
+    };
+  }, [activeDesktopMenu, scrolled]);
+
   const closeMenus = () => {
     setMobileOpen(false);
     setMobileSection(null);
     setActiveDesktopMenu(null);
+    setDropdownNotchLeft(null);
   };
 
   const desktopItems = useMemo<HeaderNavigationItem[]>(() => {
@@ -84,7 +114,13 @@ export default function Header() {
   }, [activeDesktopMenu]);
 
   const toggleDesktopMenu = (menuKey: HeaderMenuKey) => {
-    setActiveDesktopMenu((prev) => (prev === menuKey ? null : menuKey));
+    setActiveDesktopMenu((prev) => {
+      const nextValue = prev === menuKey ? null : menuKey;
+      if (!nextValue) {
+        setDropdownNotchLeft(null);
+      }
+      return nextValue;
+    });
   };
 
   return (
@@ -111,6 +147,9 @@ export default function Header() {
                   {tab.menuKey ? (
                     <button
                       type="button"
+                      ref={(node) => {
+                        desktopTriggerRefs.current[tab.menuKey!] = node;
+                      }}
                       className={`whitespace-nowrap text-[clamp(17px,1.2vw,20px)] font-sans transition ${open ? "text-brand-orange" : "text-brand-black hover:text-brand-orange"}`}
                       onClick={() => toggleDesktopMenu(tab.menuKey!)}
                     >
@@ -125,16 +164,6 @@ export default function Header() {
                       {tab.label}
                     </Link>
                   )}
-
-                  {open ? (
-                    <Image
-                      src="/assets/header/Divarrow.svg"
-                      alt=""
-                      width={33}
-                      height={11}
-                      className="pointer-events-none absolute bottom-[-28%] left-1/2 z-10 -translate-x-1/2"
-                    />
-                  ) : null}
                 </div>
               );
             })}
@@ -149,7 +178,12 @@ export default function Header() {
           </nav>
         </div>
 
-        <NavDropdown activeDesktopMenu={activeDesktopMenu} desktopItems={desktopItems} onNavigate={closeMenus} />
+        <NavDropdown
+          activeDesktopMenu={activeDesktopMenu}
+          desktopItems={desktopItems}
+          notchLeft={dropdownNotchLeft}
+          onNavigate={closeMenus}
+        />
       </div>
 
       <div className="fixed left-0 right-0 top-0 z-50 border-b border-black/10 bg-white px-5 py-4 shadow-[0px_3px_15px_#00000029] tablet:px-9 laptop:hidden">
@@ -171,5 +205,3 @@ export default function Header() {
     </header>
   );
 }
-
-

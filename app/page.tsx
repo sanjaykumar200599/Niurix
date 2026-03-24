@@ -49,12 +49,12 @@ export default function HomePage() {
         <IndustriesGrid industries={homeContent.industries} />
       </section>
 
-      <section className="px-5 pb-10 pt-6 tablet:px-20 tablet:pb-16 tablet:pt-4 laptop:p-30">
+      <section className="px-5 pb-10 pt-6 tablet:px-20 tablet:pb-16 tablet:pt-4 laptop:px-30 laptop:pb-30 laptop:pt-8">
         <h2 className="mb-8 text-[20px] font-display text-brand-black tablet:text-[22px] laptop:text-[28px]">
           <span className="text-brand-orange">Easy To</span> Install
         </h2>
 
-        <div className="grid gap-6 laptop:grid-cols-[60%_40%] laptop:items-center wide:grid-cols-[61%_39%]">
+        <div className="grid gap-8 laptop:grid-cols-[60%_40%] laptop:items-start laptop:gap-10 wide:grid-cols-[61%_39%]">
           <div className="overflow-hidden rounded-[32px] border border-black/10 bg-white">
             <video
               autoPlay
@@ -77,4 +77,5 @@ export default function HomePage() {
     </div>
   );
 }
+
 

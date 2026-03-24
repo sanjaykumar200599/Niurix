@@ -58,14 +58,14 @@ export default function ProductsGrid({ products }: { products: HomeData["product
     <div>
       <div className="hidden w-full rounded-tl-[50px] bg-[#ebebeb] laptop:flex">
         <div className="w-[95%]">
-          <div className="flex flex-col gap-8 px-5 py-8 laptop:px-10 [@media(min-width:1367px)]:gap-12 [@media(min-width:1367px)]:px-12">
-            <p className="-ml-3 font-number text-[110px] leading-none text-white [@media(min-width:1201px)]:text-[150px] [@media(min-width:1367px)]:-ml-7 [@media(min-width:1367px)]:text-[200px]">
+          <div className="flex min-h-[40rem] flex-col gap-12 px-5 py-8 laptop:px-10 [@media(min-width:1367px)]:px-12">
+            <p className="-ml-2 font-number text-[110px] leading-none whitespace-nowrap text-white [@media(min-width:1025px)_and_(max-width:1366px)]:text-[145px] [@media(min-width:1367px)]:-ml-5 [@media(min-width:1367px)]:text-[182px]">
               {selected.name}
             </p>
 
-            <div className="flex min-h-[18rem] items-center justify-evenly [@media(min-width:1367px)]:h-[15rem]">
+            <div className="flex h-[15rem] items-center justify-evenly [@media(min-width:1367px)]:h-[16rem]">
               <div className="flex w-[50%] justify-center">
-                <div className="relative h-[220px] w-[300px] [@media(min-width:1367px)]:h-[260px] [@media(min-width:1367px)]:w-[360px]">
+                <div className="relative h-[285px] w-[390px] [@media(min-width:1367px)]:h-[320px] [@media(min-width:1367px)]:w-[450px]">
                   <Image
                     src={selected.image}
                     alt={selected.name}
@@ -76,32 +76,36 @@ export default function ProductsGrid({ products }: { products: HomeData["product
               </div>
 
               <div className="flex w-[45%] flex-col">
-                <h3 className="flex items-center gap-2 text-[24px] font-display text-brand-black [@media(min-width:1367px)]:text-[28px]">
+                <h3 className="flex items-center gap-2 text-[30px] font-display leading-tight text-brand-black [@media(min-width:1367px)]:text-[34px]">
                   {selected.name}
                   <span className="text-brand-orange">({selected.type})</span>
                 </h3>
-                <p className="mt-4 w-[95%] text-[18px] font-body-light text-brand-black [@media(min-width:1367px)]:w-[80%] [@media(min-width:1367px)]:text-[20px]">
+                <p className="mt-4 w-[86%] text-[17px] leading-[1.35] font-body-light text-brand-black [@media(min-width:1367px)]:w-[80%] [@media(min-width:1367px)]:text-[18px]">
                   {selected.desc}
                 </p>
                 <Link
                   href={`/products/${selected.slug}`}
-                  className="group mt-4 inline-flex h-[86px] w-[150px] items-center justify-between rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-4 text-white transition hover:bg-white hover:text-black [@media(min-width:1367px)]:h-[92px] [@media(min-width:1367px)]:w-[160px]"
+                  className="group mt-4 inline-flex h-[86px] w-[154px] items-center justify-between rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-4 text-white transition hover:bg-[#f54f00] hover:text-white [@media(min-width:1367px)]:h-[92px] [@media(min-width:1367px)]:w-[160px]"
                 >
-                  <span className="text-left text-[18px] leading-[1.05] [@media(min-width:1367px)]:text-[20px]">Learn<br />More</span>
+                  <span className="text-left text-[20px] leading-[1.05]">
+                    Learn
+                    <br />
+                    More
+                  </span>
                   <LearnMoreArrow />
                 </Link>
               </div>
             </div>
 
-            <div className="mt-2 flex w-[95%] justify-end gap-4 [@media(min-width:1367px)]:w-[85%] [@media(min-width:1367px)]:gap-6">
+            <div className="mb-8 mt-16 flex w-[95%] justify-end gap-6 [@media(min-width:1367px)]:w-[85%]">
               {options.map((item) => (
                 <button
                   key={item.slug}
                   type="button"
                   onClick={() => setActiveIndex(products.findIndex((prod) => prod.slug === item.slug))}
-                  className="group rounded-[10px_0px] border-2 border-white px-7 py-4 transition hover:border-brand-orange [@media(min-width:1367px)]:px-12 [@media(min-width:1367px)]:py-6"
+                  className="group rounded-[10px_0px] border-2 border-white px-12 py-6 transition hover:border-brand-orange"
                 >
-                  <div className="relative h-10 w-12 [@media(min-width:1367px)]:h-12 [@media(min-width:1367px)]:w-16">
+                  <div className="relative h-12 w-16">
                     <Image src={item.image} alt={item.name} fill className="object-contain transition duration-300 group-hover:-translate-y-1" />
                   </div>
                 </button>
@@ -175,3 +179,4 @@ export default function ProductsGrid({ products }: { products: HomeData["product
     </div>
   );
 }
+
