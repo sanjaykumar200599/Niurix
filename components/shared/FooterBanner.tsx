@@ -20,12 +20,29 @@ export default function FooterBanner() {
           className="h-auto w-full tablet:hidden"
         />
 
-        <div className="absolute inset-0 flex items-center justify-center px-6 tablet:justify-end tablet:px-14 laptop:px-20">
-          <div className="w-full max-w-[560px] [@media(min-width:1025px)_and_(max-width:1366px)]:max-w-[480px]">
-            <p className="font-display text-[20px] leading-tight text-white tablet:text-[22px] laptop:text-[32px]">Transform Your Network Architecture With Us!</p>
+        <div className="absolute inset-0 hidden tablet:grid tablet:grid-cols-2">
+          <div />
+          <div className="flex items-center justify-center px-10 laptop:px-14">
+            <div className="w-full max-w-[470px]">
+              <p className="font-display text-[20px] leading-tight text-white tablet:text-[28px] laptop:text-[34px]">
+                Transform Your Network Architecture With Us!
+              </p>
+              <Link
+                href="/contact-us"
+                className="mt-4 inline-flex rounded-[10px_0px] border border-brand-orange bg-brand-orange px-5 py-2 text-[18px] font-sans text-white transition hover:bg-transparent"
+              >
+                Get in touch
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="absolute inset-0 flex items-end justify-start px-8 pb-7 tablet:hidden">
+          <div className="w-[88%]">
+            <p className="font-display text-[20px] leading-tight text-white">Transform Your Network Architecture With Us!</p>
             <Link
               href="/contact-us"
-              className="mt-4 inline-flex rounded-[10px_0px] border border-brand-orange bg-brand-orange px-5 py-2 text-[18px] font-sans text-white transition hover:bg-transparent"
+              className="mt-4 inline-flex rounded-[10px_0px] border border-brand-orange bg-brand-orange px-4 py-2 text-[16px] font-sans text-white transition hover:bg-transparent"
             >
               Get in touch
             </Link>
