@@ -336,7 +336,7 @@ const Header = (props) => {
                                                     </Link>
 
                                                     <Link
-                                                        href="/products/ONT-G2410"
+                                                        href="/products/ONT-T2001"
                                                         style={{ cursor: "pointer", textDecoration: "none" }}
                                                         onClick={handleLinkClick}>
                                                         {" "}

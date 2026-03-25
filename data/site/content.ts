@@ -20,7 +20,7 @@ import { fibers_edge_over_copper } from "@/lib/content/source/solutions/fibers_e
 import { scalable_and_future_ready_design } from "@/lib/content/source/solutions/scalable_and_future_ready_design";
 import { configurations_and_personalized_support } from "@/lib/content/source/solutions/configurations_and_personalized_support";
 import { ont_p4200r } from "@/lib/content/source/products/ont_p4200r";
-import { ont_g2410 } from "@/lib/content/source/products/ont_g2410";
+import { ont_t2001 } from "@/lib/content/source/products/ont_t2001";
 import { olt_solt33_08p } from "@/lib/content/source/products/olt_solt33_08p";
 import { olt_solt33_16p } from "@/lib/content/source/products/olt_solt33_16p";
 import { hospitality } from "@/lib/content/source/industries/hospitality";
@@ -233,7 +233,7 @@ type BaseProductSeed = {
 const baseProductSeeds: BaseProductSeed[] = [
   { slug: "ONT-P4200R", type: "ONT", data: ont_p4200r as LegacyProductSource, folder: "ONT-P4200R", legacy: false },
   { slug: "OLT-SOLT33-8P", type: "OLT", data: olt_solt33_08p as LegacyProductSource, folder: "OLT-SOLT33-8P", legacy: false },
-  { slug: "ONT-G2410", type: "ONT", data: ont_g2410 as LegacyProductSource, folder: "ONT-G2410", legacy: true },
+  { slug: "ONT-T2001", type: "ONT", data: ont_t2001 as LegacyProductSource, folder: "ONT-T2001", legacy: true },
   { slug: "OLT-SOLT33-16P", type: "OLT", data: olt_solt33_16p as LegacyProductSource, folder: "OLT-SOLT33-16P", legacy: true },
 ];
 
@@ -264,7 +264,10 @@ const baseProducts: ProductContent[] = baseProductSeeds.map(({ slug, type, data,
     overviewImageMobile: assetPath("assets", "products", "mobile_banners", folder, `${data.section2.background_img1_mobile}.webp`),
     connectHeadingHtml: data.section3.mainHeading,
     connectParaHtml: data.section3.para1,
-    componentImage: assetPath("assets", "products", folder, `${data.section3.background_img}.webp`),
+    componentImage:
+      slug === "ONT-T2001"
+        ? assetPath("assets", "products", folder, `${data.section3.background_img}.png`)
+        : assetPath("assets", "products", folder, `${data.section3.background_img}.webp`),
     detailImage: assetPath("assets", "products", folder, `${data.section4.background_img}.webp`),
     detailImageMobile: assetPath("assets", "products", "mobile_banners", folder, `${data.section4.background_img_mobile}.webp`),
     detailTitle: data.section4.title,
@@ -277,7 +280,7 @@ const baseProducts: ProductContent[] = baseProductSeeds.map(({ slug, type, data,
       assetPath("assets", "products", folder, `${img}.webp`),
     ),
     pdf: section5.pdf ? assetPath("assets", "products", "pdfs", `${section5.pdf}.pdf`) : undefined,
-    youtubeEmbed: slug === "ONT-P4200R" || slug === "ONT-G2410" ? "https://www.youtube.com/embed/1gxsPJekHSI" : undefined,
+    youtubeEmbed: slug === "ONT-P4200R" ? "https://www.youtube.com/embed/1gxsPJekHSI" : undefined,
   });
 });
 
@@ -292,25 +295,25 @@ const stubProduct = (slug: string, model: string, type: ProductType): ProductCon
     model,
     type,
     isStub: true,
-    heroImage: assetPath("assets", "products", "ONT-G2410", "g2410 banner.webp"),
-    heroImageMobile: assetPath("assets", "products", "mobile_banners", "ONT-G2410", "g2410 banner.webp"),
+    heroImage: assetPath("assets", "products", "ONT-T2001", "g2410 banner.webp"),
+    heroImageMobile: assetPath("assets", "products", "mobile_banners", "ONT-T2001", "g2410 banner.webp"),
     overviewHeadingHtml: `<span>Our</span> Product (${type}s)`,
     overviewTitle: `Niurix ${model}`,
     overviewParaHtml: `Built for carrier-grade FTTH deployments, Niurix ${model} delivers reliable performance, simplified provisioning, and seamless service delivery for modern broadband networks.`,
-    overviewImage: assetPath("assets", "products", "ONT-G2410", "Overview background.webp"),
-    overviewImageMobile: assetPath("assets", "products", "mobile_banners", "ONT-G2410", "Product g2410 backg.webp"),
+    overviewImage: assetPath("assets", "products", "ONT-T2001", "Overview background.webp"),
+    overviewImageMobile: assetPath("assets", "products", "mobile_banners", "ONT-T2001", "Product g2410 backg.webp"),
     connectHeadingHtml: "<span>Connect</span> Effortlessly, Anytime, <span>Anywhere!</span>",
     connectParaHtml: "Designed for stable uptime and efficient rollout cycles, this model supports scalable network expansion while maintaining service quality across voice, video, and high-speed internet workloads.",
-    componentImage: assetPath("assets", "products", "ONT-G2410", "Component G2410.webp"),
-    detailImage: assetPath("assets", "products", "ONT-G2410", "Details.webp"),
-    detailImageMobile: assetPath("assets", "products", "mobile_banners", "ONT-G2410", "details g2410.webp"),
+    componentImage: assetPath("assets", "products", "ONT-T2001", "Component G2410.webp"),
+    detailImage: assetPath("assets", "products", "ONT-T2001", "Details.webp"),
+    detailImageMobile: assetPath("assets", "products", "mobile_banners", "ONT-T2001", "details g2410.webp"),
     detailTitle: "Engineered for Real-World Deployments",
     highlights: [{ title: "Deployment Ready", para: "Optimized for quick installation, interoperability, and long-term network reliability." }],
     specificationHeading: "Specification",
     dimensionsHeading: "Dimensions",
     specifications: [{ title: "Architecture", value: "GPON access platform" }],
     dimensions: [{ title: "Form Factor", value: "Compact rack or CPE profile" }],
-    specSlides: [assetPath("assets", "products", "ONT-G2410", "Spec 1.webp")],
+    specSlides: [assetPath("assets", "products", "ONT-T2001", "Spec 1.webp")],
   });
 
 const requiredProduct = (slug: string): ProductContent => {
@@ -322,14 +325,12 @@ const requiredProduct = (slug: string): ProductContent => {
 };
 
 export const canonicalProductSlugs = ["ONT-P4200R", "ONT-T2001", "OLT-SOLT33-8P", "OLT-XGSPON-8P"] as const;
-export const legacyProductSlugs = ["ONT-G2410", "OLT-SOLT33-16P"] as const;
+export const legacyProductSlugs = ["ONT-T2001", "OLT-SOLT33-16P"] as const;
 
 export const products: ProductContent[] = [
-  requiredProduct("ONT-P4200R"),
-  stubProduct("ONT-T2001", "T2001", "ONT"),
-  requiredProduct("OLT-SOLT33-8P"),
+  requiredProduct("ONT-P4200R"),  requiredProduct("OLT-SOLT33-8P"),
   stubProduct("OLT-XGSPON-8P", "XGSPON-8P", "OLT"),
-  requiredProduct("ONT-G2410"),
+  requiredProduct("ONT-T2001"),
   requiredProduct("OLT-SOLT33-16P"),
 ];
 
@@ -638,6 +639,11 @@ export const headerNavigation: {
     },
   ],
 };
+
+
+
+
+
 
 
 

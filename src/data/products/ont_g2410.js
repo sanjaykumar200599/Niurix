@@ -1,4 +1,4 @@
-export const ont_g2410 = {
+export const ont_t2001 = {
     meta_title: "meta title..",
     meta_description: "meta description..",
 
@@ -109,3 +109,4 @@ export const ont_g2410 = {
         title: "section5",
     },
 };
+

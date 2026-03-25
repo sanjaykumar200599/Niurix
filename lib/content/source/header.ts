@@ -40,7 +40,7 @@ const headerData = {
             modelNum: "G2410",
             // name: "ONT- G2410",
             image: "ONT g2410",
-            url: "/products/ONT-G2410",
+            url: "/products/ONT-T2001",
         },
         {
             page: "products",
@@ -90,3 +90,4 @@ const headerData = {
 };
 
 export default headerData;
+

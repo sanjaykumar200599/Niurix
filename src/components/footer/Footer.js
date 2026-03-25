@@ -45,7 +45,7 @@ function Footer() {
                             <Link href="/products/ONT-P4200R" onClick={handleLinkClick}>
                                 <p className={Styles.list_sub_item}>P4200R</p>
                             </Link>
-                            <Link href="/products/ONT-G2410" onClick={handleLinkClick}>
+                            <Link href="/products/ONT-T2001" onClick={handleLinkClick}>
                                 <p className={Styles.list_sub_item}>G2410</p>
                             </Link>
                             <Link href="/products/OLT-SOLT33-8P" onClick={handleLinkClick}>
@@ -133,3 +133,4 @@ function Footer() {
     );
 }
 export default Footer;
+

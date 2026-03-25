@@ -94,7 +94,7 @@ export const homePage = {
             prod: "G2410",
             type: ` <span>(ONT)</span>`,
             desc: "The Niurix G2410 ONT (Optical Network Terminal) is a lightweight, compact, and high-performance networking device with four Gigabit Ethernet(GbE) ports. This ONT is engineered to bridge the communication between modern technological infrastructure and end-users.",
-            url: "/products/ONT-G2410",
+            url: "/products/ONT-T2001",
         },
         {
             // name: "SOLT33-8P",
@@ -217,3 +217,4 @@ export const homePage = {
         },
     ],
 };
+

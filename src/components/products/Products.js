@@ -37,10 +37,10 @@ const Products = (props) => {
   const renderData = (page) => {
     let data;
     switch (page) {
-      case "ONT-G2410":
+      case "ONT-T2001":
         data = require("../../data/products/ont_g2410");
-        setPage("ONT-G2410");
-        return data.ont_g2410;
+        setPage("ONT-T2001");
+        return data.ont_t2001;
       case "ONT-P4200R":
         data = require("../../data/products/ont_p4200r");
 
@@ -66,7 +66,7 @@ const Products = (props) => {
 
   const renderComponents = (page) => {
     switch (page) {
-      case "ONT-G2410":
+      case "ONT-T2001":
         return < Product_G2410/>
 
       case "ONT-P4200R":
@@ -103,7 +103,7 @@ const Products = (props) => {
     try {
       return require(`../../assets/products/${page}/${name}.webp`);
     } catch (e) {
-      return require(`../../assets/products/ONT-G2410/g2410 banner.webp`);
+      return require(`../../assets/products/ONT-T2001/g2410 banner.webp`);
     }
   };
 
@@ -374,7 +374,7 @@ const Products = (props) => {
           <section>
             <div className={Styles.section_six}>
               {/* <div className={Styles.section_five_video}> */}
-              {page === "ONT-G2410" || page === "ONT-P4200R" ? (
+              {page === "ONT-T2001" || page === "ONT-P4200R" ? (
                 <iframe src="https://www.youtube.com/embed/1gxsPJekHSI"></iframe>
               ) : null}
               {/* </div> */}
@@ -392,3 +392,4 @@ const Products = (props) => {
 };
 
 export default Products;
+
