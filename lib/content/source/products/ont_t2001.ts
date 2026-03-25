@@ -79,19 +79,19 @@ export const ont_t2001 = {
             dimensions: [
                 {
                     title: "Length",
-                    value: "110mm",
+                    value: "156mm",
                 },
                 {
                     title: "Width",
-                    value: "110mm",
+                    value: "156mm",
                 },
                 {
                     title: "Height",
-                    value: "46mm",
+                    value: "38mm",
                 },
                 {
                     title: "Weight",
-                    value: "350g",
+                    value: "<500g",
                 },
             ],
             para: "Click to download the full specifications",

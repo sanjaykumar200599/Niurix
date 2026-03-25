@@ -606,7 +606,7 @@ export const headerNavigation: {
       label: "T2001",
       type: "ONT",
       href: "/products/ONT-T2001",
-      image: "/assets/header/products/ONT g2410.webp",
+      image: "/assets/products/ONT-T2001/Product.webp",
     },
     {
       label: "SOLT33-8P",
@@ -639,6 +639,7 @@ export const headerNavigation: {
     },
   ],
 };
+
 
 
 
