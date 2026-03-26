@@ -56,7 +56,7 @@ const headerData = {
             modelNum: "SOLT33- 16P",
             // name: "OLT -  SOLT33- 16P",
             image: "OLT SOLT33-16P",
-            url: "/products/OLT-SOLT33-16P",
+            url: "/products/OLT-XGSPON-8P",
         },
     ],
     industries: [
@@ -90,4 +90,5 @@ const headerData = {
 };
 
 export default headerData;
+
 

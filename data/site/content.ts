@@ -22,7 +22,7 @@ import { configurations_and_personalized_support } from "@/lib/content/source/so
 import { ont_p4200r } from "@/lib/content/source/products/ont_p4200r";
 import { ont_t2001 } from "@/lib/content/source/products/ont_t2001";
 import { olt_solt33_08p } from "@/lib/content/source/products/olt_solt33_08p";
-import { olt_solt33_16p } from "@/lib/content/source/products/olt_solt33_16p";
+import { olt_xgspon_8p } from "@/lib/content/source/products/olt_xgspon_8p";
 import { hospitality } from "@/lib/content/source/industries/hospitality";
 import { corporate_workspaces } from "@/lib/content/source/industries/corporate_workspaces";
 import { residential_real_estate } from "@/lib/content/source/industries/residential_real_estate";
@@ -234,7 +234,7 @@ const baseProductSeeds: BaseProductSeed[] = [
   { slug: "ONT-P4200R", type: "ONT", data: ont_p4200r as LegacyProductSource, folder: "ONT-P4200R", legacy: false },
   { slug: "OLT-SOLT33-8P", type: "OLT", data: olt_solt33_08p as LegacyProductSource, folder: "OLT-SOLT33-8P", legacy: false },
   { slug: "ONT-T2001", type: "ONT", data: ont_t2001 as LegacyProductSource, folder: "ONT-T2001", legacy: true },
-  { slug: "OLT-SOLT33-16P", type: "OLT", data: olt_solt33_16p as LegacyProductSource, folder: "OLT-SOLT33-16P", legacy: true },
+  { slug: "OLT-XGSPON-8P", type: "OLT", data: olt_xgspon_8p as LegacyProductSource, folder: "OLT-XGSPON-8P", legacy: false },
 ];
 
 const baseProducts: ProductContent[] = baseProductSeeds.map(({ slug, type, data, folder, legacy }) => {
@@ -325,13 +325,13 @@ const requiredProduct = (slug: string): ProductContent => {
 };
 
 export const canonicalProductSlugs = ["ONT-P4200R", "ONT-T2001", "OLT-SOLT33-8P", "OLT-XGSPON-8P"] as const;
-export const legacyProductSlugs = ["ONT-T2001", "OLT-SOLT33-16P"] as const;
+export const legacyProductSlugs = ["ONT-T2001"] as const;
 
 export const products: ProductContent[] = [
   requiredProduct("ONT-P4200R"),  requiredProduct("OLT-SOLT33-8P"),
-  stubProduct("OLT-XGSPON-8P", "XGSPON-8P", "OLT"),
+  requiredProduct("OLT-XGSPON-8P"),
   requiredProduct("ONT-T2001"),
-  requiredProduct("OLT-SOLT33-16P"),
+
 ];
 
 const mappedIndustries = [
@@ -639,6 +639,8 @@ export const headerNavigation: {
     },
   ],
 };
+
+
 
 
 

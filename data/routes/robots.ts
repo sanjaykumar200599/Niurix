@@ -6,9 +6,10 @@ export function buildRobots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/blogs", "/products/ONT-T2001", "/products/OLT-SOLT33-16P"],
+      disallow: ["/blogs", "/products/ONT-T2001", "/products/OLT-XGSPON-8P"],
     },
     sitemap: `${siteUrl}/sitemap.xml`,
   };
 }
+
 

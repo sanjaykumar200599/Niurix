@@ -110,7 +110,7 @@ export const homePage = {
             prod: "SOLT33-16P",
             type: `<span>(OLT)</span>`,
             desc: "The Niurix SOLT33-16P is another Optical Line Terminal designed with 16 GPON ports that can be connected to ONTs. Its primary distinction from the SOLT33-08P is its increased number of GPON ports making it suitable for larger deployment for FTTB.",
-            url: "/products/OLT-SOLT33-16P",
+            url: "/products/OLT-XGSPON-8P",
         },
     ],
 
@@ -217,4 +217,5 @@ export const homePage = {
         },
     ],
 };
+
 
