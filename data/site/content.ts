@@ -265,7 +265,7 @@ const baseProducts: ProductContent[] = baseProductSeeds.map(({ slug, type, data,
     connectHeadingHtml: data.section3.mainHeading,
     connectParaHtml: data.section3.para1,
     componentImage:
-      slug === "ONT-T2001"
+      slug === "ONT-T2001" || slug === "OLT-XGSPON-8P"
         ? assetPath("assets", "products", folder, `${data.section3.background_img}.png`)
         : assetPath("assets", "products", folder, `${data.section3.background_img}.webp`),
     detailImage: assetPath("assets", "products", folder, `${data.section4.background_img}.webp`),
@@ -618,7 +618,7 @@ export const headerNavigation: {
       label: "XGSPON-8P",
       type: "OLT",
       href: "/products/OLT-XGSPON-8P",
-      image: "/assets/header/products/OLT SOLT33-16P.webp",
+      image: "/assets/products/OLT-XGSPON-8P/Product.webp",
     },
   ],
   industries: [
@@ -639,6 +639,7 @@ export const headerNavigation: {
     },
   ],
 };
+
 
 
 

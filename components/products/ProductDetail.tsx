@@ -12,6 +12,7 @@ import "swiper/css/pagination";
 
 export default function ProductDetail({ product }: { product: ProductContent }) {
   const [tab, setTab] = useState<"spec" | "dim">("spec");
+  const isOlt = product.type === "OLT";
   const rows = useMemo(() => (tab === "spec" ? product.specifications : product.dimensions), [product, tab]);
 
   return (
@@ -23,7 +24,9 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
       <section className="px-9 pb-0 pt-4 tablet:px-[78px] laptop:px-[120px] laptop:pt-20">
         <h2
-          className="nx-rich text-[28px] font-display leading-tight text-brand-black tablet:text-[34px] laptop:text-5xl"
+          className={`nx-rich text-[28px] font-display leading-tight text-brand-black tablet:text-[34px] ${
+            isOlt ? "laptop:text-[56px] laptop:leading-[1.05]" : "laptop:text-5xl"
+          }`}
           dangerouslySetInnerHTML={{ __html: product.overviewHeadingHtml }}
         />
 
@@ -166,4 +169,3 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
     </div>
   );
 }
-
