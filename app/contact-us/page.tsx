@@ -20,7 +20,9 @@ export default function ContactUsPage() {
           <Image src="/assets/contactus/Contact banner mobile.webp" alt="Contact banner" fill className="object-cover tablet:hidden" priority />
         </div>
 
-        <p className="absolute left-9 top-0 flex h-full w-[85%] items-center text-[30px] leading-tight font-display text-white tablet:left-[80px] tablet:w-[70%] tablet:text-5xl laptop:left-[120px] laptop:w-[47%] laptop:text-6xl">
+        <p className="absolute left-9 top-0 flex h-full w-[85%] items-center font-display text-white text-[22px] leading-snug
+          tablet:left-[80px] tablet:w-[70%] tablet:text-[36px]
+          laptop:left-[120px] laptop:w-[47%] laptop:text-[44px]">
           Want to know more about our product? Have any query? Or just simply want to say hello! We would love to hear from you.
         </p>
       </section>
