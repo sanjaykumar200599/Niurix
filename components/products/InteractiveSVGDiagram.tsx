@@ -186,6 +186,86 @@ function T2001Interactive() {
   );
 }
 
+function Xgspon8PInteractive() {
+  // Order matches reference screenshots:
+  // 0 = small rack (initial)
+  // 1 = larger rack
+  // 2 = larger rack + side panel
+  // 3 = full product overlay
+  const [step, setStep] = useState(3);
+
+  const onClick = () => {
+    setStep((prev) => (prev + 1) % 4);
+  };
+
+  if (step === 3) {
+    return (
+      <button
+        type="button"
+        aria-label="Advance XGSPON diagram"
+        onClick={onClick}
+        className="relative mx-auto block aspect-square w-full max-w-[700px] overflow-hidden touch-manipulation"
+      >
+        <Image
+          src="/assets/products/OLT-XGSPON-8P/Component xgspon-8P.png"
+          alt="Niurix OLT XGSPON 8P architecture"
+          fill
+          className="object-contain"
+        />
+      </button>
+    );
+  }
+
+  return (
+    <button
+      type="button"
+      aria-label="Advance XGSPON diagram"
+      onClick={onClick}
+      className="relative mx-auto block aspect-square w-full max-w-[700px] overflow-hidden touch-manipulation"
+    >
+      <Image
+        src="/assets/products/OLT-XGSPON-8P/Component xgspon-8P.png"
+        alt="Niurix OLT XGSPON 8P architecture"
+        fill
+        className="object-contain"
+      />
+
+      {/* Opaque floor patch that hides the large chassis in early steps */}
+      <div className="pointer-events-none absolute left-[31.4%] top-[19.8%] h-[61.6%] w-[38.2%] rounded-[2px] bg-[linear-gradient(180deg,#a7adb7_0%,#99a1ae_48%,#8f98a5_100%)]" />
+      <div className="pointer-events-none absolute left-[31.4%] top-[19.8%] h-[61.6%] w-[38.2%] rounded-[2px] bg-[repeating-linear-gradient(0deg,transparent_0px,transparent_47px,rgba(117,126,139,0.26)_47px,rgba(117,126,139,0.26)_49px),repeating-linear-gradient(90deg,transparent_0px,transparent_47px,rgba(117,126,139,0.18)_47px,rgba(117,126,139,0.18)_49px)]" />
+      <div className="pointer-events-none absolute left-[37%] top-[39%] h-[12%] w-[12%] rounded-full bg-[radial-gradient(circle,rgba(205,211,221,0.55)_0%,rgba(205,211,221,0)_72%)]" />
+      <div className="pointer-events-none absolute left-[58%] top-[56%] h-[13%] w-[13%] rounded-full bg-[radial-gradient(circle,rgba(205,211,221,0.5)_0%,rgba(205,211,221,0)_72%)]" />
+
+      <div
+        className={`pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-all duration-300 ${
+          step === 0 ? "h-[12%] w-[9%]" : "h-[17%] w-[13%]"
+        }`}
+      >
+        <div className="relative h-full w-full rounded-[2px] bg-[linear-gradient(135deg,#073a57_0%,#00131f_100%)] shadow-[0_8px_18px_rgba(0,0,0,0.38)]">
+          <div className="absolute inset-y-0 -left-[15%] w-[15%] rounded-l-[2px] bg-[linear-gradient(180deg,#7f8895_0%,#5d6773_100%)]" />
+          <span
+            className={`absolute left-[50%] top-[24%] -translate-x-1/2 text-center font-serif text-[#5d8191] ${
+              step === 0 ? "text-[9px]" : "text-[12px] tablet:text-[14px]"
+            }`}
+          >
+            Rack
+          </span>
+          <div className="absolute right-[4%] top-[26%] flex flex-col gap-[2px]">
+            <span className="h-[2px] w-[6px] rounded-full bg-[#d6e038]" />
+            <span className="h-[2px] w-[6px] rounded-full bg-[#d6e038]" />
+            <span className="h-[2px] w-[6px] rounded-full bg-[#d6e038]" />
+            <span className="h-[2px] w-[6px] rounded-full bg-[#d6e038]" />
+          </div>
+        </div>
+      </div>
+
+      {step === 2 ? (
+        <div className="pointer-events-none absolute left-[47%] top-[46%] h-[8.5%] w-[5.5%] -translate-y-1/2 rounded-[2px] bg-[linear-gradient(180deg,#858d98_0%,#6f7783_100%)] opacity-95 shadow-[0_6px_14px_rgba(0,0,0,0.3)] transition-all duration-300" />
+      ) : null}
+    </button>
+  );
+}
+
 export default function InteractiveSVGDiagram({ src, alt, productSlug }: InteractiveSVGDiagramProps) {
   if (productSlug === "ONT-P4200R") {
     return <P4200RInteractive />;
@@ -195,6 +275,9 @@ export default function InteractiveSVGDiagram({ src, alt, productSlug }: Interac
   }
   if (productSlug === "OLT-SOLT33-8P") {
     return <Product8pLegacy />;
+  }
+  if (productSlug === "OLT-XGSPON-8P") {
+    return <Xgspon8PInteractive />;
   }
 
   return (

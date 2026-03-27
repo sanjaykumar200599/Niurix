@@ -88,7 +88,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
         <div className="flex flex-col gap-6 laptop:flex-row laptop:items-center laptop:justify-between laptop:px-12">
           <div className="w-full laptop:w-[45%]">
-            <div className={isP4200R || isT2001 || isSolt33_8p ? "w-full" : "relative h-[300px] w-full tablet:h-[420px] laptop:h-[520px]"}>
+            <div className={isP4200R || isT2001 || isSolt33_8p || isXgspon8p ? "w-full" : "relative h-[300px] w-full tablet:h-[420px] laptop:h-[520px]"}>
               <InteractiveSVGDiagram
                 src={product.componentImage}
                 alt={`${product.overviewTitle} component`}
