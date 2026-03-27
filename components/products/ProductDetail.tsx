@@ -29,7 +29,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
           alt={product.overviewTitle}
           fill
           sizes="(max-width: 767px) 100vw, 0px"
-          className={isXgspon8p ? "bg-[#f2f2f2] object-contain object-top tablet:hidden" : "object-cover tablet:hidden"}
+          className="object-cover tablet:hidden"
           priority
         />
       </section>
@@ -112,7 +112,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
             alt={product.detailTitle}
             fill
             sizes="(max-width: 767px) 100vw, 0px"
-            className={isXgspon8p ? "bg-[#f2f2f2] object-contain object-top tablet:hidden" : "object-cover tablet:hidden"}
+            className="object-cover tablet:hidden"
           />
           <h2 className="absolute left-4 top-4 w-[80%] text-[28px] font-display leading-tight text-white tablet:left-10 tablet:top-10 tablet:w-[60%] tablet:text-[34px] laptop:left-28 laptop:top-16 laptop:w-[40%] laptop:text-5xl">
             {product.detailTitle}
