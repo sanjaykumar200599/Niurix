@@ -13,13 +13,20 @@ import "swiper/css/pagination";
 export default function ProductDetail({ product }: { product: ProductContent }) {
   const [tab, setTab] = useState<"spec" | "dim">("spec");
   const isOlt = product.type === "OLT";
+  const isXgspon8p = product.slug === "OLT-XGSPON-8P";
   const rows = useMemo(() => (tab === "spec" ? product.specifications : product.dimensions), [product, tab]);
 
   return (
     <div className="w-full">
       <section className="relative h-[420px] tablet:h-[560px] laptop:h-[760px]">
         <Image src={product.heroImage} alt={product.overviewTitle} fill className="hidden object-cover tablet:block" priority />
-        <Image src={product.heroImageMobile} alt={product.overviewTitle} fill className="object-cover tablet:hidden" priority />
+        <Image
+          src={product.heroImageMobile}
+          alt={product.overviewTitle}
+          fill
+          className={isXgspon8p ? "bg-[#f2f2f2] object-contain object-top tablet:hidden" : "object-cover tablet:hidden"}
+          priority
+        />
       </section>
 
       <section className="px-9 pb-0 pt-4 tablet:px-[78px] laptop:px-[120px] laptop:pt-20">
@@ -91,7 +98,12 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
       <section className="mt-12 px-9 tablet:mt-16 tablet:px-[78px] laptop:mt-24 laptop:px-[120px]">
         <div className="relative h-[320px] overflow-hidden tablet:h-[420px] laptop:h-[520px]">
           <Image src={product.detailImage} alt={product.detailTitle} fill className="hidden object-cover tablet:block" />
-          <Image src={product.detailImageMobile} alt={product.detailTitle} fill className="object-cover tablet:hidden" />
+          <Image
+            src={product.detailImageMobile}
+            alt={product.detailTitle}
+            fill
+            className={isXgspon8p ? "bg-[#f2f2f2] object-contain object-top tablet:hidden" : "object-cover tablet:hidden"}
+          />
           <h2 className="absolute left-4 top-4 w-[80%] text-[28px] font-display leading-tight text-white tablet:left-10 tablet:top-10 tablet:w-[60%] tablet:text-[34px] laptop:left-28 laptop:top-16 laptop:w-[40%] laptop:text-5xl">
             {product.detailTitle}
           </h2>
