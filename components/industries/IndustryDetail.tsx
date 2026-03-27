@@ -10,24 +10,40 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
   return (
     <>
       <section className="relative">
-        <div className="relative h-80 tablet:h-130 laptop:h-190">
-          <Image src={industry.heroImage} alt={industry.heroTitle} fill className="hidden object-cover brightness-75 tablet:block" priority />
-          <Image src={industry.heroImageMobile} alt={industry.heroTitle} fill className="object-cover brightness-75 tablet:hidden" priority />
+        <div className="relative h-80 tablet:h-[520px] laptop:h-[760px]">
+          <Image
+            src={industry.heroImage}
+            alt={industry.heroTitle}
+            fill
+            className="hidden object-cover brightness-[0.58] tablet:block"
+            priority
+          />
+          <Image
+            src={industry.heroImageMobile}
+            alt={industry.heroTitle}
+            fill
+            className="object-cover brightness-[0.58] tablet:hidden"
+            priority
+          />
         </div>
-        <h1 className="absolute left-9 top-68 z-10 w-[80%] text-[30px] font-display leading-tight text-white tablet:left-19.5 tablet:top-48 tablet:w-[80%] tablet:text-5xl laptop:left-30 laptop:top-120 laptop:w-[50%] laptop:text-6xl wide:top-72">
+
+        <h1 className="absolute left-9 top-1/2 z-10 w-[84%] -translate-y-1/2 text-[22px] font-display leading-[1.3] text-white tablet:left-[80px] tablet:w-[70%] tablet:text-[36px] laptop:left-[120px] laptop:w-[52%] laptop:text-[44px]">
           {industry.heroTitle}
         </h1>
       </section>
 
-      <section className="my-12 px-9 tablet:my-12 tablet:px-19.5 laptop:my-24 laptop:px-30">
-        <h2
-          className="nx-rich whitespace-pre-wrap text-[28px] font-display leading-tight text-brand-black tablet:text-[34px] laptop:w-[65%] laptop:text-5xl"
+      <section className="my-12 px-9 tablet:my-12 tablet:px-[80px] laptop:my-20 laptop:px-[120px]">
+       <h2
+          className="nx-rich max-w-[920px] text-[22px] font-display leading-[1.3] text-brand-black tablet:text-[24px] laptop:text-[28px]"
           dangerouslySetInnerHTML={{ __html: industry.introTitleHtml }}
         />
 
-        <div className="mt-6 flex flex-col-reverse gap-8 laptop:flex-row laptop:justify-between">
-          <div className="flex w-full flex-col justify-center laptop:w-[26%]">
-            <p className="text-base leading-7 text-brand-black tablet:text-lg laptop:text-xl">{industry.introText}</p>
+        <div className="mt-6 flex flex-col-reverse gap-8 laptop:mt-8 laptop:flex-row laptop:items-center laptop:justify-between">
+          <div className="flex w-full flex-col justify-center laptop:w-[24%]">
+            <p className="text-[16px] leading-[1.6] text-brand-black tablet:text-[17px] laptop:text-[18px]">
+              {industry.introText}
+            </p>
+
             <Link
               href="/contact-us"
               className="mt-6 inline-flex w-fit rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-lg font-display text-white transition hover:bg-white hover:text-brand-black"
@@ -36,39 +52,91 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
             </Link>
           </div>
 
-          <div className="w-full laptop:w-[60%]">
-            <Image src={industry.introImage} alt={industry.heroTitle} width={1400} height={900} className="h-auto w-full" />
+          <div className="w-full laptop:w-[58%]">
+            <Image
+              src={industry.introImage}
+              alt={industry.heroTitle}
+              width={1400}
+              height={900}
+              className="h-auto w-full"
+            />
           </div>
         </div>
       </section>
 
-      <section className="mx-11 my-10 rounded-[9px] px-4 py-8 shadow-[0_0_10px_#00000029] tablet:mx-11 tablet:grid tablet:grid-cols-[repeat(auto-fill,minmax(208px,1fr))] tablet:gap-8 tablet:px-6 laptop:mx-30 laptop:flex laptop:flex-wrap laptop:justify-center laptop:gap-12 laptop:px-16 laptop:py-16">
-        {industry.devices.map((device) => (
-          <article key={device.title} className="mb-4 text-center tablet:mb-0">
-            <div className="flex h-24 items-center justify-center">
-              <div className="relative h-16 w-16">
-                <Image src={device.image} alt={device.title} fill className="object-contain" />
+      <section className="mx-6 my-10 rounded-[12px] bg-white px-6 py-10 shadow-[0_0_10px_#00000029] tablet:mx-10 laptop:mx-[120px] laptop:px-10 laptop:py-12">
+        {/* Row 1 */}
+        <div className="grid grid-cols-2 gap-y-8 gap-x-6 tablet:grid-cols-4 laptop:grid-cols-4">
+          {industry.devices.slice(0, 4).map((device) => (
+            <article key={device.title} className="flex flex-col items-center text-center">
+              <div className="flex h-[90px] items-center justify-center laptop:h-[100px]">
+                <div className="relative h-[60px] w-[140px]">
+                  <Image src={device.image} alt={device.title} fill className="object-contain" />
+                </div>
               </div>
-            </div>
-            <p className="font-display text-base text-brand-black tablet:text-lg">{device.title}</p>
-          </article>
-        ))}
-      </section>
-
-      <section className="my-16 bg-[#f3f3f3] px-9 py-9 tablet:my-16 tablet:px-19.5 tablet:py-12 laptop:relative laptop:mb-24 laptop:mt-60 laptop:h-52 laptop:px-30 laptop:py-10">
-        <div className="w-full laptop:w-[40%]">
-          <h2 className="text-[28px] font-display leading-tight text-brand-black tablet:text-[34px] laptop:text-5xl">{industry.advantagesTitle}</h2>
-          <p className="mt-3 text-base leading-7 text-brand-black tablet:text-lg laptop:text-xl">{industry.advantagesText}</p>
+              <p className="mt-3 font-display text-[16px] text-brand-black tablet:text-[17px] laptop:text-[18px]">
+                {device.title}
+              </p>
+            </article>
+          ))}
         </div>
 
-        <div className="mt-8 grid gap-4 tablet:grid-cols-2 tablet:gap-6 laptop:absolute laptop:right-[10%] laptop:top-[-40%] laptop:mt-0 laptop:w-[40%] laptop:grid-cols-2">
+        {/* Row 2 */}
+        <div className="mt-14 grid grid-cols-2 gap-y-8 gap-x-6 tablet:grid-cols-3 laptop:grid-cols-6">
+          {industry.devices.slice(4, 10).map((device) => (
+            <article key={device.title} className="flex flex-col items-center text-center">
+              <div className="flex h-[90px] items-center justify-center laptop:h-[100px]">
+                <div className="relative h-[60px] w-[140px]">
+                  <Image src={device.image} alt={device.title} fill className="object-contain" />
+                </div>
+              </div>
+              <p className="mt-3 font-display text-[16px] text-brand-black tablet:text-[17px] laptop:text-[18px]">
+                {device.title}
+              </p>
+            </article>
+          ))}
+        </div>
+
+        {/* Row 3 */}
+        <div className="mt-14 flex justify-center">
+          <article className="flex flex-col items-center text-center">
+            <div className="flex h-[90px] items-center justify-center laptop:h-[100px]">
+              <div className="relative h-[60px] w-[140px]">
+                <Image src={industry.devices[10].image} alt={industry.devices[10].title} fill className="object-contain" />
+              </div>
+            </div>
+            <p className="mt-3 font-display text-[16px] text-brand-black tablet:text-[17px] laptop:text-[18px]">
+              {industry.devices[10].title}
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section className="my-16 bg-[#f3f3f3] px-9 py-9 tablet:my-16 tablet:px-[80px] tablet:py-12 laptop:relative laptop:mb-24 laptop:mt-44 laptop:min-h-[390px] laptop:px-[120px] laptop:py-10">
+        <div className="w-full laptop:w-[40%]">
+          <h2 className="text-[24px] font-display leading-[1.3] text-brand-black tablet:text-[30px] laptop:text-[46px]">
+            {industry.advantagesTitle}
+          </h2>
+
+          <p className="mt-3 text-[16px] leading-[1.65] text-brand-black tablet:text-[17px] laptop:max-w-[520px] laptop:text-[18px]">
+            {industry.advantagesText}
+          </p>
+        </div>
+
+        <div className="mt-10 grid gap-4 tablet:grid-cols-2 laptop:absolute laptop:right-[120px] laptop:top-[-80px] laptop:mt-0 laptop:w-[520px] laptop:grid-cols-2 laptop:gap-6">
           {industry.advantagesCards.map((card) => (
-            <article key={card.title} className="rounded-tl-2xl rounded-br-2xl bg-white shadow-[0_0_10px_#00000029]">
-              <div className="p-4">
-                <div className="relative mb-3 h-16 w-16">
+            <article
+              key={card.title}
+              className="rounded-tl-[18px] rounded-br-[18px] bg-white shadow-[0_0_10px_#00000029]"
+            >
+              <div className="p-5 laptop:p-6">
+                <div className="relative mb-4 h-[55px] w-[55px] laptop:h-[65px] laptop:w-[65px]">
                   <Image src={card.image} alt={card.title} fill className="object-contain" />
                 </div>
-                <h3 className="text-base font-display text-brand-black tablet:text-lg laptop:text-xl">{card.title}</h3>
+
+                <h3 className="text-[17px] font-display leading-[1.35] text-brand-black tablet:text-[19px] laptop:text-[22px]">
+                  {card.title}
+                </h3>
               </div>
             </article>
           ))}

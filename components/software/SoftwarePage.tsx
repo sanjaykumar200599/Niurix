@@ -24,8 +24,11 @@ export default function SoftwarePage({ software }: SoftwarePageProps) {
       </section>
 
       <section className="mt-8 px-9 tablet:px-20 laptop:mt-10 laptop:px-[120px]">
-        <h2 className="nx-rich whitespace-pre-wrap text-[28px] font-display leading-tight text-brand-black tablet:text-[34px] laptop:text-5xl" dangerouslySetInnerHTML={{ __html: software.introTitleHtml }} />
-        <p className="mt-4 text-base leading-7 text-brand-black/90 tablet:text-lg laptop:text-xl">{software.introText}</p>
+       <h2
+          className="nx-rich max-w-[980px] text-[22px] font-display leading-[1.3] text-brand-black tablet:text-[24px] laptop:text-[30px]"
+          dangerouslySetInnerHTML={{ __html: software.introTitleHtml }}
+        />
+        <p className="mt-9 text-base leading-7 text-brand-black/90 tablet:text-lg laptop:text-xl">{software.introText}</p>
       </section>
 
       <section className="mb-8 mt-10 px-9 tablet:mb-12 tablet:px-20 laptop:mb-16 laptop:mt-[120px] laptop:px-[120px]">
