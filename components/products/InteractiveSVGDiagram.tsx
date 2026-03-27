@@ -102,9 +102,95 @@ function P4200RInteractive() {
   );
 }
 
+function T2001Interactive() {
+  // Order:
+  // 3 = large ONT overlay only (initial)
+  // 2 = no lines + plain circles
+  // 1 = black lines + plain circles
+  // 0 = green lines + green rings
+  const [step, setStep] = useState(3);
+
+  const strokeClass =
+    step === 0 ? "stroke-[#08C22A]" : step === 1 ? "stroke-[#111111]" : "stroke-transparent";
+  const ringClass = step === 0 ? "ring-2 tablet:ring-4 ring-[#08C22A]" : "ring-0";
+
+  const onClick = () => {
+    const nextStepMap: Record<number, number> = { 3: 2, 2: 1, 1: 0, 0: 3 };
+    setStep((prev) => nextStepMap[prev] ?? 3);
+  };
+
+  if (step === 3) {
+    return (
+      <button
+        type="button"
+        aria-label="Advance T2001 diagram"
+        onClick={onClick}
+        className="relative mx-auto block aspect-square w-full max-w-[650px] overflow-hidden touch-manipulation"
+      >
+        <Image
+          src="/assets/products/ONT-T2001/Component T2001 v2.png"
+          alt="Niurix T2001 connectivity map"
+          fill
+          className="object-contain"
+        />
+      </button>
+    );
+  }
+
+  return (
+    <button
+      type="button"
+      aria-label="Advance T2001 diagram"
+      onClick={onClick}
+      className="relative mx-auto block aspect-square w-full max-w-[650px] overflow-hidden touch-manipulation"
+    >
+      <Image
+        src="/assets/products/ONT-T2001/Component T2001 v2.png"
+        alt="Niurix T2001 connectivity map"
+        fill
+        className="object-contain"
+      />
+
+      <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full" fill="none" aria-hidden>
+        <polyline className={strokeClass} points="8,9 97,9 97,34 84.5,34" strokeWidth="0.6" />
+        <polyline className={strokeClass} points="8,9 8,23 24,23" strokeWidth="0.6" />
+        <polyline className={strokeClass} points="66,14 66,73 47,73" strokeWidth="0.6" />
+      </svg>
+
+      <div className="absolute left-[50%] top-[12.2%] -translate-x-1/2 -translate-y-1/2">
+        <div className="relative h-[68px] w-[68px] rounded-full bg-[#FF5B02] shadow-sm tablet:h-[96px] tablet:w-[96px] laptop:h-[102px] laptop:w-[102px]">
+          <Image src="/assets/products/ONT-T2001/Product.webp" alt="T2001" fill className="p-3 tablet:p-4 object-contain" />
+        </div>
+      </div>
+
+      <Marker
+        className="left-[31%] top-[36.7%] -translate-x-1/2 -translate-y-1/2"
+        iconSrc="/assets/industries/hospitality/telephone.webp"
+        alt="Phone"
+        ringClass={ringClass}
+      />
+      <Marker
+        className="left-[84%] top-[35.7%] -translate-x-1/2 -translate-y-1/2"
+        iconSrc="/assets/industries/hospitality/IPTV.webp"
+        alt="TV"
+        ringClass={ringClass}
+      />
+      <Marker
+        className="left-[49%] top-[67%] -translate-x-1/2 -translate-y-1/2"
+        iconSrc="/assets/industries/hospitality/wireless.webp"
+        alt="Router"
+        ringClass={ringClass}
+      />
+    </button>
+  );
+}
+
 export default function InteractiveSVGDiagram({ src, alt, productSlug }: InteractiveSVGDiagramProps) {
   if (productSlug === "ONT-P4200R") {
     return <P4200RInteractive />;
+  }
+  if (productSlug === "ONT-T2001") {
+    return <T2001Interactive />;
   }
 
   return (
@@ -113,3 +199,4 @@ export default function InteractiveSVGDiagram({ src, alt, productSlug }: Interac
     </div>
   );
 }
+
