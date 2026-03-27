@@ -15,6 +15,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
             src={industry.heroImage}
             alt={industry.heroTitle}
             fill
+            sizes="(max-width: 767px) 0px, 100vw"
             className="hidden object-cover brightness-[0.58] tablet:block"
             priority
           />
@@ -22,6 +23,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
             src={industry.heroImageMobile}
             alt={industry.heroTitle}
             fill
+            sizes="(max-width: 767px) 100vw, 0px"
             className="object-cover brightness-[0.58] tablet:hidden"
             priority
           />
@@ -71,7 +73,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
             <article key={device.title} className="flex flex-col items-center text-center">
               <div className="flex h-[90px] items-center justify-center laptop:h-[100px]">
                 <div className="relative h-[60px] w-[140px]">
-                  <Image src={device.image} alt={device.title} fill className="object-contain" />
+                  <Image src={device.image} alt={device.title} fill sizes="140px" className="object-contain" />
                 </div>
               </div>
               <p className="mt-3 font-display text-[16px] text-brand-black tablet:text-[17px] laptop:text-[18px]">
@@ -87,7 +89,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
             <article key={device.title} className="flex flex-col items-center text-center">
               <div className="flex h-[90px] items-center justify-center laptop:h-[100px]">
                 <div className="relative h-[60px] w-[140px]">
-                  <Image src={device.image} alt={device.title} fill className="object-contain" />
+                  <Image src={device.image} alt={device.title} fill sizes="140px" className="object-contain" />
                 </div>
               </div>
               <p className="mt-3 font-display text-[16px] text-brand-black tablet:text-[17px] laptop:text-[18px]">
@@ -102,7 +104,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
           <article className="flex flex-col items-center text-center">
             <div className="flex h-[90px] items-center justify-center laptop:h-[100px]">
               <div className="relative h-[60px] w-[140px]">
-                <Image src={industry.devices[10].image} alt={industry.devices[10].title} fill className="object-contain" />
+                <Image src={industry.devices[10].image} alt={industry.devices[10].title} fill sizes="140px" className="object-contain" />
               </div>
             </div>
             <p className="mt-3 font-display text-[16px] text-brand-black tablet:text-[17px] laptop:text-[18px]">
@@ -131,7 +133,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
             >
               <div className="p-5 laptop:p-6">
                 <div className="relative mb-4 h-[55px] w-[55px] laptop:h-[65px] laptop:w-[65px]">
-                  <Image src={card.image} alt={card.title} fill className="object-contain" />
+                  <Image src={card.image} alt={card.title} fill sizes="(min-width: 1024px) 65px, 55px" className="object-contain" />
                 </div>
 
                 <h3 className="text-[17px] font-display leading-[1.35] text-brand-black tablet:text-[19px] laptop:text-[22px]">
@@ -145,3 +147,5 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
     </>
   );
 }
+
+

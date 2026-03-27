@@ -135,7 +135,7 @@ export default function Header() {
       >
         <div className={`flex items-center justify-between ${scrolled ? "px-[clamp(40px,8vw,120px)] py-6" : "px-[3.35%] py-6"}`}>
           <Link href="/" className="shrink-0" onClick={closeMenus}>
-            <Image src="/assets/header/niurixlogo.svg" alt="Niurix" width={81} height={27} priority />
+            <Image src="/assets/header/niurixlogo.svg" alt="Niurix" width={81} height={27} />
           </Link>
 
           <nav className="ml-8 flex flex-1 items-baseline justify-end">
@@ -189,7 +189,7 @@ export default function Header() {
       <div className="fixed left-0 right-0 top-0 z-50 border-b border-black/10 bg-white px-5 py-4 shadow-[0px_3px_15px_#00000029] tablet:px-9 laptop:hidden">
         <div className="flex items-center justify-between">
           <Link href="/" className="shrink-0" onClick={closeMenus}>
-            <Image src="/assets/header/niurixlogo.svg" alt="Niurix" width={81} height={27} priority />
+            <Image src="/assets/header/niurixlogo.svg" alt="Niurix" width={81} height={27} />
           </Link>
           <Hamburger toggled={mobileOpen} toggle={setMobileOpen} size={22} color="#FF5B02" />
         </div>
@@ -205,3 +205,4 @@ export default function Header() {
     </header>
   );
 }
+

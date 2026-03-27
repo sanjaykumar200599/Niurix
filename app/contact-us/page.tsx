@@ -16,8 +16,8 @@ export default function ContactUsPage() {
     <div>
       <section className="relative">
         <div className="relative h-[320px] tablet:h-[520px] laptop:h-[760px]">
-          <Image src="/assets/contactus/banner.webp" alt="Contact banner" fill className="hidden object-cover tablet:block" priority />
-          <Image src="/assets/contactus/Contact banner mobile.webp" alt="Contact banner" fill className="object-cover tablet:hidden" priority />
+          <Image src="/assets/contactus/banner.webp" alt="Contact banner" fill sizes="(max-width: 767px) 0px, 100vw" className="hidden object-cover tablet:block" priority />
+          <Image src="/assets/contactus/Contact banner mobile.webp" alt="Contact banner" fill sizes="(max-width: 767px) 100vw, 0px" className="object-cover tablet:hidden" priority />
         </div>
 
         <p className="absolute left-9 top-0 flex h-full w-[85%] items-center font-display text-white text-[22px] leading-snug
@@ -29,10 +29,10 @@ export default function ContactUsPage() {
 
       <section className="relative mb-16">
         <div className="absolute inset-0 hidden tablet:block">
-          <Image src="/assets/contactus/Contact backgr.webp" alt="Contact background" fill className="object-cover" />
+          <Image src="/assets/contactus/Contact backgr.webp" alt="Contact background" fill sizes="100vw" className="object-cover" />
         </div>
         <div className="absolute inset-0 tablet:hidden">
-          <Image src="/assets/contactus/Contact back g mobile.webp" alt="Contact background" fill className="object-cover" />
+          <Image src="/assets/contactus/Contact back g mobile.webp" alt="Contact background" fill sizes="100vw" className="object-cover" />
         </div>
 
         <div className="relative px-9 pb-36 pt-12 tablet:px-20 tablet:pb-28 tablet:pt-14 laptop:px-[120px] laptop:pb-20 laptop:pt-[90px]">
@@ -86,7 +86,7 @@ export default function ContactUsPage() {
           <aside className="w-full laptop:flex laptop:w-[25%] laptop:items-center">
             <div className="w-full rounded-tl-[30px] rounded-br-[30px] border border-[#ff5b0299] px-8 py-8 shadow-[0px_3px_30px_#ff5b0233]">
               <div className="mb-6 flex items-center gap-4">
-                <Image src="/assets/contactus/Layer 2.svg" alt="Support icon" width={50} height={46} />
+                <Image src="/assets/contactus/Layer 2.svg" alt="Support icon" width={50} height={46} className="h-auto w-auto" />
                 <p className="text-2xl font-display tablet:text-3xl">Technical support</p>
               </div>
 
@@ -113,3 +113,4 @@ export default function ContactUsPage() {
     </div>
   );
 }
+
