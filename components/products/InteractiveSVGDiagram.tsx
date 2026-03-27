@@ -14,7 +14,7 @@ function Marker({ className, iconSrc, alt, ringClass }: { className: string; ico
   return (
     <div className={`absolute ${className}`}>
       <div className={`relative h-[62px] w-[62px] rounded-full bg-white shadow-sm tablet:h-[88px] tablet:w-[88px] laptop:h-[96px] laptop:w-[96px] ${ringClass}`}>
-        <Image src={iconSrc} alt={alt} fill className="p-3 tablet:p-4 object-contain" />
+        <Image src={iconSrc} alt={alt} fill sizes="(min-width: 1024px) 96px, (min-width: 768px) 88px, 62px" className="p-3 tablet:p-4 object-contain" />
       </div>
     </div>
   );
@@ -49,6 +49,7 @@ function P4200RInteractive() {
           src="/assets/products/ONT-P4200R/Component p4200r.webp"
           alt="Niurix P4200R connectivity map"
           fill
+          sizes="(min-width: 1024px) 650px, 100vw"
           className="object-contain"
         />
       </button>
@@ -65,8 +66,9 @@ function P4200RInteractive() {
       <Image
         src="/assets/products/ONT-P4200R/Component p4200r.webp"
         alt="Niurix P4200R connectivity map"
-        fill
-        className="object-contain"
+          fill
+          sizes="(min-width: 1024px) 650px, 100vw"
+          className="object-contain"
       />
 
       <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full" fill="none" aria-hidden>
@@ -77,7 +79,7 @@ function P4200RInteractive() {
 
       <div className="absolute left-[50%] top-[14%] -translate-x-1/2 -translate-y-1/2">
         <div className="relative h-[68px] w-[68px] rounded-full bg-[#FF5B02] shadow-sm tablet:h-[96px] tablet:w-[96px] laptop:h-[102px] laptop:w-[102px]">
-          <Image src="/assets/products/ONT-P4200R/product.webp" alt="P4200R" fill className="p-3 tablet:p-4 object-contain" />
+          <Image src="/assets/products/ONT-P4200R/product.webp" alt="P4200R" fill sizes="(min-width: 1024px) 102px, (min-width: 768px) 96px, 68px" className="p-3 tablet:p-4 object-contain" />
         </div>
       </div>
 
@@ -132,6 +134,7 @@ function T2001Interactive() {
           src="/assets/products/ONT-T2001/Component T2001 v2.png"
           alt="Niurix T2001 connectivity map"
           fill
+          sizes="(min-width: 1024px) 650px, 100vw"
           className="object-contain"
         />
       </button>
@@ -148,8 +151,9 @@ function T2001Interactive() {
       <Image
         src="/assets/products/ONT-T2001/Component T2001 v2.png"
         alt="Niurix T2001 connectivity map"
-        fill
-        className="object-contain"
+          fill
+          sizes="(min-width: 1024px) 650px, 100vw"
+          className="object-contain"
       />
 
       <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full" fill="none" aria-hidden>
@@ -160,7 +164,7 @@ function T2001Interactive() {
 
       <div className="absolute left-[50%] top-[12.2%] -translate-x-1/2 -translate-y-1/2">
         <div className="relative h-[68px] w-[68px] rounded-full bg-[#FF5B02] shadow-sm tablet:h-[96px] tablet:w-[96px] laptop:h-[102px] laptop:w-[102px]">
-          <Image src="/assets/products/ONT-T2001/Product.webp" alt="T2001" fill className="p-3 tablet:p-4 object-contain" />
+          <Image src="/assets/products/ONT-T2001/Product.webp" alt="T2001" fill sizes="(min-width: 1024px) 102px, (min-width: 768px) 96px, 68px" className="p-3 tablet:p-4 object-contain" />
         </div>
       </div>
 
@@ -210,6 +214,7 @@ function Xgspon8PInteractive() {
           src="/assets/products/OLT-XGSPON-8P/Component xgspon-8P.png"
           alt="Niurix OLT XGSPON 8P architecture"
           fill
+          sizes="(min-width: 1024px) 700px, 100vw"
           className="object-contain"
         />
       </button>
@@ -226,8 +231,9 @@ function Xgspon8PInteractive() {
       <Image
         src="/assets/products/OLT-XGSPON-8P/Component xgspon-8P.png"
         alt="Niurix OLT XGSPON 8P architecture"
-        fill
-        className="object-contain"
+          fill
+          sizes="(min-width: 1024px) 700px, 100vw"
+          className="object-contain"
       />
 
       {/* Opaque floor patch that hides the large chassis in early steps */}
@@ -282,9 +288,11 @@ export default function InteractiveSVGDiagram({ src, alt, productSlug }: Interac
 
   return (
     <div className="relative h-[320px] w-full tablet:h-[420px] laptop:h-[520px]">
-      <Image src={src} alt={alt} fill className="object-contain" />
+      <Image src={src} alt={alt} fill sizes="100vw" className="object-contain" />
     </div>
   );
 }
+
+
 
 

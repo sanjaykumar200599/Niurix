@@ -23,11 +23,12 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
   return (
     <div className="w-full">
       <section className="relative h-[420px] tablet:h-[560px] laptop:h-[760px]">
-        <Image src={product.heroImage} alt={product.overviewTitle} fill className="hidden object-cover tablet:block" priority />
+        <Image src={product.heroImage} alt={product.overviewTitle} fill sizes="(max-width: 767px) 0px, 100vw" className="hidden object-cover tablet:block" priority />
         <Image
           src={product.heroImageMobile}
           alt={product.overviewTitle}
           fill
+          sizes="(max-width: 767px) 100vw, 0px"
           className={isXgspon8p ? "bg-[#f2f2f2] object-contain object-top tablet:hidden" : "object-cover tablet:hidden"}
           priority
         />
@@ -105,11 +106,12 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
       <section className="mt-12 px-9 tablet:mt-16 tablet:px-[78px] laptop:mt-24 laptop:px-[120px]">
         <div className="relative h-[320px] overflow-hidden tablet:h-[420px] laptop:h-[520px]">
-          <Image src={product.detailImage} alt={product.detailTitle} fill className="hidden object-cover tablet:block" />
+          <Image src={product.detailImage} alt={product.detailTitle} fill sizes="(max-width: 767px) 0px, 100vw" className="hidden object-cover tablet:block" />
           <Image
             src={product.detailImageMobile}
             alt={product.detailTitle}
             fill
+            sizes="(max-width: 767px) 100vw, 0px"
             className={isXgspon8p ? "bg-[#f2f2f2] object-contain object-top tablet:hidden" : "object-cover tablet:hidden"}
           />
           <h2 className="absolute left-4 top-4 w-[80%] text-[28px] font-display leading-tight text-white tablet:left-10 tablet:top-10 tablet:w-[60%] tablet:text-[34px] laptop:left-28 laptop:top-16 laptop:w-[40%] laptop:text-5xl">
@@ -182,7 +184,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
             {product.specSlides.map((slide) => (
               <SwiperSlide key={slide}>
                 <div className="relative h-full w-full">
-                  <Image src={slide} alt={`${product.overviewTitle} spec`} fill className="object-cover" />
+                  <Image src={slide} alt={`${product.overviewTitle} spec`} fill sizes="(min-width: 1024px) 55vw, 100vw" className="object-cover" />
                 </div>
               </SwiperSlide>
             ))}
@@ -203,4 +205,6 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
     </div>
   );
 }
+
+
 

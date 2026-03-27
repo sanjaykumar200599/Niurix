@@ -10,8 +10,8 @@ export default function SoftwarePage({ software }: SoftwarePageProps) {
     <>
       <section className="relative overflow-hidden">
         <div className="relative h-[320px] tablet:h-[520px] laptop:h-[760px]">
-          <Image src={software.heroImage} alt="Software banner" fill className="hidden object-cover tablet:block" priority />
-          <Image src={software.heroImageMobile} alt="Software banner" fill className="object-cover tablet:hidden" priority />
+          <Image src={software.heroImage} alt="Software banner" fill sizes="(max-width: 767px) 0px, 100vw" className="hidden object-cover tablet:block" priority />
+          <Image src={software.heroImageMobile} alt="Software banner" fill sizes="(max-width: 767px) 100vw, 0px" className="object-cover tablet:hidden" priority />
 
           <div className="absolute inset-0 bg-black/10" />
 
@@ -36,8 +36,8 @@ export default function SoftwarePage({ software }: SoftwarePageProps) {
           {software.features.map((feature) => (
             <article key={feature.id} className="group relative isolate overflow-hidden rounded-tl-[30px] rounded-br-[30px] tablet:rounded-tl-[50px] tablet:rounded-br-[50px]">
               <div className="relative h-[18rem] tablet:h-[19rem] laptop:h-[35rem]">
-                <Image src={feature.image} alt={feature.title} fill className="hidden object-cover laptop:block" />
-                <Image src={feature.imageMobile} alt={feature.title} fill className="object-cover laptop:hidden" />
+                <Image src={feature.image} alt={feature.title} fill sizes="(max-width: 1023px) 0px, 20vw" className="hidden object-cover laptop:block" />
+                <Image src={feature.imageMobile} alt={feature.title} fill sizes="(max-width: 1023px) 100vw, 0px" className="object-cover laptop:hidden" />
                 <div className="absolute inset-0 bg-black/35 transition duration-500 laptop:bg-black/20 laptop:group-hover:bg-black/55" />
               </div>
 
@@ -57,3 +57,4 @@ export default function SoftwarePage({ software }: SoftwarePageProps) {
     </>
   );
 }
+

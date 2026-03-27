@@ -33,7 +33,7 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
     <div>
       <div className="hidden gap-4 px-30 laptop:grid laptop:grid-cols-[58%_20%_20%] wide:gap-8">
         <div className="relative h-[35rem] overflow-hidden rounded-tl-[35px] rounded-br-[35px]">
-          <Image src={active.detailImage} alt={active.title} fill className="object-cover" />
+          <Image src={active.detailImage} alt={active.title} fill sizes="(min-width: 1024px) 58vw, 0px" className="object-cover" />
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white via-white/96 to-white/78 px-6 pb-6 pt-7 wide:px-7 wide:pb-7">
             <h3 className="text-[24px] font-sans text-brand-black wide:text-[28px]">{active.title}</h3>
             <p className="mt-3 max-w-[88%] text-[17px] leading-[1.35] font-body-light text-brand-black wide:mt-4 wide:max-w-[82%] wide:text-[20px]">
@@ -56,7 +56,7 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
             onClick={() => setActiveIndex(industries.findIndex((entry) => entry.slug === item.slug))}
             className="group relative h-[35rem] overflow-hidden rounded-tl-[35px] rounded-br-[35px]"
           >
-            <Image src={item.cardImage} alt={item.title} fill className="object-cover transition duration-500 group-hover:scale-105" />
+            <Image src={item.cardImage} alt={item.title} fill sizes="(min-width: 1024px) 20vw, 0px" className="object-cover transition duration-500 group-hover:scale-105" />
             <div className="absolute inset-0 bg-black/45" />
             <p className="absolute bottom-0 left-4 w-[18rem] origin-top-left -rotate-90 text-left font-body-light text-[26px] leading-none text-white wide:text-[28px]">
               {item.title}
@@ -71,13 +71,13 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
           return (
             <button key={item.slug} type="button" onClick={() => setActiveIndex(index)} className="relative block w-full overflow-hidden text-left">
               <div className="relative h-32 tablet:h-48">
-                <Image src={item.mobileCropImage} alt={item.title} fill className="object-cover" />
+                <Image src={item.mobileCropImage} alt={item.title} fill sizes="100vw" className="object-cover" />
                 <p className="absolute bottom-3 left-4 text-[20px] font-body-light text-white tablet:text-[22px]">{item.title}</p>
               </div>
 
               {open ? (
                 <div className="relative h-[26rem]">
-                  <Image src={item.mobileDetailImage} alt={item.title} fill className="object-cover" />
+                  <Image src={item.mobileDetailImage} alt={item.title} fill sizes="100vw" className="object-cover" />
                   <div className="absolute inset-x-0 bottom-0 max-h-[45%] bg-white/95 p-5 tablet:p-8">
                     <h3 className="text-[20px] font-display text-brand-black tablet:text-[22px]">{item.title}</h3>
                     <p className="mt-3 w-[95%] text-[16px] font-body-light text-brand-black tablet:w-[90%] tablet:text-[18px]">{item.desc}</p>
@@ -98,3 +98,4 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
     </div>
   );
 }
+

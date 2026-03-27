@@ -100,6 +100,7 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
                         src={card.image}
                         alt={card.title}
                         fill
+                        sizes="64px"
                         className="object-contain"
                       />
                     </div>

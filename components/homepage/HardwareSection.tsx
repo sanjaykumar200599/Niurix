@@ -15,18 +15,21 @@ export default function HardwareSection({ titleHtml, items }: HardwareSectionPro
             src="/assets/homepage/Box section-1.webp"
             alt="Hardware background"
             fill
+            sizes="(max-width: 1023px) 0px, 100vw"
             className="hidden object-cover laptop:block"
           />
           <Image
             src="/assets/homepage/Box section1-tab.webp"
             alt="Hardware background"
             fill
+            sizes="(min-width: 768px) and (max-width: 1023px) 100vw, 0px"
             className="hidden object-cover tablet:block laptop:hidden"
           />
           <Image
             src="/assets/homepage/mobbackground.png"
             alt="Hardware background"
             fill
+            sizes="(max-width: 767px) 100vw, 0px"
             className="object-cover tablet:hidden"
           />
         </div>

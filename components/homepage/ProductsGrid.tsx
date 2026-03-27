@@ -70,6 +70,7 @@ export default function ProductsGrid({ products }: { products: HomeData["product
                     src={selected.image}
                     alt={selected.name}
                     fill
+                    sizes="(min-width: 1367px) 450px, (min-width: 1025px) 390px, 0px"
                     className="object-contain drop-shadow-[2px_64px_10px_rgba(0,0,0,0.1)] transition duration-500 hover:-translate-y-3"
                   />
                 </div>
@@ -106,7 +107,7 @@ export default function ProductsGrid({ products }: { products: HomeData["product
                   className="group rounded-[10px_0px] border-2 border-white px-12 py-6 transition hover:border-brand-orange"
                 >
                   <div className="relative h-12 w-16">
-                    <Image src={item.image} alt={item.name} fill className="object-contain transition duration-300 group-hover:-translate-y-1" />
+                    <Image src={item.image} alt={item.name} fill sizes="64px" className="object-contain transition duration-300 group-hover:-translate-y-1" />
                   </div>
                 </button>
               ))}
@@ -136,7 +137,7 @@ export default function ProductsGrid({ products }: { products: HomeData["product
             </button>
 
             <div className="relative h-40 w-40 tablet:h-60 tablet:w-60">
-              <Image src={selected.image} alt={selected.name} fill className="object-contain" />
+              <Image src={selected.image} alt={selected.name} fill sizes="(min-width: 768px) 240px, 160px" className="object-contain" />
             </div>
 
             <button type="button" onClick={goNext} disabled={activeIndex === products.length - 1} className="h-8 w-8 tablet:h-10 tablet:w-10">
@@ -167,7 +168,7 @@ export default function ProductsGrid({ products }: { products: HomeData["product
                 className="rounded-[10px_0px] border-2 border-white px-5 py-3 tablet:px-10 tablet:py-4"
               >
                 <div className="relative h-8 w-10 tablet:h-12 tablet:w-16">
-                  <Image src={item.image} alt={item.name} fill className="object-contain" />
+                  <Image src={item.image} alt={item.name} fill sizes="(min-width: 768px) 64px, 40px" className="object-contain" />
                 </div>
               </button>
             ))}
@@ -179,4 +180,6 @@ export default function ProductsGrid({ products }: { products: HomeData["product
     </div>
   );
 }
+
+
 

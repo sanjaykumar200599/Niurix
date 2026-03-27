@@ -38,7 +38,7 @@ export default function NavDropdown({ activeDesktopMenu, desktopItems, notchLeft
               className="flex items-center justify-center gap-4 rounded-[10px_0px] bg-[#fbfbfb] px-6 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.02)] transition hover:bg-[#f8f8f8]"
             >
               <div className="relative h-20 w-24 shrink-0 transition duration-300 hover:-translate-y-1">
-                <Image src={item.image} alt={item.label} fill className="object-contain" />
+                <Image src={item.image} alt={item.label} fill sizes="96px" className="object-contain" />
               </div>
 
               <div className="flex flex-col leading-[1.08]">
@@ -61,6 +61,7 @@ export default function NavDropdown({ activeDesktopMenu, desktopItems, notchLeft
                 src={item.image}
                 alt={item.label}
                 fill
+                sizes="(min-width: 1024px) 20vw, 0px"
                 className="h-full w-full object-cover brightness-100 transition duration-500 group-hover:scale-[1.03]"
               />
               <span className="absolute inset-0 bg-black/24 transition-colors duration-300 group-hover:bg-black/18" />
@@ -74,3 +75,4 @@ export default function NavDropdown({ activeDesktopMenu, desktopItems, notchLeft
     </div>
   );
 }
+
