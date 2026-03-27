@@ -5,7 +5,7 @@
 
 # testing
 /coverage
-
+/src copy
 # production
 /build
 /.next
