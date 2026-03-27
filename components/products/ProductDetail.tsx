@@ -17,6 +17,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
   const isXgspon8p = product.slug === "OLT-XGSPON-8P";
   const isP4200R = product.slug === "ONT-P4200R";
   const isT2001 = product.slug === "ONT-T2001";
+  const isSolt33_8p = product.slug === "OLT-SOLT33-8P";
   const rows = useMemo(() => (tab === "spec" ? product.specifications : product.dimensions), [product, tab]);
 
   return (
@@ -87,7 +88,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
         <div className="flex flex-col gap-6 laptop:flex-row laptop:items-center laptop:justify-between laptop:px-12">
           <div className="w-full laptop:w-[45%]">
-            <div className={isP4200R || isT2001 ? "w-full" : "relative h-[300px] w-full tablet:h-[420px] laptop:h-[520px]"}>
+            <div className={isP4200R || isT2001 || isSolt33_8p ? "w-full" : "relative h-[300px] w-full tablet:h-[420px] laptop:h-[520px]"}>
               <InteractiveSVGDiagram
                 src={product.componentImage}
                 alt={`${product.overviewTitle} component`}
@@ -202,3 +203,4 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
     </div>
   );
 }
+

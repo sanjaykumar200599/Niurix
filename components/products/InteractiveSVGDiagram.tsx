@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import Product8pLegacy from "@/components/products/legacy/Product8pLegacy";
 
 type InteractiveSVGDiagramProps = {
   src: string;
@@ -192,6 +193,9 @@ export default function InteractiveSVGDiagram({ src, alt, productSlug }: Interac
   if (productSlug === "ONT-T2001") {
     return <T2001Interactive />;
   }
+  if (productSlug === "OLT-SOLT33-8P") {
+    return <Product8pLegacy />;
+  }
 
   return (
     <div className="relative h-[320px] w-full tablet:h-[420px] laptop:h-[520px]">
@@ -199,4 +203,5 @@ export default function InteractiveSVGDiagram({ src, alt, productSlug }: Interac
     </div>
   );
 }
+
 
