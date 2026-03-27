@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import InteractiveSVGDiagram from "@/components/products/InteractiveSVGDiagram";
 import type { ProductContent } from "@/lib/content/types";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -14,6 +15,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
   const [tab, setTab] = useState<"spec" | "dim">("spec");
   const isOlt = product.type === "OLT";
   const isXgspon8p = product.slug === "OLT-XGSPON-8P";
+  const isP4200R = product.slug === "ONT-P4200R";
   const rows = useMemo(() => (tab === "spec" ? product.specifications : product.dimensions), [product, tab]);
 
   return (
@@ -84,8 +86,12 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
         <div className="flex flex-col gap-6 laptop:flex-row laptop:items-center laptop:justify-between laptop:px-12">
           <div className="w-full laptop:w-[45%]">
-            <div className="relative h-[300px] w-full tablet:h-[420px] laptop:h-[520px]">
-              <Image src={product.componentImage} alt={`${product.overviewTitle} component`} fill className="object-contain" />
+            <div className={isP4200R ? "w-full" : "relative h-[300px] w-full tablet:h-[420px] laptop:h-[520px]"}>
+              <InteractiveSVGDiagram
+                src={product.componentImage}
+                alt={`${product.overviewTitle} component`}
+                productSlug={product.slug}
+              />
             </div>
           </div>
 
@@ -195,4 +201,3 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
     </div>
   );
 }
-
