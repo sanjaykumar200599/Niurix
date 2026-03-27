@@ -51,7 +51,20 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
           </div>
 
           <div className="w-full laptop:w-[60%]">
-            <Image src={product.overviewImage} alt={product.overviewTitle} width={1400} height={900} className="h-auto w-full rounded-tl-[45px]" />
+            <Image
+              src={product.overviewImage}
+              alt={product.overviewTitle}
+              width={1400}
+              height={900}
+              className="hidden h-auto w-full rounded-tl-[45px] tablet:block"
+            />
+            <Image
+              src={product.overviewImageMobile}
+              alt={product.overviewTitle}
+              width={900}
+              height={700}
+              className="h-auto w-full rounded-tl-[30px] tablet:hidden"
+            />
           </div>
         </div>
       </section>
@@ -77,7 +90,8 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
       <section className="mt-12 px-9 tablet:mt-16 tablet:px-[78px] laptop:mt-24 laptop:px-[120px]">
         <div className="relative h-[320px] overflow-hidden tablet:h-[420px] laptop:h-[520px]">
-          <Image src={product.detailImage} alt={product.detailTitle} fill className="object-cover" />
+          <Image src={product.detailImage} alt={product.detailTitle} fill className="hidden object-cover tablet:block" />
+          <Image src={product.detailImageMobile} alt={product.detailTitle} fill className="object-cover tablet:hidden" />
           <h2 className="absolute left-4 top-4 w-[80%] text-[28px] font-display leading-tight text-white tablet:left-10 tablet:top-10 tablet:w-[60%] tablet:text-[34px] laptop:left-28 laptop:top-16 laptop:w-[40%] laptop:text-5xl">
             {product.detailTitle}
           </h2>
@@ -169,3 +183,4 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
     </div>
   );
 }
+

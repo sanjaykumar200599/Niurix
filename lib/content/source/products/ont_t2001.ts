@@ -4,7 +4,7 @@ export const ont_t2001 = {
 
     section1: {
         background_img: "t2001 banner v2",
-        background_img_mobile: "g2410 banner",
+        background_img_mobile: "T2001 banner",
     },
 
     section2: {
@@ -12,7 +12,7 @@ export const ont_t2001 = {
         subHeading: "Niurix T2001",
         para: `<p>The Niurix T2001 is a compact fiber endpoint designed for environments that require streamlined connectivity with essential services. It delivers high-speed internet, voice, and TV over a single fiber connection reducing in-room complexity while maintaining a consistent service experience. Designed for hospitality and residential deployments, this ONT supports clean installations, efficient power usage, and simplified maintenance, making it ideal for properties focused on operational efficiency and modern interiors.</p>`,
         background_img1: "Overview background v2",
-        background_img1_mobile: "Product g2410 backg",
+        background_img1_mobile: "Product T2001 backg",
     },
     section3: {
         mainHeading: `<span>Compact</span> Triple-Play Fiber Endpoint!`,
@@ -25,7 +25,7 @@ export const ont_t2001 = {
     },
     section4: {
         background_img: "Details T2001 v2",
-        background_img_mobile: "details g2410",
+        background_img_mobile: "details T2001",
         title: "Simplifying Connectivity at the Edge",
         text_content_groups: [
             {
@@ -113,6 +113,7 @@ export const ont_t2001 = {
         title: "section5",
     },
 };
+
 
 
 

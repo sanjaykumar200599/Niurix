@@ -4,7 +4,7 @@ export const olt_xgspon_8p = {
 
     section1: {
         background_img: "MOLT-XGSPON8P",
-        background_img_mobile: "Solt3316p banner",
+        background_img_mobile: "MOLT-XGSPON 8P banner",
     },
 
     section2: {
@@ -15,7 +15,7 @@ export const olt_xgspon_8p = {
         <br>Built for growing properties and mid-scale deployments, it enables organizations to transition from GPON today to higher-bandwidth PON technologies tomorrow - without redesigning the network core.
         </p> `,
         background_img1: "Overview background",
-        background_img1_mobile: "Product solt 16 backg",
+        background_img1_mobile: "Product solt 08 backg",
     },
     section3: {
         mainHeading: `<span>Enterprise-Grade</span> GPON Access`,
@@ -28,7 +28,7 @@ export const olt_xgspon_8p = {
     },
     section4: {
         background_img: "Detail",
-        background_img_mobile: "details 16 p",
+        background_img_mobile: "details MOLT-XGSPON 8P",
         title: "The Foundation for Scalable Fiber Access",
         text_content_groups: [
             {
@@ -116,5 +116,6 @@ export const olt_xgspon_8p = {
         title: "section5",
     },
 };
+
 
 
