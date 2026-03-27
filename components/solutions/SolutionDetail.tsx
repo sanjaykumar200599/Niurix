@@ -32,7 +32,7 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
 
         {/* HERO TEXT */}
         <div className="absolute inset-x-0 bottom-10 z-10 px-9 tablet:bottom-16 tablet:px-[78px] laptop:bottom-[7.5rem] laptop:px-[120px]">
-          <h1 className="whitespace-nowrap text-[28px] font-display leading-[1.08] tracking-tight text-white tablet:text-[42px] laptop:text-[52px]">
+          <h1 className="text-[28px] font-display leading-[1.08] tracking-tight text-white tablet:text-[42px] laptop:text-[52px]">
             {solution.heroTitle}
           </h1>
         </div>
@@ -70,7 +70,7 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
           
           {/* FIXED HEADING */}
           <h2
-            className="nx-rich whitespace-nowrap text-[26px] font-display leading-[1.18] text-brand-black tablet:text-[32px] laptop:text-[34px]"
+            className="nx-rich text-[26px] font-display leading-[1.18] text-brand-black tablet:text-[32px] laptop:text-[34px]"
             dangerouslySetInnerHTML={{ __html: solution.cardsHeadingHtml }}
           />
 
