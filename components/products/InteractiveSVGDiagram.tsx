@@ -12,8 +12,8 @@ type InteractiveSVGDiagramProps = {
 function Marker({ className, iconSrc, alt, ringClass }: { className: string; iconSrc: string; alt: string; ringClass: string }) {
   return (
     <div className={`absolute ${className}`}>
-      <div className={`relative h-[88px] w-[88px] rounded-full bg-white shadow-sm tablet:h-[96px] tablet:w-[96px] ${ringClass}`}>
-        <Image src={iconSrc} alt={alt} fill className="p-4 object-contain" />
+      <div className={`relative h-[62px] w-[62px] rounded-full bg-white shadow-sm tablet:h-[88px] tablet:w-[88px] laptop:h-[96px] laptop:w-[96px] ${ringClass}`}>
+        <Image src={iconSrc} alt={alt} fill className="p-3 tablet:p-4 object-contain" />
       </div>
     </div>
   );
@@ -29,7 +29,7 @@ function P4200RInteractive() {
 
   const strokeClass =
     step === 0 ? "stroke-[#08C22A]" : step === 1 ? "stroke-[#111111]" : "stroke-transparent";
-  const ringClass = step === 0 ? "ring-4 ring-[#08C22A]" : "ring-0";
+  const ringClass = step === 0 ? "ring-2 tablet:ring-4 ring-[#08C22A]" : "ring-0";
 
   const onClick = () => {
     const nextStepMap: Record<number, number> = { 3: 2, 2: 1, 1: 0, 0: 3 };
@@ -42,7 +42,7 @@ function P4200RInteractive() {
         type="button"
         aria-label="Reset diagram"
         onClick={onClick}
-        className="relative mx-auto block aspect-square w-full max-w-[650px] overflow-hidden"
+        className="relative mx-auto block aspect-square w-full max-w-[650px] overflow-hidden touch-manipulation"
       >
         <Image
           src="/assets/products/ONT-P4200R/Component p4200r.webp"
@@ -59,7 +59,7 @@ function P4200RInteractive() {
       type="button"
       aria-label="Advance diagram"
       onClick={onClick}
-      className="relative mx-auto block aspect-square w-full max-w-[650px] overflow-hidden"
+      className="relative mx-auto block aspect-square w-full max-w-[650px] overflow-hidden touch-manipulation"
     >
       <Image
         src="/assets/products/ONT-P4200R/Component p4200r.webp"
@@ -75,8 +75,8 @@ function P4200RInteractive() {
       </svg>
 
       <div className="absolute left-[50%] top-[14%] -translate-x-1/2 -translate-y-1/2">
-        <div className="relative h-[96px] w-[96px] rounded-full bg-[#FF5B02] shadow-sm tablet:h-[102px] tablet:w-[102px]">
-          <Image src="/assets/products/ONT-P4200R/product.webp" alt="P4200R" fill className="p-4 object-contain" />
+        <div className="relative h-[68px] w-[68px] rounded-full bg-[#FF5B02] shadow-sm tablet:h-[96px] tablet:w-[96px] laptop:h-[102px] laptop:w-[102px]">
+          <Image src="/assets/products/ONT-P4200R/product.webp" alt="P4200R" fill className="p-3 tablet:p-4 object-contain" />
         </div>
       </div>
 
@@ -113,4 +113,3 @@ export default function InteractiveSVGDiagram({ src, alt, productSlug }: Interac
     </div>
   );
 }
-
