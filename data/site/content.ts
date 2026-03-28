@@ -171,7 +171,7 @@ type LegacyHomePageSource = {
 };
 
 export const gtmId = "GTM-NQSKDZ7";
-export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://niurix.com";
+export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://niurix.vercel.app/";
 
 const legacySolutions = [
   {
