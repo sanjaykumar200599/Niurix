@@ -18,24 +18,24 @@ export default function PrivacyPolicyContent() {
           Effective Date : February 09, 2026
         </p>
 
-        <h1 className="mt-6 text-center font-sans text-[30px] leading-tight text-brand-orange tablet:text-[32px] laptop:text-[44px]">
+        <h1 className="mt-5 text-center font-sans text-[30px] leading-tight text-brand-orange tablet:text-[32px] laptop:text-[42px]">
           Privacy Policy
         </h1>
 
-        <div className="mt-10 space-y-6 text-[16px] leading-[1.55] tablet:text-[17px] laptop:text-[18px]">
-          <h2 className="font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">1. Overview</h2>
+        <div className="mt-8 space-y-5 text-[16px] leading-[1.55] tablet:text-[17px] laptop:text-[18px]">
+          <h2 className="mb-3 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">1. Overview</h2>
 
           <p className="text-justify">
             Your privacy is important to Niurix. This privacy statement applies to data collected through websites owned and operated by Niurix.
             This statement describes the information practices for Niurix websites including but not limited to{" "}
-            <a href="mailto:support@niurix.com" className="text-[#2a39ff] underline">support@niurix.com</a>. This privacy statement describes the
+            <a href="mailto:support@niurix.com" className="text-[#2a39ff] underline hover:text-[#1f2eff]">support@niurix.com</a>. This privacy statement describes the
             information practices for Niurix websites, including what types of information are collected, how Niurix uses this information and for what purposes;
             with whom information is shared; and how Niurix protects information. It also describes your choices regarding use, access, correction and deletion of
             your information, among other topics. In addition, this statement addresses personal information collection and use by Niurix in certain offline contexts,
             such as marketing and customer service and support.
           </p>
 
-          <h2 className="pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">2. What Information Do We Collect?</h2>
+          <h2 className="mb-2 pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">2. What Information Do We Collect?</h2>
 
           <p className="text-justify">
             Niurix collects data to enable us to make our products available to you, and to provide you with the best experience on our website and with our
@@ -80,7 +80,7 @@ export default function PrivacyPolicyContent() {
             we correct them promptly in accordance with documented internal processes.
           </InlineHeading>
 
-          <h2 className="pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">3. What Do We Use Your Information For?</h2>
+          <h2 className="mb-2 pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">3. What Do We Use Your Information For?</h2>
 
           <p className="text-justify">
             We use the data we collect to operate our business, and to make products available to you. This includes using the data to improve our Niurix product,
@@ -131,7 +131,7 @@ export default function PrivacyPolicyContent() {
             and choose whether you want to receive marketing communications from us.
           </InlineHeading>
 
-          <h2 className="pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">4. How Do We Protect Your Information?</h2>
+          <h2 className="mb-2 pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">4. How Do We Protect Your Information?</h2>
 
           <p className="text-justify">
             We implement a variety of security measures to help maintain the safety of your information when you enter, submit, or access your information. We
@@ -139,7 +139,7 @@ export default function PrivacyPolicyContent() {
             required to keep the information confidential.
           </p>
 
-          <h2 className="pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">
+          <h2 className="mb-2 pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">
             5. How Do We Ensure That Our Processing Systems Remain Confidential, Resilient, and Available?
           </h2>
 
@@ -170,7 +170,7 @@ export default function PrivacyPolicyContent() {
             permitted to access the data centres.
           </InlineHeading>
 
-          <h2 className="pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">6. Do We Disclose any Information to Outside Parties?</h2>
+          <h2 className="mb-2 pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">6. Do We Disclose any Information to Outside Parties?</h2>
 
           <p className="text-justify">
             We share your data with your consent, or as necessary to make our product available to you. We also share your data with vendors working on our behalf;
@@ -195,7 +195,7 @@ export default function PrivacyPolicyContent() {
             your information to third parties.
           </p>
 
-          <h2 className="pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">7. How to Access and Control Your personal data?</h2>
+          <h2 className="mb-2 pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">7. How to Access and Control Your personal data?</h2>
 
           <p className="text-justify">
             You can view, access, edit, or request a copy of your data. You can also delete certain elements of your data or move certain elements of your data to
@@ -206,7 +206,7 @@ export default function PrivacyPolicyContent() {
 
           <InlineHeading title="7.1.1 Discovery of Personal Information">
             Data subjects may request confirmation of whether Niurix maintains their personal information by submitting a written request via email to{" "}
-            <a href="mailto:privacy@niurix.com" className="text-[#2a39ff] underline">privacy@niurix.com</a>. The request should include sufficient
+            <a href="mailto:privacy@niurix.com" className="text-[#2a39ff] underline hover:text-[#1f2eff]">privacy@niurix.com</a>. The request should include sufficient
             identification. Upon receipt, Niurix will verify the data subject's identity and respond within thirty (30) days, providing access or confirmation as
             applicable, in accordance with documented procedures for handling such requests.
           </InlineHeading>
@@ -221,7 +221,7 @@ export default function PrivacyPolicyContent() {
 
           <InlineHeading title="7.3.1 Review and Correction Procedure">
             Data subjects may review, update, or correct their personal information by accessing their user dashboard or submitting a written request via email to{" "}
-            <a href="mailto:privacy@niurix.com" className="text-[#2a39ff] underline">privacy@niurix.com</a>. Upon verification of identity, Niurix will process
+            <a href="mailto:privacy@niurix.com" className="text-[#2a39ff] underline hover:text-[#1f2eff]">privacy@niurix.com</a>. Upon verification of identity, Niurix will process
             corrections within thirty (30) days and communicate any amendments to relevant third parties where committed or required (e.g., service providers or legal
             obligations), in accordance with documented procedures.
           </InlineHeading>
@@ -235,12 +235,12 @@ export default function PrivacyPolicyContent() {
             Upon request, data subjects may obtain an accounting of the personal information held about them, including types of personal and sensitive personal
             information (e.g., contact details, device data), related processes and systems for handling such information, and disclosures to third parties
             (e.g., vendors as described in Section 6). Requests should be submitted via email to{" "}
-            <a href="mailto:privacy@niurix.com" className="text-[#2a39ff] underline">privacy@niurix.com</a>, with sufficient identification. Niurix will verify
+            <a href="mailto:privacy@niurix.com" className="text-[#2a39ff] underline hover:text-[#1f2eff]">privacy@niurix.com</a>, with sufficient identification. Niurix will verify
             identity and provide the accounting within 30 days, including details on relevant third-party systems and processes where applicable, in accordance with
             documented procedures. If a request is denied, data subjects will be informed of the reason(s) and any rights to challenge, consistent with Section 7.1.2.
           </InlineHeading>
 
-          <h2 className="pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">
+          <h2 className="mb-2 pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">
             8. Where Do We Store and Process Personal Data and Conduct International Transfers?
           </h2>
 
@@ -260,7 +260,7 @@ export default function PrivacyPolicyContent() {
 
           <InlineHeading title="8.2 Customer data deletion request">
             Customers may request the deletion of their data by submitting a written request to Niurix via email at{" "}
-            <a href="mailto:privacy@niurix.com" className="text-[#2a39ff] underline">privacy@niurix.com</a>. The request should include sufficient
+            <a href="mailto:privacy@niurix.com" className="text-[#2a39ff] underline hover:text-[#1f2eff]">privacy@niurix.com</a>. The request should include sufficient
             identification and a clear reason for deletion. Upon receipt of the request, Niurix will verify the customer's identity and confirm the deletion request
             within five (5) business days.
           </InlineHeading>
@@ -277,21 +277,21 @@ export default function PrivacyPolicyContent() {
             notification. We encourage you to review this Policy periodically to learn how Niurix is protecting your information.
           </InlineHeading>
 
-          <h2 className="pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">9. How to Contact Us?</h2>
+          <h2 className="mb-2 pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">9. How to Contact Us?</h2>
 
           <p className="text-justify">
             If you have a technical or support question, please send us an email at{" "}
-            <a href="mailto:support@niurix.com" className="text-[#2a39ff] underline">support@niurix.com</a>.
+            <a href="mailto:support@niurix.com" className="text-[#2a39ff] underline hover:text-[#1f2eff]">support@niurix.com</a>.
           </p>
 
           <p className="text-justify">
             If you have any complaints or grievances, please send us an email at{" "}
-            <a href="mailto:grievance@niurix.com" className="text-[#2a39ff] underline">grievance@niurix.com</a>.
+            <a href="mailto:grievance@niurix.com" className="text-[#2a39ff] underline hover:text-[#1f2eff]">grievance@niurix.com</a>.
           </p>
 
           <p className="text-justify">
             For any privacy concern, complaint, or a question for the Data Protection Team of Niurix, please contact us by sending us an email at{" "}
-            <a href="mailto:security@niurix.com" className="text-[#2a39ff] underline">security@niurix.com</a>. We will respond to any queries or concerns within seven (7) days.
+            <a href="mailto:security@niurix.com" className="text-[#2a39ff] underline hover:text-[#1f2eff]">security@niurix.com</a>. We will respond to any queries or concerns within seven (7) days.
           </p>
         </div>
 
@@ -302,6 +302,8 @@ export default function PrivacyPolicyContent() {
     </section>
   );
 }
+
+
 
 
 
