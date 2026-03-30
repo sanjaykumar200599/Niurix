@@ -18,7 +18,7 @@ export default function PrivacyPolicyContent() {
           Effective Date : February 09, 2026
         </p>
 
-        <h1 className="mt-5 text-center font-sans text-[30px] leading-tight text-brand-orange tablet:text-[32px] laptop:text-[42px]">
+        <h1 className="mt-5 text-center font-display font-semibold text-[30px] leading-tight text-brand-orange tablet:text-[32px] laptop:text-[42px]">
           Privacy Policy
         </h1>
 
@@ -302,6 +302,7 @@ export default function PrivacyPolicyContent() {
     </section>
   );
 }
+
 
 
 

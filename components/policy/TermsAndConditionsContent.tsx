@@ -288,7 +288,7 @@ export default function TermsAndConditionsContent() {
   return (
     <section className="bg-[#ececec] px-9 py-10 tablet:px-20 tablet:py-12 laptop:px-[120px] laptop:pb-16 laptop:pt-44">
       <div className="mx-auto max-w-[1320px] text-[#393f4a]">
-        <h1 className="mb-14 text-center font-sans text-[26px] leading-tight text-brand-orange tablet:text-[28px] laptop:text-[34px]">
+        <h1 className="mb-14 text-center font-display font-semibold text-[26px] leading-tight text-brand-orange tablet:text-[28px] laptop:text-[34px]">
           Terms And Conditions
         </h1>
 
@@ -345,6 +345,7 @@ export default function TermsAndConditionsContent() {
     </section>
   );
 }
+
 
 
 
