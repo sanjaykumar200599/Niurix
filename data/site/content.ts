@@ -1,4 +1,4 @@
-import { assetPath } from "@/lib/content/asset-path";
+﻿import { assetPath } from "@/lib/content/asset-path";
 import {
   HomeDataSchema,
   IndustryContentSchema,
@@ -509,8 +509,16 @@ export const policyPages: PolicyPageContent[] = [
     title: "Privacy Policy",
     isStub: false,
     body: [
-      "Niurix respects your privacy and is committed to protecting personal information shared through our website and services.",
-      "This policy explains what data we collect, how we use it, and the controls available to users.",
+      "Niurix respects your privacy and is committed to safeguarding personal information shared through our website, product inquiries, and support channels.",
+      "This Privacy Policy describes what information we collect, how we use it to provide and improve our services, and what controls are available to you.",
+      "We may collect contact details such as your name, email address, phone number, company information, and any information you provide through forms, calls, or direct communications.",
+      "We also collect technical and usage information such as browser type, IP address, pages visited, referral source, and interaction data to maintain security, monitor performance, and improve user experience.",
+      "Niurix uses collected information to respond to requests, process business inquiries, provide customer support, improve products and website functionality, and share relevant service updates.",
+      "Where required by applicable law, we rely on legal bases such as consent, legitimate business interests, contractual necessity, and legal obligations for processing personal data.",
+      "We do not sell personal information. We may share information with trusted service providers who support hosting, analytics, communications, and operations under appropriate confidentiality and security obligations.",
+      "Information may be retained only for as long as needed for legitimate business, legal, accounting, or compliance purposes, after which it is securely deleted or anonymized where feasible.",
+      "You may request access, correction, deletion, or limitation of your personal information, and you may withdraw consent where processing is based on consent, subject to applicable legal requirements.",
+      "For privacy-related questions or requests, please contact Niurix through the official contact channels listed on our website. We may update this policy periodically, and continued use of our site reflects acceptance of any updated terms.",
     ],
   }),
   PolicyPageContentSchema.parse({
@@ -523,8 +531,16 @@ export const policyPages: PolicyPageContent[] = [
     title: "Terms and Conditions",
     isStub: false,
     body: [
-      "By accessing Niurix websites and services, you agree to the applicable terms, policies, and lawful-use requirements.",
-      "These terms describe account responsibilities, acceptable use, and limitations of liability.",
+      "By accessing or using Niurix websites, products, and related services, you agree to comply with these Terms and Conditions and all applicable laws and regulations.",
+      "You are responsible for ensuring that information provided to Niurix is accurate and current, and for using our website and services only for lawful and authorized business purposes.",
+      "All content on this site, including text, visuals, technical material, logos, and trademarks, is owned by Niurix or used under license and may not be copied, modified, or distributed without prior written permission.",
+      "Product descriptions, specifications, and availability are provided for general information and may be updated, revised, or discontinued without prior notice.",
+      "You agree not to misuse the website, attempt unauthorized access, interfere with platform operations, transmit harmful code, or engage in any activity that could damage Niurix systems or other users.",
+      "Where services involve third-party platforms or integrations, additional third-party terms may apply, and Niurix is not responsible for independent third-party policies or service interruptions outside our control.",
+      "Niurix makes reasonable efforts to maintain accurate and reliable information, but the website and related content are provided on an as-is and as-available basis without warranties of uninterrupted operation.",
+      "To the maximum extent permitted by law, Niurix is not liable for indirect, incidental, special, consequential, or punitive damages arising from use of or inability to use the website or services.",
+      "Niurix may suspend or terminate access where there is suspected misuse, legal non-compliance, or violation of these terms.",
+      "We may revise these Terms and Conditions from time to time. Continued use of Niurix websites or services after updates are published constitutes acceptance of the revised terms.",
     ],
   }),
 ];
@@ -639,6 +655,8 @@ export const headerNavigation: {
     },
   ],
 };
+
+
 
 
 

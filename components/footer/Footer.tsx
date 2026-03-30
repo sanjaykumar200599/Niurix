@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import ScrollToTop from "@/components/shared/ScrollToTop";
 
@@ -74,8 +74,12 @@ export default function Footer() {
           <div className="mb-4 text-[16px] font-sans text-black laptop:mb-0">&copy; 2026 All rights reserved</div>
 
           <div className="mb-4 flex items-center justify-center gap-10 text-[16px] font-sans text-black laptop:mb-0 laptop:justify-center">
-            <span>Terms & Conditions</span>
-            <span>Privacy Policy</span>
+            <Link href="/terms-and-conditions" className="transition hover:text-brand-orange">
+              Terms & Conditions
+            </Link>
+            <Link href="/privacy-policy" className="transition hover:text-brand-orange">
+              Privacy Policy
+            </Link>
           </div>
 
           <div className="flex items-center justify-center gap-2.5 text-[16px] leading-none font-sans text-black laptop:justify-end laptop:pr-1">
@@ -97,3 +101,4 @@ export default function Footer() {
     </footer>
   );
 }
+
