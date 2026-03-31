@@ -83,7 +83,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
       <section className="px-9 pb-0 pt-12 tablet:px-[78px] tablet:pt-16 laptop:px-[120px] laptop:pt-32">
         <h2
-          className="nx-rich flex min-h-[80px] items-center justify-center text-center text-[28px] font-display leading-tight text-brand-black tablet:min-h-[100px] tablet:text-[34px] laptop:min-h-[120px] laptop:text-5xl"
+          className="nx-rich flex min-h-[80px] items-center justify-center text-center text-[28px] font-display leading-tight tracking-normal text-brand-black tablet:min-h-[100px] tablet:text-[34px] laptop:min-h-[120px] laptop:text-5xl"
           dangerouslySetInnerHTML={{ __html: product.connectHeadingHtml }}
         />
 
@@ -205,6 +205,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
     </div>
   );
 }
+
 
 
 

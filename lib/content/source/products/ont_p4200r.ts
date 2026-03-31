@@ -16,7 +16,7 @@ export const ont_p4200r = {
         background_img1_mobile: "Product P4200R backg",
     },
     section3: {
-        mainHeading: `<span>Connect</span> Effortlessly, Anytime, <span>Anywhere!</span>`,
+        mainHeading: `<span>Connect</span>&nbsp;Effortlessly, Anytime,&nbsp;<span>Anywhere!</span>`,
         // subHeading1: "subheading1",
         para1: `<p>The GPON supported ONT is similar to G2410 and has high speed of 1Gbps/port with low latency making it ideal for connecting it to streaming videos and gaming. The P4200R enables remote configuration and management, making it scalable for multiple users on a premise.\n\nThe P4200R offers advanced security features like port filtering, firewall and DHCP, making it ideal for connecting all devices enclosed in a building system. The Niurix P4200R ONT is versatile and is viable to connect analog  phones and CATV as well.<p>`,
         subHeading2: "The Twist Towards Simpler Connectivity",
@@ -109,3 +109,4 @@ export const ont_p4200r = {
         title: "section5",
     },
 };
+

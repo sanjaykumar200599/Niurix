@@ -16,7 +16,7 @@ export const olt_solt33_08p = {
         background_img1_mobile: "Product Solt 08 backg",
     },
     section3: {
-        mainHeading: `<span>Connect</span> Effortlessly, Anytime, <span>Anywhere!</span>`,
+        mainHeading: `<span>Connect</span>&nbsp;Effortlessly, Anytime,&nbsp;<span>Anywhere!</span>`,
         // subHeading1: "subheading1",
         para1: `<p>The compact size makes it compatible for small to medium-sized businesses or deployments and multi-dwelling units (MDUs). The availability of 8 GPON ports makes SOLT33-08P more practical consuming lesser power. It also has a full-fledged carrier-class reliability with a complete set of security features.\n\nThe Niurix SOLT33-08P is widely used to cater to the custom requirements of LCOs (Local Cable Operators) and ISPs (Internet Service Providers) due to its flexible features and QoS features.</p>`,
         subHeading2: "The Twist Towards Simpler Connectivity",
@@ -124,3 +124,4 @@ export const olt_solt33_08p = {
         title: "section5",
     },
 };
+
