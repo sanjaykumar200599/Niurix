@@ -38,7 +38,7 @@ export default function Header() {
   const [mobileSection, setMobileSection] = useState<HeaderMenuKey | null>(null);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 850);
+    const onScroll = () => setScrolled(window.scrollY > 40);
     onScroll();
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
@@ -182,6 +182,7 @@ export default function Header() {
           activeDesktopMenu={activeDesktopMenu}
           desktopItems={desktopItems}
           notchLeft={dropdownNotchLeft}
+          scrolled={scrolled}
           onNavigate={closeMenus}
         />
       </div>
@@ -205,4 +206,9 @@ export default function Header() {
     </header>
   );
 }
+
+
+
+
+
 
