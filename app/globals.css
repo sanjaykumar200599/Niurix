@@ -160,6 +160,6 @@ main {
 
   .homepage-swiper .swiper-horizontal > .swiper-pagination-bullets,
   .homepage-swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
-    bottom: 5rem !important;
+    bottom: 3.25rem !important;
   }
 }

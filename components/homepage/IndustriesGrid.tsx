@@ -68,29 +68,40 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
       <div className="space-y-4 px-5 tablet:px-20 laptop:hidden">
         {industries.map((item, index) => {
           const open = index === activeIndex;
+
+          if (open) {
+            return (
+              <article key={item.slug} className="overflow-hidden rounded-tl-[28px] rounded-br-[28px] border border-black/8 bg-[#f7f7f7]">
+                <div className="relative aspect-[16/10] w-full">
+                  <Image src={item.mobileDetailImage} alt={item.title} fill sizes="100vw" className="object-cover" />
+                </div>
+                <div className="px-5 pb-5 pt-4 tablet:px-8 tablet:pb-8 tablet:pt-6">
+                  <h3 className="text-[20px] font-display text-brand-black tablet:text-[22px]">{item.title}</h3>
+                  <p className="mt-3 text-[16px] leading-[1.4] font-body-light text-brand-black tablet:text-[18px]">{item.desc}</p>
+                  <Link
+                    href={`/industries/${item.slug}`}
+                    className="mt-5 inline-flex min-w-[170px] items-center justify-center gap-3 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-5 py-2.5 text-[16px] font-sans text-white tablet:text-[18px]"
+                  >
+                    <span>Learn More</span>
+                    <ArrowRightIcon />
+                  </Link>
+                </div>
+              </article>
+            );
+          }
+
           return (
-            <button key={item.slug} type="button" onClick={() => setActiveIndex(index)} className="relative block w-full overflow-hidden text-left">
+            <button
+              key={item.slug}
+              type="button"
+              onClick={() => setActiveIndex(index)}
+              className="relative block w-full overflow-hidden rounded-tl-[28px] rounded-br-[28px] text-left"
+            >
               <div className="relative h-32 tablet:h-48">
                 <Image src={item.mobileCropImage} alt={item.title} fill sizes="100vw" className="object-cover" />
+                <div className="absolute inset-0 bg-black/35" />
                 <p className="absolute bottom-3 left-4 text-[20px] font-body-light text-white tablet:text-[22px]">{item.title}</p>
               </div>
-
-              {open ? (
-                <div className="relative h-[26rem]">
-                  <Image src={item.mobileDetailImage} alt={item.title} fill sizes="100vw" className="object-cover" />
-                  <div className="absolute inset-x-0 bottom-0 max-h-[45%] bg-white/95 p-5 tablet:p-8">
-                    <h3 className="text-[20px] font-display text-brand-black tablet:text-[22px]">{item.title}</h3>
-                    <p className="mt-3 w-[95%] text-[16px] font-body-light text-brand-black tablet:w-[90%] tablet:text-[18px]">{item.desc}</p>
-                    <Link
-                      href={`/industries/${item.slug}`}
-                      className="mt-4 inline-flex min-w-[170px] items-center justify-center gap-3 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-5 py-2.5 text-[16px] font-sans text-white tablet:text-[18px]"
-                    >
-                      <span>Learn More</span>
-                      <ArrowRightIcon />
-                    </Link>
-                  </div>
-                </div>
-              ) : null}
             </button>
           );
         })}
@@ -98,4 +109,3 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
     </div>
   );
 }
-

@@ -20,12 +20,12 @@ export default function ContactParallax() {
   return (
     <section className="px-5 pb-5 pt-3 tablet:px-12 tablet:pb-10 tablet:pt-2 laptop:px-20 laptop:pb-16 laptop:pt-6">
       <div
-        className="relative h-[250px] overflow-hidden rounded-tl-[32px] rounded-br-[32px] bg-cover bg-center tablet:h-[320px] laptop:h-[400px] laptop:bg-fixed wide:h-[440px]"
+        className="relative h-[280px] overflow-hidden rounded-tl-[32px] rounded-br-[32px] bg-cover bg-center tablet:h-[320px] laptop:h-[400px] laptop:bg-fixed wide:h-[440px]"
         style={{ backgroundImage: "url('/assets/homepage/Contact.webp')" }}
       >
-        <div className="absolute inset-0 flex items-center justify-center tablet:justify-end tablet:pr-14 laptop:pr-20">
-          <div className="flex w-full flex-col items-center tablet:w-[58%] tablet:items-start">
-            <p className="whitespace-nowrap text-center text-[18px] font-sans leading-tight text-white tablet:text-[22px] laptop:text-[30px] laptop:leading-[1.1] wide:text-[36px]">
+        <div className="absolute inset-0 flex items-center px-6 tablet:justify-end tablet:px-0 tablet:pr-14 laptop:pr-20">
+          <div className="flex w-full flex-col items-start tablet:w-[58%] tablet:items-start">
+            <p className="max-w-[15rem] text-left text-[20px] font-sans leading-[1.15] text-white tablet:max-w-none tablet:text-[22px] tablet:leading-tight laptop:text-[30px] laptop:leading-[1.1] wide:text-[36px]">
               Transform Your Network Architecture With Us!
             </p>
 
