@@ -1,4 +1,4 @@
-﻿import { assetPath } from "@/lib/content/asset-path";
+import { assetPath } from "@/lib/content/asset-path";
 import {
   HomeDataSchema,
   IndustryContentSchema,
@@ -266,7 +266,7 @@ const baseProducts: ProductContent[] = baseProductSeeds.map(({ slug, type, data,
     connectParaHtml: data.section3.para1,
     componentImage:
       slug === "ONT-T2001" || slug === "OLT-XGSPON-8P"
-        ? assetPath("assets", "products", folder, `${data.section3.background_img}.png`)
+        ? assetPath("assets", "products", folder, `${data.section3.background_img}.svg`)
         : assetPath("assets", "products", folder, `${data.section3.background_img}.webp`),
     detailImage: assetPath("assets", "products", folder, `${data.section4.background_img}.webp`),
     detailImageMobile: assetPath("assets", "products", "mobile_banners", folder, `${data.section4.background_img_mobile}.webp`),
@@ -283,39 +283,6 @@ const baseProducts: ProductContent[] = baseProductSeeds.map(({ slug, type, data,
     youtubeEmbed: slug === "ONT-P4200R" ? "https://www.youtube.com/embed/1gxsPJekHSI" : undefined,
   });
 });
-
-const stubProduct = (slug: string, model: string, type: ProductType): ProductContent =>
-  ProductContentSchema.parse({
-    slug,
-    seo: {
-      title: `${model} | Niurix`,
-      description: "Enterprise GPON product page for Niurix deployments.",
-      canonicalPath: `/products/${slug}`,
-    },
-    model,
-    type,
-    isStub: true,
-    heroImage: assetPath("assets", "products", "ONT-T2001", "g2410 banner.webp"),
-    heroImageMobile: assetPath("assets", "products", "mobile_banners", "ONT-T2001", "g2410 banner.webp"),
-    overviewHeadingHtml: `<span>Our</span> Product (${type}s)`,
-    overviewTitle: `Niurix ${model}`,
-    overviewParaHtml: `Built for carrier-grade FTTH deployments, Niurix ${model} delivers reliable performance, simplified provisioning, and seamless service delivery for modern broadband networks.`,
-    overviewImage: assetPath("assets", "products", "ONT-T2001", "Overview background.webp"),
-    overviewImageMobile: assetPath("assets", "products", "mobile_banners", "ONT-T2001", "Product g2410 backg.webp"),
-    connectHeadingHtml: "<span>Connect</span> Effortlessly, Anytime, <span>Anywhere!</span>",
-    connectParaHtml: "Designed for stable uptime and efficient rollout cycles, this model supports scalable network expansion while maintaining service quality across voice, video, and high-speed internet workloads.",
-    componentImage: assetPath("assets", "products", "ONT-T2001", "Component G2410.webp"),
-    detailImage: assetPath("assets", "products", "ONT-T2001", "Details.webp"),
-    detailImageMobile: assetPath("assets", "products", "mobile_banners", "ONT-T2001", "details g2410.webp"),
-    detailTitle: "Engineered for Real-World Deployments",
-    highlights: [{ title: "Deployment Ready", para: "Optimized for quick installation, interoperability, and long-term network reliability." }],
-    specificationHeading: "Specification",
-    dimensionsHeading: "Dimensions",
-    specifications: [{ title: "Architecture", value: "GPON access platform" }],
-    dimensions: [{ title: "Form Factor", value: "Compact rack or CPE profile" }],
-    specSlides: [assetPath("assets", "products", "ONT-T2001", "Spec 1.webp")],
-  });
-
 const requiredProduct = (slug: string): ProductContent => {
   const product = baseProducts.find((item) => item.slug === slug);
   if (!product) {
@@ -328,10 +295,10 @@ export const canonicalProductSlugs = ["ONT-P4200R", "ONT-T2001", "OLT-SOLT33-8P"
 export const legacyProductSlugs = ["ONT-T2001"] as const;
 
 export const products: ProductContent[] = [
-  requiredProduct("ONT-P4200R"),  requiredProduct("OLT-SOLT33-8P"),
+  requiredProduct("ONT-P4200R"),
+  requiredProduct("OLT-SOLT33-8P"),
   requiredProduct("OLT-XGSPON-8P"),
   requiredProduct("ONT-T2001"),
-
 ];
 
 const mappedIndustries = [
@@ -362,6 +329,7 @@ const mappedIndustries = [
 ] as const;
 
 export const canonicalIndustrySlugs = mappedIndustries.map((item) => item.slug);
+export const legacyIndustrySlugs = mappedIndustries.map((item) => item.legacy);
 
 export const industries: IndustryContent[] = mappedIndustries.map(({ slug, legacy, data, folder }) =>
   IndustryContentSchema.parse({
@@ -655,24 +623,6 @@ export const headerNavigation: {
     },
   ],
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

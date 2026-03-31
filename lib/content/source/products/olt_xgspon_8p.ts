@@ -18,7 +18,7 @@ export const olt_xgspon_8p = {
         background_img1_mobile: "Product solt 08 backg",
     },
     section3: {
-        mainHeading: `<span>Enterprise-Grade</span> GPON Access`,
+        mainHeading: `Enterprise-Grade <span>GPON</span> Access`,
         // subHeading1: "subheading1",
         para1: `<p>As bandwidth requirements increase, traditional copper and legacy LAN designs struggle to scale. The MOLT-XGS-08P XGSPON OLT enables organizations and network operators to deploy a fiber-based access architecture using GPON and XGS-PON technologies from a single, centralized platform.
         <br>With centralized control at the OLT and distributed services delivered over fiber to ONTs, the platform simplifies network operations while supporting advanced bandwidth, quality of service, and a clear upgrade path to symmetrical 10 Gbps services.</p> `,
@@ -99,7 +99,7 @@ export const olt_xgspon_8p = {
                 },
             ],
             para: "Click to download the full specifications",
-            pdf: "NiurixSOLT33-16POLT",
+            pdf: "Niurix MOLT XGSPON 8P",
         },
     ],
     swipper: {
@@ -116,6 +116,5 @@ export const olt_xgspon_8p = {
         title: "section5",
     },
 };
-
 
 

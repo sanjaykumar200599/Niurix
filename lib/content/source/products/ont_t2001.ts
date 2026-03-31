@@ -4,7 +4,7 @@ export const ont_t2001 = {
 
     section1: {
         background_img: "t2001 banner v2",
-        background_img_mobile: "T2001 banner",
+        background_img_mobile: "T2001 banner copy",
     },
 
     section2: {
@@ -21,7 +21,7 @@ export const ont_t2001 = {
         <br>By replacing multiple copper cables with a single fiber drop, it simplifies installation, reduces maintenance overhead, and aligns with Niurix's broader goal of clean, future-ready fiber architecture across properties.</p>`,
         subHeading2: "The Twist Towards Simpler Connectivity",
         para2: `<ul><li>4 Ethernet port</li><li>1 GPON Uplink Port</li></ul>`,
-        background_img: "Component T2001 v2",
+        background_img: "ComponentT2001",
     },
     section4: {
         background_img: "Details T2001 v2",
@@ -95,7 +95,7 @@ export const ont_t2001 = {
                 },
             ],
             para: "Click to download the full specifications",
-            pdf: "Niurix-G2110",
+            pdf: "Niurix T2001",
         },
     ],
 
@@ -113,9 +113,4 @@ export const ont_t2001 = {
         title: "section5",
     },
 };
-
-
-
-
-
 

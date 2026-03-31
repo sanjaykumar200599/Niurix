@@ -43,37 +43,65 @@ const sections = [
 
 export default function Footer() {
   return (
-    <footer className="relative w-full">
+    <footer className="relative w-full py-14 laptop:py-16">
       <div className="px-9 tablet:px-20 laptop:px-30">
-        <div className="border-t-2 border-[#DFDFDF] px-0 py-8 laptop:flex laptop:justify-between laptop:py-8">
-          <div className="mb-6 laptop:mb-0 laptop:pt-1">
+
+        {/* TOP SECTION */}
+        <div className="border-t-2 border-[#DFDFDF] pt-10 pb-12 laptop:flex laptop:items-start laptop:justify-between laptop:pt-12 laptop:pb-12">
+          
+          {/* LOGO */}
+          <div className="mb-6 shrink-0 laptop:mb-0 laptop:w-[108px] laptop:pt-[2px]">
             <Link href="/" className="inline-flex">
-              <Image src="/assets/footer/niurixlogo.svg" alt="Niurix" width={81} height={27} />
+              <Image
+                src="/assets/footer/niurixlogo.svg"
+                alt="Niurix"
+                width={81}
+                height={27}
+              />
             </Link>
           </div>
 
-          <div className="grid gap-6 tablet:grid-cols-2 laptop:w-[88%] laptop:grid-cols-4 laptop:gap-8">
+          {/* LINKS */}
+          <div className="grid gap-y-6 tablet:grid-cols-2 tablet:gap-x-10 laptop:w-[calc(100%-132px)] laptop:grid-cols-[1.22fr_0.7fr_1.05fr_0.72fr] laptop:gap-x-6">
             {sections.map((section) => (
-              <div key={section.title}>
-                <p className="mb-2 text-[20px] font-sans text-black">{section.title}</p>
-                <ul className="space-y-1">
-                  {section.links.map(([label, href]) => (
-                    <li key={label + href}>
-                      <Link href={href} className="text-[16px] font-sans text-black transition hover:text-brand-orange">
-                        {label}
-                      </Link>
-                    </li>
-                  ))}
+              <div key={section.title} className="min-w-0">
+                <p className="mb-4 text-[20px] leading-none font-sans text-black">
+                  {section.title}
+                </p>
+
+                <ul className="space-y-[10px]">
+                  {section.links.map(([label, href]) => {
+                    const isSoftwareFirst =
+                      section.title === "Software" &&
+                      label === "Centralized Login and Access control";
+
+                    return (
+                      <li key={label + href}>
+                        <Link
+                          href={href}
+                          className={`block text-[16px] leading-[1.25] font-sans text-black transition hover:text-brand-orange ${
+                            isSoftwareFirst ? "laptop:whitespace-nowrap" : ""
+                          }`}
+                        >
+                          {label}
+                        </Link>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="border-t border-[#707070] py-5 text-center tablet:py-6 laptop:grid laptop:grid-cols-[45%_35%_20%] laptop:items-center laptop:text-left">
-          <div className="mb-4 text-[16px] font-sans text-black laptop:mb-0">&copy; 2026 All rights reserved</div>
+        {/* BOTTOM SECTION */}
+        <div className="border-t border-[#707070] pt-6 pb-2 laptop:grid laptop:grid-cols-[1fr_auto_1fr] laptop:items-center laptop:pt-6 laptop:pb-3">
+          
+          <div className="mb-4 text-center text-[16px] leading-none font-sans text-black laptop:mb-0 laptop:text-left">
+            &copy; 2026 All rights reserved
+          </div>
 
-          <div className="mb-4 flex items-center justify-center gap-10 text-[16px] font-sans text-black laptop:mb-0 laptop:justify-center">
+          <div className="mb-4 flex items-center justify-center gap-10 text-[16px] leading-none font-sans text-black laptop:mb-0">
             <Link href="/terms-and-conditions" className="transition hover:text-brand-orange">
               Terms & Conditions
             </Link>
@@ -82,8 +110,8 @@ export default function Footer() {
             </Link>
           </div>
 
-          <div className="flex items-center justify-center gap-2.5 text-[16px] leading-none font-sans text-black laptop:justify-end laptop:pr-1">
-            <span className="inline-flex items-center leading-none">Find us on</span>
+          <div className="flex items-center justify-center gap-2.5 text-[16px] leading-none font-sans text-black laptop:justify-end">
+            <span>Find us on</span>
             <a
               href="https://www.linkedin.com/company/niurix/"
               target="_blank"
@@ -91,7 +119,13 @@ export default function Footer() {
               aria-label="LinkedIn"
               className="inline-flex h-6 w-6 items-center justify-center"
             >
-              <Image src="/assets/footer/linkedin.svg" alt="LinkedIn" width={20} height={20} className="h-[20px] w-[20px] object-contain" />
+              <Image
+                src="/assets/footer/linkedin.svg"
+                alt="LinkedIn"
+                width={20}
+                height={20}
+                className="h-[20px] w-[20px] object-contain"
+              />
             </a>
           </div>
         </div>
@@ -101,4 +135,3 @@ export default function Footer() {
     </footer>
   );
 }
-
