@@ -385,7 +385,7 @@ const homePageData = homePage as LegacyHomePageSource;
 
 export const homeContent: HomeData = HomeDataSchema.parse({
   seo: {
-    title: "Niurix | Home",
+    title: "GPON Fiber Networking Solutions for Modern Building | Niurix",
     description: homePageData.meta_description,
     canonicalPath: "/",
   },
