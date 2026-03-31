@@ -36,7 +36,7 @@ export default function ContactUsPage() {
         </div>
 
         <div className="relative px-9 pb-36 pt-12 tablet:px-20 tablet:pb-28 tablet:pt-14 laptop:px-[120px] laptop:pb-20 laptop:pt-[90px]">
-          <h1 className="text-[34px] font-display text-brand-black tablet:text-5xl laptop:text-[56px]">
+          <h1 className="text-[30px] font-display text-brand-black tablet:text-[44px] laptop:text-[48px]">
             <span className="text-brand-orange">Contact</span> Us
           </h1>
 
@@ -62,8 +62,8 @@ export default function ContactUsPage() {
             </div>
           </div>
 
-          <div className="absolute bottom-[-4rem] left-1/2 h-[12rem] w-[16rem] -translate-x-1/2 tablet:bottom-[-4.5rem] tablet:h-[14rem] tablet:w-[19rem] laptop:bottom-auto laptop:left-auto laptop:right-[8%] laptop:top-[57%] laptop:h-auto laptop:w-auto laptop:translate-x-0">
-            <Image src="/assets/contactus/Product.webp" alt="Product" width={430} height={360} className="h-full w-full object-contain" />
+          <div className="absolute bottom-[-4rem] left-1/2 h-[13.5rem] w-[18rem] -translate-x-1/2 tablet:bottom-[-5rem] tablet:h-[17rem] tablet:w-[23rem] laptop:bottom-[-12rem] laptop:left-auto laptop:right-[2%] laptop:top-auto laptop:h-[28rem] laptop:w-[48rem] laptop:translate-x-0">
+            <Image src="/assets/contactus/Product.webp" alt="Product" width={820} height={560} className="h-full w-full object-contain" />
           </div>
         </div>
       </section>
@@ -71,7 +71,7 @@ export default function ContactUsPage() {
       <section className="px-9 pb-8 tablet:px-20 tablet:pb-12 laptop:px-[120px] laptop:pb-16">
         <div className="flex flex-col gap-8 laptop:flex-row laptop:justify-between">
           <div className="w-full border-b border-[#d6d6d6] pb-8 laptop:w-[70%] laptop:border-b-0 laptop:border-r laptop:pb-0 laptop:pr-8">
-            <h2 className="text-[34px] font-display text-brand-black tablet:text-5xl laptop:text-[56px]">
+            <h2 className="text-[30px] font-display text-brand-black tablet:text-[44px] laptop:text-[48px]">
               <span className="text-brand-orange">Get in</span> Touch
             </h2>
             <p className="mt-4 w-full text-base text-brand-black tablet:w-[85%] tablet:text-lg laptop:text-[22px]">
@@ -113,4 +113,8 @@ export default function ContactUsPage() {
     </div>
   );
 }
+
+
+
+
 
