@@ -2,18 +2,18 @@
 
 function InlineHeading({ title, children }: { title: string; children: ReactNode }) {
   return (
-    <p className="text-justify text-[16px] leading-[1.55] text-[#3c4452] tablet:text-[17px] laptop:text-[18px]">
+    <p className="text-justify text-[16px] leading-[1.9rem] text-[#3c4452] tablet:text-[16px] laptop:text-[18px]">
       <span className="font-sans text-brand-orange text-[22px] tablet:text-[24px] laptop:text-[24px]">{title}</span>
       <span className="mx-2 text-brand-orange">-</span>
-      <span className="font-sans text-[#3c4452] text-[16px] tablet:text-[17px] laptop:text-[18px]">{children}</span>
+      <span className="font-sans text-[#3c4452] text-[16px] tablet:text-[16px] laptop:text-[18px]">{children}</span>
     </p>
   );
 }
 
 export default function PrivacyPolicyContent() {
   return (
-    <section className="bg-[#ececec] px-9 py-10 tablet:px-20 tablet:py-12 laptop:px-[120px] laptop:pb-16 laptop:pt-44">
-      <div className="mx-auto max-w-[1320px] text-[#3c4452]">
+    <section className="bg-[#ececec]">
+      <div className="mx-auto w-full px-4 py-20 text-[#3c4452] tablet:px-8 tablet:py-[88px] laptop:px-[140px] laptop:pb-10 laptop:pt-[180px] [@media(min-width:1025px)_and_(max-width:1367px)]:px-[80px] [@media(min-width:1367px)_and_(max-width:1600px)]:px-[100px]">
         <p className="text-right font-sans text-[16px] text-[#3f4654] tablet:text-[18px] laptop:text-[20px]">
           Effective Date : February 09, 2026
         </p>
@@ -22,7 +22,7 @@ export default function PrivacyPolicyContent() {
           Privacy Policy
         </h1>
 
-        <div className="mt-8 space-y-5 text-[16px] leading-[1.55] tablet:text-[17px] laptop:text-[18px]">
+        <div className="mt-8 space-y-5 text-[16px] leading-[1.9rem] tablet:text-[16px] laptop:text-[18px]">
           <h2 className="mb-3 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">1. Overview</h2>
 
           <p className="text-justify">
@@ -302,6 +302,8 @@ export default function PrivacyPolicyContent() {
     </section>
   );
 }
+
+
 
 
 

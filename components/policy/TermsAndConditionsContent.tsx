@@ -286,8 +286,8 @@ const serviceTerms: SectionBlock[] = [
 
 export default function TermsAndConditionsContent() {
   return (
-    <section className="bg-[#ececec] px-9 py-10 tablet:px-20 tablet:py-12 laptop:px-[120px] laptop:pb-16 laptop:pt-44">
-      <div className="mx-auto max-w-[1320px] text-[#393f4a]">
+    <section className="bg-[#ececec]">
+      <div className="mx-auto w-full px-4 py-20 text-[#393f4a] tablet:px-8 tablet:py-[88px] laptop:px-[140px] laptop:pb-10 laptop:pt-[180px] [@media(min-width:1025px)_and_(max-width:1367px)]:px-[80px] [@media(min-width:1367px)_and_(max-width:1600px)]:px-[100px]">
         <h1 className="mb-14 text-center font-display font-semibold text-[26px] leading-tight text-brand-orange tablet:text-[28px] laptop:text-[34px]">
           Terms And Conditions
         </h1>
@@ -296,7 +296,7 @@ export default function TermsAndConditionsContent() {
           Introduction
         </h2>
 
-        <div className="space-y-6 text-[16px] leading-[1.55] tablet:text-[17px] laptop:text-[18px]">
+        <div className="space-y-6 text-[16px] leading-[1.9rem] tablet:text-[16px] laptop:text-[18px]">
           {introduction.map((item) => (
             <div key={item.id} className="flex items-start gap-2.5 laptop:gap-3">
               <span className="min-w-[22px] font-sans text-brand-orange laptop:min-w-[24px]">{item.id}.</span>
@@ -309,7 +309,7 @@ export default function TermsAndConditionsContent() {
           BY USING OUR SERVICES, YOU AGREE THAT:
         </h2>
 
-        <ul className="mb-9 list-disc space-y-3 pl-8 text-[16px] leading-[1.55] tablet:text-[17px] laptop:mb-10 laptop:text-[18px]">
+        <ul className="mb-9 list-disc space-y-3 pl-8 text-[16px] leading-[1.9rem] tablet:text-[16px] laptop:mb-10 laptop:text-[18px]">
           {serviceConsentBullets.map((item) => (
             <li key={item} className="text-justify">{item}</li>
           ))}
@@ -326,7 +326,7 @@ export default function TermsAndConditionsContent() {
                 {section.title}
               </h3>
 
-              <div className="space-y-5 text-[16px] leading-[1.55] tablet:text-[17px] laptop:text-[18px]">
+              <div className="space-y-5 text-[16px] leading-[1.9rem] tablet:text-[16px] laptop:text-[18px]">
                 {section.clauses.map((clause) => (
                   <div key={clause.id} className="flex items-start gap-2.5 laptop:gap-3">
                     <span className="min-w-[36px] font-sans text-[#2f3744] laptop:min-w-[40px]">{clause.id}</span>
@@ -345,6 +345,8 @@ export default function TermsAndConditionsContent() {
     </section>
   );
 }
+
+
 
 
 
