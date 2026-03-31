@@ -1,10 +1,12 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Image from "next/image";
-import Product8pLegacy from "@/components/products/legacy/Product8pLegacy";
-import ProductMolt8pLegacy from "@/components/products/legacy/ProductMolt8pLegacy";
-import ProductP4200RLegacy from "@/components/products/legacy/ProductP4200RLegacy";
-import ProductT2001Legacy from "@/components/products/legacy/ProductT2001Legacy";
+
+const Product8pLegacy = dynamic(() => import("@/components/products/legacy/Product8pLegacy"), { ssr: false });
+const ProductMolt8pLegacy = dynamic(() => import("@/components/products/legacy/ProductMolt8pLegacy"), { ssr: false });
+const ProductP4200RLegacy = dynamic(() => import("@/components/products/legacy/ProductP4200RLegacy"), { ssr: false });
+const ProductT2001Legacy = dynamic(() => import("@/components/products/legacy/ProductT2001Legacy"), { ssr: false });
 
 type InteractiveSVGDiagramProps = {
   src: string;
