@@ -138,7 +138,7 @@ export default function Header() {
             <Image src="/assets/header/niurixlogo.svg" alt="Niurix" width={81} height={27} />
           </Link>
 
-          <nav className="ml-8 flex flex-1 items-baseline justify-end">
+          <nav className="ml-8 flex flex-1 items-baseline justify-end pr-10 [@media(min-width:1025px)_and_(max-width:1280px)]:pr-6">
             {desktopTabs.map((tab) => {
               const open = tab.menuKey ? activeDesktopMenu === tab.menuKey : false;
 
@@ -150,7 +150,7 @@ export default function Header() {
                       ref={(node) => {
                         desktopTriggerRefs.current[tab.menuKey!] = node;
                       }}
-                      className={`whitespace-nowrap text-[clamp(17px,1.2vw,20px)] font-sans transition ${open ? "text-brand-orange" : "text-brand-black hover:text-brand-orange"}`}
+                      className={`whitespace-nowrap text-[clamp(18px,1.25vw,22px)] font-sans transition ${open ? "text-brand-orange" : "text-brand-black hover:text-brand-orange"}`}
                       onClick={() => toggleDesktopMenu(tab.menuKey!)}
                     >
                       {tab.label}
@@ -158,7 +158,7 @@ export default function Header() {
                   ) : (
                     <Link
                       href={tab.href}
-                      className="whitespace-nowrap text-[clamp(17px,1.2vw,20px)] font-sans !text-brand-black transition hover:!text-brand-orange"
+                      className="whitespace-nowrap text-[clamp(18px,1.25vw,22px)] font-sans !text-brand-black transition hover:!text-brand-orange"
                       onClick={closeMenus}
                     >
                       {tab.label}
@@ -170,7 +170,7 @@ export default function Header() {
 
             <Link
               href="/contact-us"
-              className="ml-3 min-w-[150px] rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-5 py-2 text-center text-[clamp(18px,1.2vw,20px)] font-sans !text-white visited:!text-white transition hover:bg-white hover:!text-brand-black [@media(min-width:1025px)_and_(max-width:1280px)]:min-w-[136px] [@media(min-width:1025px)_and_(max-width:1280px)]:px-4"
+              className="ml-3 min-w-[160px] rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-5 py-2.5 text-center text-[clamp(19px,1.25vw,22px)] font-sans !text-white visited:!text-white transition hover:bg-white hover:!text-brand-black [@media(min-width:1025px)_and_(max-width:1280px)]:min-w-[146px] [@media(min-width:1025px)_and_(max-width:1280px)]:px-4"
               onClick={closeMenus}
             >
               Contact Us
@@ -206,6 +206,7 @@ export default function Header() {
     </header>
   );
 }
+
 
 
 

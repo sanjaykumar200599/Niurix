@@ -21,7 +21,7 @@ function ArrowIcon({ direction = "next", disabled = false }: { direction?: "next
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeMiterlimit="10"
-        strokeWidth="3"
+        strokeWidth="2.2"
       />
     </svg>
   );
@@ -29,7 +29,7 @@ function ArrowIcon({ direction = "next", disabled = false }: { direction?: "next
 
 function LearnMoreArrow() {
   return (
-    <svg viewBox="0 0 12.242 21.483" className="h-6 w-6" fill="none" aria-hidden>
+    <svg viewBox="0 0 12.242 21.483" className="h-4 w-4" fill="none" aria-hidden>
       <path
         d="M17.24,8.621,8.62,0,0,8.621"
         transform="translate(10.742 2.121) rotate(90)"
@@ -37,7 +37,7 @@ function LearnMoreArrow() {
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeMiterlimit="10"
-        strokeWidth="2.4"
+        strokeWidth="2"
       />
     </svg>
   );
@@ -58,12 +58,12 @@ export default function ProductsGrid({ products }: { products: HomeData["product
     <div>
       <div className="hidden w-full rounded-tl-[50px] bg-[#ebebeb] laptop:flex">
         <div className="w-[95%]">
-          <div className="flex min-h-[40rem] flex-col gap-12 px-5 py-8 laptop:px-10 [@media(min-width:1367px)]:px-12">
+          <div className="flex min-h-[42rem] flex-col px-5 py-8 laptop:px-10 [@media(min-width:1367px)]:min-h-[44rem] [@media(min-width:1367px)]:px-12">
             <p className="-ml-2 font-number text-[110px] leading-none whitespace-nowrap text-white [@media(min-width:1025px)_and_(max-width:1366px)]:text-[145px] [@media(min-width:1367px)]:-ml-5 [@media(min-width:1367px)]:text-[182px]">
               {selected.name}
             </p>
 
-            <div className="flex h-[15rem] items-center justify-evenly [@media(min-width:1367px)]:h-[16rem]">
+            <div className="mt-2 flex items-center justify-between [@media(min-width:1367px)]:mt-3">
               <div className="flex w-[50%] justify-center">
                 <div className="relative h-[285px] w-[390px] [@media(min-width:1367px)]:h-[320px] [@media(min-width:1367px)]:w-[450px]">
                   <Image
@@ -76,7 +76,7 @@ export default function ProductsGrid({ products }: { products: HomeData["product
                 </div>
               </div>
 
-              <div className="flex w-[45%] flex-col">
+              <div className="flex w-[45%] flex-col self-start">
                 <h3 className="flex items-center gap-2 text-[30px] font-display leading-tight text-brand-black [@media(min-width:1367px)]:text-[34px]">
                   {selected.name}
                   <span className="text-brand-orange">({selected.type})</span>
@@ -86,9 +86,9 @@ export default function ProductsGrid({ products }: { products: HomeData["product
                 </p>
                 <Link
                   href={`/products/${selected.slug}`}
-                  className="group mt-4 inline-flex h-[86px] w-[154px] items-center justify-between rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-4 text-white transition hover:bg-[#f54f00] hover:text-white [@media(min-width:1367px)]:h-[92px] [@media(min-width:1367px)]:w-[160px]"
+                  className="group mt-4 inline-flex h-[82px] w-[146px] items-center justify-between rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-3.5 !text-white transition hover:bg-[#f54f00] hover:!text-white [@media(min-width:1367px)]:h-[88px] [@media(min-width:1367px)]:w-[152px]"
                 >
-                  <span className="text-left text-[20px] leading-[1.05]">
+                  <span className="text-left text-[20px] leading-[1.05] text-white">
                     Learn
                     <br />
                     More
@@ -98,7 +98,7 @@ export default function ProductsGrid({ products }: { products: HomeData["product
               </div>
             </div>
 
-            <div className="mb-8 mt-16 flex w-[95%] justify-end gap-6 [@media(min-width:1367px)]:w-[85%]">
+            <div className="mb-3 mt-auto flex w-[95%] justify-end gap-6 translate-x-6 [@media(min-width:1367px)]:w-[85%] [@media(min-width:1367px)]:translate-x-8">
               {options.map((item) => (
                 <button
                   key={item.slug}
@@ -116,11 +116,11 @@ export default function ProductsGrid({ products }: { products: HomeData["product
         </div>
 
         <div className="flex w-[5%] items-center bg-[#e1e1e1]">
-          <div className="mx-auto flex flex-col items-center gap-8">
-            <button type="button" onClick={goPrev} disabled={activeIndex === 0} className="h-8 w-8">
+          <div className="mx-auto flex flex-col items-center gap-6">
+            <button type="button" onClick={goPrev} disabled={activeIndex === 0} className="h-6 w-6">
               <ArrowIcon direction="prev" disabled={activeIndex === 0} />
             </button>
-            <button type="button" onClick={goNext} disabled={activeIndex === products.length - 1} className="h-8 w-8">
+            <button type="button" onClick={goNext} disabled={activeIndex === products.length - 1} className="h-6 w-6">
               <ArrowIcon direction="next" disabled={activeIndex === products.length - 1} />
             </button>
           </div>

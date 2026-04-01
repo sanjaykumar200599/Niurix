@@ -44,7 +44,7 @@ export default function HardwareSection({ titleHtml, items }: HardwareSectionPro
             />
           </div>
 
-          <div className="mt-[22rem] grid grid-cols-1 gap-4 px-5 tablet:mt-[28rem] tablet:grid-cols-2 tablet:gap-5 tablet:px-19.5 laptop:mt-16 laptop:grid-cols-1 laptop:gap-9 laptop:px-0 wide:mt-[4.5rem] wide:gap-[2.75rem]">
+          <div className="mt-[22rem] grid grid-cols-1 gap-4 px-5 tablet:mt-[28rem] tablet:grid-cols-4 tablet:gap-5 tablet:px-19.5 laptop:mt-16 laptop:grid-cols-1 laptop:gap-9 laptop:px-0 wide:mt-[4.5rem] wide:gap-[2.75rem]">
             {items.map((item, index) => (
               <article
                 key={item}
@@ -67,13 +67,3 @@ export default function HardwareSection({ titleHtml, items }: HardwareSectionPro
     </section>
   );
 }
-
-
-
-
-
-
-
-
-
-
