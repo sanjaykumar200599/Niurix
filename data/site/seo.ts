@@ -6,12 +6,12 @@ export type MetadataInput = {
   description: string;
   canonicalPath: string;
   noindex?: boolean;
+  previewImage?: string;
 };
 
 export function toMetadata(seo: MetadataInput): Metadata {
   const canonical = new URL(seo.canonicalPath, siteUrl).toString();
-  const sharedPreviewImage = "/opengraph-image";
-  const sharedTwitterImage = "/twitter-image";
+  const previewImage = seo.previewImage ?? "/assets/homepreview.png";
 
   return {
     title: seo.title,
@@ -26,10 +26,10 @@ export function toMetadata(seo: MetadataInput): Metadata {
       type: "website",
       images: [
         {
-          url: sharedPreviewImage,
+          url: previewImage,
           width: 1200,
           height: 630,
-          alt: "Niurix shared social preview",
+          alt: `${seo.title} social preview`,
         },
       ],
     },
@@ -37,7 +37,7 @@ export function toMetadata(seo: MetadataInput): Metadata {
       card: "summary_large_image",
       title: seo.title,
       description: seo.description,
-      images: [sharedTwitterImage],
+      images: [previewImage],
     },
   };
 }

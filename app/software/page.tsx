@@ -9,6 +9,7 @@ export const revalidate = 86400;
 export const metadata: Metadata = toMetadata({
   ...softwareContent.seo,
   canonicalPath: "/software",
+  previewImage: softwareContent.heroImage,
 });
 
 export default function SoftwareRoutePage() {
@@ -19,3 +20,5 @@ export default function SoftwareRoutePage() {
     </div>
   );
 }
+
+

@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   const { slug } = await params;
   const product = getProductBySlug(slug);
   if (!product) return {};
-  return toMetadata({ ...product.seo, canonicalPath: `/products/${product.slug}` });
+  return toMetadata({ ...product.seo, canonicalPath: `/products/${product.slug}`, previewImage: product.heroImage });
 }
 
 export default async function ProductPage({ params }: ProductPageProps) {
@@ -47,3 +47,4 @@ export default async function ProductPage({ params }: ProductPageProps) {
     </div>
   );
 }
+

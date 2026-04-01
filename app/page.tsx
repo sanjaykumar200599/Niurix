@@ -12,7 +12,7 @@ import { toMetadata } from "@/data/site/seo";
 
 export const revalidate = 86400;
 
-export const metadata: Metadata = toMetadata(homeContent.seo);
+export const metadata: Metadata = toMetadata({ ...homeContent.seo, previewImage: "/assets/homepreview.png" });
 
 export default function HomePage() {
   return (
@@ -77,5 +77,6 @@ export default function HomePage() {
     </div>
   );
 }
+
 
 

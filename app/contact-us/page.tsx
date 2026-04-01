@@ -7,6 +7,7 @@ const seo = {
   title: "Contact Us | Niurix",
   description: "Want to know more about our products? Get in touch with Niurix.",
   canonicalPath: "/contact-us",
+  previewImage: "/assets/contactus/banner.webp",
 };
 
 export const metadata: Metadata = toMetadata(seo);
@@ -113,6 +114,8 @@ export default function ContactUsPage() {
     </div>
   );
 }
+
+
 
 
 

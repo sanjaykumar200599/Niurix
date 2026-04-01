@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import TermsAndConditionsContent from "@/components/policy/TermsAndConditionsContent";
 import { getPolicyBySlug } from "@/data/site/content";
 import { toMetadata } from "@/data/site/seo";
@@ -9,8 +9,9 @@ if (!policy) {
   throw new Error("Missing terms-and-conditions content.");
 }
 
-export const metadata: Metadata = toMetadata(policy.seo);
+export const metadata: Metadata = toMetadata({ ...policy.seo, previewImage: "/assets/homepreview.png" });
 
 export default function TermsAndConditionsPage() {
   return <TermsAndConditionsContent />;
 }
+

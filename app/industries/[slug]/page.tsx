@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: IndustryPageProps): Promise<M
   const { slug } = await params;
   const industry = getIndustryBySlug(slug);
   if (!industry) return {};
-  return toMetadata(industry.seo);
+  return toMetadata({ ...industry.seo, previewImage: industry.heroImage });
 }
 
 export default async function IndustryPage({ params }: IndustryPageProps) {
@@ -47,3 +47,4 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
     </div>
   );
 }
+

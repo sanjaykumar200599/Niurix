@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import PrivacyPolicyContent from "@/components/policy/PrivacyPolicyContent";
 import { getPolicyBySlug } from "@/data/site/content";
 import { toMetadata } from "@/data/site/seo";
@@ -9,8 +9,9 @@ if (!policy) {
   throw new Error("Missing privacy-policy content.");
 }
 
-export const metadata: Metadata = toMetadata(policy.seo);
+export const metadata: Metadata = toMetadata({ ...policy.seo, previewImage: "/assets/homepreview.png" });
 
 export default function PrivacyPolicyPage() {
   return <PrivacyPolicyContent />;
 }
+

@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: SolutionPageProps): Promise<M
   const { slug } = await params;
   const solution = getSolutionBySlug(slug);
   if (!solution) return {};
-  return toMetadata({ ...solution.seo, canonicalPath: `/solutions/${solution.slug}` });
+  return toMetadata({ ...solution.seo, canonicalPath: `/solutions/${solution.slug}`, previewImage: solution.heroImage });
 }
 
 export default async function SolutionPage({ params }: SolutionPageProps) {
@@ -47,3 +47,4 @@ export default async function SolutionPage({ params }: SolutionPageProps) {
     </div>
   );
 }
+
