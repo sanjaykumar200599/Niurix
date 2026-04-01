@@ -15,13 +15,11 @@ export default function ContactForm() {
   const messageClass = useMemo(() => (state.ok ? "text-green-700" : "text-red-600"), [state.ok]);
 
   return (
-    <form action={formAction} className="w-full">
-      <input type="hidden" name="website" value="" />
-
+    <form action={formAction} method="post" className="w-full">
       <div className="grid gap-4 laptop:grid-cols-2">
         <div>
           <input name="name" placeholder="Name" className="h-[47px] w-full rounded-[10px_0px] border border-black/40 px-4 text-base" />
-          {state.fieldErrors?.name ? <p className="mt-1 text-sm text-red-600">{state.fieldErrors.name}</p> : null}
+          {state.fieldErrors?.name ? <p className="mt-1 text-sm text-black">{state.fieldErrors.name}</p> : null}
         </div>
 
         <div>
@@ -38,7 +36,7 @@ export default function ContactForm() {
 
       <div className="mt-5">
         <input type="email" name="email" placeholder="Email" className="h-[47px] w-full rounded-[10px_0px] border border-black/40 px-4 text-base" />
-        {state.fieldErrors?.email ? <p className="mt-1 text-sm text-red-600">{state.fieldErrors.email}</p> : null}
+        {state.fieldErrors?.email ? <p className="mt-1 text-sm text-black">{state.fieldErrors.email}</p> : null}
       </div>
 
       <div className="mt-5">
@@ -54,7 +52,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={pending}
-          className="rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-lg font-display text-white transition hover:bg-white hover:text-black disabled:opacity-60"
+          className="rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-lg font-display text-white transition disabled:opacity-60"
         >
           {pending ? "Submitting..." : "Submit"}
         </button>
@@ -64,4 +62,3 @@ export default function ContactForm() {
     </form>
   );
 }
-

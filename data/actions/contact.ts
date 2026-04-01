@@ -3,6 +3,31 @@
 import { ContactFormInputSchema, type ContactActionResult } from "@/lib/validation/contact";
 
 const endpoint = process.env.CONTACT_ENDPOINT ?? "https://app.sclera.com/alert/acknowledgementEmail";
+const DEFAULT_SUCCESS_MESSAGE = "Message has been sent successfully.";
+const DEFAULT_ERROR_MESSAGE = "Message not sent! Please try again.";
+
+type UnknownRecord = Record<string, unknown>;
+
+function getMessageFromResponseBody(body: unknown): string | null {
+  if (!body) return null;
+  if (typeof body === "string") {
+    const trimmed = body.trim();
+    return trimmed.length ? trimmed : null;
+  }
+  if (typeof body !== "object") return null;
+
+  const record = body as UnknownRecord;
+  const possibleKeys = ["message", "response", "detail", "error", "status", "msg"];
+
+  for (const key of possibleKeys) {
+    const value = record[key];
+    if (typeof value === "string" && value.trim().length) {
+      return value.trim();
+    }
+  }
+
+  return null;
+}
 
 export async function submitContact(_: ContactActionResult, formData: FormData): Promise<ContactActionResult> {
   const parsed = ContactFormInputSchema.safeParse({
@@ -10,7 +35,6 @@ export async function submitContact(_: ContactActionResult, formData: FormData):
     email: formData.get("email"),
     phoneNumber: formData.get("phoneNumber"),
     message: formData.get("message"),
-    website: formData.get("website"),
   });
 
   if (!parsed.success) {
@@ -19,33 +43,53 @@ export async function submitContact(_: ContactActionResult, formData: FormData):
       const key = String(issue.path[0] ?? "form");
       if (!fieldErrors[key]) fieldErrors[key] = issue.message;
     }
-    return { ok: false, message: "Please review highlighted fields.", fieldErrors };
-  }
-
-  if (parsed.data.website) {
-    return { ok: true, message: "Message has been sent successfully." };
+    return { ok: false,message:"", fieldErrors };
   }
 
   try {
+    const body: Record<string, string> = {
+      name: parsed.data.name,
+      email: parsed.data.email,
+    };
+
+    if (parsed.data.phoneNumber.trim()) {
+      body.phoneNumber = parsed.data.phoneNumber.trim();
+    }
+
+    if (parsed.data.message.trim()) {
+      body.message = parsed.data.message.trim();
+    }
+
     const response = await fetch(endpoint, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: parsed.data.name,
-        email: parsed.data.email,
-        phoneNumber: parsed.data.phoneNumber,
-        message: parsed.data.message,
-      }),
+      body: JSON.stringify(body),
       cache: "no-store",
     });
 
-    if (!response.ok) {
-      return { ok: false, message: "Message not sent! Please try again." };
+    const contentType = response.headers.get("content-type") ?? "";
+    let responseBody: unknown = null;
+
+    if (contentType.includes("application/json")) {
+      responseBody = await response.json().catch(() => null);
+    } else {
+      responseBody = await response.text().catch(() => "");
     }
 
-    return { ok: true, message: "Message has been sent successfully." };
+    const responseMessage = getMessageFromResponseBody(responseBody);
+
+    if (!response.ok) {
+      return {
+        ok: false,
+        message: responseMessage ?? DEFAULT_ERROR_MESSAGE,
+      };
+    }
+
+    return {
+      ok: true,
+      message: responseMessage ?? DEFAULT_SUCCESS_MESSAGE,
+    };
   } catch {
-    return { ok: false, message: "Message not sent! Please try again." };
+    return { ok: false, message: DEFAULT_ERROR_MESSAGE };
   }
 }
-
