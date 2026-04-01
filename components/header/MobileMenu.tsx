@@ -25,11 +25,11 @@ export default function MobileMenu({ mobileOpen, mobileSection, setMobileSection
           transition={{ duration: 0.2 }}
           className="fixed inset-0 z-40 bg-white pt-20 laptop:hidden"
         >
-          <div className="h-full overflow-auto px-9 pb-12">
-            {(["solutions", "products", "industries"] as HeaderMenuKey[]).map((section) => {
+          <div className="h-full overflow-auto px-9 pb-8">
+            {(["solutions", "products"] as HeaderMenuKey[]).map((section) => {
               const open = mobileSection === section;
               return (
-                <div key={section} className="border-b border-black/10 py-2">
+                <div key={section} className="py-1">
                   <button
                     type="button"
                     className="flex w-full items-center justify-between py-3"
@@ -45,10 +45,10 @@ export default function MobileMenu({ mobileOpen, mobileSection, setMobileSection
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="overflow-hidden bg-[#FF8948]"
+                        className="-mx-9 overflow-hidden bg-[#FF8948]"
                       >
                         {mobileLinks[section].map((item) => (
-                          <Link key={item.href} href={item.href} onClick={onNavigate} className="block px-4 py-3 text-lg text-white">
+                          <Link key={item.href} href={item.href} onClick={onNavigate} className="block px-9 py-3 text-lg !text-white">
                             {item.label}
                           </Link>
                         ))}
@@ -59,15 +59,43 @@ export default function MobileMenu({ mobileOpen, mobileSection, setMobileSection
               );
             })}
 
-            <Link href="/software" onClick={onNavigate} className="block border-b border-black/10 py-5 text-2xl font-display text-brand-black">
+            <Link href="/software" onClick={onNavigate} className="block py-3 text-2xl font-display text-brand-black">
               Software
             </Link>
 
-            <div className="mt-8 flex justify-center">
+            <div className="py-1">
+              <button
+                type="button"
+                className="flex w-full items-center justify-between py-3"
+                onClick={() => setMobileSection((prev) => (prev === "industries" ? null : "industries"))}
+              >
+                <span className="text-2xl font-display text-brand-black capitalize">industries</span>
+                <span className={`text-3xl text-brand-orange transition ${mobileSection === "industries" ? "rotate-45" : ""}`}>+</span>
+              </button>
+
+              <AnimatePresence>
+                {mobileSection === "industries" ? (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="-mx-9 overflow-hidden bg-[#FF8948]"
+                  >
+                    {mobileLinks.industries.map((item) => (
+                      <Link key={item.href} href={item.href} onClick={onNavigate} className="block px-9 py-3 text-lg !text-white">
+                        {item.label}
+                      </Link>
+                    ))}
+                  </motion.div>
+                ) : null}
+              </AnimatePresence>
+            </div>
+
+            <div className="mt-3 flex justify-center">
               <Link
                 href="/contact-us"
                 onClick={onNavigate}
-                className="rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-xl font-display text-white"
+                className="rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-xl font-display !text-white"
               >
                 Contact Us
               </Link>
@@ -78,3 +106,5 @@ export default function MobileMenu({ mobileOpen, mobileSection, setMobileSection
     </AnimatePresence>
   );
 }
+
+
