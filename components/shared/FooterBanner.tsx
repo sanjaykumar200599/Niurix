@@ -27,7 +27,7 @@ export default function FooterBanner() {
             </p>
             <Link
               href="/contact-us"
-              className="mt-4 inline-flex items-center justify-center rounded-[10px_0px] border border-brand-orange bg-brand-orange px-5 py-2 text-center text-[18px] font-sans text-white transition hover:bg-transparent hover:text-white"
+              className="mt-4 inline-flex items-center justify-center rounded-[10px_0px] border border-brand-orange bg-brand-orange px-5 py-2 text-center text-[18px] font-sans !text-white visited:!text-white transition hover:bg-transparent hover:!text-white"
             >
               Get in touch
             </Link>
@@ -41,7 +41,7 @@ export default function FooterBanner() {
             </p>
             <Link
               href="/contact-us"
-              className="mt-4 inline-flex rounded-[10px_0px] border border-brand-orange bg-brand-orange px-4 py-2 text-[16px] font-sans text-white transition hover:bg-transparent"
+              className="mt-4 inline-flex rounded-[10px_0px] border border-brand-orange bg-brand-orange px-4 py-2 text-[16px] font-sans !text-white visited:!text-white transition hover:bg-transparent hover:!text-white"
             >
               Get in touch
             </Link>
@@ -51,6 +51,7 @@ export default function FooterBanner() {
     </section>
   );
 }
+
 
 
 

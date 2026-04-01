@@ -5,19 +5,34 @@ type SoftwarePageProps = {
   software: SoftwareContent;
 };
 
+function renderSoftwareHeroTitle(title: string) {
+  if (title !== "Fiber for the Future: Advancing Connectivity and Control for the Users Today.") {
+    return title;
+  }
+
+  return (
+    <>
+      <span className="block tablet:inline">Fiber for the Future:</span>{" "}
+      <span className="block whitespace-nowrap tablet:inline tablet:whitespace-normal laptop:block laptop:whitespace-nowrap">Advancing Connectivity</span>{" "}
+      <span className="block whitespace-nowrap tablet:inline tablet:whitespace-normal laptop:block laptop:whitespace-nowrap">and Control for the</span>{" "}
+      <span className="block tablet:inline">Users Today.</span>
+    </>
+  );
+}
+
 export default function SoftwarePage({ software }: SoftwarePageProps) {
   return (
     <>
       <section className="relative overflow-hidden">
-        <div className="relative h-[320px] tablet:h-[520px] laptop:h-[760px]">
+        <div className="relative h-[760px] tablet:h-[520px] laptop:h-[860px]">
           <Image src={software.heroImage} alt="Software banner" fill sizes="(max-width: 767px) 0px, 100vw" className="hidden object-cover tablet:block" priority />
           <Image src={software.heroImageMobile} alt="Software banner" fill sizes="(max-width: 767px) 100vw, 0px" className="object-cover tablet:hidden" priority />
 
           <div className="absolute inset-0 bg-black/10" />
 
-          <div className="relative z-10 flex h-full items-end px-9 pb-10 tablet:px-[78px] tablet:pb-16 laptop:px-[120px] laptop:pb-28">
+          <div className="relative z-10 flex h-full items-center px-9 tablet:items-end tablet:px-[78px] tablet:pb-16 laptop:px-[120px] laptop:pb-28">
             <h1 className="w-[85%] text-[32px] font-display leading-tight text-white tablet:w-[70%] tablet:text-[34px] laptop:w-[35%] laptop:text-[48px]">
-              {software.heroTitle}
+              {renderSoftwareHeroTitle(software.heroTitle)}
             </h1>
           </div>
         </div>
@@ -57,4 +72,5 @@ export default function SoftwarePage({ software }: SoftwarePageProps) {
     </>
   );
 }
+
 
