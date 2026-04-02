@@ -43,17 +43,17 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
           dangerouslySetInnerHTML={{ __html: product.overviewHeadingHtml }}
         />
 
-        <div className="mt-5 flex flex-col-reverse items-center gap-6 tablet:mt-8 laptop:flex-row laptop:items-stretch laptop:justify-between">
+        <div className="mt-5 flex flex-col-reverse items-center gap-4 tablet:mt-8 tablet:gap-6 laptop:flex-row laptop:items-stretch laptop:justify-between">
           <div className="w-full laptop:w-[30%]">
             <h1 className="text-center text-[22px] font-display text-brand-black tablet:text-[28px] laptop:text-left laptop:text-[24px]">
               {product.overviewTitle}
             </h1>
             <div
-              className="mt-4 whitespace-pre-line text-left text-base font-normal leading-8 text-brand-black/80 tablet:text-lg laptop:text-xl"
+              className="mt-3 whitespace-pre-line text-left text-[16px] font-normal leading-[1.45] text-brand-black/80 tablet:mt-4 tablet:text-lg tablet:leading-8 laptop:text-xl"
               dangerouslySetInnerHTML={{ __html: product.overviewParaHtml }}
             />
 
-            <div className="mt-8 flex justify-center laptop:justify-start">
+            <div className="mt-6 flex justify-center laptop:mt-8 laptop:justify-start">
               <Link
                 href="/contact-us"
                 className="group inline-flex flex-col rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-left text-lg font-display leading-tight text-white transition-colors duration-200 hover:bg-white hover:text-brand-black"
@@ -64,7 +64,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
             </div>
           </div>
 
-          <div className="relative h-[420px] w-full overflow-hidden rounded-tl-[30px] tablet:h-[600px] tablet:rounded-tl-[45px] laptop:h-auto laptop:w-[70%] laptop:self-stretch laptop:min-h-[760px]">
+          <div className="relative h-[360px] w-full overflow-hidden rounded-tl-[30px] tablet:h-[600px] tablet:rounded-tl-[45px] laptop:h-auto laptop:w-[70%] laptop:self-stretch laptop:min-h-[760px]">
             <Image
               src={product.overviewImage}
               alt={product.overviewTitle}
@@ -77,7 +77,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
               alt={product.overviewTitle}
               fill
               sizes="(max-width: 1023px) 100vw, 0px"
-              className="object-cover tablet:hidden"
+              className="object-contain object-center tablet:hidden"
             />
           </div>
         </div>
@@ -85,11 +85,11 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
       <section className="px-9 pb-0 pt-8 tablet:px-[78px] tablet:pt-12 laptop:px-[120px] laptop:pt-16">
         <h2
-          className="nx-rich mb-8 flex min-h-[64px] items-center justify-center text-center text-[22px] font-display font-normal leading-tight tracking-normal text-brand-black tablet:mb-10 tablet:min-h-[78px] tablet:text-[28px] laptop:mb-12 laptop:min-h-[88px] laptop:text-[40px]"
+          className="nx-rich mb-6 flex min-h-[52px] items-center justify-center whitespace-nowrap text-center text-[17px] font-display font-normal leading-tight tracking-normal text-brand-black tablet:mb-10 tablet:min-h-[78px] tablet:whitespace-normal tablet:text-[28px] laptop:mb-12 laptop:min-h-[88px] laptop:text-[40px]"
           dangerouslySetInnerHTML={{ __html: product.connectHeadingHtml }}
         />
 
-        <div className="flex flex-col gap-6 laptop:flex-row laptop:items-start laptop:justify-between laptop:px-12">
+        <div className="flex flex-col gap-3 laptop:flex-row laptop:items-start laptop:justify-between laptop:px-12">
           <div className="w-full laptop:w-[45%]">
             <div className={isP4200R || isT2001 || isSolt33_8p || isXgspon8p ? "w-full" : "relative h-[300px] w-full tablet:h-[420px] laptop:h-[520px]"}>
               <InteractiveSVGDiagram
@@ -100,7 +100,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
             </div>
           </div>
 
-          <div className="w-full pt-3 text-left text-base font-normal leading-8 text-brand-black/80 tablet:pt-4 tablet:text-lg laptop:w-[42%] laptop:pt-12 laptop:text-lg">
+          <div className="w-full pt-1 text-left text-[16px] font-normal leading-[1.35] text-brand-black/80 tablet:pt-4 tablet:text-lg tablet:leading-8 laptop:w-[42%] laptop:pt-12 laptop:text-lg">
             <div className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: product.connectParaHtml }} />
           </div>
         </div>
@@ -213,6 +213,9 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
     </div>
   );
 }
+
+
+
 
 
 
