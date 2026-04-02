@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -106,26 +106,26 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
         </div>
       </section>
 
-      <section className="mt-12 px-9 tablet:mt-16 tablet:px-[78px] laptop:mt-24 laptop:px-[120px]">
-        <div className="relative h-[380px] overflow-hidden tablet:h-[520px] laptop:h-[660px]">
+      <section className="mt-8 px-9 tablet:mt-16 tablet:px-[78px] laptop:mt-24 laptop:px-[120px]">
+        <div className="relative h-[340px] overflow-hidden bg-[#c2c2c2] tablet:h-[520px] laptop:h-[660px]">
           <Image src={product.detailImage} alt={product.detailTitle} fill sizes="(max-width: 1023px) 0px, 100vw" className="hidden object-cover laptop:block" />
           <Image
             src={product.detailImageMobile}
             alt={product.detailTitle}
             fill
             sizes="(max-width: 1023px) 100vw, 0px"
-            className="object-cover tablet:hidden"
+            className="object-contain object-[center_72%] tablet:hidden"
           />
           <h2 className="absolute left-4 top-6 w-[85%] text-[26px] font-display leading-tight text-white tablet:left-10 tablet:top-12 tablet:w-[64%] tablet:text-[34px] laptop:left-28 laptop:top-16 laptop:w-[42%] laptop:text-4xl">
-            {splitSimplerConnectivity ? (<><span className="whitespace-nowrap">The Twist Towards Simpler</span><br />Connectivity</>) : (product.detailTitle)}
+            {splitSimplerConnectivity ? (<>The Twist Towards Simpler<br />Connectivity</>) : (product.detailTitle)}
           </h2>
         </div>
 
-        <div className="mt-[-2px] flex flex-col justify-between gap-6 bg-[#f3f3f3] px-7 py-7 tablet:px-12 tablet:py-10 laptop:h-[220px] laptop:flex-row laptop:items-start laptop:px-14">
+        <div className="mt-[-2px] flex flex-col justify-between gap-5 bg-[#f3f3f3] px-7 py-7 tablet:px-12 tablet:py-10 laptop:h-[220px] laptop:flex-row laptop:items-start laptop:px-14">
           {product.highlights.map((item) => (
             <article key={item.title} className="w-full laptop:w-[30%]">
               <h3 className="text-lg font-display text-brand-orange tablet:text-xl laptop:text-2xl">{item.title}</h3>
-              <p className="mt-2 text-base leading-7 text-brand-black tablet:text-lg">{item.para}</p>
+              <p className="mt-1 text-base leading-[1.45] text-brand-black tablet:mt-2 tablet:text-lg tablet:leading-7">{item.para}</p>
             </article>
           ))}
         </div>
@@ -213,6 +213,16 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
