@@ -23,14 +23,14 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
   return (
     <div className="w-full">
-      <section className="relative h-[420px] tablet:h-[560px] laptop:h-[860px]">
-        <Image src={product.heroImage} alt={product.overviewTitle} fill sizes="(max-width: 767px) 0px, 100vw" className="hidden object-cover tablet:block" priority />
+      <section className="relative h-[720px] tablet:h-[700px] laptop:h-[860px]">
+        <Image src={product.heroImage} alt={product.overviewTitle} fill sizes="(max-width: 1023px) 0px, 100vw" className="hidden object-cover laptop:block" priority />
         <Image
           src={product.heroImageMobile}
           alt={product.overviewTitle}
           fill
-          sizes="(max-width: 767px) 100vw, 0px"
-          className="object-cover tablet:hidden"
+          sizes="(max-width: 1023px) 100vw, 0px"
+          className="object-cover object-[center_30%] laptop:hidden"
           priority
         />
       </section>
@@ -76,7 +76,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
               src={product.overviewImageMobile}
               alt={product.overviewTitle}
               fill
-              sizes="(max-width: 767px) 100vw, 0px"
+              sizes="(max-width: 1023px) 100vw, 0px"
               className="object-cover tablet:hidden"
             />
           </div>
@@ -108,12 +108,12 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
       <section className="mt-12 px-9 tablet:mt-16 tablet:px-[78px] laptop:mt-24 laptop:px-[120px]">
         <div className="relative h-[380px] overflow-hidden tablet:h-[520px] laptop:h-[660px]">
-          <Image src={product.detailImage} alt={product.detailTitle} fill sizes="(max-width: 767px) 0px, 100vw" className="hidden object-cover tablet:block" />
+          <Image src={product.detailImage} alt={product.detailTitle} fill sizes="(max-width: 1023px) 0px, 100vw" className="hidden object-cover laptop:block" />
           <Image
             src={product.detailImageMobile}
             alt={product.detailTitle}
             fill
-            sizes="(max-width: 767px) 100vw, 0px"
+            sizes="(max-width: 1023px) 100vw, 0px"
             className="object-cover tablet:hidden"
           />
           <h2 className="absolute left-4 top-6 w-[85%] text-[26px] font-display leading-tight text-white tablet:left-10 tablet:top-12 tablet:w-[64%] tablet:text-[34px] laptop:left-28 laptop:top-16 laptop:w-[42%] laptop:text-4xl">
@@ -213,6 +213,17 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
