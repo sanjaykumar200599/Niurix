@@ -413,7 +413,7 @@ export const homeContent: HomeData = HomeDataSchema.parse({
       name: "T2001",
       type: "ONT",
       desc: "The Niurix T2001 ONT (Optical Network Terminal) is a lightweight, compact, and high-performance networking device built to bridge communication between modern infrastructure and end users while delivering stable high-speed access.",
-      image: assetPath("assets", "products", "ONT-T2001", "Product.webp"),
+      image: assetPath("assets", "homepage", "T2001.webp"),
     },
     {
       slug: "OLT-SOLT33-8P",
@@ -427,7 +427,7 @@ export const homeContent: HomeData = HomeDataSchema.parse({
       name: "XGSPON-8P",
       type: "OLT",
       desc: "The Niurix XGSPON-8P is a high-capacity Optical Line Terminal engineered for large-scale FTTH/FTTB deployments with higher throughput, low-latency transport, and future-ready multi-tenant network expansion.",
-      image: assetPath("assets", "products", "OLT-XGSPON-8P", "Product.webp"),
+      image: assetPath("assets", "homepage", "XGSPON 8P.webp"),
     },
   ],
   industries: [
