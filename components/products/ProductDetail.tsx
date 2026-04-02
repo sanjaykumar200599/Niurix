@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -36,46 +36,47 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
       <section className="px-9 pb-0 pt-4 tablet:px-[78px] laptop:px-[120px] laptop:pt-20">
         <h2
-          className={`nx-rich text-[28px] font-display leading-tight text-brand-black tablet:text-[34px] ${
-            isOlt ? "laptop:text-[56px] laptop:leading-[1.05]" : "laptop:text-5xl"
+          className={`nx-rich text-[24px] font-display leading-tight text-brand-black tablet:text-[30px] ${
+            isOlt ? "laptop:text-[48px] laptop:leading-[1.05]" : "laptop:text-[44px]"
           }`}
           dangerouslySetInnerHTML={{ __html: product.overviewHeadingHtml }}
         />
 
-        <div className="mt-5 flex flex-col-reverse items-center gap-6 tablet:mt-8 laptop:flex-row laptop:justify-between">
-          <div className="w-full laptop:w-[35%]">
-            <h1 className="text-center text-[30px] font-display text-brand-black tablet:text-[40px] laptop:text-left laptop:text-5xl">
+        <div className="mt-5 flex flex-col-reverse items-center gap-6 tablet:mt-8 laptop:flex-row laptop:items-stretch laptop:justify-between">
+          <div className="w-full laptop:w-[30%]">
+            <h1 className="text-center text-[22px] font-display text-brand-black tablet:text-[28px] laptop:text-left laptop:text-[24px]">
               {product.overviewTitle}
             </h1>
             <div
-              className="mt-4 whitespace-pre-line text-base leading-7 text-brand-black tablet:text-lg laptop:text-xl"
+              className="mt-4 whitespace-pre-line text-left text-base font-normal leading-8 text-brand-black/80 tablet:text-lg laptop:text-xl"
               dangerouslySetInnerHTML={{ __html: product.overviewParaHtml }}
             />
 
             <div className="mt-8 flex justify-center laptop:justify-start">
               <Link
                 href="/contact-us"
-                className="inline-flex rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-lg font-display text-white transition hover:bg-white hover:text-brand-black"
+                className="inline-flex flex-col rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-left text-lg font-display leading-tight text-white transition-colors duration-200 hover:bg-white hover:text-brand-black"
               >
-                Get in touch
+                <span>Get in</span>
+                <span>touch</span>
               </Link>
             </div>
           </div>
 
-          <div className="w-full laptop:w-[60%]">
+          <div className="relative h-[400px] w-full overflow-hidden rounded-tl-[30px] tablet:h-[560px] tablet:rounded-tl-[45px] laptop:h-auto laptop:w-[70%] laptop:self-stretch">
             <Image
               src={product.overviewImage}
               alt={product.overviewTitle}
-              width={1400}
-              height={900}
-              className="hidden h-auto w-full rounded-tl-[45px] tablet:block"
+              fill
+              sizes="(max-width: 767px) 0px, (max-width: 1023px) 100vw, 70vw"
+              className="hidden object-cover tablet:block"
             />
             <Image
               src={product.overviewImageMobile}
               alt={product.overviewTitle}
-              width={900}
-              height={700}
-              className="h-auto w-full rounded-tl-[30px] tablet:hidden"
+              fill
+              sizes="(max-width: 767px) 100vw, 0px"
+              className="object-cover tablet:hidden"
             />
           </div>
         </div>
@@ -205,6 +206,14 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
     </div>
   );
 }
+
+
+
+
+
+
+
+
 
 
 
