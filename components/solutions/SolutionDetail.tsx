@@ -31,8 +31,8 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
         </div>
 
         {/* HERO TEXT */}
-        <div className="absolute inset-x-0 top-1/2 z-10 -translate-y-1/2 px-9 tablet:top-auto tablet:bottom-16 tablet:translate-y-0 tablet:px-[78px] laptop:bottom-auto laptop:top-1/2 laptop:-translate-y-1/2 laptop:px-[120px]">
-          <h1 className="text-[28px] font-display leading-[1.08] tracking-tight text-white tablet:text-[42px] laptop:text-[52px]">
+        <div className="absolute inset-x-0 top-[47%] z-10 -translate-y-1/2 px-9 tablet:top-auto tablet:bottom-16 tablet:translate-y-0 tablet:px-[78px] laptop:bottom-auto laptop:top-1/2 laptop:-translate-y-1/2 laptop:px-[120px]">
+          <h1 className="text-[28px] font-display leading-[1.14] tracking-tight text-white tablet:text-[42px] tablet:leading-[1.08] laptop:text-[52px]">
             {solution.heroTitle === "Optimized Fiber-Optic Solution" ? (
               <>
                 <span>Optimized Fiber-</span>
@@ -55,7 +55,7 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
 
         <div className="mt-6 flex flex-col-reverse gap-8 laptop:flex-row">
           <div className="flex w-full items-center laptop:w-[40%]">
-            <p className="text-base leading-7 text-brand-black/90 tablet:text-lg laptop:text-xl">
+            <p className="text-base leading-[1.45] text-brand-black/90 tablet:text-lg tablet:leading-7 laptop:text-xl">
               {solution.introText}
             </p>
           </div>
@@ -68,20 +68,36 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
 
       {/* CARDS SECTION */}
       <section className="bg-[#f3f3f3] py-10 tablet:py-14 laptop:py-[4.5rem]">
-        <div className="px-9 tablet:px-[78px] laptop:px-[120px]">
-          <h2
-            className="nx-rich text-[24px] font-display leading-[1.18] text-brand-black tablet:text-[28px] laptop:text-[26px]"
-            dangerouslySetInnerHTML={{ __html: solution.cardsHeadingHtml }}
-          />
+        <div className="px-5 tablet:px-[78px] laptop:px-[120px]">
+          {solution.heroTitle === "Optimized Fiber-Optic Solution" ? (
+            <>
+              <h2 className="text-[24px] font-display leading-[1.2] text-brand-black tablet:hidden">
+                <span>Three Key Factors of Our</span>
+                <br />
+                <span className="text-brand-orange">Optimized Fiber-Optic</span>
+                <br />
+                <span>Solution</span>
+              </h2>
+              <h2
+                className="nx-rich hidden text-[24px] font-display leading-[1.18] text-brand-black tablet:block tablet:text-[28px] laptop:text-[26px]"
+                dangerouslySetInnerHTML={{ __html: solution.cardsHeadingHtml }}
+              />
+            </>
+          ) : (
+            <h2
+              className="nx-rich text-[24px] font-display leading-[1.18] text-brand-black tablet:text-[28px] laptop:text-[26px]"
+              dangerouslySetInnerHTML={{ __html: solution.cardsHeadingHtml }}
+            />
+          )}
 
           <div className="mt-10 grid gap-8 tablet:grid-cols-3 tablet:gap-4 laptop:mt-12 laptop:gap-5">
             {solution.cards.map((card) => (
-              <article key={card.number + card.title} className="relative px-4 pt-8 tablet:px-0 laptop:px-0">
+              <article key={card.number + card.title} className="relative pt-8 tablet:px-0 laptop:px-0">
                 <p className="absolute left-1/2 top-8 -translate-x-1/2 -translate-y-1/2 text-[58px] leading-none font-number text-brand-orange tablet:text-[66px] laptop:text-[82px]">
                   {card.number}
                 </p>
 
-                <div className="rounded-tl-[30px] rounded-br-[30px] bg-white px-5 pb-5 pt-12 shadow-[0_0_2px_#00000029] tablet:min-h-[20rem] laptop:min-h-[14.5rem] laptop:px-4 laptop:pb-4 laptop:pt-11">
+                <div className="rounded-tl-[30px] rounded-br-[30px] bg-white px-6 pb-7 pt-14 shadow-[0_0_2px_#00000029] tablet:min-h-[20rem] tablet:px-5 tablet:pb-6 tablet:pt-12 laptop:min-h-[14.5rem] laptop:px-4 laptop:pb-4 laptop:pt-11">
                   <h3 className="text-center text-[23px] font-display text-brand-black tablet:min-h-[4.4rem] laptop:text-[22px]">
                     {card.title}
                   </h3>
