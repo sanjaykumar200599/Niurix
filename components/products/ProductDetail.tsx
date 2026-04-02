@@ -82,13 +82,13 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
         </div>
       </section>
 
-      <section className="px-9 pb-0 pt-12 tablet:px-[78px] tablet:pt-16 laptop:px-[120px] laptop:pt-32">
+      <section className="px-9 pb-0 pt-8 tablet:px-[78px] tablet:pt-12 laptop:px-[120px] laptop:pt-16">
         <h2
-          className="nx-rich flex min-h-[80px] items-center justify-center text-center text-[28px] font-display leading-tight tracking-normal text-brand-black tablet:min-h-[100px] tablet:text-[34px] laptop:min-h-[120px] laptop:text-5xl"
+          className="nx-rich mb-8 flex min-h-[64px] items-center justify-center text-center text-[22px] font-display font-normal leading-tight tracking-normal text-brand-black tablet:mb-10 tablet:min-h-[78px] tablet:text-[28px] laptop:mb-12 laptop:min-h-[88px] laptop:text-[40px]"
           dangerouslySetInnerHTML={{ __html: product.connectHeadingHtml }}
         />
 
-        <div className="flex flex-col gap-6 laptop:flex-row laptop:items-center laptop:justify-between laptop:px-12">
+        <div className="flex flex-col gap-6 laptop:flex-row laptop:items-start laptop:justify-between laptop:px-12">
           <div className="w-full laptop:w-[45%]">
             <div className={isP4200R || isT2001 || isSolt33_8p || isXgspon8p ? "w-full" : "relative h-[300px] w-full tablet:h-[420px] laptop:h-[520px]"}>
               <InteractiveSVGDiagram
@@ -99,7 +99,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
             </div>
           </div>
 
-          <div className="w-full text-base leading-7 text-brand-black tablet:text-lg laptop:w-[45%] laptop:text-xl">
+          <div className="w-full pt-3 text-left text-base font-normal leading-8 text-brand-black/80 tablet:pt-4 tablet:text-lg laptop:w-[42%] laptop:pt-12 laptop:text-lg">
             <div className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: product.connectParaHtml }} />
           </div>
         </div>
@@ -206,6 +206,13 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
     </div>
   );
 }
+
+
+
+
+
+
+
 
 
 
