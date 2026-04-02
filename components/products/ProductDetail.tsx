@@ -133,9 +133,12 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
       <section className="mt-12 flex w-full flex-col-reverse tablet:mt-16 laptop:mt-24 laptop:flex-row">
         <div className="w-full bg-[#f3f3f3] laptop:w-[45%]">
-          <div className="flex h-full flex-col justify-center px-10 py-10 tablet:px-20 tablet:py-16 laptop:min-h-[50rem] laptop:px-24">
-            <h2 className="mb-8 text-[30px] font-display leading-tight text-brand-black tablet:text-[34px] laptop:text-5xl">
-              General Product Specifications of Niurix {product.model}
+          <div className="flex h-full flex-col justify-start px-10 pb-10 pt-8 tablet:px-20 tablet:pb-16 tablet:pt-10 laptop:min-h-[50rem] laptop:px-24 laptop:pt-12">
+            <h2 className="mb-8 text-[20px] font-sans leading-tight text-brand-black tablet:text-[26px] laptop:text-[36px]">
+              <span className="whitespace-nowrap">General Product Specifications</span>
+              <br />
+              of Niurix {product.model}
+              {product.type === "ONT" ? " ONT" : ""}
             </h2>
 
             <div className="flex w-full justify-between">
@@ -169,20 +172,23 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
             </div>
 
             {product.pdf ? (
-              <a
-                href={product.pdf}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-8 inline-flex w-fit items-center gap-2 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-5 py-2 text-lg font-display text-white transition hover:bg-white hover:text-brand-black"
-              >
-                Download
-              </a>
+              <>
+                <p className="mt-8 text-base text-brand-black/75 tablet:text-lg">Click to download the full specifications</p>
+                <a
+                  href={product.pdf}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-4 inline-flex w-fit items-center gap-2 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-5 py-2 text-lg font-display !text-white transition-colors duration-200 hover:bg-[#e85300] hover:!text-white"
+                >
+                  Download
+                </a>
+              </>
             ) : null}
           </div>
         </div>
 
-        <div className="w-full laptop:h-[60rem] laptop:w-[55%]">
-          <Swiper modules={[Pagination, Navigation]} navigation pagination={{ clickable: true }} loop className="h-[420px] tablet:h-[640px] laptop:h-full">
+        <div className="w-full laptop:h-[52rem] laptop:w-[55%]"> 
+          <Swiper modules={[Pagination, Navigation]} navigation pagination={{ clickable: true }} loop className="product-spec-swiper h-[360px] tablet:h-[560px] laptop:h-full">
             {product.specSlides.map((slide) => (
               <SwiperSlide key={slide}>
                 <div className="relative h-full w-full">
@@ -207,6 +213,16 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

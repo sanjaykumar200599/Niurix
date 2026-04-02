@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 @font-face {
   font-family: "Nunito Regular";
@@ -163,3 +163,34 @@ main {
     bottom: 3.25rem !important;
   }
 }
+
+.product-spec-swiper {
+  --swiper-navigation-size: 18px;
+}
+
+.product-spec-swiper .swiper-button-prev,
+.product-spec-swiper .swiper-button-next {
+  color: #ffffff !important;
+  width: 24px !important;
+  height: 24px !important;
+}
+
+.product-spec-swiper .swiper-button-prev {
+  left: 16px !important;
+}
+
+.product-spec-swiper .swiper-button-next {
+  right: 16px !important;
+}
+
+@media (min-width: 1025px) {
+  .product-spec-swiper .swiper-button-prev {
+    left: 12% !important;
+  }
+
+  .product-spec-swiper .swiper-button-next {
+    right: 12% !important;
+  }
+}
+
+
