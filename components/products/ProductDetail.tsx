@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -106,18 +106,18 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
         </div>
       </section>
 
-      <section className="mt-8 px-9 tablet:mt-16 tablet:px-[78px] laptop:mt-24 laptop:px-[120px]">
-        <div className="relative h-[340px] overflow-hidden bg-[#c2c2c2] tablet:h-[520px] laptop:h-[660px]">
+      <section className="mt-15 px-9 tablet:mt-16 tablet:px-[78px] laptop:mt-24 laptop:px-[120px]">
+        <div className="relative h-[360px] overflow-hidden tablet:h-[520px] laptop:h-[660px]">
           <Image src={product.detailImage} alt={product.detailTitle} fill sizes="(max-width: 1023px) 0px, 100vw" className="hidden object-cover laptop:block" />
           <Image
             src={product.detailImageMobile}
             alt={product.detailTitle}
             fill
             sizes="(max-width: 1023px) 100vw, 0px"
-            className="object-contain object-[center_72%] tablet:hidden"
+            className="object-cover object-[center_12%] tablet:hidden"
           />
-          <h2 className="absolute left-4 top-6 w-[85%] text-[26px] font-display leading-tight text-white tablet:left-10 tablet:top-12 tablet:w-[64%] tablet:text-[34px] laptop:left-28 laptop:top-16 laptop:w-[42%] laptop:text-4xl">
-            {splitSimplerConnectivity ? (<>The Twist Towards Simpler<br />Connectivity</>) : (product.detailTitle)}
+          <h2 className="absolute left-4 top-5 z-10 w-[70%] text-[17px] font-display leading-tight text-white tablet:left-10 tablet:top-12 tablet:w-[64%] tablet:text-[34px] laptop:left-28 laptop:top-16 laptop:w-[42%] laptop:text-4xl">
+            {splitSimplerConnectivity ? (<>The Twist Towards<br /><span className="whitespace-nowrap">Simpler Connectivity</span></>) : (product.detailTitle)}
           </h2>
         </div>
 
@@ -213,6 +213,12 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
     </div>
   );
 }
+
+
+
+
+
+
 
 
 
