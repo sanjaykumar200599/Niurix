@@ -107,16 +107,16 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
       </section>
 
       <section className="mt-15 px-9 tablet:mt-16 tablet:px-[78px] laptop:mt-24 laptop:px-[120px]">
-        <div className="relative h-[360px] overflow-hidden tablet:h-[520px] laptop:h-[660px]">
+        <div className="relative h-[340px] overflow-hidden tablet:h-[520px] laptop:h-[660px]">
           <Image src={product.detailImage} alt={product.detailTitle} fill sizes="(max-width: 1023px) 0px, 100vw" className="hidden object-cover laptop:block" />
           <Image
             src={product.detailImageMobile}
             alt={product.detailTitle}
             fill
             sizes="(max-width: 1023px) 100vw, 0px"
-            className="object-cover object-[center_12%] tablet:hidden"
+            className="object-cover object-[center_26%] tablet:hidden"
           />
-          <h2 className="absolute left-4 top-5 z-10 w-[70%] text-[17px] font-display leading-tight text-white tablet:left-10 tablet:top-12 tablet:w-[64%] tablet:text-[34px] laptop:left-28 laptop:top-16 laptop:w-[42%] laptop:text-4xl">
+          <h2 className="absolute left-4 top-5 z-10 w-[70%] text-[17px] font-display leading-tight text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] tablet:left-10 tablet:top-12 tablet:w-[64%] tablet:text-[34px] tablet:[text-shadow:none] laptop:left-28 laptop:top-16 laptop:w-[42%] laptop:text-4xl">
             {splitSimplerConnectivity ? (<>The Twist Towards<br /><span className="whitespace-nowrap">Simpler Connectivity</span></>) : (product.detailTitle)}
           </h2>
         </div>
@@ -133,8 +133,8 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
       <section className="mt-12 flex w-full flex-col-reverse tablet:mt-16 laptop:mt-24 laptop:flex-row">
         <div className="w-full bg-[#f3f3f3] laptop:w-[45%]">
-          <div className="flex h-full flex-col justify-start px-10 pb-10 pt-8 tablet:px-20 tablet:pb-16 tablet:pt-10 laptop:min-h-[50rem] laptop:px-24 laptop:pt-12">
-            <h2 className="mb-8 text-[20px] font-sans leading-tight text-brand-black tablet:text-[26px] laptop:text-[36px]">
+          <div className="flex h-full flex-col justify-start px-10 pb-10 pt-8 tablet:px-20 tablet:pb-16 tablet:pt-10 laptop:min-h-[50rem] laptop:px-24 laptop:pt-28">
+            <h2 className="mb-8 text-[20px] font-sans leading-tight text-brand-black tablet:text-[26px] laptop:text-[30px]">
               <span className="whitespace-nowrap">General Product Specifications</span>
               <br />
               of Niurix {product.model}
@@ -145,7 +145,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
               <button
                 type="button"
                 onClick={() => setTab("spec")}
-                className={`border-b-[3px] pb-1 text-[26px] font-display tablet:text-[30px] ${
+                className={`border-b-[3px] pb-1 text-[24px] font-display tablet:text-[28px] laptop:text-[24px] ${
                   tab === "spec" ? "border-brand-orange text-brand-orange" : "border-transparent text-brand-black/30"
                 }`}
               >
@@ -154,7 +154,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
               <button
                 type="button"
                 onClick={() => setTab("dim")}
-                className={`border-b-[3px] pb-1 text-[26px] font-display tablet:text-[30px] ${
+                className={`border-b-[3px] pb-1 text-[24px] font-display tablet:text-[28px] laptop:text-[24px] ${
                   tab === "dim" ? "border-brand-orange text-brand-orange" : "border-transparent text-brand-black/30"
                 }`}
               >
@@ -164,7 +164,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
             <div className="mt-8 space-y-3">
               {rows.map((row) => (
-                <div key={row.title} className="flex w-full justify-between gap-6 text-base tablet:text-lg laptop:text-xl">
+                <div key={row.title} className="flex w-full justify-between gap-6 text-base tablet:text-lg laptop:text-[20px]">
                   <p className="w-[58%] text-brand-black">{row.title}</p>
                   <p className="w-[38%] text-brand-black">{row.value}</p>
                 </div>
@@ -173,12 +173,12 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
             {product.pdf ? (
               <>
-                <p className="mt-8 text-[18px] text-brand-black/75 tablet:text-[20px]">Click to download the full specifications</p>
+                <p className="mt-8 text-[18px] text-brand-black/75 tablet:text-[20px] laptop:text-[20px]">Click to download the full specifications</p>
                 <a
                   href={product.pdf}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-4 inline-flex w-fit items-center gap-2 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-5 py-2 text-lg font-display !text-white transition-colors duration-200 hover:bg-white hover:!text-black"
+                  className="mt-4 inline-flex w-fit items-center gap-2 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-5 py-[6px] text-lg font-display !text-white transition-colors duration-200 hover:bg-white hover:!text-black"
                 >
                   Download
                 </a>
@@ -213,6 +213,15 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
 
 
 

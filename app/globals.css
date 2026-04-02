@@ -1,4 +1,4 @@
-﻿@import "tailwindcss";
+@import "tailwindcss";
 
 @font-face {
   font-family: "Nunito Regular";
@@ -190,6 +190,38 @@ main {
 
   .product-spec-swiper .swiper-button-next {
     right: 12% !important;
+  }
+}
+
+
+
+/* Product spec slider pagination (desktop line style) */
+.product-spec-swiper {
+  --swiper-pagination-color: #ff5b02;
+  --swiper-pagination-bullet-inactive-color: #ffffff;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+}
+
+@media (min-width: 1025px) {
+  .product-spec-swiper .swiper-pagination-bullet {
+    width: 72px !important;
+    height: 4px !important;
+    border-radius: 999px !important;
+    margin: 0 4px !important;
+    background: #ffffff !important;
+    opacity: 1 !important;
+  }
+
+  .product-spec-swiper .swiper-pagination-bullet-active {
+    background: #ff5b02 !important;
+  }
+  .product-spec-swiper {
+    padding-bottom: 0;
+  }
+
+  .product-spec-swiper .swiper-pagination,
+  .product-spec-swiper .swiper-pagination.swiper-pagination-horizontal {
+    bottom: 48px !important;
   }
 }
 
