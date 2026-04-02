@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import ScrollToTop from "@/components/shared/ScrollToTop";
 
@@ -43,26 +43,26 @@ const sections = [
 
 export default function Footer() {
   return (
-    <footer className="relative w-full py-14 laptop:py-16">
+    <footer className="relative w-full pt-3 pb-8 laptop:pt-4 laptop:pb-10">
       <div className="px-9 tablet:px-20 laptop:px-30">
 
         {/* TOP SECTION */}
-        <div className="border-t-2 border-[#DFDFDF] pt-10 pb-12 laptop:flex laptop:items-start laptop:justify-between laptop:pt-12 laptop:pb-12">
+        <div className="border-t-2 border-[#DFDFDF] pt-7 pb-12 laptop:flex laptop:items-start laptop:justify-between laptop:gap-10 laptop:pt-7 laptop:pb-16">
           
           {/* LOGO */}
-          <div className="mb-6 shrink-0 laptop:mb-0 laptop:w-[108px] laptop:pt-[2px]">
+          <div className="mb-6 shrink-0 laptop:mb-0 laptop:w-[156px] laptop:pr-20 laptop:pt-[2px]">
             <Link href="/" className="inline-flex">
               <Image
                 src="/assets/footer/niurixlogo.svg"
                 alt="Niurix"
-                width={81}
-                height={27}
+                width={136}
+                height={45}
               />
             </Link>
           </div>
 
           {/* LINKS */}
-          <div className="grid gap-y-6 tablet:grid-cols-2 tablet:gap-x-10 laptop:w-[calc(100%-132px)] laptop:grid-cols-[1.22fr_0.7fr_1.05fr_0.72fr] laptop:gap-x-6">
+          <div className="grid gap-y-6 tablet:grid-cols-2 tablet:gap-x-10 laptop:flex-1 laptop:grid-cols-[1.22fr_0.7fr_1.05fr_0.72fr] laptop:gap-x-6">
             {sections.map((section) => (
               <div key={section.title} className="min-w-0">
                 <p className="mb-4 text-[20px] leading-none font-sans text-black">
