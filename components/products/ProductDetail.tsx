@@ -173,12 +173,12 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
             {product.pdf ? (
               <>
-                <p className="mt-8 text-base text-brand-black/75 tablet:text-lg">Click to download the full specifications</p>
+                <p className="mt-8 text-[18px] text-brand-black/75 tablet:text-[20px]">Click to download the full specifications</p>
                 <a
                   href={product.pdf}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-4 inline-flex w-fit items-center gap-2 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-5 py-2 text-lg font-display !text-white transition-colors duration-200 hover:bg-[#e85300] hover:!text-white"
+                  className="mt-4 inline-flex w-fit items-center gap-2 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-5 py-2 text-lg font-display !text-white transition-colors duration-200 hover:bg-white hover:!text-black"
                 >
                   Download
                 </a>
@@ -213,6 +213,11 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
     </div>
   );
 }
+
+
+
+
+
 
 
 
