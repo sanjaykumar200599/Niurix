@@ -18,6 +18,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
   const isP4200R = product.slug === "ONT-P4200R";
   const isT2001 = product.slug === "ONT-T2001";
   const isSolt33_8p = product.slug === "OLT-SOLT33-8P";
+  const splitSimplerConnectivity = product.detailTitle.includes("Simpler Connectivity");
   const rows = useMemo(() => (tab === "spec" ? product.specifications : product.dimensions), [product, tab]);
 
   return (
@@ -106,7 +107,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
       </section>
 
       <section className="mt-12 px-9 tablet:mt-16 tablet:px-[78px] laptop:mt-24 laptop:px-[120px]">
-        <div className="relative h-[320px] overflow-hidden tablet:h-[420px] laptop:h-[520px]">
+        <div className="relative h-[380px] overflow-hidden tablet:h-[520px] laptop:h-[660px]">
           <Image src={product.detailImage} alt={product.detailTitle} fill sizes="(max-width: 767px) 0px, 100vw" className="hidden object-cover tablet:block" />
           <Image
             src={product.detailImageMobile}
@@ -115,12 +116,12 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
             sizes="(max-width: 767px) 100vw, 0px"
             className="object-cover tablet:hidden"
           />
-          <h2 className="absolute left-4 top-4 w-[80%] text-[28px] font-display leading-tight text-white tablet:left-10 tablet:top-10 tablet:w-[60%] tablet:text-[34px] laptop:left-28 laptop:top-16 laptop:w-[40%] laptop:text-5xl">
-            {product.detailTitle}
+          <h2 className="absolute left-4 top-6 w-[85%] text-[26px] font-display leading-tight text-white tablet:left-10 tablet:top-12 tablet:w-[64%] tablet:text-[34px] laptop:left-28 laptop:top-16 laptop:w-[42%] laptop:text-4xl">
+            {splitSimplerConnectivity ? (<><span className="whitespace-nowrap">The Twist Towards Simpler</span><br />Connectivity</>) : (product.detailTitle)}
           </h2>
         </div>
 
-        <div className="mt-[-2px] flex flex-col justify-between gap-5 bg-[#f3f3f3] px-6 py-6 tablet:px-10 tablet:py-8 laptop:h-48 laptop:flex-row laptop:items-center laptop:px-12">
+        <div className="mt-[-2px] flex flex-col justify-between gap-6 bg-[#f3f3f3] px-7 py-7 tablet:px-12 tablet:py-10 laptop:h-[220px] laptop:flex-row laptop:items-start laptop:px-14">
           {product.highlights.map((item) => (
             <article key={item.title} className="w-full laptop:w-[30%]">
               <h3 className="text-lg font-display text-brand-orange tablet:text-xl laptop:text-2xl">{item.title}</h3>
@@ -206,6 +207,14 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
     </div>
   );
 }
+
+
+
+
+
+
+
+
 
 
 
