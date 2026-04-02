@@ -22,7 +22,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
   return (
     <div className="w-full">
-      <section className="relative h-[420px] tablet:h-[560px] laptop:h-[760px]">
+      <section className="relative h-[420px] tablet:h-[560px] laptop:h-[860px]">
         <Image src={product.heroImage} alt={product.overviewTitle} fill sizes="(max-width: 767px) 0px, 100vw" className="hidden object-cover tablet:block" priority />
         <Image
           src={product.heroImageMobile}
@@ -55,21 +55,21 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
             <div className="mt-8 flex justify-center laptop:justify-start">
               <Link
                 href="/contact-us"
-                className="inline-flex flex-col rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-left text-lg font-display leading-tight text-white transition-colors duration-200 hover:bg-white hover:text-brand-black"
+                className="group inline-flex flex-col rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-left text-lg font-display leading-tight text-white transition-colors duration-200 hover:bg-white hover:text-brand-black"
               >
-                <span>Get in</span>
-                <span>touch</span>
+                <span className="text-white transition-colors duration-200 group-hover:text-brand-black">Get in</span>
+                <span className="text-white transition-colors duration-200 group-hover:text-brand-black">touch</span>
               </Link>
             </div>
           </div>
 
-          <div className="relative h-[400px] w-full overflow-hidden rounded-tl-[30px] tablet:h-[560px] tablet:rounded-tl-[45px] laptop:h-auto laptop:w-[70%] laptop:self-stretch">
+          <div className="relative h-[420px] w-full overflow-hidden rounded-tl-[30px] tablet:h-[600px] tablet:rounded-tl-[45px] laptop:h-auto laptop:w-[70%] laptop:self-stretch laptop:min-h-[760px]">
             <Image
               src={product.overviewImage}
               alt={product.overviewTitle}
               fill
               sizes="(max-width: 767px) 0px, (max-width: 1023px) 100vw, 70vw"
-              className="hidden object-cover tablet:block"
+              className="hidden object-contain object-center tablet:block"
             />
             <Image
               src={product.overviewImageMobile}
@@ -206,6 +206,19 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
