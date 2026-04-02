@@ -5,12 +5,12 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import type { HomeData } from "@/lib/content/types";
 
-function ArrowIcon({ direction = "next", disabled = false }: { direction?: "next" | "prev"; disabled?: boolean }) {
+function ArrowIcon({ direction = "next", disabled = false, className = "" }: { direction?: "next" | "prev"; disabled?: boolean; className?: string }) {
   const stroke = disabled ? "#D9D9D9" : "#FF5B02";
   return (
     <svg
       viewBox="0 0 12.242 21.483"
-      className={`h-full w-full ${direction === "prev" ? "rotate-180" : ""}`}
+      className={`h-full w-full ${direction === "prev" ? "rotate-180" : ""} ${className}`}
       fill="none"
       aria-hidden
     >
@@ -118,10 +118,10 @@ export default function ProductsGrid({ products }: { products: HomeData["product
         <div className="flex w-[5%] items-center bg-[#e1e1e1]">
           <div className="mx-auto flex flex-col items-center gap-6">
             <button type="button" onClick={goPrev} disabled={activeIndex === 0} className="h-6 w-6">
-              <ArrowIcon direction="prev" disabled={activeIndex === 0} />
+              <ArrowIcon direction="prev" disabled={activeIndex === 0} className="scale-75" />
             </button>
             <button type="button" onClick={goNext} disabled={activeIndex === products.length - 1} className="h-6 w-6">
-              <ArrowIcon direction="next" disabled={activeIndex === products.length - 1} />
+              <ArrowIcon direction="next" disabled={activeIndex === products.length - 1} className="scale-75" />
             </button>
           </div>
         </div>
@@ -132,16 +132,16 @@ export default function ProductsGrid({ products }: { products: HomeData["product
           <p className="font-number text-[45px] leading-none text-white tablet:text-[100px]">{selected.name}</p>
 
           <div className="mt-3 flex items-center justify-evenly">
-            <button type="button" onClick={goPrev} disabled={activeIndex === 0} className="h-8 w-8 tablet:h-10 tablet:w-10">
-              <ArrowIcon direction="prev" disabled={activeIndex === 0} />
+            <button type="button" onClick={goPrev} disabled={activeIndex === 0} className="h-6 w-6 tablet:h-8 tablet:w-8">
+              <ArrowIcon direction="prev" disabled={activeIndex === 0} className="scale-75" />
             </button>
 
             <div className="relative h-40 w-40 tablet:h-60 tablet:w-60">
               <Image src={selected.image} alt={selected.name} fill sizes="(min-width: 768px) 240px, 160px" className="object-contain" />
             </div>
 
-            <button type="button" onClick={goNext} disabled={activeIndex === products.length - 1} className="h-8 w-8 tablet:h-10 tablet:w-10">
-              <ArrowIcon direction="next" disabled={activeIndex === products.length - 1} />
+            <button type="button" onClick={goNext} disabled={activeIndex === products.length - 1} className="h-6 w-6 tablet:h-8 tablet:w-8">
+              <ArrowIcon direction="next" disabled={activeIndex === products.length - 1} className="scale-75" />
             </button>
           </div>
 
@@ -153,9 +153,10 @@ export default function ProductsGrid({ products }: { products: HomeData["product
             <p className="mt-3 text-center text-[16px] font-body-light text-brand-black tablet:text-[18px]">{selected.desc}</p>
             <Link
               href={`/products/${selected.slug}`}
-              className="mt-4 inline-flex items-center justify-center rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-4 py-2 text-[16px] font-sans text-white tablet:text-[18px]"
+              className="group mt-4 inline-flex items-center gap-2 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-4 py-2 !text-white transition hover:bg-[#f54f00] hover:!text-white tablet:text-[18px]"
             >
-              Learn More
+              <span className="text-white">Learn More</span>
+              <LearnMoreArrow />
             </Link>
           </div>
 

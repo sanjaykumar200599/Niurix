@@ -5,11 +5,11 @@ import type { HomeData } from "@/lib/content/types";
 
 function DotTrail({ active }: { active: boolean }) {
   return (
-    <div className="flex h-11 w-13 items-center justify-center gap-1.5 tablet:w-15 laptop:h-12 laptop:w-16">
+    <div className="flex h-9 w-11 items-center justify-center gap-1 tablet:w-15 laptop:h-12 laptop:w-16">
       {Array.from({ length: 3 }).map((_, index) => (
         <span
           key={index}
-          className={active ? "h-2 w-2 rounded-full bg-brand-orange" : "h-2 w-2 rounded-full border border-brand-orange/70 bg-white"}
+          className={active ? "h-1.5 w-1.5 rounded-full bg-brand-orange tablet:h-2 tablet:w-2" : "h-1.5 w-1.5 rounded-full border border-brand-orange/70 bg-white tablet:h-2 tablet:w-2"}
         />
       ))}
     </div>
@@ -21,14 +21,14 @@ export default function InstallGuide({ steps }: { steps: HomeData["installSteps"
 
   return (
     <div className="laptop:ml-20 wide:ml-22">
-      <div className="ml-[0.2rem] flex items-center justify-start">
+      <div className="ml-1.5 flex items-center justify-start tablet:ml-[0.2rem]">
         {steps.map((_, stepIdx) => (
           <div key={stepIdx} className="flex items-center">
             {stepIdx > 0 ? <DotTrail active={idx >= stepIdx} /> : null}
             <button
               type="button"
               onClick={() => setIdx(stepIdx)}
-              className={`flex h-11 w-11 items-center justify-center rounded-full text-[22px] font-display shadow-[0px_3px_10px_#0000001A] transition tablet:h-12 tablet:w-12 tablet:text-[24px] laptop:h-[52px] laptop:w-[52px] laptop:text-[26px] ${
+              className={`flex h-8 w-8 items-center justify-center rounded-full text-[16px] font-display shadow-[0px_3px_10px_#0000001A] transition tablet:h-12 tablet:w-12 tablet:text-[24px] laptop:h-[52px] laptop:w-[52px] laptop:text-[26px] ${
                 idx === stepIdx ? "bg-brand-orange text-white" : "bg-white text-[#8A8A8A]"
               }`}
             >
@@ -38,7 +38,7 @@ export default function InstallGuide({ steps }: { steps: HomeData["installSteps"
         ))}
       </div>
 
-      <div className="mt-6 min-h-[12rem] font-body-light tablet:min-h-[13rem] laptop:min-h-[14rem]">
+      <div className="mt-6 min-h-[12rem] pl-1.5 font-body-light tablet:min-h-[13rem] tablet:pl-0 laptop:min-h-[14rem]">
         <h3 className="text-[24px] font-sans font-light text-brand-black tablet:text-[28px] laptop:text-[30px] [@media(min-width:1025px)_and_(max-width:1366px)]:text-[28px]">
           {steps[idx]?.title}
         </h3>

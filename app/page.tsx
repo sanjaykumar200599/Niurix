@@ -22,8 +22,10 @@ export default function HomePage() {
       <HardwareSection titleHtml={homeContent.hardwareTitleHtml} items={homeContent.hardwareItems} />
 
       <section className="px-5 py-9 tablet:px-19.5 tablet:py-0 laptop:px-30 laptop:py-30">
-        <h2 className="mb-8 text-[30px] font-display leading-tight text-brand-black tablet:text-center tablet:text-[34px] laptop:mb-16 laptop:text-left laptop:text-[32px]">
-          Transforming Building <span className="text-brand-orange">Network Architecture</span> with <span className="text-brand-orange">Fiber</span>
+        <h2 className="mb-8 text-[22px] font-display leading-[1.25] text-brand-black tablet:text-center tablet:text-[34px] laptop:mb-16 laptop:text-left laptop:text-[32px]">
+          Transforming Building <span className="text-brand-orange">Network</span>
+          <br className="tablet:hidden" />
+          <span className="text-brand-orange">Architecture</span> with <span className="text-brand-orange">Fiber</span>
         </h2>
 
         <div className="grid place-items-center">

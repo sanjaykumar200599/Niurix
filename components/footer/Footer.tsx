@@ -55,8 +55,9 @@ export default function Footer() {
               <Image
                 src="/assets/footer/niurixlogo.svg"
                 alt="Niurix"
-                width={136}
-                height={45}
+                width={124}
+                height={41}
+                className="h-[33px] w-[100px] tablet:h-[37px] tablet:w-[112px] laptop:h-[41px] laptop:w-[124px]"
               />
             </Link>
           </div>
@@ -65,7 +66,7 @@ export default function Footer() {
           <div className="grid gap-y-6 tablet:grid-cols-2 tablet:gap-x-10 laptop:flex-1 laptop:grid-cols-[1.22fr_0.7fr_1.05fr_0.72fr] laptop:gap-x-6">
             {sections.map((section) => (
               <div key={section.title} className="min-w-0">
-                <p className="mb-4 text-[20px] leading-none font-sans text-black">
+                <p className="mb-3 text-[18px] leading-none font-display text-black tablet:mb-4 tablet:text-[20px]">
                   {section.title}
                 </p>
 
@@ -79,7 +80,7 @@ export default function Footer() {
                       <li key={label + href}>
                         <Link
                           href={href}
-                          className={`block text-[16px] leading-[1.25] font-sans text-black transition hover:text-brand-orange ${
+                          className={`block text-[15px] leading-[1.28] font-sans text-black transition hover:text-brand-orange tablet:text-[16px] ${
                             isSoftwareFirst ? "laptop:whitespace-nowrap" : ""
                           }`}
                         >

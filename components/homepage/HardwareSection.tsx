@@ -9,7 +9,37 @@ type HardwareSectionProps = {
 export default function HardwareSection({ titleHtml, items }: HardwareSectionProps) {
   return (
     <section className="relative w-full overflow-hidden laptop:overflow-visible">
-      <div className="relative h-[1220px] tablet:h-[86rem] laptop:h-[900px] wide:h-[940px]">
+      <div className="relative tablet:hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/assets/homepage/mobbackground.png"
+            alt="Hardware background"
+            fill
+            sizes="100vw"
+            className="object-cover object-top"
+          />
+        </div>
+
+        <div className="relative z-20 px-5 pb-10 pt-6">
+          <h2
+            className="nx-rich mx-auto max-w-[20rem] text-center font-sans text-[22px] leading-[1.24] text-brand-black"
+            dangerouslySetInnerHTML={{ __html: titleHtml }}
+          />
+
+          <div className="mt-[22rem] grid grid-cols-1 gap-3.5">
+            {items.map((item) => (
+              <article
+                key={item}
+                className="mx-auto flex h-[96px] w-[86%] items-center justify-center rounded-tl-[16px] rounded-br-[16px] border border-transparent bg-white px-5 text-center shadow-[0px_3px_15px_#0000001F]"
+              >
+                <p className="text-[14px] font-sans leading-[1.3] text-brand-black">{item}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="relative hidden h-[86rem] tablet:block laptop:h-[900px] wide:h-[940px]">
         <div className="absolute inset-0">
           <Image
             src="/assets/homepage/Box section-1.webp"
@@ -23,40 +53,33 @@ export default function HardwareSection({ titleHtml, items }: HardwareSectionPro
             alt="Hardware background"
             fill
             sizes="(min-width: 768px) and (max-width: 1023px) 100vw, 0px"
-            className="hidden object-cover tablet:block laptop:hidden"
-          />
-          <Image
-            src="/assets/homepage/mobbackground.png"
-            alt="Hardware background"
-            fill
-            sizes="(max-width: 767px) 100vw, 0px"
-            className="object-cover tablet:hidden"
+            className="object-cover laptop:hidden"
           />
         </div>
 
         <HardwareAnimation />
 
-        <div className="absolute left-1/2 top-[2rem] z-40 w-[82%] -translate-x-1/2 tablet:top-[4rem] tablet:w-full tablet:-translate-y-0 laptop:left-auto laptop:right-[78px] laptop:top-[-18rem] laptop:w-[34%] laptop:translate-x-0 laptop:translate-y-0 wide:right-[86px] wide:top-[-19rem] wide:w-[31%]">
-          <div className="w-full px-5 tablet:px-19.5 laptop:px-0">
+        <div className="absolute left-1/2 top-[4rem] z-40 w-full -translate-x-1/2 tablet:-translate-y-0 laptop:left-auto laptop:right-[78px] laptop:top-[-18rem] laptop:w-[34%] laptop:translate-x-0 laptop:translate-y-0 wide:right-[86px] wide:top-[-19rem] wide:w-[31%]">
+          <div className="w-full px-19.5 laptop:px-0">
             <h2
-              className="nx-rich text-center font-sans text-[24px] leading-[1.22] text-brand-black tablet:text-left tablet:text-[30px] laptop:w-[95%] laptop:text-left laptop:text-[24px] laptop:leading-[1.24] wide:text-[28px]"
+              className="nx-rich text-left font-sans text-[30px] leading-[1.22] text-brand-black laptop:w-[95%] laptop:text-[24px] laptop:leading-[1.24] wide:text-[28px]"
               dangerouslySetInnerHTML={{ __html: titleHtml }}
             />
           </div>
 
-          <div className="mt-[22rem] grid grid-cols-1 gap-4 px-5 tablet:mt-[28rem] tablet:grid-cols-4 tablet:gap-5 tablet:px-19.5 laptop:mt-16 laptop:grid-cols-1 laptop:gap-9 laptop:px-0 wide:mt-[4.5rem] wide:gap-[2.75rem]">
+          <div className="mt-[28rem] grid grid-cols-4 gap-5 px-19.5 laptop:mt-16 laptop:grid-cols-1 laptop:gap-9 laptop:px-0 wide:mt-[4.5rem] wide:gap-[2.75rem]">
             {items.map((item, index) => (
               <article
                 key={item}
                 className={`flex items-center justify-center rounded-tl-[16px] rounded-br-[16px] border border-transparent bg-white px-6 text-center shadow-[0px_3px_15px_#0000001F] transition hover:border-brand-orange tablet:h-[120px] laptop:w-full ${
                   index === 0
-                    ? "h-[112px] laptop:-mt-8 laptop:h-[10.5rem]"
+                    ? "laptop:-mt-8 laptop:h-[10.5rem]"
                     : index === 1
-                      ? "h-[112px] laptop:-mt-1 laptop:h-[9rem] wide:h-[9.8rem]"
-                      : "h-[112px] laptop:h-[9rem] wide:h-[9.8rem]"
+                      ? "laptop:-mt-1 laptop:h-[9rem] wide:h-[9.8rem]"
+                      : "laptop:h-[9rem] wide:h-[9.8rem]"
                 }`}
               >
-                <p className="text-[16px] font-sans leading-[1.3] text-brand-black tablet:text-[20px] laptop:w-[80%] laptop:text-[16px] wide:text-[18px]">
+                <p className="text-[20px] font-sans leading-[1.3] text-brand-black laptop:w-[80%] laptop:text-[16px] wide:text-[18px]">
                   {item}
                 </p>
               </article>

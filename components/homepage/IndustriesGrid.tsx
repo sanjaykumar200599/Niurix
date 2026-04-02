@@ -71,7 +71,7 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
         ))}
       </div>
 
-      <div className="space-y-4 px-5 tablet:px-20 laptop:hidden">
+      <div className="space-y-3 px-5 tablet:px-20 laptop:hidden">
         {industries.map((item, index) => {
           const open = index === activeIndex;
 
@@ -81,7 +81,7 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
                 <div className="relative aspect-[16/10] w-full">
                   <Image src={item.mobileDetailImage} alt={item.title} fill sizes="100vw" className="object-cover" />
                 </div>
-                <div className="px-5 pb-5 pt-4 tablet:px-8 tablet:pb-8 tablet:pt-6">
+                <div className="px-5 pb-4 pt-3 tablet:px-8 tablet:pb-8 tablet:pt-6">
                   <h3 className="text-[20px] font-display text-brand-black tablet:text-[22px]">{item.title}</h3>
                   <p className="mt-3 text-[16px] leading-[1.4] font-body-light text-brand-black tablet:text-[18px]">{item.desc}</p>
                   <Link
