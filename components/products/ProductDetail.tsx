@@ -104,7 +104,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
       </section>
 
       <section className="mt-15 px-9 tablet:mt-16 tablet:px-[78px] laptop:mt-24 laptop:px-[120px]">
-        <div className="relative aspect-square overflow-hidden tablet:h-[520px] tablet:aspect-auto laptop:h-[660px]">
+        <div className="relative aspect-[4/3] overflow-hidden tablet:h-[520px] tablet:aspect-auto laptop:h-[660px]">
           <Image src={product.detailImage} alt={product.detailTitle} fill sizes="(max-width: 1023px) 0px, 100vw" className="hidden object-cover laptop:block" />
           <Image
             src={product.detailImageMobile}
