@@ -37,22 +37,22 @@ export default function ContactUsPage() {
         </div>
 
         <div className="relative px-9 pb-36 pt-12 tablet:px-20 tablet:pb-28 tablet:pt-14 laptop:px-[120px] laptop:pb-20 laptop:pt-[90px]">
-          <h1 className="text-[30px] font-display text-brand-black tablet:text-[44px] laptop:text-[48px]">
+          <h1 className="text-[30px] font-display text-brand-black tablet:text-[42px] laptop:text-[44px]">
             <span className="text-brand-orange">Contact</span> Us
           </h1>
 
-          <p className="mt-4 w-full text-base text-brand-black tablet:w-[90%] tablet:text-lg laptop:w-[43%] laptop:text-[22px]">
+          <p className="mt-4 w-full text-base font-normal leading-[1.55] text-brand-black/80 tablet:w-[90%] tablet:text-lg laptop:w-[43%] laptop:text-[20px]">
             Niurix is headquartered at the beautiful city of Illinois, USA. To contact us, use any of the below means and we will always be available to assist you.
           </p>
 
-          <div className="mt-8 grid gap-6 tablet:grid-cols-2 laptop:w-[41%] laptop:grid-cols-[1fr_1fr]">
+          <div className="mt-10 grid gap-y-8 tablet:grid-cols-2 tablet:gap-x-12 laptop:w-[42%] laptop:grid-cols-[1fr_1fr] laptop:gap-x-16">
             <div>
               <p className="text-xl font-display tablet:text-2xl">Address</p>
-              <p className="mt-1 whitespace-pre-line text-base text-brand-black tablet:text-lg">{"2130 Foster Ave\nWheeling IL, 60090\nUSA"}</p>
+              <p className="mt-2 whitespace-pre-line text-base leading-[1.4] text-brand-black/90 tablet:text-lg">{"2130\nFoster\nAve\nWheeling\nIL, 60090\nUSA"}</p>
             </div>
 
             <div>
-              <div className="mb-4">
+              <div className="mb-7">
                 <p className="text-xl font-display tablet:text-2xl">Contact No.</p>
                 <p className="text-base text-brand-black tablet:text-lg">+1 847-957-6900</p>
               </div>
@@ -72,7 +72,7 @@ export default function ContactUsPage() {
       <section className="px-9 pb-8 tablet:px-20 tablet:pb-12 laptop:px-[120px] laptop:pb-16">
         <div className="flex flex-col gap-8 laptop:flex-row laptop:justify-between">
           <div className="w-full border-b border-[#d6d6d6] pb-8 laptop:w-[70%] laptop:border-b-0 laptop:border-r laptop:pb-0 laptop:pr-8">
-            <h2 className="text-[30px] font-display text-brand-black tablet:text-[44px] laptop:text-[48px]">
+            <h2 className="text-[30px] font-display text-brand-black tablet:text-[42px] laptop:text-[44px]">
               <span className="text-brand-orange">Get in</span> Touch
             </h2>
             <p className="mt-4 w-full text-base text-brand-black tablet:w-[85%] tablet:text-lg laptop:text-[22px]">
@@ -91,7 +91,7 @@ export default function ContactUsPage() {
                 <p className="text-2xl font-display tablet:text-3xl">Technical support</p>
               </div>
 
-              <div className="mb-4">
+              <div className="mb-7">
                 <p className="text-lg font-display tablet:text-xl">Contact No.</p>
                 <p className="text-base text-brand-black tablet:text-lg">+1 847-957-6900</p>
               </div>
@@ -114,6 +114,8 @@ export default function ContactUsPage() {
     </div>
   );
 }
+
+
 
 
 
