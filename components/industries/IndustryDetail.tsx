@@ -8,20 +8,20 @@ type IndustryDetailProps = {
 
 export default function IndustryDetail({ industry }: IndustryDetailProps) {
   const deviceImageSizeClasses: Record<string, string> = {
-    router: "h-[50px] w-[158px] tablet:h-[54px] tablet:w-[172px]",
-    olt: "h-[48px] w-[166px] tablet:h-[52px] tablet:w-[178px]",
-    splitter: "h-[44px] w-[118px] tablet:h-[48px] tablet:w-[130px]",
-    "internet traffic": "h-[38px] w-[112px] tablet:h-[42px] tablet:w-[124px]",
-    "1g fiber": "h-[12px] w-[158px] tablet:h-[14px] tablet:w-[172px]",
-    "ethernet cable": "h-[12px] w-[130px] tablet:h-[14px] tablet:w-[144px]",
-    ont: "h-[66px] w-[66px] tablet:h-[74px] tablet:w-[74px]",
-    iptv: "h-[74px] w-[114px] tablet:h-[82px] tablet:w-[124px]",
-    "access point": "h-[70px] w-[70px] tablet:h-[78px] tablet:w-[78px]",
-    telephone: "h-[72px] w-[96px] tablet:h-[80px] tablet:w-[106px]",
-    wireless: "h-[42px] w-[88px] tablet:h-[48px] tablet:w-[96px]",
+    router: "h-[42px] w-[134px] tablet:h-[54px] tablet:w-[172px]",
+    olt: "h-[40px] w-[142px] tablet:h-[52px] tablet:w-[178px]",
+    splitter: "h-[38px] w-[102px] tablet:h-[48px] tablet:w-[130px]",
+    "internet traffic": "h-[32px] w-[96px] tablet:h-[42px] tablet:w-[124px]",
+    "1g fiber": "h-[10px] w-[132px] tablet:h-[14px] tablet:w-[172px]",
+    "ethernet cable": "h-[10px] w-[110px] tablet:h-[14px] tablet:w-[144px]",
+    ont: "h-[56px] w-[56px] tablet:h-[74px] tablet:w-[74px]",
+    iptv: "h-[62px] w-[96px] tablet:h-[82px] tablet:w-[124px]",
+    "access point": "h-[58px] w-[58px] tablet:h-[78px] tablet:w-[78px]",
+    telephone: "h-[60px] w-[80px] tablet:h-[80px] tablet:w-[106px]",
+    wireless: "h-[34px] w-[72px] tablet:h-[48px] tablet:w-[96px]",
   };
 
-  const getDeviceImageSizeClasses = (title: string) => deviceImageSizeClasses[title.toLowerCase()] ?? "h-[52px] w-[132px] tablet:h-[56px] tablet:w-[144px]";
+  const getDeviceImageSizeClasses = (title: string) => deviceImageSizeClasses[title.toLowerCase()] ?? "h-[44px] w-[112px] tablet:h-[56px] tablet:w-[144px]";
 
   const advantagesHeading = industry.advantagesTitle.includes(" Solutions")
     ? industry.advantagesTitle.replace(" Solutions", "\nSolutions")
@@ -121,8 +121,8 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
         </div>
 
         {/* Row 3 */}
-        <div className="mt-10 flex justify-center">
-          <article className="flex flex-col items-center text-center">
+        <div className="mt-10 flex justify-start tablet:justify-center">
+          <article className="flex w-1/2 flex-col items-center text-center tablet:w-auto">
             <div className="flex h-[90px] items-center justify-center tablet:h-[96px] laptop:h-[96px]">
               <div className={`relative ${getDeviceImageSizeClasses(industry.devices[10].title)}`}>
                 <Image src={industry.devices[10].image} alt={industry.devices[10].title} fill sizes="220px" className="object-contain" />
@@ -168,6 +168,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
     </>
   );
 }
+
 
 
 
