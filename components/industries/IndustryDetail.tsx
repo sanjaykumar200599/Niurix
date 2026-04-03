@@ -23,6 +23,10 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
 
   const getDeviceImageSizeClasses = (title: string) => deviceImageSizeClasses[title.toLowerCase()] ?? "h-[52px] w-[132px] tablet:h-[56px] tablet:w-[144px]";
 
+  const advantagesHeading = industry.advantagesTitle.includes(" Solutions")
+    ? industry.advantagesTitle.replace(" Solutions", "\nSolutions")
+    : industry.advantagesTitle;
+
   return (
     <>
       <section className="relative" data-hero-banner="industries">
@@ -131,29 +135,29 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
         </div>
       </section>
 
-      <section className="my-16 bg-[#f3f3f3] px-9 py-9 tablet:my-16 tablet:px-[80px] tablet:py-12 laptop:relative laptop:mb-24 laptop:mt-44 laptop:min-h-[390px] laptop:px-[120px] laptop:py-10">
-        <div className="w-full laptop:w-[40%]">
-          <h2 className="text-[24px] font-display leading-[1.3] text-brand-black tablet:text-[30px] laptop:text-[46px]">
-            {industry.advantagesTitle}
+      <section className="my-16 bg-[#f3f3f3] px-9 py-9 tablet:my-16 tablet:px-[80px] tablet:py-12 laptop:relative laptop:mb-44 laptop:mt-44 laptop:min-h-[300px] laptop:px-[120px] laptop:py-10">
+        <div className="w-full laptop:w-[44%]">
+          <h2 className="whitespace-pre-line text-[24px] font-display font-normal leading-[1.28] text-brand-black tablet:text-[28px] laptop:text-[30px]">
+            {advantagesHeading}
           </h2>
 
-          <p className="mt-3 text-[16px] leading-[1.65] text-brand-black tablet:text-[17px] laptop:max-w-[520px] laptop:text-[18px]">
+          <p className="mt-4 text-[17px] font-normal leading-[1.62] text-brand-black/80 tablet:text-[18px] laptop:max-w-[560px] laptop:text-[20px]">
             {industry.advantagesText}
           </p>
         </div>
 
-        <div className="mt-10 grid gap-4 tablet:grid-cols-2 laptop:absolute laptop:right-[120px] laptop:top-[-80px] laptop:mt-0 laptop:w-[520px] laptop:grid-cols-2 laptop:gap-6">
+        <div className="mt-10 grid gap-5 tablet:grid-cols-2 laptop:absolute laptop:right-[120px] laptop:top-[-70px] laptop:mt-0 laptop:w-[620px] laptop:grid-cols-2 laptop:gap-7">
           {industry.advantagesCards.map((card) => (
             <article
               key={card.title}
-              className="rounded-tl-[18px] rounded-br-[18px] bg-white shadow-[0_0_10px_#00000029]"
+              className="min-h-[220px] rounded-tl-[18px] rounded-br-[18px] bg-white shadow-[0_0_10px_#00000029]"
             >
-              <div className="p-5 laptop:p-6">
-                <div className="relative mb-4 h-[55px] w-[55px] laptop:h-[65px] laptop:w-[65px]">
-                  <Image src={card.image} alt={card.title} fill sizes="(min-width: 1024px) 65px, 55px" className="object-contain" />
+              <div className="p-7 laptop:p-8">
+                <div className="relative mb-5 h-[64px] w-[64px] laptop:h-[72px] laptop:w-[72px]">
+                  <Image src={card.image} alt={card.title} fill sizes="(min-width: 1024px) 72px, 64px" className="object-contain" />
                 </div>
 
-                <h3 className="text-[17px] font-display leading-[1.35] text-brand-black tablet:text-[19px] laptop:text-[22px]">
+                <h3 className="text-[18px] font-sans font-medium leading-[1.35] text-brand-black tablet:text-[20px] laptop:text-[22px]">
                   {card.title}
                 </h3>
               </div>
@@ -164,6 +168,14 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
     </>
   );
 }
+
+
+
+
+
+
+
+
 
 
 
