@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -7,9 +7,6 @@ import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import InteractiveSVGDiagram from "@/components/products/InteractiveSVGDiagram";
 import type { ProductContent } from "@/lib/content/types";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 export default function ProductDetail({ product }: { product: ProductContent }) {
   const [tab, setTab] = useState<"spec" | "dim">("spec");
@@ -77,7 +74,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
               alt={product.overviewTitle}
               fill
               sizes="(max-width: 1023px) 100vw, 0px"
-              className="object-contain object-center tablet:hidden"
+              className="object-cover object-center tablet:hidden"
             />
           </div>
         </div>
@@ -107,16 +104,16 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
       </section>
 
       <section className="mt-15 px-9 tablet:mt-16 tablet:px-[78px] laptop:mt-24 laptop:px-[120px]">
-        <div className="relative h-[340px] overflow-hidden tablet:h-[520px] laptop:h-[660px]">
+        <div className="relative aspect-square overflow-hidden tablet:h-[520px] tablet:aspect-auto laptop:h-[660px]">
           <Image src={product.detailImage} alt={product.detailTitle} fill sizes="(max-width: 1023px) 0px, 100vw" className="hidden object-cover laptop:block" />
           <Image
             src={product.detailImageMobile}
             alt={product.detailTitle}
             fill
             sizes="(max-width: 1023px) 100vw, 0px"
-            className="object-cover object-[center_26%] tablet:hidden"
+            className="object-cover object-center tablet:hidden"
           />
-          <h2 className="absolute left-4 top-5 z-10 w-[70%] text-[17px] font-display leading-tight text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.35)] tablet:left-10 tablet:top-12 tablet:w-[64%] tablet:text-[34px] tablet:[text-shadow:none] laptop:left-28 laptop:top-16 laptop:w-[42%] laptop:text-4xl">
+          <h2 className="absolute left-4 top-5 z-10 w-[76%] text-[17px] font-display leading-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.5)] tablet:left-10 tablet:top-12 tablet:w-[64%] tablet:text-[34px] tablet:[text-shadow:none] laptop:left-28 laptop:top-16 laptop:w-[42%] laptop:text-4xl">
             {splitSimplerConnectivity ? (<>The Twist Towards<br /><span className="whitespace-nowrap">Simpler Connectivity</span></>) : (product.detailTitle)}
           </h2>
         </div>
