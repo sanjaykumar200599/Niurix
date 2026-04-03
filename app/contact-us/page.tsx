@@ -16,7 +16,7 @@ export default function ContactUsPage() {
   return (
     <div>
       <section className="relative">
-        <div className="relative h-[320px] tablet:h-[520px] laptop:h-[760px]">
+        <div className="relative h-[320px] tablet:h-[520px] laptop:h-[850px]">
           <Image src="/assets/contactus/banner.webp" alt="Contact banner" fill sizes="(max-width: 767px) 0px, 100vw" className="hidden object-cover tablet:block" priority />
           <Image src="/assets/contactus/Contact banner mobile.webp" alt="Contact banner" fill sizes="(max-width: 767px) 100vw, 0px" className="object-cover tablet:hidden" priority />
         </div>
@@ -114,6 +114,7 @@ export default function ContactUsPage() {
     </div>
   );
 }
+
 
 
 
