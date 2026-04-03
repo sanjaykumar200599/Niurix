@@ -42,7 +42,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
 
         <div className="mt-3 flex flex-col-reverse gap-8 laptop:mt-4 laptop:flex-row laptop:items-center laptop:justify-between">
           <div className="flex w-full flex-col justify-start laptop:w-[24%]">
-            <p className="text-[16px] font-normal leading-[1.6] text-brand-black tablet:text-[17px] laptop:text-[19px]">
+            <p className="pb-3 text-[16px] font-normal leading-[1.6] text-brand-black/80 tablet:pb-4 tablet:text-[17px] laptop:text-[19px]">
               {industry.introText}
             </p>
 
@@ -148,6 +148,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
     </>
   );
 }
+
 
 
 
