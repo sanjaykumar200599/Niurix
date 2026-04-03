@@ -198,26 +198,45 @@ main {
 
 
 
-/* Product spec slider pagination (desktop line style) */
+/* Product spec slider pagination (line style on all screens) */
 .product-spec-swiper {
   --swiper-pagination-color: #ff5b02;
   --swiper-pagination-bullet-inactive-color: #ffffff;
   --swiper-pagination-bullet-inactive-opacity: 1;
 }
 
+.product-spec-swiper .swiper-pagination-bullet {
+  width: 42px !important;
+  height: 3px !important;
+  border-radius: 999px !important;
+  margin: 0 3px !important;
+  background: #ffffff !important;
+  opacity: 1 !important;
+}
+
+.product-spec-swiper .swiper-pagination-bullet-active {
+  background: #ff5b02 !important;
+}
+
+.product-spec-swiper .swiper-pagination,
+.product-spec-swiper .swiper-pagination.swiper-pagination-horizontal {
+  bottom: 16px !important;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .product-spec-swiper .swiper-pagination,
+  .product-spec-swiper .swiper-pagination.swiper-pagination-horizontal {
+    bottom: 28px !important;
+  }
+}
+
 @media (min-width: 1025px) {
   .product-spec-swiper .swiper-pagination-bullet {
     width: 72px !important;
     height: 4px !important;
-    border-radius: 999px !important;
     margin: 0 4px !important;
-    background: #ffffff !important;
-    opacity: 1 !important;
   }
 
-  .product-spec-swiper .swiper-pagination-bullet-active {
-    background: #ff5b02 !important;
-  }
   .product-spec-swiper {
     padding-bottom: 0;
   }
@@ -227,5 +246,3 @@ main {
     bottom: 48px !important;
   }
 }
-
-

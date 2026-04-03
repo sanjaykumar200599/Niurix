@@ -200,7 +200,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
         </div>
 
         <div className="w-full laptop:h-[52rem] laptop:w-[55%]"> 
-          <Swiper modules={[Pagination, Navigation]} navigation pagination={{ clickable: true }} loop className="product-spec-swiper h-[360px] tablet:h-[560px] laptop:h-full">
+          <Swiper modules={[Pagination, Navigation]} navigation pagination={{ clickable: true }} loop className="product-spec-swiper h-[420px] tablet:h-[560px] laptop:h-full">
             {product.specSlides.map((slide) => (
               <SwiperSlide key={slide}>
                 <div className="relative h-full w-full">
