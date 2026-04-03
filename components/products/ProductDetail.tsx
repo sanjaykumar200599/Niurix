@@ -143,7 +143,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
         </div>
       </section>
 
-      <section className="mt-12 flex w-full flex-col-reverse tablet:mt-16 laptop:mt-24 laptop:flex-row">
+      <section className="mt-28 flex w-full flex-col-reverse tablet:mt-16 laptop:mt-24 laptop:flex-row">
         <div className="w-full bg-[#f3f3f3] laptop:w-[45%]">
           <div className="flex h-full flex-col justify-start px-10 pb-10 pt-8 tablet:px-20 tablet:pb-16 tablet:pt-10 laptop:min-h-[50rem] laptop:px-24 laptop:pt-28">
             <h2 className="mb-8 text-[20px] font-sans leading-tight text-brand-black tablet:text-[26px] laptop:text-[30px]">
@@ -174,7 +174,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
               </button>
             </div>
 
-            <div className="mt-8 space-y-3">
+            <div className="mt-8 min-h-[14rem] space-y-3 tablet:min-h-0">
               {rows.map((row) => (
                 <div key={row.title} className="flex w-full justify-between gap-6 text-base tablet:text-lg laptop:text-[20px]">
                   <p className="w-[58%] text-brand-black">{row.title}</p>
@@ -185,7 +185,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
             {product.pdf ? (
               <>
-                <p className="mt-8 text-[18px] text-brand-black/75 tablet:text-[20px] laptop:text-[20px]">Click to download the full specifications</p>
+                <p className="mt-12 text-[18px] text-brand-black/75 tablet:mt-8 tablet:text-[20px] laptop:text-[20px]">Click to download the full specifications</p>
                 <a
                   href={product.pdf}
                   target="_blank"
