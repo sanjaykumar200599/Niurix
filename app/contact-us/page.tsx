@@ -88,7 +88,7 @@ export default function ContactUsPage() {
             <div className="w-full rounded-tl-[30px] rounded-br-[30px] border border-[#ff5b0299] px-8 py-8 shadow-[0px_3px_30px_#ff5b0233]">
               <div className="mb-6 flex items-center gap-4">
                 <Image src="/assets/contactus/Layer 2.svg" alt="Support icon" width={50} height={46} className="h-auto w-auto" />
-                <p className="text-2xl font-display tablet:text-3xl">Technical support</p>
+                <p className="text-xl font-display whitespace-nowrap tablet:text-2xl">Technical support</p>
               </div>
 
               <div className="mb-7">
@@ -114,13 +114,6 @@ export default function ContactUsPage() {
     </div>
   );
 }
-
-
-
-
-
-
-
 
 
 

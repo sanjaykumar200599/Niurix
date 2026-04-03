@@ -1,0 +1,46 @@
+.phoneWrap :global(.react-tel-input) {
+  width: 100%;
+  height: 47px;
+}
+
+.phoneWrap :global(.react-tel-input .form-control) {
+  width: 100% !important;
+  height: 47px !important;
+  border: 1px solid rgba(29, 29, 29, 0.3) !important;
+  border-radius: 10px 0 !important;
+  font-size: 1rem !important;
+  color: #1d1d1d;
+  padding-left: 74px !important;
+  padding-right: 12px !important;
+}
+
+.phoneWrap :global(.react-tel-input .form-control::placeholder) {
+  color: rgba(29, 29, 29, 0.28);
+}
+
+.phoneWrap :global(.react-tel-input .flag-dropdown) {
+  border: 1px solid rgba(29, 29, 29, 0.3) !important;
+  border-right: 1px solid rgba(29, 29, 29, 0.2) !important;
+  border-radius: 10px 0 0 0 !important;
+  background: transparent !important;
+}
+
+.phoneWrap :global(.react-tel-input .selected-flag) {
+  width: 58px !important;
+  padding: 0 0 0 14px !important;
+}
+
+.phoneWrap :global(.react-tel-input .selected-flag .arrow) {
+  left: 34px !important;
+}
+
+.phoneWrap :global(.react-tel-input .country-list) {
+  width: 335px;
+  text-align: left;
+  z-index: 40;
+}
+
+.phoneWrap :global(.react-tel-input .country-list .search-box) {
+  width: calc(100% - 20px);
+  margin-left: 10px;
+}

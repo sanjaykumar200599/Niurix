@@ -1,13 +1,16 @@
 "use client";
 
-import { useActionState, useMemo } from "react";
+import { useActionState, useMemo, useState } from "react";
+import PhoneInput from "react-phone-input-2";
 import { submitContact } from "@/data/actions/contact";
 import type { ContactActionResult } from "@/lib/validation/contact";
+import styles from "./ContactForm.module.css";
 
 const initialState: ContactActionResult = { ok: false, message: "" };
 
 export default function ContactForm() {
   const [state, formAction, pending] = useActionState(submitContact, initialState);
+  const [phoneNumber, setPhoneNumber] = useState("");
 
   const messageClass = useMemo(() => (state.ok ? "text-green-700" : "text-red-600"), [state.ok]);
 
@@ -23,13 +26,16 @@ export default function ContactForm() {
           {state.fieldErrors?.name ? <p className="mt-1 text-sm text-black">{state.fieldErrors.name}</p> : null}
         </div>
 
-        <div className="laptop:max-w-[400px] pl-18">
-          <input
-            type="tel"
-            name="phoneNumber"
+        <div className={`laptop:max-w-[400px] ${styles.phoneWrap}`}>
+          <PhoneInput
+            country="us"
+            enableSearch={true}
+            value={phoneNumber}
+            onChange={(value, _country, _event, formattedValue) => setPhoneNumber(formattedValue ?? value)}
             placeholder="Phone Number"
-            className="h-[47px] w-full rounded-[10px_0px] border border-black/30 px-4 text-base placeholder:text-black/28"
+            inputProps={{ id: "phoneNumber", "aria-label": "Phone Number" }}
           />
+          <input type="hidden" name="phoneNumber" value={phoneNumber.trim()} />
         </div>
 
         <div className="laptop:col-start-1 laptop:col-end-2 laptop:max-w-[310px]">
