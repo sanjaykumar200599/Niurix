@@ -30,7 +30,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
   return (
     <>
       <section className="relative" data-hero-banner="industries">
-        <div className="relative h-80 tablet:h-[520px] laptop:h-[860px]">
+        <div className="relative h-[660px] tablet:h-[520px] laptop:h-[860px]">
           <Image
             src={industry.heroImage}
             alt={industry.heroTitle}
@@ -49,7 +49,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
           />
         </div>
 
-        <h1 className="absolute left-9 top-1/2 z-10 w-[84%] -translate-y-1/2 text-[22px] font-display leading-[1.3] text-white tablet:left-[80px] tablet:w-[70%] tablet:text-[36px] laptop:left-[120px] laptop:w-[52%] laptop:text-[44px]">
+        <h1 className="absolute left-9 top-44 z-10 w-[75%] text-[30px] font-sans font-normal leading-[1.34] tracking-[-0.01em] text-white tablet:left-[80px] tablet:top-1/2 tablet:w-[70%] tablet:-translate-y-1/2 tablet:text-[36px] tablet:font-display laptop:left-[120px] laptop:w-[52%] laptop:text-[44px]">
           {industry.heroTitle}
         </h1>
       </section>
@@ -168,6 +168,9 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
     </>
   );
 }
+
+
+
 
 
 
