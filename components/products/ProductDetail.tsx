@@ -74,7 +74,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
               alt={product.overviewTitle}
               fill
               sizes="(max-width: 1023px) 100vw, 0px"
-              className="object-cover object-center tablet:hidden"
+              className="object-cover object-[center_54%] tablet:hidden"
             />
           </div>
         </div>
@@ -111,10 +111,25 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
             alt={product.detailTitle}
             fill
             sizes="(max-width: 1023px) 100vw, 0px"
-            className="object-cover object-center tablet:hidden"
+            className="object-cover object-[center_54%] tablet:hidden"
           />
-          <h2 className="absolute left-4 top-5 z-10 w-[76%] text-[17px] font-display leading-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.5)] tablet:left-10 tablet:top-12 tablet:w-[64%] tablet:text-[34px] tablet:[text-shadow:none] laptop:left-28 laptop:top-16 laptop:w-[42%] laptop:text-4xl">
-            {splitSimplerConnectivity ? (<>The Twist Towards<br /><span className="whitespace-nowrap">Simpler Connectivity</span></>) : (product.detailTitle)}
+          <h2 className="absolute left-4 top-5 z-10 w-[76%] pb-2 text-[17px] font-display leading-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.5)] tablet:left-10 tablet:top-12 tablet:w-[64%] tablet:pb-0 tablet:text-[34px] tablet:[text-shadow:none] laptop:left-28 laptop:top-16 laptop:w-[42%] laptop:text-4xl">
+            {splitSimplerConnectivity ? (
+              <>
+                <span className="laptop:hidden">
+                  The Twist Towards
+                  <br />
+                  <span className="whitespace-nowrap">Simpler Connectivity</span>
+                </span>
+                <span className="hidden laptop:inline">
+                  <span className="whitespace-nowrap">The Twist Towards Simpler</span>
+                  <br />
+                  <span className="whitespace-nowrap">Connectivity</span>
+                </span>
+              </>
+            ) : (
+              product.detailTitle
+            )}
           </h2>
         </div>
 
