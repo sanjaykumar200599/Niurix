@@ -9,8 +9,8 @@ type IndustryDetailProps = {
 export default function IndustryDetail({ industry }: IndustryDetailProps) {
   return (
     <>
-      <section className="relative">
-        <div className="relative h-80 tablet:h-[520px] laptop:h-[760px]">
+      <section className="relative" data-hero-banner="industries">
+        <div className="relative h-80 tablet:h-[520px] laptop:h-[860px]">
           <Image
             src={industry.heroImage}
             alt={industry.heroTitle}
@@ -40,17 +40,18 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
           dangerouslySetInnerHTML={{ __html: industry.introTitleHtml }}
         />
 
-        <div className="mt-6 flex flex-col-reverse gap-8 laptop:mt-8 laptop:flex-row laptop:items-center laptop:justify-between">
-          <div className="flex w-full flex-col justify-center laptop:w-[24%]">
-            <p className="text-[16px] leading-[1.6] text-brand-black tablet:text-[17px] laptop:text-[18px]">
+        <div className="mt-3 flex flex-col-reverse gap-8 laptop:mt-4 laptop:flex-row laptop:items-center laptop:justify-between">
+          <div className="flex w-full flex-col justify-start laptop:w-[24%]">
+            <p className="text-[16px] font-normal leading-[1.6] text-brand-black tablet:text-[17px] laptop:text-[19px]">
               {industry.introText}
             </p>
 
             <Link
               href="/contact-us"
-              className="mt-6 inline-flex w-fit rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-lg font-display text-white transition hover:bg-white hover:text-brand-black"
+              className="group mt-6 inline-flex w-fit flex-col rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-left text-lg font-medium leading-tight text-white transition-colors duration-200 hover:bg-white hover:text-brand-black"
             >
-              Get in touch
+              <span className="text-white transition-colors duration-200 group-hover:text-brand-black">Get in</span>
+              <span className="text-white transition-colors duration-200 group-hover:text-brand-black">touch</span>
             </Link>
           </div>
 
@@ -147,5 +148,10 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
     </>
   );
 }
+
+
+
+
+
 
 
