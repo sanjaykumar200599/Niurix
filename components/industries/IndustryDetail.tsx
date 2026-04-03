@@ -135,7 +135,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
         </div>
       </section>
 
-      <section className="my-16 bg-[#f3f3f3] px-9 py-9 tablet:my-16 tablet:px-[80px] tablet:py-12 laptop:relative laptop:mb-44 laptop:mt-44 laptop:min-h-[300px] laptop:px-[120px] laptop:py-10">
+      <section className="my-16 bg-[#f3f3f3] px-9 py-9 tablet:my-16 tablet:px-[80px] tablet:py-12 laptop:relative laptop:mb-34 laptop:mt-44 laptop:min-h-[300px] laptop:px-[120px] laptop:py-10">
         <div className="w-full laptop:w-[44%]">
           <h2 className="whitespace-pre-line text-[24px] font-display font-normal leading-[1.28] text-brand-black tablet:text-[28px] laptop:text-[30px]">
             {advantagesHeading}
