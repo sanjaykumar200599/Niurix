@@ -7,6 +7,22 @@ type IndustryDetailProps = {
 };
 
 export default function IndustryDetail({ industry }: IndustryDetailProps) {
+  const deviceImageSizeClasses: Record<string, string> = {
+    router: "h-[50px] w-[158px] tablet:h-[54px] tablet:w-[172px]",
+    olt: "h-[48px] w-[166px] tablet:h-[52px] tablet:w-[178px]",
+    splitter: "h-[44px] w-[118px] tablet:h-[48px] tablet:w-[130px]",
+    "internet traffic": "h-[38px] w-[112px] tablet:h-[42px] tablet:w-[124px]",
+    "1g fiber": "h-[12px] w-[158px] tablet:h-[14px] tablet:w-[172px]",
+    "ethernet cable": "h-[12px] w-[130px] tablet:h-[14px] tablet:w-[144px]",
+    ont: "h-[66px] w-[66px] tablet:h-[74px] tablet:w-[74px]",
+    iptv: "h-[74px] w-[114px] tablet:h-[82px] tablet:w-[124px]",
+    "access point": "h-[70px] w-[70px] tablet:h-[78px] tablet:w-[78px]",
+    telephone: "h-[72px] w-[96px] tablet:h-[80px] tablet:w-[106px]",
+    wireless: "h-[42px] w-[88px] tablet:h-[48px] tablet:w-[96px]",
+  };
+
+  const getDeviceImageSizeClasses = (title: string) => deviceImageSizeClasses[title.toLowerCase()] ?? "h-[52px] w-[132px] tablet:h-[56px] tablet:w-[144px]";
+
   return (
     <>
       <section className="relative" data-hero-banner="industries">
@@ -69,15 +85,15 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
 
       <section className="mx-6 my-10 rounded-[12px] bg-white px-6 py-10 shadow-[0_0_10px_#00000029] tablet:mx-10 laptop:mx-[120px] laptop:px-10 laptop:py-12">
         {/* Row 1 */}
-        <div className="grid grid-cols-2 gap-y-8 gap-x-6 tablet:grid-cols-4 laptop:grid-cols-4">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 tablet:grid-cols-4 laptop:grid-cols-4 laptop:gap-x-8 laptop:gap-y-12 laptop:px-16">
           {industry.devices.slice(0, 4).map((device) => (
-            <article key={device.title} className="flex flex-col items-center text-center">
-              <div className="flex h-[90px] items-center justify-center laptop:h-[100px]">
-                <div className="relative h-[60px] w-[140px]">
-                  <Image src={device.image} alt={device.title} fill sizes="140px" className="object-contain" />
+            <article key={device.title} className="flex w-full flex-col items-center text-center">
+              <div className="flex h-[90px] items-center justify-center tablet:h-[96px] laptop:h-[96px]">
+                <div className={`relative ${getDeviceImageSizeClasses(device.title)}`}>
+                  <Image src={device.image} alt={device.title} fill sizes="220px" className="object-contain" />
                 </div>
               </div>
-              <p className="mt-3 font-display text-[16px] text-brand-black tablet:text-[17px] laptop:text-[18px]">
+              <p className="mt-4 font-display text-[16px] text-brand-black tablet:text-[17px] laptop:text-[18px]">
                 {device.title}
               </p>
             </article>
@@ -85,15 +101,15 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
         </div>
 
         {/* Row 2 */}
-        <div className="mt-14 grid grid-cols-2 gap-y-8 gap-x-6 tablet:grid-cols-3 laptop:grid-cols-6">
+        <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 tablet:grid-cols-3 laptop:grid-cols-6 laptop:gap-x-8 laptop:gap-y-12 laptop:px-6">
           {industry.devices.slice(4, 10).map((device) => (
-            <article key={device.title} className="flex flex-col items-center text-center">
-              <div className="flex h-[90px] items-center justify-center laptop:h-[100px]">
-                <div className="relative h-[60px] w-[140px]">
-                  <Image src={device.image} alt={device.title} fill sizes="140px" className="object-contain" />
+            <article key={device.title} className="flex w-full flex-col items-center text-center">
+              <div className="flex h-[90px] items-center justify-center tablet:h-[96px] laptop:h-[96px]">
+                <div className={`relative ${getDeviceImageSizeClasses(device.title)}`}>
+                  <Image src={device.image} alt={device.title} fill sizes="220px" className="object-contain" />
                 </div>
               </div>
-              <p className="mt-3 font-display text-[16px] text-brand-black tablet:text-[17px] laptop:text-[18px]">
+              <p className="mt-4 font-display text-[16px] text-brand-black tablet:text-[17px] laptop:text-[18px]">
                 {device.title}
               </p>
             </article>
@@ -101,14 +117,14 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
         </div>
 
         {/* Row 3 */}
-        <div className="mt-14 flex justify-center">
+        <div className="mt-10 flex justify-center">
           <article className="flex flex-col items-center text-center">
-            <div className="flex h-[90px] items-center justify-center laptop:h-[100px]">
-              <div className="relative h-[60px] w-[140px]">
-                <Image src={industry.devices[10].image} alt={industry.devices[10].title} fill sizes="140px" className="object-contain" />
+            <div className="flex h-[90px] items-center justify-center tablet:h-[96px] laptop:h-[96px]">
+              <div className={`relative ${getDeviceImageSizeClasses(industry.devices[10].title)}`}>
+                <Image src={industry.devices[10].image} alt={industry.devices[10].title} fill sizes="220px" className="object-contain" />
               </div>
             </div>
-            <p className="mt-3 font-display text-[16px] text-brand-black tablet:text-[17px] laptop:text-[18px]">
+            <p className="mt-4 font-display text-[16px] text-brand-black tablet:text-[17px] laptop:text-[18px]">
               {industry.devices[10].title}
             </p>
           </article>
@@ -148,6 +164,9 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
     </>
   );
 }
+
+
+
 
 
 
