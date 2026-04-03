@@ -8,20 +8,20 @@ type IndustryDetailProps = {
 
 export default function IndustryDetail({ industry }: IndustryDetailProps) {
   const deviceImageSizeClasses: Record<string, string> = {
-    router: "h-[42px] w-[134px] tablet:h-[54px] tablet:w-[172px]",
-    olt: "h-[40px] w-[142px] tablet:h-[52px] tablet:w-[178px]",
-    splitter: "h-[38px] w-[102px] tablet:h-[48px] tablet:w-[130px]",
-    "internet traffic": "h-[32px] w-[96px] tablet:h-[42px] tablet:w-[124px]",
-    "1g fiber": "h-[10px] w-[132px] tablet:h-[14px] tablet:w-[172px]",
-    "ethernet cable": "h-[10px] w-[110px] tablet:h-[14px] tablet:w-[144px]",
-    ont: "h-[56px] w-[56px] tablet:h-[74px] tablet:w-[74px]",
-    iptv: "h-[62px] w-[96px] tablet:h-[82px] tablet:w-[124px]",
-    "access point": "h-[58px] w-[58px] tablet:h-[78px] tablet:w-[78px]",
-    telephone: "h-[60px] w-[80px] tablet:h-[80px] tablet:w-[106px]",
-    wireless: "h-[34px] w-[72px] tablet:h-[48px] tablet:w-[96px]",
+    router: "h-[34px] w-[112px] tablet:h-[54px] tablet:w-[172px]",
+    olt: "h-[32px] w-[118px] tablet:h-[52px] tablet:w-[178px]",
+    splitter: "h-[30px] w-[86px] tablet:h-[48px] tablet:w-[130px]",
+    "internet traffic": "h-[26px] w-[76px] tablet:h-[42px] tablet:w-[124px]",
+    "1g fiber": "h-[8px] w-[110px] tablet:h-[14px] tablet:w-[172px]",
+    "ethernet cable": "h-[8px] w-[94px] tablet:h-[14px] tablet:w-[144px]",
+    ont: "h-[46px] w-[46px] tablet:h-[74px] tablet:w-[74px]",
+    iptv: "h-[50px] w-[80px] tablet:h-[82px] tablet:w-[124px]",
+    "access point": "h-[46px] w-[46px] tablet:h-[78px] tablet:w-[78px]",
+    telephone: "h-[50px] w-[68px] tablet:h-[80px] tablet:w-[106px]",
+    wireless: "h-[28px] w-[60px] tablet:h-[48px] tablet:w-[96px]",
   };
 
-  const getDeviceImageSizeClasses = (title: string) => deviceImageSizeClasses[title.toLowerCase()] ?? "h-[44px] w-[112px] tablet:h-[56px] tablet:w-[144px]";
+  const getDeviceImageSizeClasses = (title: string) => deviceImageSizeClasses[title.toLowerCase()] ?? "h-[36px] w-[94px] tablet:h-[56px] tablet:w-[144px]";
 
   const advantagesHeading = industry.advantagesTitle.includes(" Solutions")
     ? industry.advantagesTitle.replace(" Solutions", "\nSolutions")
@@ -92,7 +92,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
         <div className="grid grid-cols-2 gap-x-6 gap-y-10 tablet:grid-cols-4 laptop:grid-cols-4 laptop:gap-x-8 laptop:gap-y-12 laptop:px-16">
           {industry.devices.slice(0, 4).map((device) => (
             <article key={device.title} className="flex w-full flex-col items-center text-center">
-              <div className="flex h-[90px] items-center justify-center tablet:h-[96px] laptop:h-[96px]">
+              <div className="flex h-[76px] items-center justify-center tablet:h-[96px] laptop:h-[96px]">
                 <div className={`relative ${getDeviceImageSizeClasses(device.title)}`}>
                   <Image src={device.image} alt={device.title} fill sizes="220px" className="object-contain" />
                 </div>
@@ -108,7 +108,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
         <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 tablet:grid-cols-3 laptop:grid-cols-6 laptop:gap-x-8 laptop:gap-y-12 laptop:px-6">
           {industry.devices.slice(4, 10).map((device) => (
             <article key={device.title} className="flex w-full flex-col items-center text-center">
-              <div className="flex h-[90px] items-center justify-center tablet:h-[96px] laptop:h-[96px]">
+              <div className="flex h-[76px] items-center justify-center tablet:h-[96px] laptop:h-[96px]">
                 <div className={`relative ${getDeviceImageSizeClasses(device.title)}`}>
                   <Image src={device.image} alt={device.title} fill sizes="220px" className="object-contain" />
                 </div>
@@ -123,7 +123,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
         {/* Row 3 */}
         <div className="mt-10 flex justify-start tablet:justify-center">
           <article className="flex w-1/2 flex-col items-center text-center tablet:w-auto">
-            <div className="flex h-[90px] items-center justify-center tablet:h-[96px] laptop:h-[96px]">
+            <div className="flex h-[76px] items-center justify-center tablet:h-[96px] laptop:h-[96px]">
               <div className={`relative ${getDeviceImageSizeClasses(industry.devices[10].title)}`}>
                 <Image src={industry.devices[10].image} alt={industry.devices[10].title} fill sizes="220px" className="object-contain" />
               </div>
@@ -168,6 +168,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
     </>
   );
 }
+
 
 
 
