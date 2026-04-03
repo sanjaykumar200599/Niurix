@@ -13,34 +13,43 @@ export default function ContactForm() {
 
   return (
     <form action={formAction} className="w-full">
-      <div className="grid gap-4 laptop:grid-cols-2">
-        <div>
-          <input name="name" placeholder="Name" className="h-[47px] w-full rounded-[10px_0px] border border-black/40 px-4 text-base" />
+      <div className="grid gap-4 laptop:grid-cols-2 laptop:gap-5">
+        <div className="laptop:max-w-[310px]">
+          <input
+            name="name"
+            placeholder="Name"
+            className="h-[47px] w-full rounded-[10px_0px] border border-black/30 px-4 text-base placeholder:text-black/28"
+          />
           {state.fieldErrors?.name ? <p className="mt-1 text-sm text-black">{state.fieldErrors.name}</p> : null}
         </div>
 
-        <div>
+        <div className="laptop:max-w-[400px] pl-18">
           <input
             type="tel"
             name="phoneNumber"
             placeholder="Phone Number"
-            className="h-[47px] w-full rounded-[10px_0px] border border-black/40 px-4 text-base"
+            className="h-[47px] w-full rounded-[10px_0px] border border-black/30 px-4 text-base placeholder:text-black/28"
           />
         </div>
-      </div>
 
-      <div className="mt-5">
-        <input type="email" name="email" placeholder="Email" className="h-[47px] w-full rounded-[10px_0px] border border-black/40 px-4 text-base" />
-        {state.fieldErrors?.email ? <p className="mt-1 text-sm text-black">{state.fieldErrors.email}</p> : null}
-      </div>
+        <div className="laptop:col-start-1 laptop:col-end-2 laptop:max-w-[310px]">
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            className="h-[47px] w-full rounded-[10px_0px] border border-black/30 px-4 text-base placeholder:text-black/28"
+          />
+          {state.fieldErrors?.email ? <p className="mt-1 text-sm text-black">{state.fieldErrors.email}</p> : null}
+        </div>
 
-      <div className="mt-5">
-        <textarea
-          name="message"
-          placeholder="Message"
-          rows={3}
-          className="h-[76px] w-full rounded-[10px_0px] border border-black/40 px-4 py-3 text-base"
-        />
+        <div className="laptop:col-span-2">
+          <textarea
+            name="message"
+            placeholder="Message"
+            rows={3}
+            className="h-[56px] w-full rounded-[10px_0px] border border-black/30 px-4 py-3 text-base placeholder:text-black/28"
+          />
+        </div>
       </div>
 
       <div className="mt-8 flex justify-center">
@@ -57,4 +66,3 @@ export default function ContactForm() {
     </form>
   );
 }
-

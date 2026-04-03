@@ -69,17 +69,17 @@ export default function ContactUsPage() {
         </div>
       </section>
 
-      <section className="px-9 pb-8 tablet:px-20 tablet:pb-12 laptop:px-[120px] laptop:pb-16">
+      <section className="px-9 pb-8 pt-2 tablet:px-20 tablet:pb-12 tablet:pt-4 laptop:px-[120px] laptop:pb-36 laptop:pt-20">
         <div className="flex flex-col gap-8 laptop:flex-row laptop:justify-between">
           <div className="w-full border-b border-[#d6d6d6] pb-8 laptop:w-[70%] laptop:border-b-0 laptop:border-r laptop:pb-0 laptop:pr-8">
-            <h2 className="text-[30px] font-display text-brand-black tablet:text-[42px] laptop:text-[44px]">
+            <h2 className="mt-4 text-[30px] font-display text-brand-black tablet:mt-5 tablet:text-[42px] laptop:mt-10 laptop:text-[44px]">
               <span className="text-brand-orange">Get in</span> Touch
             </h2>
-            <p className="mt-4 w-full text-base text-brand-black tablet:w-[85%] tablet:text-lg laptop:text-[22px]">
+            <p className="mt-4 w-full text-base font-normal leading-[1.6] text-brand-black/75 tablet:w-[85%] tablet:text-lg laptop:text-[20px]">
               Let&apos;s connect. Your feedback, questions, and ideas matter to us and we are there to provide answers and support. Enter your details in the form below and we will be in touch with you as soon as possible.
             </p>
 
-            <div className="mt-8 w-full laptop:w-[90%]">
+            <div className="mt-8 w-full laptop:w-[96%]">
               <ContactForm />
             </div>
           </div>
