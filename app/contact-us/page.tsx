@@ -16,15 +16,34 @@ export default function ContactUsPage() {
   return (
     <div>
       <section className="relative">
-        <div className="relative h-[320px] tablet:h-[520px] laptop:h-[850px]">
+        <div className="relative h-[680px] tablet:h-[520px] laptop:h-[850px]">
           <Image src="/assets/contactus/banner.webp" alt="Contact banner" fill sizes="(max-width: 767px) 0px, 100vw" className="hidden object-cover tablet:block" priority />
           <Image src="/assets/contactus/Contact banner mobile.webp" alt="Contact banner" fill sizes="(max-width: 767px) 100vw, 0px" className="object-cover tablet:hidden" priority />
         </div>
 
-        <p className="absolute left-9 top-0 flex h-full w-[85%] items-center font-display text-white text-[22px] leading-snug
-          tablet:left-[80px] tablet:w-[70%] tablet:text-[36px]
-          laptop:left-[120px] laptop:w-[47%] laptop:text-[44px]">
-          Want to know more about our product? Have any query? Or just simply want to say hello! We would love to hear from you.
+        <p
+          className="absolute left-9 right-9 top-1/2 -translate-y-1/2 font-sans text-[28px] font-normal leading-[1.35] text-white
+          tablet:left-[80px] tablet:right-auto tablet:top-0 tablet:w-[70%] tablet:translate-y-0 tablet:font-display tablet:text-[36px] tablet:font-semibold tablet:leading-snug tablet:flex tablet:h-full tablet:items-center
+          laptop:left-[120px] laptop:w-[47%] laptop:text-[44px]"
+        >
+          <span className="tablet:hidden">
+            Want to know more
+            <br />
+            about our product?
+            <br />
+            Have any query? Or
+            <br />
+            just simply want to
+            <br />
+            say hello! We would
+            <br />
+            love to hear from
+            <br />
+            you.
+          </span>
+          <span className="hidden tablet:inline">
+            Want to know more about our product? Have any query? Or just simply want to say hello! We would love to hear from you.
+          </span>
         </p>
       </section>
 
@@ -114,6 +133,4 @@ export default function ContactUsPage() {
     </div>
   );
 }
-
-
 
