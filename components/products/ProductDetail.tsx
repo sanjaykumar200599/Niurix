@@ -153,11 +153,11 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
               {product.type === "ONT" ? " ONT" : ""}
             </h2>
 
-            <div className="flex w-full justify-between">
+            <div className="flex w-full justify-between laptop:justify-start laptop:gap-0">
               <button
                 type="button"
                 onClick={() => setTab("spec")}
-                className={`border-b-[3px] pb-1 text-[24px] font-display tablet:text-[28px] laptop:text-[24px] ${
+                className={`border-b-[3px] pb-1 text-[24px] font-display tablet:text-[28px] laptop:w-[170px] laptop:text-left laptop:text-[24px] ${
                   tab === "spec" ? "border-brand-orange text-brand-orange" : "border-transparent text-brand-black/30"
                 }`}
               >
@@ -166,7 +166,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
               <button
                 type="button"
                 onClick={() => setTab("dim")}
-                className={`border-b-[3px] pb-1 text-[24px] font-display tablet:text-[28px] laptop:text-[24px] ${
+                className={`border-b-[3px] pb-1 text-[24px] font-display tablet:text-[28px] laptop:ml-30 laptop:w-[170px] laptop:text-left laptop:text-[24px] ${
                   tab === "dim" ? "border-brand-orange text-brand-orange" : "border-transparent text-brand-black/30"
                 }`}
               >
@@ -174,7 +174,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
               </button>
             </div>
 
-            <div className="mt-8 min-h-[14rem] space-y-3 tablet:min-h-0">
+            <div className="mt-8 min-h-[14rem] space-y-3 tablet:min-h-[17rem] laptop:min-h-[18.5rem]">
               {rows.map((row) => (
                 <div key={row.title} className="flex w-full justify-between gap-6 text-base tablet:text-lg laptop:text-[20px]">
                   <p className="w-[58%] text-brand-black">{row.title}</p>
