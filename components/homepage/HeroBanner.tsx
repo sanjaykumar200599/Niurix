@@ -12,8 +12,9 @@ export default function HeroBanner({ banners }: { banners: HomeData["banners"] }
   return (
     <div className="homepage-swiper relative">
       <Swiper modules={[Pagination, Parallax]} speed={600} parallax pagination={{ clickable: true }}>
-        {banners.map((item) => {
+        {banners.map((item, index) => {
           const mobilePara = item.para.replace("Multiple Services", "Multiple\nServices");
+          const isFirstSlide = index === 0;
 
           return (
             <SwiperSlide key={item.solutionSlug}>
@@ -24,7 +25,8 @@ export default function HeroBanner({ banners }: { banners: HomeData["banners"] }
                     alt={item.title}
                     fill
                     sizes="(max-width: 767px) 0px, 100vw"
-                    priority
+                    priority={isFirstSlide}
+                    fetchPriority={isFirstSlide ? "high" : "auto"}
                     className="object-cover scale-[1.12] object-[42%_44%] laptop:scale-[1.22] laptop:object-[15%_25%]"
                   />
                 </div>
@@ -35,7 +37,8 @@ export default function HeroBanner({ banners }: { banners: HomeData["banners"] }
                     alt={item.title}
                     fill
                     sizes="(max-width: 767px) 100vw, 0px"
-                    priority
+                    priority={isFirstSlide}
+                    fetchPriority={isFirstSlide ? "high" : "auto"}
                     className="object-cover scale-[1.12] object-[42%_44%] laptop:scale-[1.22] laptop:object-[15%_25%]"
                   />
                 </div>

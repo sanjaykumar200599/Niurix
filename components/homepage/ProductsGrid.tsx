@@ -117,10 +117,10 @@ export default function ProductsGrid({ products }: { products: HomeData["product
 
         <div className="flex w-[5%] items-center bg-[#e1e1e1]">
           <div className="mx-auto flex flex-col items-center gap-6">
-            <button type="button" onClick={goPrev} disabled={activeIndex === 0} className="h-6 w-6">
+            <button type="button" aria-label="Previous product" onClick={goPrev} disabled={activeIndex === 0} className="h-6 w-6">
               <ArrowIcon direction="prev" disabled={activeIndex === 0} className="scale-75" />
             </button>
-            <button type="button" onClick={goNext} disabled={activeIndex === products.length - 1} className="h-6 w-6">
+            <button type="button" aria-label="Next product" onClick={goNext} disabled={activeIndex === products.length - 1} className="h-6 w-6">
               <ArrowIcon direction="next" disabled={activeIndex === products.length - 1} className="scale-75" />
             </button>
           </div>
@@ -132,7 +132,7 @@ export default function ProductsGrid({ products }: { products: HomeData["product
           <p className="font-number text-[45px] leading-none text-white tablet:text-[100px]">{selected.name}</p>
 
           <div className="mt-3 flex items-center justify-evenly">
-            <button type="button" onClick={goPrev} disabled={activeIndex === 0} className="h-6 w-6 tablet:h-8 tablet:w-8">
+            <button type="button" aria-label="Previous product" onClick={goPrev} disabled={activeIndex === 0} className="h-6 w-6 tablet:h-8 tablet:w-8">
               <ArrowIcon direction="prev" disabled={activeIndex === 0} className="scale-75" />
             </button>
 
@@ -140,7 +140,7 @@ export default function ProductsGrid({ products }: { products: HomeData["product
               <Image src={selected.image} alt={selected.name} fill sizes="(min-width: 768px) 240px, 160px" className="object-contain" />
             </div>
 
-            <button type="button" onClick={goNext} disabled={activeIndex === products.length - 1} className="h-6 w-6 tablet:h-8 tablet:w-8">
+            <button type="button" aria-label="Next product" onClick={goNext} disabled={activeIndex === products.length - 1} className="h-6 w-6 tablet:h-8 tablet:w-8">
               <ArrowIcon direction="next" disabled={activeIndex === products.length - 1} className="scale-75" />
             </button>
           </div>
@@ -181,6 +181,7 @@ export default function ProductsGrid({ products }: { products: HomeData["product
     </div>
   );
 }
+
 
 
 

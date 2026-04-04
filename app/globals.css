@@ -107,7 +107,7 @@ main {
 }
 
 .nx-rich span {
-  color: var(--color-brand-orange);
+  color: #cc4300;
 }
 
 .nx-gradient-hero {
@@ -247,4 +247,5 @@ main {
     bottom: 48px !important;
   }
 }
+
 

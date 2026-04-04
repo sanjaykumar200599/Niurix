@@ -6,6 +6,7 @@ import DataCounters from "@/components/homepage/DataCounters";
 import ProductsGrid from "@/components/homepage/ProductsGrid";
 import IndustriesGrid from "@/components/homepage/IndustriesGrid";
 import InstallGuide from "@/components/homepage/InstallGuide";
+import InstallMedia from "@/components/homepage/InstallMedia";
 import ContactParallax from "@/components/homepage/ContactParallax";
 import { homeContent } from "@/data/site/content";
 import { toMetadata } from "@/data/site/seo";
@@ -58,18 +59,7 @@ export default function HomePage() {
 
         <div className="grid gap-8 laptop:grid-cols-[60%_40%] laptop:items-start laptop:gap-10 wide:grid-cols-[61%_39%]">
           <div className="overflow-hidden rounded-[32px] border border-black/10 bg-white">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="auto"
-              poster="/assets/homepage/Box Together.webp"
-              className="aspect-[16/9] w-full bg-white object-contain"
-            >
-              <source src="/assets/homepage/Niurixinstall.mp4" type="video/mp4" />
-              <source src="/assets/homepage/Nurix Home Page Video.mp4" type="video/mp4" />
-            </video>
+            <InstallMedia />
           </div>
           <InstallGuide steps={homeContent.installSteps} />
         </div>
@@ -79,6 +69,3 @@ export default function HomePage() {
     </div>
   );
 }
-
-
-
