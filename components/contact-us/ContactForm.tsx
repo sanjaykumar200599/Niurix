@@ -8,11 +8,28 @@ import styles from "./ContactForm.module.css";
 
 const initialState: ContactActionResult = { ok: false, message: "" };
 
+type PhoneCountry = {
+  dialCode?: string;
+};
+
 export default function ContactForm() {
   const [state, formAction, pending] = useActionState(submitContact, initialState);
   const [phoneNumber, setPhoneNumber] = useState("");
+  const [selectedDialCode, setSelectedDialCode] = useState("1");
 
   const messageClass = useMemo(() => (state.ok ? "text-green-700" : "text-red-600"), [state.ok]);
+  const hasLocalPhoneNumber = useMemo(() => {
+    const digits = phoneNumber.replace(/\D/g, "");
+    if (!digits) return false;
+    if (!selectedDialCode) return digits.length > 0;
+    if (!digits.startsWith(selectedDialCode)) return digits.length > 0;
+    return digits.slice(selectedDialCode.length).length > 0;
+  }, [phoneNumber, selectedDialCode]);
+
+  const handlePhoneChange = (value: string, country: PhoneCountry, _event: unknown, formattedValue: string) => {
+    setSelectedDialCode(country?.dialCode ?? "");
+    setPhoneNumber(formattedValue ?? value);
+  };
 
   return (
     <form action={formAction} className="w-full">
@@ -21,7 +38,7 @@ export default function ContactForm() {
           <input
             name="name"
             placeholder="Name"
-            className="h-[47px] w-full rounded-[10px_0px] border border-black/30 px-4 text-base placeholder:text-black/28"
+            className="h-[47px] w-full rounded-[10px_0px] border border-black/20 px-4 text-base font-normal text-black/55 placeholder:text-black/28 focus:border-black/30 focus:outline-none focus:ring-0"
           />
           {state.fieldErrors?.name ? <p className="mt-1 text-sm text-black">{state.fieldErrors.name}</p> : null}
         </div>
@@ -31,8 +48,9 @@ export default function ContactForm() {
             country="us"
             enableSearch={true}
             value={phoneNumber}
-            onChange={(value, _country, _event, formattedValue) => setPhoneNumber(formattedValue ?? value)}
+            onChange={handlePhoneChange}
             placeholder="Phone Number"
+            inputClass={hasLocalPhoneNumber ? styles.phoneInputFilled : styles.phoneInputEmpty}
             inputProps={{ id: "phoneNumber", "aria-label": "Phone Number" }}
           />
           <input type="hidden" name="phoneNumber" value={phoneNumber.trim()} />
@@ -43,7 +61,7 @@ export default function ContactForm() {
             type="email"
             name="email"
             placeholder="Email"
-            className="h-[47px] w-full rounded-[10px_0px] border border-black/30 px-4 text-base placeholder:text-black/28"
+            className="h-[47px] w-full rounded-[10px_0px] border border-black/20 px-4 text-base font-normal text-black/55 placeholder:text-black/28 focus:border-black/30 focus:outline-none focus:ring-0"
           />
           {state.fieldErrors?.email ? <p className="mt-1 text-sm text-black">{state.fieldErrors.email}</p> : null}
         </div>
@@ -53,7 +71,7 @@ export default function ContactForm() {
             name="message"
             placeholder="Message"
             rows={3}
-            className="h-[56px] w-full rounded-[10px_0px] border border-black/30 px-4 py-3 text-base placeholder:text-black/28"
+            className="h-[56px] w-full rounded-[10px_0px] border border-black/20 px-4 py-3 text-base font-normal text-black/55 placeholder:text-black/28 focus:border-black/30 focus:outline-none focus:ring-0"
           />
         </div>
       </div>
@@ -72,3 +90,5 @@ export default function ContactForm() {
     </form>
   );
 }
+
+

@@ -6,10 +6,10 @@
 .phoneWrap :global(.react-tel-input .form-control) {
   width: 100% !important;
   height: 47px !important;
-  border: 1px solid rgba(29, 29, 29, 0.3) !important;
+  border: 1px solid rgba(29, 29, 29, 0.2) !important;
   border-radius: 10px 0 !important;
   font-size: 1rem !important;
-  color: #1d1d1d;
+  font-weight: 400 !important;
   padding-left: 74px !important;
   padding-right: 12px !important;
 }
@@ -19,7 +19,7 @@
 }
 
 .phoneWrap :global(.react-tel-input .flag-dropdown) {
-  border: 1px solid rgba(29, 29, 29, 0.3) !important;
+  border: 1px solid rgba(29, 29, 29, 0.2) !important;
   border-right: 1px solid rgba(29, 29, 29, 0.2) !important;
   border-radius: 10px 0 0 0 !important;
   background: transparent !important;
@@ -44,3 +44,26 @@
   width: calc(100% - 20px);
   margin-left: 10px;
 }
+
+.phoneInputEmpty {
+  color: rgba(29, 29, 29, 0.32) !important;
+  font-weight: 400 !important;
+}
+
+.phoneInputFilled {
+  color: rgba(29, 29, 29, 0.55) !important;
+  font-weight: 400 !important;
+}
+
+.phoneWrap :global(.react-tel-input .form-control:focus) {
+  border-color: rgba(29, 29, 29, 0.3) !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.phoneWrap :global(.react-tel-input:focus-within .flag-dropdown) {
+  border-color: rgba(29, 29, 29, 0.3) !important;
+}
+
+
+
