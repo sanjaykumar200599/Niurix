@@ -28,9 +28,16 @@ const mobileLinks = {
   industries: headerNavigation.industries,
 };
 
+const HEADER_SCROLL_THRESHOLD = 850;
+const HEADER_ARROW_DOWN_THRESHOLD = 22;
+const KEYBOARD_SCROLL_WINDOW_MS = 250;
+
 export default function Header() {
   const shellRef = useRef<HTMLDivElement | null>(null);
   const desktopTriggerRefs = useRef<Partial<Record<HeaderMenuKey, HTMLButtonElement | null>>>({});
+  const arrowDownCountRef = useRef(0);
+  const lastArrowKeyTsRef = useRef(0);
+
   const [scrolled, setScrolled] = useState(false);
   const [activeDesktopMenu, setActiveDesktopMenu] = useState<HeaderMenuKey | null>(null);
   const [dropdownNotchLeft, setDropdownNotchLeft] = useState<number | null>(null);
@@ -38,10 +45,62 @@ export default function Header() {
   const [mobileSection, setMobileSection] = useState<HeaderMenuKey | null>(null);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => {
+      if (window.scrollY <= 0) {
+        arrowDownCountRef.current = 0;
+        setScrolled(false);
+        return;
+      }
+
+      const isKeyboardScroll = Date.now() - lastArrowKeyTsRef.current < KEYBOARD_SCROLL_WINDOW_MS;
+
+      if (isKeyboardScroll) {
+        setScrolled(arrowDownCountRef.current >= HEADER_ARROW_DOWN_THRESHOLD);
+        return;
+      }
+
+      setScrolled(window.scrollY > HEADER_SCROLL_THRESHOLD);
+    };
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "ArrowDown") {
+        lastArrowKeyTsRef.current = Date.now();
+        arrowDownCountRef.current += 1;
+        setScrolled(arrowDownCountRef.current >= HEADER_ARROW_DOWN_THRESHOLD);
+        return;
+      }
+
+      if (event.key === "ArrowUp") {
+        lastArrowKeyTsRef.current = Date.now();
+        arrowDownCountRef.current = Math.max(0, arrowDownCountRef.current - 1);
+        if (window.scrollY <= HEADER_SCROLL_THRESHOLD) {
+          setScrolled(arrowDownCountRef.current >= HEADER_ARROW_DOWN_THRESHOLD);
+        }
+        return;
+      }
+
+      if (event.key === "Home") {
+        arrowDownCountRef.current = 0;
+        setScrolled(false);
+      }
+    };
+
+    const onPointerScroll = () => {
+      lastArrowKeyTsRef.current = 0;
+    };
+
     onScroll();
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("keydown", onKeyDown);
+    window.addEventListener("wheel", onPointerScroll, { passive: true });
+    window.addEventListener("touchmove", onPointerScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("keydown", onKeyDown);
+      window.removeEventListener("wheel", onPointerScroll);
+      window.removeEventListener("touchmove", onPointerScroll);
+    };
   }, []);
 
   useEffect(() => {
@@ -206,13 +265,3 @@ export default function Header() {
     </header>
   );
 }
-
-
-
-
-
-
-
-
-
-
