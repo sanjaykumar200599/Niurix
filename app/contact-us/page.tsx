@@ -16,8 +16,8 @@ export default function ContactUsPage() {
   return (
     <div>
       <section className="relative">
-        <div className="relative h-[680px] tablet:h-[520px] laptop:h-[850px]">
-          <Image src="/assets/contactus/banner.webp" alt="Contact banner" fill sizes="(max-width: 767px) 0px, 100vw" className="hidden object-cover tablet:block" priority />
+        <div className="relative h-[680px] tablet:h-[470px] laptop:h-[850px]">
+          <Image src="/assets/contactus/banner.webp" alt="Contact banner" fill sizes="(max-width: 767px) 0px, 100vw" className="hidden object-cover tablet:object-[center_58%] laptop:object-center tablet:block" priority />
           <Image src="/assets/contactus/Contact banner mobile.webp" alt="Contact banner" fill sizes="(max-width: 767px) 100vw, 0px" className="object-cover tablet:hidden" priority />
         </div>
 
@@ -47,7 +47,7 @@ export default function ContactUsPage() {
         </p>
       </section>
 
-      <section className="relative mb-28 tablet:mb-16">
+      <section className="relative mb-28 tablet:mb-32">
         <div className="absolute inset-0 hidden tablet:block">
           <Image src="/assets/contactus/Contact backgr.webp" alt="Contact background" fill sizes="100vw" className="object-cover" />
         </div>
@@ -55,34 +55,34 @@ export default function ContactUsPage() {
           <Image src="/assets/contactus/Contact back g mobile.webp" alt="Contact background" fill sizes="100vw" className="object-cover" />
         </div>
 
-        <div className="relative px-9 pb-28 pt-12 tablet:px-20 tablet:pb-28 tablet:pt-14 laptop:px-[120px] laptop:pb-20 laptop:pt-[90px]">
-          <h1 className="text-[30px] font-display text-brand-black tablet:text-[42px] laptop:text-[44px]">
+        <div className="relative px-9 pb-28 pt-12 tablet:px-20 tablet:pb-36 tablet:pt-14 laptop:px-[120px] laptop:pb-20 laptop:pt-[90px]">
+          <h1 className="text-[30px] font-display text-brand-black tablet:text-[29px] laptop:text-[44px]">
             <span className="text-brand-orange">Contact</span> Us
           </h1>
 
-          <p className="mt-4 w-full text-base font-normal leading-[1.55] text-brand-black/80 tablet:w-[90%] tablet:text-lg laptop:w-[43%] laptop:text-[20px]">
+          <p className="mt-4 w-full text-base font-normal leading-[1.55] text-brand-black/80 tablet:w-full tablet:text-lg laptop:w-[43%] laptop:text-[20px]">
             Niurix is headquartered at the beautiful city of Illinois, USA. To contact us, use any of the below means and we will always be available to assist you.
           </p>
 
-          <div className="mt-10 grid gap-y-8 tablet:grid-cols-2 tablet:gap-x-12 laptop:w-[42%] laptop:grid-cols-[1fr_1fr] laptop:gap-x-16">
+          <div className="mt-10 grid gap-y-7 laptop:w-[42%] laptop:grid-cols-[1fr_1fr] laptop:gap-x-16">
             <div>
-              <p className="text-xl font-display tablet:text-2xl">Address</p>
-              <p className="mt-2 whitespace-pre-line text-base leading-[1.4] text-brand-black/90 tablet:text-lg"><><span className="tablet:hidden">{"2130 Foster Ave\nWheeling IL,\n60090 USA"}</span><span className="hidden whitespace-pre-line tablet:inline">{"2130\nFoster\nAve\nWheeling\nIL, 60090\nUSA"}</span></></p>
+              <p className="text-xl font-display laptop:text-2xl">Address</p>
+              <p className="mt-2 whitespace-pre-line text-base leading-[1.4] text-brand-black/90 tablet:text-lg"><><span className="tablet:hidden">{"2130 Foster Ave\nWheeling IL,\n60090 USA"}</span><span className="hidden whitespace-pre-line tablet:inline laptop:hidden">{"2130 Foster Ave Wheeling IL,\n60090 USA"}</span><span className="hidden whitespace-pre-line laptop:inline">{"2130\nFoster\nAve\nWheeling\nIL, 60090\nUSA"}</span></></p>
             </div>
 
             <div>
               <div className="mb-7">
-                <p className="text-xl font-display tablet:text-2xl">Contact No.</p>
+                <p className="text-xl font-display laptop:text-2xl">Contact No.</p>
                 <p className="text-base text-brand-black tablet:text-lg">+1 847-957-6900</p>
               </div>
               <div>
-                <p className="text-xl font-display tablet:text-2xl">Email ID</p>
+                <p className="text-xl font-display laptop:text-2xl">Email ID</p>
                 <p className="text-base text-brand-black tablet:text-lg">salesinfo@niurix.com</p>
               </div>
             </div>
           </div>
 
-          <div className="absolute bottom-[-9rem] left-1/2 h-[13.5rem] w-[18rem] -translate-x-1/2 tablet:bottom-[-5rem] tablet:h-[17rem] tablet:w-[23rem] laptop:bottom-[-12rem] laptop:left-auto laptop:right-[2%] laptop:top-auto laptop:h-[28rem] laptop:w-[48rem] laptop:translate-x-0">
+          <div className="absolute bottom-[-9rem] left-1/2 h-[13.5rem] w-[18rem] -translate-x-1/2 tablet:bottom-[-11rem] tablet:left-1/2 tablet:h-[19rem] tablet:w-[27rem] tablet:-translate-x-1/2 laptop:bottom-[-12rem] laptop:left-auto laptop:right-[2%] laptop:top-auto laptop:h-[28rem] laptop:w-[48rem] laptop:translate-x-0">
             <Image src="/assets/contactus/Product.webp" alt="Product" width={820} height={560} className="h-full w-full object-contain" />
           </div>
         </div>
@@ -91,7 +91,7 @@ export default function ContactUsPage() {
       <section className="px-9 pb-8 pt-2 tablet:px-20 tablet:pb-12 tablet:pt-4 laptop:px-[120px] laptop:pb-36 laptop:pt-20">
         <div className="flex flex-col gap-8 laptop:flex-row laptop:justify-between">
           <div className="w-full border-b border-[#d6d6d6] pb-8 laptop:w-[70%] laptop:border-b-0 laptop:border-r laptop:pb-0 laptop:pr-8">
-            <h2 className="mt-4 text-[30px] font-display text-brand-black tablet:mt-5 tablet:text-[42px] laptop:mt-10 laptop:text-[44px]">
+            <h2 className="mt-4 text-[30px] font-display text-brand-black tablet:mt-5 tablet:text-[29px] laptop:mt-10 laptop:text-[44px]">
               <span className="text-brand-orange">Get in</span> Touch
             </h2>
             <p className="mt-4 w-full text-base font-normal leading-[1.6] text-brand-black/75 tablet:w-[85%] tablet:text-lg laptop:text-[20px]">
@@ -103,8 +103,8 @@ export default function ContactUsPage() {
             </div>
           </div>
 
-          <aside className="w-full laptop:flex laptop:w-[25%] laptop:items-center">
-            <div className="w-full rounded-tl-[30px] rounded-br-[30px] border border-[#ff5b0299] px-8 py-8 shadow-[0px_3px_30px_#ff5b0233]">
+          <aside className="w-full tablet:flex tablet:justify-center laptop:flex laptop:w-[25%] laptop:items-center laptop:justify-center">
+            <div className="w-full tablet:w-[58%] laptop:w-full laptop:max-w-[360px] rounded-tl-[30px] rounded-br-[30px] border border-[#ff5b0299] px-8 py-8 tablet:px-7 tablet:py-7 laptop:px-8 laptop:py-8 shadow-[0px_3px_30px_#ff5b0233]">
               <div className="mb-6 flex items-center gap-4">
                 <Image src="/assets/contactus/Layer 2.svg" alt="Support icon" width={50} height={46} className="h-auto w-auto" />
                 <p className="text-xl font-display whitespace-nowrap tablet:text-2xl">Technical support</p>
@@ -133,6 +133,12 @@ export default function ContactUsPage() {
     </div>
   );
 }
+
+
+
+
+
+
 
 
 

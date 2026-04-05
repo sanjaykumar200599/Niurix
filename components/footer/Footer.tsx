@@ -63,7 +63,7 @@ export default function Footer() {
           </div>
 
           {/* LINKS */}
-          <div className="grid gap-y-6 tablet:grid-cols-2 tablet:gap-x-10 laptop:flex-1 laptop:grid-cols-[1.22fr_0.7fr_1.05fr_0.72fr] laptop:gap-x-6">
+          <div className="grid gap-y-6 laptop:flex-1 laptop:grid-cols-[1.22fr_0.7fr_1.05fr_0.72fr] laptop:gap-x-6">
             {sections.map((section) => (
               <div key={section.title} className="min-w-0">
                 <p className="mb-3 text-[18px] leading-none font-display text-black tablet:mb-4 tablet:text-[20px]">

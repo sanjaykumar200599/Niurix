@@ -10,7 +10,7 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
     <>
       {/* HERO SECTION */}
       <section className="relative overflow-hidden">
-        <div className="relative h-[820px] tablet:h-[520px] laptop:h-[860px]">
+        <div className="relative h-[820px] tablet:h-[440px] laptop:h-[860px]">
           <Image
             src={solution.heroImage}
             alt={solution.heroTitle}
@@ -35,9 +35,9 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
           <h1 className="text-[28px] font-display leading-[1.14] tracking-tight text-white tablet:text-[42px] tablet:leading-[1.08] laptop:text-[52px]">
             {solution.heroTitle === "Optimized Fiber-Optic Solution" ? (
               <>
-                <span>Optimized Fiber-</span>
-                <br className="tablet:hidden" />
-                <span>Optic Solution</span>
+                <span>Optimized Fiber-Optic</span>
+                <br />
+                <span>Solution</span>
               </>
             ) : (
               solution.heroTitle
@@ -92,17 +92,17 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
 
           <div className="mt-10 grid gap-8 tablet:grid-cols-3 tablet:gap-4 laptop:mt-12 laptop:gap-5">
             {solution.cards.map((card) => (
-              <article key={card.number + card.title} className="relative pt-8 tablet:px-0 laptop:px-0">
+              <article key={card.number + card.title} className="relative pt-8 tablet:flex tablet:h-full tablet:px-0 laptop:px-0">
                 <p className="absolute left-1/2 top-8 -translate-x-1/2 -translate-y-1/2 text-[58px] leading-none font-number text-brand-orange tablet:text-[66px] laptop:text-[82px]">
                   {card.number}
                 </p>
 
-                <div className="rounded-tl-[30px] rounded-br-[30px] bg-white px-6 pb-7 pt-14 shadow-[0_0_2px_#00000029] tablet:min-h-[20rem] tablet:px-5 tablet:pb-6 tablet:pt-12 laptop:min-h-[14.5rem] laptop:px-4 laptop:pb-4 laptop:pt-11">
-                  <h3 className="text-center text-[23px] font-display text-brand-black tablet:min-h-[4.4rem] laptop:text-[22px]">
+                <div className="rounded-tl-[30px] rounded-br-[30px] bg-white px-6 pb-7 pt-14 shadow-[0_0_2px_#00000029] tablet:flex tablet:h-full tablet:min-h-[20rem] tablet:flex-col tablet:px-5 tablet:pb-6 tablet:pt-12 laptop:min-h-[14.5rem] laptop:px-4 laptop:pb-4 laptop:pt-11">
+                  <h3 className={`text-center text-[23px] font-display text-brand-black tablet:min-h-[4.4rem] laptop:text-[22px] ${card.number === "03" ? "tablet:pb-8" : ""}`}>
                     {card.title}
                   </h3>
 
-                  <p className="mt-2 text-[19px] leading-[1.55] text-brand-black/90 tablet:min-h-[8rem] laptop:min-h-[6.8rem] laptop:text-[18px] laptop:leading-[1.52]">
+                  <p className="mt-2 text-[19px] leading-[1.55] text-brand-black/90 tablet:min-h-[8rem] tablet:flex-1 laptop:min-h-[6.8rem] laptop:text-[18px] laptop:leading-[1.52]">
                     {card.para}
                   </p>
 
@@ -120,3 +120,11 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
     </>
   );
 }
+
+
+
+
+
+
+
+

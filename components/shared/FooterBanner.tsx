@@ -20,14 +20,14 @@ export default function FooterBanner() {
           className="h-auto w-full tablet:hidden"
         />
 
-        <div className="absolute inset-0 hidden tablet:flex tablet:items-center tablet:justify-start">
-          <div className="tablet:ml-[42%] flex max-w-[620px] flex-col items-start">
-            <p className="font-display text-[20px] leading-tight text-white tablet:text-[28px] laptop:text-[34px]">
+        <div className="absolute inset-0 hidden tablet:flex tablet:items-center tablet:justify-end tablet:px-10 laptop:px-0 laptop:justify-start">
+          <div className="flex w-[44%] max-w-[420px] flex-col items-start tablet:pr-4 laptop:w-auto laptop:max-w-[620px] laptop:pr-0 laptop:ml-[42%]">
+            <p className="font-display text-[20px] leading-tight text-white tablet:text-[22px] laptop:text-[34px]">
               <span className="laptop:whitespace-nowrap">Transform Your Network Architecture</span> <br /> With Us!
             </p>
             <Link
               href="/contact-us"
-              className="mt-4 inline-flex items-center justify-center rounded-[10px_0px] border border-brand-orange bg-brand-orange px-5 py-2 text-center text-[18px] font-sans !text-white visited:!text-white transition hover:bg-transparent hover:!text-white"
+              className="mt-3 inline-flex items-center justify-center rounded-[10px_0px] border border-brand-orange bg-brand-orange px-4 py-1.5 text-center text-[16px] font-sans !text-white visited:!text-white transition hover:bg-transparent hover:!text-white laptop:mt-4 laptop:px-5 laptop:py-2 laptop:text-[18px]"
             >
               Get in touch
             </Link>
@@ -51,7 +51,4 @@ export default function FooterBanner() {
     </section>
   );
 }
-
-
-
 

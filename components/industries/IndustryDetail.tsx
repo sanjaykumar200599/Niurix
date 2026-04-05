@@ -30,7 +30,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
   return (
     <>
       <section className="relative" data-hero-banner="industries">
-        <div className="relative h-[660px] tablet:h-[520px] laptop:h-[860px]">
+        <div className="relative h-[660px] tablet:h-[460px] laptop:h-[860px]">
           <Image
             src={industry.heroImage}
             alt={industry.heroTitle}
@@ -89,7 +89,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
 
       <section className="mx-6 my-10 rounded-[12px] bg-white px-6 py-10 shadow-[0_0_10px_#00000029] tablet:mx-10 laptop:mx-[120px] laptop:px-10 laptop:py-12">
         {/* Row 1 */}
-        <div className="grid grid-cols-2 gap-x-6 gap-y-10 tablet:grid-cols-4 laptop:grid-cols-4 laptop:gap-x-8 laptop:gap-y-12 laptop:px-16">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 tablet:grid-cols-2 laptop:grid-cols-4 laptop:gap-x-8 laptop:gap-y-12 laptop:px-16">
           {industry.devices.slice(0, 4).map((device) => (
             <article key={device.title} className="flex w-full flex-col items-center text-center">
               <div className="flex h-[76px] items-center justify-center tablet:h-[96px] laptop:h-[96px]">
@@ -105,7 +105,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
         </div>
 
         {/* Row 2 */}
-        <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 tablet:grid-cols-3 laptop:grid-cols-6 laptop:gap-x-8 laptop:gap-y-12 laptop:px-6">
+        <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 tablet:grid-cols-2 laptop:grid-cols-6 laptop:gap-x-8 laptop:gap-y-12 laptop:px-6">
           {industry.devices.slice(4, 10).map((device) => (
             <article key={device.title} className="flex w-full flex-col items-center text-center">
               <div className="flex h-[76px] items-center justify-center tablet:h-[96px] laptop:h-[96px]">
@@ -121,8 +121,8 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
         </div>
 
         {/* Row 3 */}
-        <div className="mt-10 flex justify-start tablet:justify-center">
-          <article className="flex w-1/2 flex-col items-center text-center tablet:w-auto">
+        <div className="mt-10 grid grid-cols-2 laptop:flex laptop:justify-center">
+          <article className="col-start-1 justify-self-center flex w-full max-w-[50%] flex-col items-center text-center tablet:max-w-none laptop:w-auto">
             <div className="flex h-[76px] items-center justify-center tablet:h-[96px] laptop:h-[96px]">
               <div className={`relative ${getDeviceImageSizeClasses(industry.devices[10].title)}`}>
                 <Image src={industry.devices[10].image} alt={industry.devices[10].title} fill sizes="220px" className="object-contain" />
@@ -151,10 +151,10 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
           {industry.advantagesCards.map((card) => (
             <article
               key={card.title}
-              className="min-h-[170px] rounded-tl-[18px] rounded-br-[18px] bg-white shadow-[0_0_10px_#00000029] tablet:min-h-[220px]"
+              className="min-h-[170px] rounded-tl-[18px] rounded-br-[18px] bg-white shadow-[0_0_10px_#00000029] tablet:min-h-[168px] laptop:min-h-[220px]"
             >
               <div className="p-5 tablet:p-7 laptop:p-8">
-                <div className="relative mb-4 h-[52px] w-[52px] tablet:mb-5 tablet:h-[64px] tablet:w-[64px] laptop:h-[72px] laptop:w-[72px]">
+                <div className="relative mb-3 h-[52px] w-[52px] tablet:mb-3 tablet:h-[56px] tablet:w-[56px] laptop:h-[72px] laptop:w-[72px]">
                   <Image src={card.image} alt={card.title} fill sizes="(min-width: 1024px) 72px, 64px" className="object-contain" />
                 </div>
 
@@ -169,6 +169,10 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
     </>
   );
 }
+
+
+
+
 
 
 

@@ -20,14 +20,22 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
   return (
     <div className="w-full">
-      <section className="relative h-[720px] tablet:h-[700px] laptop:h-[860px]">
+      <section className="relative h-[720px] tablet:h-[490px] laptop:h-[860px]">
         <Image src={product.heroImage} alt={product.overviewTitle} fill sizes="(max-width: 1023px) 0px, 100vw" className="hidden object-cover laptop:block" priority />
+        <Image
+          src={product.heroImage}
+          alt={product.overviewTitle}
+          fill
+          sizes="(max-width: 767px) 0px, (max-width: 1023px) 100vw, 0px"
+          className="hidden object-contain object-center tablet:block laptop:hidden"
+          priority
+        />
         <Image
           src={product.heroImageMobile}
           alt={product.overviewTitle}
           fill
-          sizes="(max-width: 1023px) 100vw, 0px"
-          className="object-cover object-[center_30%] laptop:hidden"
+          sizes="(max-width: 767px) 100vw, 0px"
+          className="object-cover object-[center_30%] tablet:hidden"
           priority
         />
       </section>
@@ -105,7 +113,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
       <section className="mt-15 px-9 tablet:mt-16 tablet:px-[78px] laptop:mt-24 laptop:px-[120px]">
         <div className="relative aspect-[4/3] overflow-hidden tablet:h-[520px] tablet:aspect-auto laptop:h-[660px]">
-          <Image src={product.detailImage} alt={product.detailTitle} fill sizes="(max-width: 1023px) 0px, 100vw" className="hidden object-cover laptop:block" />
+          <Image src={product.detailImage} alt={product.detailTitle} fill sizes="100vw" className="hidden object-cover tablet:block" />
           <Image
             src={product.detailImageMobile}
             alt={product.detailTitle}
@@ -153,7 +161,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
               {product.type === "ONT" ? " ONT" : ""}
             </h2>
 
-            <div className="flex w-full justify-between laptop:justify-start laptop:gap-0">
+            <div className="flex w-full justify-between tablet:justify-start tablet:gap-[12.5rem] laptop:justify-start laptop:gap-0">
               <button
                 type="button"
                 onClick={() => setTab("spec")}
@@ -225,6 +233,9 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
     </div>
   );
 }
+
+
+
 
 
 

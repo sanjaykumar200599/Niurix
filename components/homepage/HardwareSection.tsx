@@ -39,21 +39,44 @@ export default function HardwareSection({ titleHtml, items }: HardwareSectionPro
         </div>
       </div>
 
-      <div className="relative hidden h-[86rem] tablet:block laptop:h-[900px] wide:h-[940px]">
+      <div className="relative hidden h-[64rem] tablet:block laptop:hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/assets/homepage/Box section1-tab.webp"
+            alt="Hardware background"
+            fill
+            sizes="(min-width: 768px) and (max-width: 1023px) 100vw, 0px"
+            className="object-contain object-top scale-[2.1] origin-top"
+          />
+        </div>
+
+        <div className="absolute inset-x-0 top-[35.5rem] z-20 px-19.5">
+          <h2
+            className="nx-rich mx-auto max-w-[42rem] text-center font-sans text-[22px] leading-[1.2] text-brand-black"
+            dangerouslySetInnerHTML={{ __html: titleHtml }}
+          />
+
+          <div className="mt-8 grid grid-cols-2 gap-5">
+            {items.map((item) => (
+              <article
+                key={item}
+                className="flex h-[110px] items-center justify-center rounded-tl-[16px] rounded-br-[16px] border border-transparent bg-white px-6 text-center shadow-[0px_3px_15px_#0000001F]"
+              >
+                <p className="text-[15px] font-sans leading-[1.3] text-brand-black">{item}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="relative hidden h-[900px] laptop:block wide:h-[940px]">
         <div className="absolute inset-0">
           <Image
             src="/assets/homepage/Box section-1.webp"
             alt="Hardware background"
             fill
             sizes="(max-width: 1023px) 0px, 100vw"
-            className="hidden object-cover laptop:block"
-          />
-          <Image
-            src="/assets/homepage/Box section1-tab.webp"
-            alt="Hardware background"
-            fill
-            sizes="(min-width: 768px) and (max-width: 1023px) 100vw, 0px"
-            className="object-cover laptop:hidden"
+            className="object-cover"
           />
         </div>
 
@@ -90,3 +113,6 @@ export default function HardwareSection({ titleHtml, items }: HardwareSectionPro
     </section>
   );
 }
+
+
+
