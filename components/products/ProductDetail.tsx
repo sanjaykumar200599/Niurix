@@ -20,7 +20,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
   return (
     <div className="w-full">
-      <section className="relative h-[720px] tablet:h-[490px] laptop:h-[860px]">
+      <section className="relative h-[720px] tablet:h-[490px] laptop:h-[860px] [@media(min-width:1920px)_and_(min-height:1800px)]:h-[1040px]">
         <Image src={product.heroImage} alt={product.overviewTitle} fill sizes="(max-width: 1023px) 0px, 100vw" className="hidden object-cover laptop:block" priority />
         <Image
           src={product.heroImage}
@@ -75,7 +75,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
               alt={product.overviewTitle}
               fill
               sizes="(max-width: 767px) 0px, (max-width: 1023px) 100vw, 70vw"
-              className="hidden object-contain object-center tablet:block"
+              className="hidden object-contain object-center tablet:block [@media(min-width:1920px)_and_(min-height:1800px)]:object-cover [@media(min-width:1920px)_and_(min-height:1800px)]:object-right"
             />
             <Image
               src={product.overviewImageMobile}
@@ -233,6 +233,9 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
     </div>
   );
 }
+
+
+
 
 
 
