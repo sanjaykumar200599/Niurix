@@ -10,7 +10,7 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
     <>
       {/* HERO SECTION */}
       <section className="relative overflow-hidden">
-        <div className="relative h-[820px] tablet:h-[440px] laptop:h-[860px]">
+        <div className="relative h-[820px] tablet:h-[440px] laptop:h-[860px] [@media(min-width:1920px)_and_(min-height:1800px)]:h-[1100px]">
           <Image
             src={solution.heroImage}
             alt={solution.heroTitle}
@@ -32,12 +32,10 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
 
         {/* HERO TEXT */}
         <div className="absolute inset-x-0 top-[47%] z-10 -translate-y-1/2 px-9 tablet:top-auto tablet:bottom-16 tablet:translate-y-0 tablet:px-[78px] laptop:bottom-auto laptop:top-1/2 laptop:-translate-y-1/2 laptop:px-[120px]">
-          <h1 className="text-[28px] font-display leading-[1.14] tracking-tight text-white tablet:text-[42px] tablet:leading-[1.08] laptop:text-[52px]">
+          <h1 className="text-[28px] font-display leading-[1.14] tracking-tight text-white tablet:text-[42px] tablet:leading-[1.08] laptop:text-[48px] [@media(min-width:1920px)_and_(min-height:1800px)]:text-[52px]">
             {solution.heroTitle === "Optimized Fiber-Optic Solution" ? (
               <>
-                <span>Optimized Fiber-Optic</span>
-                <br />
-                <span>Solution</span>
+                <span>Optimized Fiber-Optic </span><br className="laptop:hidden" /><span>Solution</span>
               </>
             ) : (
               solution.heroTitle
@@ -97,7 +95,7 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
                   {card.number}
                 </p>
 
-                <div className="rounded-tl-[30px] rounded-br-[30px] bg-white px-6 pb-7 pt-14 shadow-[0_0_2px_#00000029] tablet:flex tablet:h-full tablet:min-h-[20rem] tablet:flex-col tablet:px-5 tablet:pb-6 tablet:pt-12 laptop:min-h-[14.5rem] laptop:px-4 laptop:pb-4 laptop:pt-11">
+                <div className="rounded-tl-[30px] rounded-br-[30px] bg-white px-6 pb-7 pt-14 shadow-[0_0_2px_#00000029] tablet:flex tablet:h-full tablet:min-h-[20rem] tablet:flex-col tablet:px-5 tablet:pb-6 tablet:pt-12 laptop:min-h-[14.5rem] laptop:px-4 laptop:pb-4 laptop:pt-11 [@media(min-width:1920px)_and_(min-height:1800px)]:pb-19">
                   <h3 className={`text-center text-[23px] font-display text-brand-black tablet:min-h-[4.4rem] laptop:text-[22px] ${card.number === "03" ? "tablet:pb-8" : ""}`}>
                     {card.title}
                   </h3>
@@ -120,6 +118,9 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
     </>
   );
 }
+
+
+
 
 
 
