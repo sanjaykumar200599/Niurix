@@ -12,10 +12,18 @@ function renderSoftwareHeroTitle(title: string) {
 
   return (
     <>
-      <span className="block tablet:inline">Fiber for the Future:</span>{" "}
-      <span className="block whitespace-nowrap tablet:inline tablet:whitespace-normal laptop:block laptop:whitespace-nowrap">Advancing Connectivity</span>{" "}
-      <span className="block whitespace-nowrap tablet:inline tablet:whitespace-normal laptop:block laptop:whitespace-nowrap">and Control for the</span>{" "}
-      <span className="block tablet:inline">Users Today.</span>
+      <span className="[@media(min-width:1920px)_and_(min-height:1800px)]:hidden">
+        <span className="block tablet:inline">Fiber for the Future:</span>{" "}
+        <span className="block whitespace-nowrap tablet:inline tablet:whitespace-normal laptop:block laptop:whitespace-nowrap [@media(min-width:1920px)_and_(min-height:1800px)]:inline">Advancing Connectivity</span>{" "}
+        <span className="block whitespace-nowrap tablet:inline tablet:whitespace-normal laptop:block laptop:whitespace-nowrap [@media(min-width:1920px)_and_(min-height:1800px)]:inline">and Control for the</span>{" "}
+        <span className="block tablet:inline [@media(min-width:1920px)_and_(min-height:1800px)]:whitespace-nowrap">Users Today.</span>
+      </span>
+
+      <span className="hidden [@media(min-width:1920px)_and_(min-height:1800px)]:block">
+        <span className="block whitespace-nowrap">Fiber for the Future: Advancing</span>
+        <span className="block whitespace-nowrap">Connectivity and Control for</span>
+        <span className="block whitespace-nowrap">the Users Today.</span>
+      </span>
     </>
   );
 }
@@ -24,14 +32,14 @@ export default function SoftwarePage({ software }: SoftwarePageProps) {
   return (
     <>
       <section className="relative overflow-hidden">
-        <div className="relative h-[760px] tablet:h-[520px] laptop:h-[860px]">
+        <div className="relative h-[760px] tablet:h-[520px] laptop:h-[860px] [@media(min-width:1920px)_and_(min-height:1800px)]:h-[1040px]">
           <Image src={software.heroImage} alt="Software banner" fill sizes="(max-width: 767px) 0px, 100vw" className="hidden object-cover tablet:block" priority />
           <Image src={software.heroImageMobile} alt="Software banner" fill sizes="(max-width: 767px) 100vw, 0px" className="object-cover tablet:hidden" priority />
 
           <div className="absolute inset-0 bg-black/10" />
 
-          <div className="relative z-10 flex h-full items-center px-9 tablet:items-end tablet:px-[78px] tablet:pb-16 laptop:px-[120px] laptop:pb-28">
-            <h1 className="w-[85%] text-[32px] font-display leading-tight text-white tablet:w-[70%] tablet:text-[34px] laptop:w-[35%] laptop:text-[48px]">
+          <div className="relative z-10 flex h-full items-center px-9 tablet:items-end tablet:px-[78px] tablet:pb-16 laptop:px-[120px] laptop:pb-28 [@media(min-width:1920px)_and_(min-height:1800px)]:pb-71">
+            <h1 className="w-[85%] text-[32px] font-display leading-tight text-white tablet:w-[70%] tablet:text-[34px] laptop:w-[35%] laptop:text-[48px] [@media(min-width:1920px)_and_(min-height:1800px)]:w-[42%]">
               {renderSoftwareHeroTitle(software.heroTitle)}
             </h1>
           </div>
@@ -47,7 +55,7 @@ export default function SoftwarePage({ software }: SoftwarePageProps) {
       </section>
 
       <section className="mb-8 mt-10 px-9 tablet:mb-12 tablet:px-20 laptop:mb-16 laptop:mt-[120px] laptop:px-[120px]">
-        <div className="grid gap-6 tablet:gap-8 laptop:grid-cols-5 laptop:gap-0">
+        <div className="grid gap-6 tablet:gap-8 laptop:grid-cols-5 laptop:gap-0 [@media(min-width:1920px)_and_(min-height:1800px)]:gap-7">
           {software.features.map((feature) => (
             <article key={feature.id} className="group relative isolate overflow-hidden rounded-tl-[30px] rounded-br-[30px] tablet:rounded-tl-[50px] tablet:rounded-br-[50px]">
               <div className="relative h-[18rem] tablet:h-[19rem] laptop:h-[35rem]">
@@ -72,5 +80,10 @@ export default function SoftwarePage({ software }: SoftwarePageProps) {
     </>
   );
 }
+
+
+
+
+
 
 
