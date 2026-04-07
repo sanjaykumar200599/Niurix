@@ -4,7 +4,6 @@ import { useActionState, useMemo, useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import { submitContact } from "@/data/actions/contact";
 import type { ContactActionResult } from "@/lib/validation/contact";
-import styles from "./ContactForm.module.css";
 
 const initialState: ContactActionResult = { ok: false, message: "" };
 
@@ -43,14 +42,14 @@ export default function ContactForm() {
           {state.fieldErrors?.name ? <p className="mt-1 text-sm text-black">{state.fieldErrors.name}</p> : null}
         </div>
 
-        <div className={`laptop:max-w-[400px] ${styles.phoneWrap}`}>
+        <div className="contact-phone-wrap laptop:max-w-[400px]">
           <PhoneInput
             country="us"
             enableSearch={true}
             value={phoneNumber}
             onChange={handlePhoneChange}
             placeholder="Phone Number"
-            inputClass={hasLocalPhoneNumber ? styles.phoneInputFilled : styles.phoneInputEmpty}
+            inputClass={hasLocalPhoneNumber ? "contact-phone-input-filled" : "contact-phone-input-empty"}
             inputProps={{ id: "phoneNumber", "aria-label": "Phone Number" }}
           />
           <input type="hidden" name="phoneNumber" value={phoneNumber.trim()} />
@@ -90,5 +89,6 @@ export default function ContactForm() {
     </form>
   );
 }
+
 
 
