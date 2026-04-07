@@ -50,7 +50,7 @@ export default function Footer() {
         <div className="border-t-2 border-[#DFDFDF] pt-7 pb-12 laptop:flex laptop:items-start laptop:justify-between laptop:gap-10 laptop:pt-7 laptop:pb-16">
           
           {/* LOGO */}
-          <div className="mb-6 shrink-0 laptop:mb-0 laptop:w-[156px] laptop:pr-20 laptop:pt-[2px]">
+          <div className="mb-6 shrink-0 laptop:mb-0 laptop:w-[156px] laptop:pr-20 laptop:pt-[2px] [@media(min-width:1920px)_and_(min-height:1800px)]:pr-20">
             <Link href="/" className="inline-flex">
               <Image
                 src="/assets/footer/niurixlogo.svg"
@@ -63,7 +63,7 @@ export default function Footer() {
           </div>
 
           {/* LINKS */}
-          <div className="grid gap-y-6 laptop:flex-1 laptop:grid-cols-[1.22fr_0.7fr_1.05fr_0.72fr] laptop:gap-x-6">
+          <div className="grid gap-y-6 laptop:flex-1 laptop:grid-cols-[1.22fr_0.7fr_1.05fr_0.72fr] laptop:gap-x-6 [@media(min-width:1920px)_and_(min-height:1800px)]:grid-cols-[1.12fr_0.66fr_0.96fr_0.62fr] [@media(min-width:1920px)_and_(min-height:1800px)]:gap-x-0 [@media(min-width:1920px)_and_(min-height:1800px)]:pl-62">
             {sections.map((section) => (
               <div key={section.title} className="min-w-0">
                 <p className="mb-3 text-[18px] leading-none font-display text-black tablet:mb-4 tablet:text-[20px]">
@@ -136,3 +136,7 @@ export default function Footer() {
     </footer>
   );
 }
+
+
+
+
