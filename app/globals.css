@@ -169,14 +169,17 @@ main {
 }
 
 .product-spec-swiper {
-  --swiper-navigation-size: 18px;
+  --swiper-navigation-size: 26px;
 }
 
 .product-spec-swiper .swiper-button-prev,
 .product-spec-swiper .swiper-button-next {
   color: #ffffff !important;
-  width: 24px !important;
-  height: 24px !important;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 10px !important;
+  display: grid !important;
+  place-items: center !important;
 }
 
 .product-spec-swiper .swiper-button-prev {
@@ -197,9 +200,6 @@ main {
   }
 }
 
-
-
-/* Product spec slider pagination (line style on all screens) */
 .product-spec-swiper {
   --swiper-pagination-color: #ff5b02;
   --swiper-pagination-bullet-inactive-color: #ffffff;
@@ -314,4 +314,56 @@ main {
 
 .contact-phone-wrap .react-tel-input:focus-within .flag-dropdown {
   border-color: rgba(29, 29, 29, 0.3) !important;
+}
+
+@media (min-width: 1025px) {
+  .product-spec-swiper .swiper-button-prev,
+  .product-spec-swiper .swiper-button-next {
+    color: #ffffff !important;
+    width: 40px !important;
+    height: 40px !important;
+    padding: 10px !important;
+    display: grid !important;
+    place-items: center !important;
+    opacity: 1 !important;
+  }
+
+  .product-spec-swiper .swiper-button-prev::after,
+  .product-spec-swiper .swiper-button-next::after {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    font-size: 54px !important;
+    line-height: 1 !important;
+    font-weight: 900 !important;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.95);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.5), 0 0 1px rgba(255, 255, 255, 0.9);
+  }
+
+  .product-spec-swiper .swiper-button-disabled,
+  .product-spec-swiper .swiper-button-disabled::after {
+    opacity: 0.8 !important;
+  }
+}
+
+@media (min-width: 1025px) {
+  .product-spec-swiper .swiper-button-prev::after,
+  .product-spec-swiper .swiper-button-next::after {
+    content: "" !important;
+    width: 18px !important;
+    height: 18px !important;
+    border-top: 4px solid #fff !important;
+    border-right: 4px solid #fff !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+    -webkit-text-stroke: 0 !important;
+    font-size: 0 !important;
+  }
+
+  .product-spec-swiper .swiper-button-prev::after {
+    transform: rotate(-135deg) !important;
+  }
+
+  .product-spec-swiper .swiper-button-next::after {
+    transform: rotate(45deg) !important;
+  }
 }
