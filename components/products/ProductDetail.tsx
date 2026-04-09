@@ -87,13 +87,13 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
         </div>
       </section>
 
-      <section className="px-9 pb-0 pt-8 tablet:px-[78px] tablet:pt-12 laptop:px-[120px] laptop:pt-16">
+      <section className="px-9 pb-0 pt-8 tablet:px-[78px] tablet:pt-12 laptop:px-[120px] laptop:pt-24">
         <h2
           className="nx-rich mb-6 flex min-h-[52px] items-center justify-center whitespace-nowrap text-center text-[17px] font-display font-normal leading-tight tracking-normal text-brand-black tablet:mb-10 tablet:min-h-[78px] tablet:whitespace-normal tablet:text-[28px] laptop:mb-12 laptop:min-h-[88px] laptop:text-[40px]"
           dangerouslySetInnerHTML={{ __html: product.connectHeadingHtml }}
         />
 
-        <div className="flex flex-col gap-3 laptop:flex-row laptop:items-center laptop:justify-between laptop:px-12">
+        <div className="flex flex-col gap-3 laptop:flex-row laptop:items-center laptop:justify-between laptop:px-12 [@media(min-width:1920px)_and_(min-height:1800px)]:justify-start [@media(min-width:1920px)_and_(min-height:1800px)]:gap-10">
           <div className="w-full laptop:w-[50%]">
             <div className={isP4200R || isT2001 || isSolt33_8p || isXgspon8p ? "w-full" : "relative h-[300px] w-full tablet:h-[420px] laptop:h-[520px]"}>
               <InteractiveSVGDiagram
@@ -104,7 +104,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
             </div>
           </div>
 
-          <div className="w-full pt-1 text-left text-[16px] font-normal leading-[1.95] text-brand-black/80 tablet:pt-4 tablet:text-lg tablet:leading-8 laptop:w-[38%] laptop:pt-0 laptop:self-center laptop:text-lg">
+          <div className="w-full pt-1 text-left text-[16px] font-normal leading-[1.35] text-brand-black/80 tablet:pt-4 tablet:text-lg tablet:leading-8 laptop:w-[39%] laptop:pt-0 laptop:self-center laptop:text-[18px] laptop:leading-[1.42]">
             <div className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: product.connectParaHtml }} />
           </div>
         </div>
@@ -232,6 +232,9 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
     </div>
   );
 }
+
+
+
 
 
 
