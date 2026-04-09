@@ -40,42 +40,41 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
         />
       </section>
 
-      <section className="px-9 pb-0 pt-4 tablet:px-[78px] laptop:px-[120px] laptop:pt-20">
+      <section className="px-9 pb-0 pt-4 tablet:px-[78px] laptop:px-0 laptop:pt-30">
         <h2
-          className={`nx-rich text-[24px] font-display leading-tight text-brand-black tablet:text-[30px] ${
+          className={`nx-rich text-[24px] font-display leading-tight text-brand-black tablet:text-[30px] laptop:px-[120px] ${
             isOlt ? "laptop:text-[48px] laptop:leading-[1.05]" : "laptop:text-[44px]"
           }`}
           dangerouslySetInnerHTML={{ __html: product.overviewHeadingHtml }}
         />
 
-        <div className="mt-5 flex flex-col-reverse items-center gap-4 tablet:mt-8 tablet:gap-6 laptop:flex-row laptop:items-stretch laptop:justify-between">
-          <div className="w-full laptop:w-[30%]">
+        <div className="mt-5 flex flex-col-reverse items-center gap-4 tablet:mt-8 tablet:gap-6 laptop:flex-row laptop:items-start laptop:justify-between laptop:pl-[120px]">
+          <div className="w-full laptop:w-[24%] laptop:max-w-[360px] laptop:pt-30">
             <h1 className="text-center text-[22px] font-display text-brand-black tablet:text-[28px] laptop:text-left laptop:text-[24px]">
               {product.overviewTitle}
             </h1>
             <div
-              className="mt-3 whitespace-pre-line text-left text-[16px] font-normal leading-[1.45] text-brand-black/80 tablet:mt-4 tablet:text-lg tablet:leading-8 laptop:text-xl"
+              className="mt-3 whitespace-pre-line text-left text-[16px] font-normal leading-[1.45] text-brand-black/80 tablet:mt-4 tablet:text-lg tablet:leading-8 laptop:text-[16px] laptop:leading-[1.55]"
               dangerouslySetInnerHTML={{ __html: product.overviewParaHtml }}
             />
 
             <div className="mt-6 flex justify-center laptop:mt-8 laptop:justify-start">
               <Link
                 href="/contact-us"
-                className="group inline-flex flex-col rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-left text-lg font-display leading-tight text-white transition-colors duration-200 hover:bg-white hover:text-brand-black"
+                className="group inline-flex rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-lg font-display leading-tight text-white transition-colors duration-200 hover:bg-white hover:text-brand-black whitespace-nowrap"
               >
-                <span className="text-white transition-colors duration-200 group-hover:text-brand-black">Get in</span>
-                <span className="text-white transition-colors duration-200 group-hover:text-brand-black">touch</span>
+                <span className="text-white transition-colors duration-200 group-hover:text-brand-black">Get in touch</span>
               </Link>
             </div>
           </div>
 
-          <div className="relative h-[360px] w-full overflow-hidden rounded-tl-[30px] tablet:h-[600px] tablet:rounded-tl-[45px] laptop:h-auto laptop:w-[70%] laptop:self-stretch laptop:min-h-[760px]">
+          <div className="relative h-[360px] w-full overflow-hidden rounded-tl-[30px] tablet:h-[600px] tablet:rounded-tl-[45px] laptop:h-auto laptop:w-[76%] laptop:self-stretch laptop:min-h-[700px]">
             <Image
               src={product.overviewImage}
               alt={product.overviewTitle}
               fill
               sizes="(max-width: 767px) 0px, (max-width: 1023px) 100vw, 70vw"
-              className="hidden object-contain object-center tablet:block [@media(min-width:1920px)_and_(min-height:1800px)]:object-cover [@media(min-width:1920px)_and_(min-height:1800px)]:object-right"
+              className="hidden object-contain object-center tablet:block laptop:object-cover laptop:object-right"
             />
             <Image
               src={product.overviewImageMobile}
@@ -94,8 +93,8 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
           dangerouslySetInnerHTML={{ __html: product.connectHeadingHtml }}
         />
 
-        <div className="flex flex-col gap-3 laptop:flex-row laptop:items-start laptop:justify-between laptop:px-12">
-          <div className="w-full laptop:w-[45%]">
+        <div className="flex flex-col gap-3 laptop:flex-row laptop:items-center laptop:justify-between laptop:px-12">
+          <div className="w-full laptop:w-[50%]">
             <div className={isP4200R || isT2001 || isSolt33_8p || isXgspon8p ? "w-full" : "relative h-[300px] w-full tablet:h-[420px] laptop:h-[520px]"}>
               <InteractiveSVGDiagram
                 src={product.componentImage}
@@ -105,7 +104,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
             </div>
           </div>
 
-          <div className="w-full pt-1 text-left text-[16px] font-normal leading-[1.35] text-brand-black/80 tablet:pt-4 tablet:text-lg tablet:leading-8 laptop:w-[42%] laptop:pt-12 laptop:text-lg">
+          <div className="w-full pt-1 text-left text-[16px] font-normal leading-[1.95] text-brand-black/80 tablet:pt-4 tablet:text-lg tablet:leading-8 laptop:w-[38%] laptop:pt-0 laptop:self-center laptop:text-lg">
             <div className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: product.connectParaHtml }} />
           </div>
         </div>
@@ -233,6 +232,18 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

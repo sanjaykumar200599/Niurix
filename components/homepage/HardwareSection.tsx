@@ -82,27 +82,21 @@ export default function HardwareSection({ titleHtml, items }: HardwareSectionPro
 
         <HardwareAnimation />
 
-        <div className="absolute left-1/2 top-[4rem] z-40 w-full -translate-x-1/2 tablet:-translate-y-0 laptop:left-auto laptop:right-[78px] laptop:top-[-18rem] laptop:w-[34%] laptop:translate-x-0 laptop:translate-y-0 wide:right-[86px] wide:top-[-19rem] wide:w-[31%] [@media(min-width:1920px)_and_(min-height:1800px)]:top-[40%] [@media(min-width:1920px)_and_(min-height:1800px)]:-translate-y-1/2">
+        <div className="absolute left-1/2 top-[4rem] z-40 w-full -translate-x-1/2 tablet:-translate-y-0 laptop:left-auto laptop:right-[78px] laptop:top-[40%] laptop:w-[34%] laptop:translate-x-0 laptop:-translate-y-1/2 wide:right-[86px] wide:w-[31%] [@media(min-width:1920px)_and_(min-height:1800px)]:top-[40%] [@media(min-width:1920px)_and_(min-height:1800px)]:-translate-y-1/2">
           <div className="w-full px-19.5 laptop:px-0">
             <h2
-              className="nx-rich text-left font-sans text-[30px] leading-[1.22] text-brand-black laptop:w-[95%] laptop:text-[24px] laptop:leading-[1.24] wide:text-[28px]"
+              className="nx-rich text-left font-sans text-[30px] leading-[1.22] text-brand-black laptop:w-[95%] laptop:text-[28px] laptop:leading-[1.24]"
               dangerouslySetInnerHTML={{ __html: titleHtml }}
             />
           </div>
 
-          <div className="mt-[28rem] grid grid-cols-4 gap-5 px-19.5 laptop:mt-16 laptop:grid-cols-1 laptop:gap-9 laptop:px-0 wide:mt-[4.5rem] wide:gap-[2.75rem] [@media(min-width:1920px)_and_(min-height:1800px)]:mt-[4rem] [@media(min-width:1920px)_and_(min-height:1800px)]:grid-cols-2 [@media(min-width:1920px)_and_(min-height:1800px)]:gap-4">
-            {items.map((item, index) => (
+          <div className="mt-[28rem] grid grid-cols-4 gap-5 px-19.5 laptop:mt-[4rem] laptop:grid-cols-2 laptop:gap-4 laptop:px-0 [@media(min-width:1920px)_and_(min-height:1800px)]:mt-[4rem] [@media(min-width:1920px)_and_(min-height:1800px)]:grid-cols-2 [@media(min-width:1920px)_and_(min-height:1800px)]:gap-4">
+            {items.map((item) => (
               <article
                 key={item}
-                className={`flex items-center justify-center rounded-tl-[16px] rounded-br-[16px] border border-transparent bg-white px-6 text-center shadow-[0px_3px_15px_#0000001F] transition hover:border-brand-orange tablet:h-[120px] laptop:w-full [@media(min-width:1920px)_and_(min-height:1800px)]:!mt-0 [@media(min-width:1920px)_and_(min-height:1800px)]:!h-[8.8rem] ${
-                  index === 0
-                    ? "laptop:-mt-8 laptop:h-[10.5rem]"
-                    : index === 1
-                      ? "laptop:-mt-1 laptop:h-[9rem] wide:h-[9.8rem]"
-                      : "laptop:h-[9rem] wide:h-[9.8rem]"
-                }`}
+                className="flex items-center justify-center rounded-tl-[16px] rounded-br-[16px] border border-transparent bg-white px-6 text-center shadow-[0px_3px_15px_#0000001F] transition hover:border-brand-orange tablet:h-[120px] laptop:h-[8.8rem] laptop:w-full [@media(min-width:1920px)_and_(min-height:1800px)]:!mt-0 [@media(min-width:1920px)_and_(min-height:1800px)]:!h-[8.8rem]"
               >
-                <p className="text-[20px] font-sans leading-[1.3] text-brand-black laptop:w-[80%] laptop:text-[16px] wide:text-[18px]">
+                <p className="text-[20px] font-sans leading-[1.3] text-brand-black laptop:w-[80%] laptop:text-[18px]">
                   {item}
                 </p>
               </article>
@@ -113,7 +107,3 @@ export default function HardwareSection({ titleHtml, items }: HardwareSectionPro
     </section>
   );
 }
-
-
-
-

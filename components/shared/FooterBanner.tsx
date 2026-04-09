@@ -20,9 +20,9 @@ export default function FooterBanner() {
           className="h-auto w-full tablet:hidden"
         />
 
-        <div className="absolute inset-0 hidden tablet:flex tablet:items-center tablet:justify-end tablet:px-10 laptop:px-0 laptop:justify-start [@media(min-width:1920px)_and_(min-height:1800px)]:justify-end [@media(min-width:1920px)_and_(min-height:1800px)]:pr-51">
-          <div className="flex w-[44%] max-w-[420px] flex-col items-start tablet:pr-4 laptop:w-auto laptop:max-w-[620px] laptop:pr-0 laptop:ml-[42%] [@media(min-width:1920px)_and_(min-height:1800px)]:ml-0 [@media(min-width:1920px)_and_(min-height:1800px)]:w-[36%] [@media(min-width:1920px)_and_(min-height:1800px)]:max-w-[520px]">
-            <p className="font-display text-[20px] leading-tight text-white tablet:text-[22px] laptop:text-[34px]">
+        <div className="absolute inset-0 hidden tablet:flex tablet:items-center tablet:justify-end tablet:px-10 laptop:px-0 laptop:justify-end laptop:pr-51 [@media(min-width:1920px)_and_(min-height:1800px)]:justify-end [@media(min-width:1920px)_and_(min-height:1800px)]:pr-51">
+          <div className="flex w-[44%] max-w-[420px] flex-col items-start tablet:pr-4 laptop:ml-0 laptop:w-[36%] laptop:max-w-[520px] laptop:pr-0 [@media(min-width:1920px)_and_(min-height:1800px)]:ml-0 [@media(min-width:1920px)_and_(min-height:1800px)]:w-[36%] [@media(min-width:1920px)_and_(min-height:1800px)]:max-w-[520px]">
+            <p className="font-display text-[20px] leading-tight text-white tablet:text-[22px] laptop:text-[28px]">
               <span className="laptop:whitespace-nowrap">Transform Your Network Architecture</span> <br /> With Us!
             </p>
             <Link
@@ -51,5 +51,6 @@ export default function FooterBanner() {
     </section>
   );
 }
+
 
 
