@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import { submitContact } from "@/data/actions/contact";
 import type { ContactActionResult } from "@/lib/validation/contact";
@@ -12,7 +12,8 @@ type PhoneCountry = {
 };
 
 export default function ContactForm() {
-  const [state, formAction, pending] = useActionState(submitContact, initialState);
+  const [state, setState] = useState<ContactActionResult>(initialState);
+  const [pending, setPending] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState("");
   const [selectedDialCode, setSelectedDialCode] = useState("1");
 
@@ -30,8 +31,31 @@ export default function ContactForm() {
     setPhoneNumber(formattedValue ?? value);
   };
 
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setPending(true);
+    setState(initialState);
+
+    const form = e.currentTarget;
+    const result = await submitContact({
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      phoneNumber: phoneNumber.trim(),
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+    });
+
+    setState(result);
+    setPending(false);
+
+    if (result.ok) {
+      form.reset();
+      setPhoneNumber("");
+      setSelectedDialCode("1");
+    }
+  };
+
   return (
-    <form action={formAction} className="w-full">
+    <form onSubmit={handleSubmit} className="w-full">
       <div className="grid gap-4 laptop:grid-cols-2 laptop:gap-5">
         <div className="laptop:max-w-[310px]">
           <input
@@ -52,7 +76,6 @@ export default function ContactForm() {
             inputClass={hasLocalPhoneNumber ? "contact-phone-input-filled" : "contact-phone-input-empty"}
             inputProps={{ id: "phoneNumber", "aria-label": "Phone Number" }}
           />
-          <input type="hidden" name="phoneNumber" value={phoneNumber.trim()} />
         </div>
 
         <div className="laptop:col-start-1 laptop:col-end-2 laptop:max-w-[310px]">
@@ -89,6 +112,3 @@ export default function ContactForm() {
     </form>
   );
 }
-
-
-

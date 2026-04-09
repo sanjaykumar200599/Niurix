@@ -10,18 +10,7 @@ export const dynamic = "force-static";
 export const dynamicParams = false;
 
 export function generateStaticParams(): Array<{ slug: string }> {
-  const slugs = Array.from(
-    new Set(
-      industries.flatMap((item) => [
-        item.slug,
-        item.slug.toLowerCase(),
-        ...item.legacySlugs,
-        ...item.legacySlugs.map((legacy) => legacy.toLowerCase()),
-      ]),
-    ),
-  );
-
-  return slugs.map((slug) => ({ slug }));
+  return industries.map((item) => ({ slug: item.slug }));
 }
 
 type IndustryPageProps = {

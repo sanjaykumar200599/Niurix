@@ -13,7 +13,7 @@ import { toMetadata } from "@/data/site/seo";
 
 export const revalidate = 86400;
 
-export const metadata: Metadata = toMetadata({ ...homeContent.seo, previewImage: "/assets/homepreview.png" });
+export const metadata: Metadata = toMetadata({ ...homeContent.seo, previewImage: "/assets/header/niurixlogo.svg" });
 
 export default function HomePage() {
   return (

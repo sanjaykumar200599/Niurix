@@ -1,8 +1,6 @@
-"use server";
-
 import { ContactFormInputSchema, type ContactActionResult } from "@/lib/validation/contact";
 
-const endpoint = process.env.CONTACT_ENDPOINT ?? "https://app.sclera.com/alert/acknowledgementEmail";
+const endpoint = process.env.NEXT_PUBLIC_CONTACT_ENDPOINT ?? "https://app.sclera.com/alert/acknowledgementEmail";
 const DEFAULT_SUCCESS_MESSAGE = "Message has been sent successfully.";
 const DEFAULT_ERROR_MESSAGE = "Message not sent! Please try again.";
 
@@ -29,13 +27,13 @@ function getMessageFromResponseBody(body: unknown): string | null {
   return null;
 }
 
-export async function submitContact(_: ContactActionResult, formData: FormData): Promise<ContactActionResult> {
-  const parsed = ContactFormInputSchema.safeParse({
-    name: formData.get("name"),
-    email: formData.get("email"),
-    phoneNumber: formData.get("phoneNumber"),
-    message: formData.get("message"),
-  });
+export async function submitContact(data: {
+  name: string;
+  email: string;
+  phoneNumber: string;
+  message: string;
+}): Promise<ContactActionResult> {
+  const parsed = ContactFormInputSchema.safeParse(data);
 
   if (!parsed.success) {
     const fieldErrors: Record<string, string> = {};
@@ -43,28 +41,27 @@ export async function submitContact(_: ContactActionResult, formData: FormData):
       const key = String(issue.path[0] ?? "form");
       if (!fieldErrors[key]) fieldErrors[key] = issue.message;
     }
-    return { ok: false,message:"", fieldErrors };
+    return { ok: false, message: "", fieldErrors };
+  }
+
+  const body: Record<string, string> = {
+    name: parsed.data.name,
+    email: parsed.data.email,
+  };
+
+  if (parsed.data.phoneNumber.trim()) {
+    body.phoneNumber = parsed.data.phoneNumber.trim();
+  }
+
+  if (parsed.data.message.trim()) {
+    body.message = parsed.data.message.trim();
   }
 
   try {
-    const body: Record<string, string> = {
-      name: parsed.data.name,
-      email: parsed.data.email,
-    };
-
-    if (parsed.data.phoneNumber.trim()) {
-      body.phoneNumber = parsed.data.phoneNumber.trim();
-    }
-
-    if (parsed.data.message.trim()) {
-      body.message = parsed.data.message.trim();
-    }
-
     const response = await fetch(endpoint, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(body),
-      cache: "no-store",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(body).toString(),
     });
 
     const contentType = response.headers.get("content-type") ?? "";
@@ -79,16 +76,10 @@ export async function submitContact(_: ContactActionResult, formData: FormData):
     const responseMessage = getMessageFromResponseBody(responseBody);
 
     if (!response.ok) {
-      return {
-        ok: false,
-        message: responseMessage ?? DEFAULT_ERROR_MESSAGE,
-      };
+      return { ok: false, message: responseMessage ?? DEFAULT_ERROR_MESSAGE };
     }
 
-    return {
-      ok: true,
-      message: responseMessage ?? DEFAULT_SUCCESS_MESSAGE,
-    };
+    return { ok: true, message: responseMessage ?? DEFAULT_SUCCESS_MESSAGE };
   } catch {
     return { ok: false, message: DEFAULT_ERROR_MESSAGE };
   }
