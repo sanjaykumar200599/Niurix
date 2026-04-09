@@ -5,12 +5,18 @@ import ProductDetail from "@/components/products/ProductDetail";
 import { getProductBySlug, products } from "@/data/site/content";
 import { toMetadata } from "@/data/site/seo";
 
-export const revalidate = 86400;
-export const dynamic = "force-static";
-export const dynamicParams = false;
 
 export function generateStaticParams(): Array<{ slug: string }> {
-  return products.map((item) => ({ slug: item.slug }));
+  const slugs = Array.from(
+    new Set(
+      products.flatMap((item) => [
+        item.slug,
+        ...item.legacySlugs,
+      ]),
+    ),
+  );
+
+  return slugs.map((slug) => ({ slug }));
 }
 
 type ProductPageProps = {
@@ -36,4 +42,5 @@ export default async function ProductPage({ params }: ProductPageProps) {
     </div>
   );
 }
+
 

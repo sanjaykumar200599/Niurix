@@ -5,9 +5,6 @@ import IndustryDetail from "@/components/industries/IndustryDetail";
 import { getIndustryBySlug, industries } from "@/data/site/content";
 import { toMetadata } from "@/data/site/seo";
 
-export const revalidate = 86400;
-export const dynamic = "force-static";
-export const dynamicParams = false;
 
 export function generateStaticParams(): Array<{ slug: string }> {
   return industries.map((item) => ({ slug: item.slug }));
@@ -36,4 +33,3 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
     </div>
   );
 }
-
