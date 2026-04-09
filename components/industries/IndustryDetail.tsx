@@ -68,10 +68,9 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
 
             <Link
               href="/contact-us"
-              className="group mt-6 inline-flex w-fit flex-col [@media(min-width:1920px)_and_(min-height:1800px)]:flex-row [@media(min-width:1920px)_and_(min-height:1800px)]:items-center [@media(min-width:1920px)_and_(min-height:1800px)]:gap-1 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-left text-lg font-medium leading-tight text-white transition-colors duration-200 hover:bg-white hover:text-brand-black"
+              className="group mt-6 inline-flex w-fit flex-row items-center gap-1 whitespace-nowrap rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-left text-lg font-medium leading-tight text-white transition-colors duration-200 hover:bg-white hover:text-brand-black"
             >
-              <span className="text-white transition-colors duration-200 group-hover:text-brand-black">Get in</span>
-              <span className="text-white transition-colors duration-200 group-hover:text-brand-black">touch</span>
+              <span className="text-white transition-colors duration-200 group-hover:text-brand-black">Get in touch</span>
             </Link>
           </div>
 
@@ -89,7 +88,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
 
       <section className="mx-6 my-10 rounded-[12px] bg-white px-6 py-10 shadow-[0_0_10px_#00000029] tablet:mx-10 laptop:mx-[120px] laptop:px-10 laptop:py-12 [@media(min-width:1920px)_and_(min-height:1800px)]:px-12 [@media(min-width:1920px)_and_(min-height:1800px)]:py-10">
         {/* 1920x1800 two-row layout */}
-        <div className="hidden [@media(min-width:1920px)_and_(min-height:1800px)]:block">
+        <div className="hidden laptop:block">
           <div className="grid grid-cols-6 gap-x-10 gap-y-10 px-8">
             {industry.devices.slice(0, 6).map((device) => (
               <article key={device.title} className="flex w-full flex-col items-center text-center">
@@ -118,7 +117,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
         </div>
 
         {/* Row 1 */}
-        <div className="grid grid-cols-2 gap-x-6 gap-y-10 tablet:grid-cols-2 laptop:grid-cols-4 laptop:gap-x-8 laptop:gap-y-12 laptop:px-16 [@media(min-width:1920px)_and_(min-height:1800px)]:hidden">
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 tablet:grid-cols-2 laptop:hidden">
           {industry.devices.slice(0, 4).map((device) => (
             <article key={device.title} className="flex w-full flex-col items-center text-center">
               <div className="flex h-[76px] items-center justify-center tablet:h-[96px] laptop:h-[96px]">
@@ -134,7 +133,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
         </div>
 
         {/* Row 2 */}
-        <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 tablet:grid-cols-2 laptop:grid-cols-6 laptop:gap-x-8 laptop:gap-y-12 laptop:px-6 [@media(min-width:1920px)_and_(min-height:1800px)]:hidden">
+        <div className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 tablet:grid-cols-2 laptop:hidden">
           {industry.devices.slice(4, 10).map((device) => (
             <article key={device.title} className="flex w-full flex-col items-center text-center">
               <div className="flex h-[76px] items-center justify-center tablet:h-[96px] laptop:h-[96px]">
@@ -150,7 +149,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
         </div>
 
         {/* Row 3 */}
-        <div className="mt-10 grid grid-cols-2 laptop:flex laptop:justify-center [@media(min-width:1920px)_and_(min-height:1800px)]:hidden">
+        <div className="mt-10 grid grid-cols-2 laptop:hidden">
           <article className="col-start-1 justify-self-center flex w-full max-w-[50%] flex-col items-center text-center tablet:max-w-none laptop:w-auto">
             <div className="flex h-[76px] items-center justify-center tablet:h-[96px] laptop:h-[96px]">
               <div className={`relative ${getDeviceImageSizeClasses(industry.devices[10].title)}`}>
@@ -199,6 +198,8 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
     </>
   );
 }
+
+
 
 
 

@@ -55,7 +55,7 @@ export default function SoftwarePage({ software }: SoftwarePageProps) {
       </section>
 
       <section className="mb-8 mt-10 px-9 tablet:mb-12 tablet:px-20 laptop:mb-16 laptop:mt-[120px] laptop:px-[120px]">
-        <div className="grid gap-6 tablet:gap-8 laptop:grid-cols-5 laptop:gap-0 [@media(min-width:1920px)_and_(min-height:1800px)]:gap-7">
+        <div className="grid gap-6 tablet:gap-8 laptop:grid-cols-5 laptop:gap-7 [@media(min-width:1920px)_and_(min-height:1800px)]:gap-7">
           {software.features.map((feature) => (
             <article key={feature.id} className="group relative isolate overflow-hidden rounded-tl-[30px] rounded-br-[30px] tablet:rounded-tl-[50px] tablet:rounded-br-[50px]">
               <div className="relative h-[18rem] tablet:h-[19rem] laptop:h-[35rem]">
@@ -80,6 +80,7 @@ export default function SoftwarePage({ software }: SoftwarePageProps) {
     </>
   );
 }
+
 
 
 
