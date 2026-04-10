@@ -11,5 +11,3 @@ export default function AppError({ error, reset }: { error: Error; reset: () => 
     </div>
   );
 }
-
-

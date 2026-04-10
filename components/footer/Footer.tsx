@@ -46,10 +46,8 @@ export default function Footer() {
     <footer className="relative w-full pt-3 pb-8 laptop:pt-4 laptop:pb-10">
       <div className="px-9 tablet:px-20 laptop:px-30">
 
-        {/* TOP SECTION */}
         <div className="border-t-2 border-[#DFDFDF] pt-7 pb-12 laptop:flex laptop:items-start laptop:justify-between laptop:gap-10 laptop:pt-7 laptop:pb-16">
           
-          {/* LOGO */}
           <div className="mb-6 shrink-0 laptop:mb-0 laptop:w-[156px] laptop:pr-20 laptop:pt-[2px] [@media(min-width:1920px)_and_(min-height:1800px)]:pr-20">
             <Link href="/" className="inline-flex">
               <Image
@@ -62,7 +60,6 @@ export default function Footer() {
             </Link>
           </div>
 
-          {/* LINKS */}
           <div className="grid gap-y-6 laptop:flex-1 laptop:grid-cols-[1.22fr_0.7fr_1.05fr_0.72fr] laptop:gap-x-6 [@media(min-width:1920px)_and_(min-height:1800px)]:grid-cols-[1.12fr_0.66fr_0.96fr_0.62fr] [@media(min-width:1920px)_and_(min-height:1800px)]:gap-x-0 [@media(min-width:1920px)_and_(min-height:1800px)]:pl-62">
             {sections.map((section) => (
               <div key={section.title} className="min-w-0">
@@ -95,7 +92,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* BOTTOM SECTION */}
         <div className="border-t border-[#707070] pt-6 pb-2 laptop:grid laptop:grid-cols-[1fr_auto_1fr] laptop:items-center laptop:pt-6 laptop:pb-3">
           
           <div className="mb-4 text-center text-[16px] leading-none font-sans text-black laptop:mb-0 laptop:text-left">
@@ -136,7 +132,3 @@ export default function Footer() {
     </footer>
   );
 }
-
-
-
-

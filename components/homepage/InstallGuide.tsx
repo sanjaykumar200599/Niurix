@@ -49,7 +49,3 @@ export default function InstallGuide({ steps }: { steps: HomeData["installSteps"
     </div>
   );
 }
-
-
-
-

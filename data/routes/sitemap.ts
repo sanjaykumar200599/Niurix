@@ -27,4 +27,3 @@ export function buildSitemap(): MetadataRoute.Sitemap {
 
   return entries;
 }
-

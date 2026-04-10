@@ -9,9 +9,8 @@ if (!policy) {
   throw new Error("Missing privacy-policy content.");
 }
 
-export const metadata: Metadata = toMetadata({ ...policy.seo, previewImage: "/assets/homepreview.png" });
+export const metadata: Metadata = toMetadata({ ...policy.seo, previewImage: "/assets/header/niurixlogo.svg" });
 
 export default function PrivacyPolicyPage() {
   return <PrivacyPolicyContent />;
 }
-

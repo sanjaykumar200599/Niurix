@@ -5,8 +5,6 @@ import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Parallax } from "swiper/modules";
 import type { HomeData } from "@/lib/content/types";
-import "swiper/css";
-import "swiper/css/pagination";
 
 export default function HeroBanner({ banners }: { banners: HomeData["banners"] }) {
   return (

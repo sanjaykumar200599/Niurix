@@ -106,5 +106,3 @@ export default function MobileMenu({ mobileOpen, mobileSection, setMobileSection
     </AnimatePresence>
   );
 }
-
-

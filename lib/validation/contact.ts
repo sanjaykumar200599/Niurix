@@ -14,5 +14,3 @@ export type ContactActionResult = {
   message: string;
   fieldErrors?: Record<string, string>;
 };
-
-

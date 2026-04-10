@@ -345,13 +345,3 @@ export default function TermsAndConditionsContent() {
     </section>
   );
 }
-
-
-
-
-
-
-
-
-
-

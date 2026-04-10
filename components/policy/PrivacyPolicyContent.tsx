@@ -302,11 +302,3 @@ export default function PrivacyPolicyContent() {
     </section>
   );
 }
-
-
-
-
-
-
-
-

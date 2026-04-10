@@ -80,11 +80,3 @@ export default function SoftwarePage({ software }: SoftwarePageProps) {
     </>
   );
 }
-
-
-
-
-
-
-
-

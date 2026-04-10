@@ -30,7 +30,6 @@ const headerData = {
             page: "products",
             type: "ONT",
             modelNum: "P4200R",
-            // name: "ONT - P4200R",
             image: "ONT P4200r",
             url: "/products/ONT-P4200R",
         },
@@ -38,7 +37,6 @@ const headerData = {
             page: "products",
             type: "ONT",
             modelNum: "G2410",
-            // name: "ONT- G2410",
             image: "ONT g2410",
             url: "/products/ONT-T2001",
         },
@@ -46,7 +44,6 @@ const headerData = {
             page: "products",
             type: "OLT",
             modelNum: "SOLT33- 8P",
-            // name: "OLT - SOLT33- 8P",
             image: "OLT SOLT33- 08P",
             url: "/products/OLT-SOLT33-8P",
         },
@@ -54,7 +51,6 @@ const headerData = {
             page: "products",
             type: "OLT",
             modelNum: "SOLT33- 16P",
-            // name: "OLT -  SOLT33- 16P",
             image: "OLT SOLT33-16P",
             url: "/products/OLT-XGSPON-8P",
         },
@@ -90,5 +86,3 @@ const headerData = {
 };
 
 export default headerData;
-
-

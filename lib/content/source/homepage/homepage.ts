@@ -57,7 +57,6 @@ export const homePage = {
 
     building_video: [
         {
-            // title:"lorem ipsum dolor sit amet, consectetur",
             img2: "sub content building img",
         },
     ],
@@ -81,32 +80,28 @@ export const homePage = {
     ],
     niurix_products: [
         {
-            // name: "P4200R",
-            // img: "P4200R",
+
             prod: "P4200R",
             type: `<span>(ONT)</span>`,
             desc: "The Niurix P4200R (Optical Network Terminal) is a full-feature ONT exclusively designed for triple-play services (internet, television, and voice). Typically consisting of 4 Gigabit Ethernet(GbE)/PoE ports can be used extensively for connecting multiple devices over the internet.",
             url: "/products/ONT-P4200R",
         },
         {
-            // name: "G2410",
-            // img: "G2410",
+            
             prod: "G2410",
             type: ` <span>(ONT)</span>`,
             desc: "The Niurix G2410 ONT (Optical Network Terminal) is a lightweight, compact, and high-performance networking device with four Gigabit Ethernet(GbE) ports. This ONT is engineered to bridge the communication between modern technological infrastructure and end-users.",
             url: "/products/ONT-T2001",
         },
         {
-            // name: "SOLT33-8P",
-            // img: "SOLT33-08P",
+            
             prod: "SOLT33-08P",
             type: `<span>(OLT)</span>`,
             desc: "The Niurix SOLT33-08P is an Optical Line Terminal (OLT) designed for GPON networks serving up to 128 Optical Network Terminals (ONTs) per PON port. It consists of eight GPON ports, 4 GE Optical/Electrical uplink ports, along with two 10 Gigabit Ethernet (10GE) uplink ports.",
             url: "/products/OLT-SOLT33-8P",
         },
         {
-            // name: "SOLT33-16P",
-            // img: "SOLT33-16P",
+           
             prod: "SOLT33-16P",
             type: `<span>(OLT)</span>`,
             desc: "The Niurix SOLT33-16P is another Optical Line Terminal designed with 16 GPON ports that can be connected to ONTs. Its primary distinction from the SOLT33-08P is its increased number of GPON ports making it suitable for larger deployment for FTTB.",
@@ -179,10 +174,9 @@ export const homePage = {
         },
     ],
 
-    //merge
+   
     blog_heading: {
         title: "Blogs",
-        //blogs swipper
         blogs_content_swipper: [
             {
                 imageName: "Blog1",
@@ -207,15 +201,10 @@ export const homePage = {
             },
         ],
     },
-    //paralax
     parallax_content: [
         {
-            // img:"homepage- contact",
             desc: "Transform Your Network Architecture With Us!",
-            //url
             url: "",
         },
     ],
 };
-
-

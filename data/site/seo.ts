@@ -11,7 +11,7 @@ export type MetadataInput = {
 
 export function toMetadata(seo: MetadataInput): Metadata {
   const canonical = new URL(seo.canonicalPath, siteUrl).toString();
-  const previewImage = seo.previewImage ?? "/assets/homepreview.png";
+  const previewImage = seo.previewImage ?? "/assets/header/niurixlogo.svg";
 
   return {
     title: seo.title,

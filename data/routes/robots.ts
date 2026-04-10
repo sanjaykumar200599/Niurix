@@ -11,5 +11,3 @@ export function buildRobots(): MetadataRoute.Robots {
     sitemap: `${siteUrl}/sitemap.xml`,
   };
 }
-
-

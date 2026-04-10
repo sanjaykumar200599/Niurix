@@ -77,25 +77,25 @@ export const corporate_workspaces = {
             {
                 cards_img: "Integration-with-External-Networks",
                 cards_title: "Integration with External Networks",
-                // cards_desc: "Supports all data carrying devices like surveillance cameras, routers, switches, etc. to create one network that connects all.",
+                
             },
 
             {
                 cards_img: "Seamlessly-Connected",
                 cards_title: "Seamlessly Connected",
-                // cards_desc: "Connection, configuration and credential sharing is done to ethernet or wireless devices easily.",
+                
             },
 
             {
                 cards_img: "Gigabit Level Network Velocity",
                 cards_title: "Gigabit Level Network Velocity",
-                // cards_desc: "Low latency, high speed network anytime to support high bandwidth applications compared to copper-based network.",
+              
             },
 
             {
                 cards_img: "Designed-to-Maximize-Performance",
                 cards_title: "Designed to Maximize Performance",
-                // cards_desc: "Deliver enterprise-class solution, enabling deployments in even the most challenging network environments.",
+               
             },
         ],
     },

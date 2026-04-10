@@ -623,6 +623,3 @@ export const headerNavigation: {
     },
   ],
 };
-
-
-

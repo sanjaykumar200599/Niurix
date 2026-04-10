@@ -77,25 +77,25 @@ export const residential_real_estate = {
             {
                 cards_img: "Resilient-and-Reliable",
                 cards_title: "Resilient and Reliable",
-                // cards_desc: "Consistent and high-speed connectivity even during peak usage with bandwidth-hungry applications.",
+                
             },
 
             {
                 cards_img: "Prepared for Tomorrow",
                 cards_title: "Prepared for Tomorrow",
-                // cards_desc: "Make your property in sync with future technologies and let Niurix handle future upgrades with ease.",
+                
             },
 
             {
                 cards_img: "Low-Latency",
                 cards_title: "Low Latency",
-                // cards_desc: "Experience transformational triple play services with minimum delay in data transfer for smooth entertainment.",
+               
             },
 
             {
                 cards_img: "Space-Efficient",
                 cards_title: "Space Efficient",
-                // cards_desc: "A sleek and modest design without the mesh of wires to compliment your space without making its presence known.",
+               
             },
         ],
     },

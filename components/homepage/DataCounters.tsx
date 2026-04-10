@@ -48,4 +48,3 @@ export default function DataCounters({ metrics }: DataCountersProps) {
     </div>
   );
 }
-

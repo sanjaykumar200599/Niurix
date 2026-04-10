@@ -19,7 +19,7 @@ export const olt_xgspon_8p = {
     },
     section3: {
         mainHeading: `Enterprise-Grade <span>GPON</span> Access`,
-        // subHeading1: "subheading1",
+       
         para1: `<p>As bandwidth requirements increase, traditional copper and legacy LAN designs struggle to scale. The MOLT-XGS-08P XGSPON OLT enables organizations and network operators to deploy a fiber-based access architecture using GPON and XGS-PON technologies from a single, centralized platform.
         <br>With centralized control at the OLT and distributed services delivered over fiber to ONTs, the platform simplifies network operations while supporting advanced bandwidth, quality of service, and a clear upgrade path to symmetrical 10 Gbps services.</p> `,
         subHeading2: "The Twist Towards Simpler Connectivity",

@@ -9,9 +9,8 @@ if (!policy) {
   throw new Error("Missing terms-and-conditions content.");
 }
 
-export const metadata: Metadata = toMetadata({ ...policy.seo, previewImage: "/assets/homepreview.png" });
+export const metadata: Metadata = toMetadata({ ...policy.seo, previewImage: "/assets/header/niurixlogo.svg" });
 
 export default function TermsAndConditionsPage() {
   return <TermsAndConditionsContent />;
 }
-

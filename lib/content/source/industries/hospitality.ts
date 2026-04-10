@@ -77,25 +77,25 @@ export const hospitality = {
             {
                 cards_img: "Budgetary-Efficiency",
                 cards_title: "Budgetary Efficiency",
-                // cards_desc: "Reduce cost and in turn your working capital with the energy efficient networking solution.",
+               
             },
 
             {
                 cards_img: "Triple-Play-Services",
                 cards_title: "Triple Play Services",
-                // cards_desc: "Easy integration of video, voice, and networking devices in one room without the jungle of wires.",
+               
             },
 
             {
                 cards_img: "Structured-Spatial-Layout",
                 cards_title: "Structured Spatial Layout",
-                // cards_desc: "Create a clean and harmonized guest space by getting rid of all the unwanted home run cables.",
+                
             },
 
             {
                 cards_img: "Single-Configuration-Deployment",
                 cards_title: "Single Configuration Deployment",
-                // cards_desc: "Seamless, quick and one-time deployment by the experts without hindering the business operations.",
+               
             },
         ],
     },

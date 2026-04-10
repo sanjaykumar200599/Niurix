@@ -184,5 +184,3 @@ export const PolicyPageContentSchema = z.object({
 });
 
 export type PolicyPageContent = z.infer<typeof PolicyPageContentSchema>;
-
-

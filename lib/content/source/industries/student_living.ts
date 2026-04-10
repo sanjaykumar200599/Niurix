@@ -77,25 +77,25 @@ export const student_living = {
             {
                 cards_img: "Reliable-Connectivity",
                 cards_title: "Reliable Connectivity",
-                // cards_desc: "Access an extensive range of the latest generation in wireless connectivity along with wired connectivity solutions.",
+               
             },
 
             {
                 cards_img: "Advanced-Network-Security",
                 cards_title: "Advanced Network Security",
-                // cards_desc: "Experience more secure connectivity with fiber optics and prevent student's sensitive data.",
+                
             },
 
             {
                 cards_img: "Differentiate Competitively",
                 cards_title: "Differentiate Competitively",
-                // cards_desc: "Offering students a unique and fast network solution sets student living communities apart from competitors.",
+               
             },
 
             {
                 cards_img: "Easy-Maintenance",
                 cards_title: "Easy Maintenance",
-                // cards_desc: "Hassle-free functioning for smooth operations without easy corrosion and minimum signal loss issues.",
+               
             },
         ],
     },

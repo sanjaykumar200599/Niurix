@@ -585,8 +585,3 @@ function Product8pLegacy() {
 }
 
 export default Product8pLegacy;
-
-
-
-
-

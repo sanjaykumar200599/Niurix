@@ -16,7 +16,7 @@ export const ont_t2001 = {
     },
     section3: {
         mainHeading: `<span>Compact</span> Triple-Play Fiber Endpoint!`,
-        // subHeading1: "Versatility and seamless integration",
+       
         para1: `<p>Not every deployment requires multiple LAN ports or complex in-room wiring. The Niurix T2001 focuses on essential connectivity, delivering triple-play services through a streamlined interface.
         <br>By replacing multiple copper cables with a single fiber drop, it simplifies installation, reduces maintenance overhead, and aligns with Niurix's broader goal of clean, future-ready fiber architecture across properties.</p>`,
         subHeading2: "The Twist Towards Simpler Connectivity",

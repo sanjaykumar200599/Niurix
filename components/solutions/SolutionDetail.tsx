@@ -118,14 +118,3 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
     </>
   );
 }
-
-
-
-
-
-
-
-
-
-
-

@@ -9,7 +9,7 @@ export const metadata: Metadata = toMetadata({
   description: "Legacy blogs route retained for backward compatibility.",
   canonicalPath: "/blogs",
   noindex: true,
-  previewImage: "/assets/homepreview.png",
+  previewImage: "/assets/header/niurixlogo.svg",
 });
 
 export default function BlogsPage() {
