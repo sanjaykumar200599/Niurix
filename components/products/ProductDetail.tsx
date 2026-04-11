@@ -160,11 +160,18 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
       <section className="mt-28 flex w-full flex-col-reverse tablet:mt-16 laptop:mt-24 laptop:flex-row">
         <div className="w-full bg-[#f3f3f3] laptop:w-[45%]">
           <div className="flex h-full flex-col justify-start px-10 pb-10 pt-8 tablet:px-20 tablet:pb-16 tablet:pt-10 laptop:min-h-[50rem] laptop:px-24 laptop:pt-28">
-            <h2 className="mb-8 text-[20px] font-sans leading-tight text-brand-black tablet:text-[26px] laptop:text-[30px]">
-              <span className="whitespace-nowrap">General Product Specifications</span>
+            <h2 className="mb-8 text-[20px] font-sans leading-tight text-brand-black tablet:text-[26px] laptop:text-[28px] ">
+              <span className="whitespace-nowrap [@media(min-width:1920px)_and_(min-height:1800px)]:hidden">General Product Specifications</span>
+              <span className="hidden whitespace-nowrap [@media(min-width:1920px)_and_(min-height:1800px)]:inline">General Product Specifications of Niurix</span>
               <br />
-              of Niurix {product.model}
-              {product.type === "ONT" ? " ONT" : ""}
+              <span className="[@media(min-width:1920px)_and_(min-height:1800px)]:hidden">
+                of Niurix {product.model}
+                {product.type === "ONT" ? " ONT" : ""}
+              </span>
+              <span className="hidden [@media(min-width:1920px)_and_(min-height:1800px)]:inline">
+                {product.model}
+                {product.type === "ONT" ? " ONT" : ""}
+              </span>
             </h2>
 
             <div className="flex w-full justify-between tablet:justify-start tablet:gap-[12.5rem] laptop:justify-start laptop:gap-0">
@@ -180,7 +187,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
               <button
                 type="button"
                 onClick={() => setTab("dim")}
-                className={`border-b-[3px] pb-1 text-[24px] font-display tablet:text-[28px] laptop:ml-30 laptop:w-[170px] laptop:text-left laptop:text-[24px] ${
+                className={`border-b-[3px] pb-1 text-[24px] font-display tablet:text-[28px] laptop:ml-30 laptop:w-[170px] laptop:text-left laptop:text-[24px] [@media(min-width:1920px)_and_(min-height:1800px)]:pl-30 ${
                   tab === "dim" ? "border-brand-orange text-brand-orange" : "border-transparent text-brand-black/30"
                 }`}
               >
@@ -199,7 +206,9 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
             {product.pdf ? (
               <>
-                <p className="mt-12 text-[18px] text-brand-black/75 tablet:mt-8 tablet:text-[20px] laptop:text-[20px]">Click to download the full specifications</p>
+                <p className="mt-12 text-[18px] text-brand-black/75 tablet:mt-8 tablet:text-[20px] laptop:text-[20px] [@media(min-width:1920px)_and_(min-height:1800px)]:pt-16 ">
+                  Click to download the full specifications
+                </p>
                 <a
                   href={product.pdf}
                   target="_blank"
