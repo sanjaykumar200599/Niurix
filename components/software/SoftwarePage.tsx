@@ -32,13 +32,13 @@ export default function SoftwarePage({ software }: SoftwarePageProps) {
   return (
     <>
       <section className="relative overflow-hidden">
-        <div className="relative h-[760px] tablet:h-[520px] laptop:h-[860px] [@media(min-width:1920px)_and_(min-height:1800px)]:h-[1040px]">
+        <div className="relative h-[760px] tablet:h-[520px] laptop:h-[860px] [@media(min-width:1920px)_and_(min-height:1800px)]:h-[1080px]">
           <Image src={software.heroImage} alt="Software banner" fill sizes="(max-width: 767px) 0px, 100vw" className="hidden object-cover tablet:block" priority />
           <Image src={software.heroImageMobile} alt="Software banner" fill sizes="(max-width: 767px) 100vw, 0px" className="object-cover tablet:hidden" priority />
 
           <div className="absolute inset-0 bg-black/10" />
 
-          <div className="relative z-10 flex h-full items-center px-9 tablet:items-end tablet:px-[78px] tablet:pb-16 laptop:px-[120px] laptop:pb-28 [@media(min-width:1920px)_and_(min-height:1800px)]:pb-71">
+          <div className="relative z-10 flex h-full items-center px-9 tablet:items-end tablet:px-[78px] tablet:pb-16 laptop:px-[120px] laptop:pb-28 [@media(min-width:1920px)_and_(min-height:1800px)]:pb-98">
             <h1 className="w-[85%] text-[32px] font-display leading-tight text-white tablet:w-[70%] tablet:text-[34px] laptop:w-[35%] laptop:text-[48px] [@media(min-width:1920px)_and_(min-height:1800px)]:w-[42%]">
               {renderSoftwareHeroTitle(software.heroTitle)}
             </h1>
@@ -48,14 +48,14 @@ export default function SoftwarePage({ software }: SoftwarePageProps) {
 
       <section className="mt-8 px-9 tablet:px-20 laptop:mt-10 laptop:px-[120px]">
        <h2
-          className="nx-rich max-w-[980px] text-[22px] font-display leading-[1.3] text-brand-black tablet:text-[24px] laptop:text-[30px]"
+          className="nx-rich max-w-[980px] text-[22px] font-display leading-[1.3] text-brand-black tablet:text-[24px] laptop:text-[28px]"
           dangerouslySetInnerHTML={{ __html: software.introTitleHtml }}
         />
         <p className="mt-9 text-base leading-7 text-brand-black/90 tablet:text-lg laptop:text-xl">{software.introText}</p>
       </section>
 
-      <section className="mb-8 mt-10 px-9 tablet:mb-12 tablet:px-20 laptop:mb-16 laptop:mt-[120px] laptop:px-[120px]">
-        <div className="grid gap-6 tablet:gap-8 laptop:grid-cols-5 laptop:gap-7 [@media(min-width:1920px)_and_(min-height:1800px)]:gap-7">
+      <section className="mb-8 mt-10 px-9 tablet:mb-12 tablet:px-20 laptop:mb-16 laptop:mt-[120px] laptop:px-[120px] ">
+        <div className="grid gap-6 tablet:gap-8 laptop:grid-cols-5 laptop:gap-7 [@media(min-width:1920px)_and_(min-height:1800px)]:gap-11">
           {software.features.map((feature) => (
             <article key={feature.id} className="group relative isolate overflow-hidden rounded-tl-[30px] rounded-br-[30px] tablet:rounded-tl-[50px] tablet:rounded-br-[50px]">
               <div className="relative h-[18rem] tablet:h-[19rem] laptop:h-[35rem]">
