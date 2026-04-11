@@ -61,8 +61,8 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
         />
 
         <div className="mt-6 flex flex-col-reverse gap-8 laptop:flex-row">
-          <div className="flex w-full items-center laptop:w-[45%] laptop:pt-2 [@media(min-width:1920px)_and_(min-height:1800px)]:pb-10">
-            <p className="text-base leading-[1.45] text-brand-black/90 tablet:text-lg tablet:leading-7 laptop:text-l">
+          <div className="flex w-full items-center laptop:w-[45%] laptop:pt-2 [@media(min-width:1920px)_and_(min-height:1800px)]:pb-10 ">
+            <p className="text-base leading-[1.45] text-brand-black/90 tablet:text-lg tablet:leading-7 laptop:text-l [@media(min-width:1920px)_and_(min-height:1800px)]:max-w-[90%]">
               {solution.introText}
             </p>
           </div>
