@@ -8,17 +8,17 @@ type IndustryDetailProps = {
 
 export default function IndustryDetail({ industry }: IndustryDetailProps) {
   const deviceImageSizeClasses: Record<string, string> = {
-    router: "h-[34px] w-[112px] tablet:h-[54px] tablet:w-[172px]",
-    olt: "h-[32px] w-[118px] tablet:h-[52px] tablet:w-[178px]",
-    splitter: "h-[30px] w-[86px] tablet:h-[48px] tablet:w-[130px]",
-    "internet traffic": "h-[26px] w-[76px] tablet:h-[42px] tablet:w-[124px]",
-    "1g fiber": "h-[8px] w-[110px] tablet:h-[14px] tablet:w-[172px]",
-    "ethernet cable": "h-[8px] w-[94px] tablet:h-[14px] tablet:w-[144px]",
-    ont: "h-[46px] w-[46px] tablet:h-[74px] tablet:w-[74px]",
-    iptv: "h-[50px] w-[80px] tablet:h-[82px] tablet:w-[124px]",
-    "access point": "h-[46px] w-[46px] tablet:h-[78px] tablet:w-[78px]",
-    telephone: "h-[50px] w-[68px] tablet:h-[80px] tablet:w-[106px]",
-    wireless: "h-[28px] w-[60px] tablet:h-[48px] tablet:w-[96px]",
+    router: "h-[34px] w-[112px] tablet:h-[41px] tablet:w-[169px]",
+    olt: "h-[32px] w-[118px] tablet:h-[38px] tablet:w-[214px]",
+    splitter: "h-[30px] w-[86px] tablet:h-[39px] tablet:w-[133px]",
+    "internet traffic": "h-[26px] w-[76px] tablet:h-[29px] tablet:w-[130px]",
+    "1g fiber": "h-[8px] w-[110px] tablet:h-[18.4px] tablet:w-[207px]",
+    "ethernet cable": "h-[8px] w-[94px] tablet:h-[5px] tablet:w-[141px]",
+    ont: "h-[46px] w-[46px] tablet:h-[69px] tablet:w-[69px]",
+    iptv: "h-[50px] w-[80px] tablet:h-[83px] tablet:w-[122px]",
+    "access point": "h-[46px] w-[46px] tablet:h-[74px] tablet:w-[56px]",
+    telephone: "h-[50px] w-[68px] tablet:h-[82px] tablet:w-[75px]",
+    wireless: "h-[28px] w-[60px] tablet:h-[38px] tablet:w-[75px]",
   };
 
   const getDeviceImageSizeClasses = (title: string) => deviceImageSizeClasses[title.toLowerCase()] ?? "h-[36px] w-[94px] tablet:h-[56px] tablet:w-[144px]";
@@ -49,12 +49,12 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
           />
         </div>
 
-        <h1 className="absolute left-9 top-44 z-10 w-[75%] text-[30px] font-sans font-normal leading-[1.34] tracking-[-0.01em] text-white tablet:left-[80px] tablet:top-1/2 tablet:w-[70%] tablet:-translate-y-1/2 tablet:text-[36px] tablet:font-display laptop:left-[120px] laptop:w-[52%] laptop:text-[44px] [@media(min-width:1920px)_and_(min-height:1800px)]:font-sans [@media(min-width:1920px)_and_(min-height:1800px)]:font-normal [@media(min-width:1920px)_and_(min-height:1800px)]:text-white/95">
+        <h1 className="absolute left-9 top-44 z-10 w-[75%] text-[30px] font-sans font-normal leading-[1.34] tracking-[-0.01em] text-white tablet:left-[80px] tablet:top-1/2 tablet:w-[70%] tablet:-translate-y-1/2 tablet:text-[36px] tablet:font-display laptop:left-[120px] laptop:w-[52%] laptop:text-[48px] [@media(min-width:1920px)_and_(min-height:1800px)]:font-sans [@media(min-width:1920px)_and_(min-height:1800px)]:font-normal [@media(min-width:1920px)_and_(min-height:1800px)]:text-white/95 [@media(min-width:1920px)_and_(min-height:1800px)] pt-14">
           {industry.heroTitle}
         </h1>
       </section>
 
-      <section className="my-12 px-9 tablet:my-12 tablet:px-[80px] laptop:my-20 laptop:px-[120px]">
+      <section className="my-12 px-9 tablet:my-12 tablet:px-[80px] laptop:my-24 laptop:px-[120px]">
        <h2
           className="nx-rich max-w-[920px] text-[22px] font-display leading-[1.3] text-brand-black tablet:text-[24px] laptop:text-[28px]"
           dangerouslySetInnerHTML={{ __html: industry.introTitleHtml }}
@@ -62,7 +62,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
 
         <div className="mt-3 flex flex-col-reverse gap-8 laptop:mt-4 laptop:flex-row laptop:items-center laptop:justify-between">
           <div className="flex w-full flex-col justify-start laptop:w-[24%]">
-            <p className="pb-3 text-[16px] font-normal leading-[1.6] text-brand-black/80 tablet:pb-4 tablet:text-[17px] laptop:text-[19px]">
+            <p className="pb-3 text-[16px] font-normal leading-[1.4] text-brand-black/80 tablet:pb-4 tablet:text-[17px] laptop:text-[20px] [@media(min-width:1920px)_and_(min-height:1800px)] w-[110%]">
               {industry.introText}
             </p>
 
@@ -74,7 +74,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
             </Link>
           </div>
 
-          <div className="w-full laptop:w-[58%]">
+          <div className="w-full laptop:w-[60%]">
             <Image
               src={industry.introImage}
               alt={industry.heroTitle}
@@ -86,9 +86,49 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
         </div>
       </section>
 
-      <section className="mx-6 my-10 rounded-[12px] bg-white px-6 py-10 shadow-[0_0_10px_#00000029] tablet:mx-10 laptop:mx-[120px] laptop:px-10 laptop:py-12 [@media(min-width:1920px)_and_(min-height:1800px)]:px-12 [@media(min-width:1920px)_and_(min-height:1800px)]:py-10">
-        {/* 1920x1800 two-row layout */}
-        <div className="hidden laptop:block">
+      <section className="mx-6 my-10 rounded-[12px] bg-white px-6 py-10 shadow-[0_0_10px_#00000029] tablet:mx-10 laptop:mx-[120px] laptop:px-6 laptop:py-12 [@media(min-width:1920px)_and_(min-height:1800px)]:px-12 [@media(min-width:1920px)_and_(min-height:1800px)]:py-10">
+        {/* Laptop-only fixed 3-row layout (exclude 1920x1800) */}
+        <div className="hidden laptop:block [@media(min-width:1920px)_and_(min-height:1800px)]:hidden">
+          <div className="grid grid-cols-4 gap-x-2 gap-y-12 px-20">
+            {industry.devices.slice(0, 4).map((device) => (
+              <article key={device.title} className="flex w-full flex-col items-center text-center">
+                <div className="flex h-[96px] items-center justify-center">
+                  <div className={`relative ${getDeviceImageSizeClasses(device.title)}`}>
+                    <Image src={device.image} alt={device.title} fill sizes="220px" className="object-contain" />
+                  </div>
+                </div>
+                <p className="mt-3 font-display text-[17px] text-brand-black">{device.title}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-10 grid grid-cols-6 gap-x-10 gap-y-10 px-4">
+            {industry.devices.slice(4, 10).map((device) => (
+              <article key={device.title} className="flex w-full flex-col items-center text-center">
+                <div className="flex h-[96px] items-center justify-center">
+                  <div className={`relative ${getDeviceImageSizeClasses(device.title)}`}>
+                    <Image src={device.image} alt={device.title} fill sizes="220px" className="object-contain" />
+                  </div>
+                </div>
+                <p className="mt-3 font-display text-[17px] text-brand-black">{device.title}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-10 grid grid-cols-3 px-8 pb-4">
+            <article className="col-start-2 flex w-full flex-col items-center text-center">
+              <div className="flex h-[96px] items-center justify-center">
+                <div className={`relative ${getDeviceImageSizeClasses(industry.devices[10].title)}`}>
+                  <Image src={industry.devices[10].image} alt={industry.devices[10].title} fill sizes="220px" className="object-contain" />
+                </div>
+              </div>
+              <p className="mt-3 font-display text-[17px] text-brand-black">{industry.devices[10].title}</p>
+            </article>
+          </div>
+        </div>
+
+        {/* 1920x1800 original layout */}
+        <div className="hidden [@media(min-width:1920px)_and_(min-height:1800px)]:block">
           <div className="grid grid-cols-6 gap-x-10 gap-y-10 px-8">
             {industry.devices.slice(0, 6).map((device) => (
               <article key={device.title} className="flex w-full flex-col items-center text-center">
