@@ -6,14 +6,6 @@ type SolutionDetailProps = {
 };
 
 export default function SolutionDetail({ solution }: SolutionDetailProps) {
-  const isOptimizedFiber = solution.heroTitle === "Optimized Fiber-Optic Solution";
-  const introTitleHtml = isOptimizedFiber
-    ? solution.introTitleHtml.replaceAll("<span>", '<span style="color: var(--color-brand-orange)">')
-    : solution.introTitleHtml;
-  const cardsHeadingHtml = isOptimizedFiber
-    ? solution.cardsHeadingHtml.replaceAll("<span>", '<span style="color: var(--color-brand-orange)">')
-    : solution.cardsHeadingHtml;
-
   return (
     <>
       {/* HERO SECTION */}
@@ -56,7 +48,7 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
       <section className="my-12 px-9 tablet:my-12 tablet:px-[78px] laptop:my-24 laptop:px-[120px] ">
         <h2
           className="nx-rich whitespace-pre-wrap text-[26px] font-display leading-tight text-brand-black tablet:text-[30px] laptop:w-[62%] laptop:text-[25px] [@media(min-width:1920px)_and_(min-height:1800px)]:text-[30px]"
-          dangerouslySetInnerHTML={{ __html: introTitleHtml }}
+          dangerouslySetInnerHTML={{ __html: solution.introTitleHtml }}
           
         />
 
@@ -87,13 +79,13 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
               </h2>
               <h2
                 className="nx-rich hidden text-[24px] font-display leading-[1.18] text-brand-black tablet:block tablet:text-[28px] laptop:text-[26px]"
-                dangerouslySetInnerHTML={{ __html: cardsHeadingHtml }}
+                dangerouslySetInnerHTML={{ __html: solution.cardsHeadingHtml }}
               />
             </>
           ) : (
             <h2
               className="nx-rich text-[24px] font-display leading-[1.18] text-brand-black tablet:text-[28px] laptop:text-[26px]"
-              dangerouslySetInnerHTML={{ __html: cardsHeadingHtml }}
+              dangerouslySetInnerHTML={{ __html: solution.cardsHeadingHtml }}
             />
           )}
 
