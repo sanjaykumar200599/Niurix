@@ -57,7 +57,7 @@ export default function HomePage() {
           <span className="text-brand-orange">Easy To</span> Install
         </h2>
 
-        <div className="grid gap-8 laptop:grid-cols-[60%_40%] laptop:items-start laptop:gap-10 wide:grid-cols-[61%_39%]">
+        <div className="grid gap-8 laptop:grid-cols-[60%_40%] laptop:items-center laptop:gap-6 wide:grid-cols-[61%_39%]">
           <div className="overflow-hidden rounded-[32px] border border-black/10 bg-white">
             <InstallMedia />
           </div>
