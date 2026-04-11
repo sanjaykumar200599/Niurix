@@ -189,15 +189,15 @@ export default function Header() {
         className={`fixed z-50 hidden transition-all duration-500 laptop:block ${
           scrolled
             ? "left-0 right-0 top-0 border-b border-black/10 bg-white shadow-[0px_3px_15px_#00000029]"
-            : "left-[clamp(56px,7vw,120px)] right-[clamp(56px,7vw,120px)] top-[7%] rounded-tl-[10px] rounded-br-[10px] bg-white shadow-[0px_3px_15px_#00000029]"
+            : "left-[clamp(64px,7.5vw,130px)] right-[clamp(64px,7.5vw,130px)] [@media(min-width:1600px)]:left-30 [@media(min-width:1600px)]:right-30 top-[7%] rounded-tl-[10px] rounded-br-[10px] bg-white shadow-[0px_3px_15px_#00000029]"
         }`}
       >
-        <div className={`flex items-center justify-between ${scrolled ? "px-[clamp(40px,8vw,120px)] py-6" : "px-[3.35%] py-6"}`}>
+        <div className={`flex items-center justify-between ${scrolled ? "px-[clamp(40px,8vw,120px)] py-6 h-25" : "pl-[4%] pr-[3.4%] py-6 h-25"}`}>
           <Link href="/" className="shrink-0" onClick={closeMenus}>
             <Image src="/assets/header/niurixlogo.svg" alt="Niurix" width={81} height={27} />
           </Link>
 
-          <nav className="ml-8 flex flex-1 items-baseline justify-end pr-10 [@media(min-width:1025px)_and_(max-width:1280px)]:pr-6">
+          <nav className="ml-8 flex flex-1 items-baseline justify-end gap-3 [@media(min-width:1025px)_and_(max-width:1280px)]:pr-6">
             {desktopTabs.map((tab) => {
               const open = tab.menuKey ? activeDesktopMenu === tab.menuKey : false;
 
@@ -209,7 +209,7 @@ export default function Header() {
                       ref={(node) => {
                         desktopTriggerRefs.current[tab.menuKey!] = node;
                       }}
-                      className={`whitespace-nowrap text-[clamp(18px,1.25vw,22px)] font-sans transition ${open ? "text-brand-orange" : "text-brand-black hover:text-brand-orange"}`}
+                      className={`whitespace-nowrap text-xl font-sans transition ${open ? "text-brand-orange" : "text-black hover:text-brand-orange"}`}
                       onClick={() => toggleDesktopMenu(tab.menuKey!)}
                     >
                       {tab.label}
@@ -217,7 +217,7 @@ export default function Header() {
                   ) : (
                     <Link
                       href={tab.href}
-                      className="whitespace-nowrap text-[clamp(18px,1.25vw,22px)] font-sans !text-brand-black transition hover:!text-brand-orange"
+                      className="whitespace-nowrap text-xl font-sans text-brand-black! transition hover:text-brand-orange!"
                       onClick={closeMenus}
                     >
                       {tab.label}
@@ -229,7 +229,7 @@ export default function Header() {
 
             <Link
               href="/contact-us"
-              className="ml-3 min-w-[160px] rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-5 py-2.5 text-center text-[clamp(19px,1.25vw,22px)] font-sans !text-white visited:!text-white transition hover:bg-white hover:!text-brand-black [@media(min-width:1025px)_and_(max-width:1280px)]:min-w-[146px] [@media(min-width:1025px)_and_(max-width:1280px)]:px-4"
+              className="ml-3 min-w-[150px] rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-2 py-2 text-center text-xl font-sans text-white! visited:text-white! transition hover:bg-white hover:text-brand-black! [@media(min-width:1025px)_and_(max-width:1280px)]:min-w-[130px] [@media(min-width:1025px)_and_(max-width:1280px)]:px-3"
               onClick={closeMenus}
             >
               Contact Us

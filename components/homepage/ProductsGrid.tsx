@@ -57,14 +57,14 @@ export default function ProductsGrid({ products }: { products: HomeData["product
   return (
     <div>
       <div className="hidden w-full rounded-tl-[50px] bg-[#ebebeb] laptop:flex">
-        <div className="w-[95%]">
-          <div className="flex min-h-[42rem] flex-col px-5 py-8 laptop:px-10 [@media(min-width:1367px)]:min-h-[44rem] [@media(min-width:1367px)]:px-12">
-            <p className="-ml-2 font-number text-[110px] leading-none whitespace-nowrap text-white [@media(min-width:1025px)_and_(max-width:1366px)]:text-[145px] [@media(min-width:1367px)]:-ml-5 [@media(min-width:1367px)]:text-[182px]">
+        <div className="w-[97%]">
+          <div className="flex min-h-[50rem] flex-col px-5 py-8 laptop:px-10 [@media(min-width:1367px)]:min-h-[50rem] [@media(min-width:1367px)]:px-12">
+            <p className="-ml-5 font-number text-[110px] leading-none whitespace-nowrap text-white [@media(min-width:1025px)_and_(max-width:1366px)]:text-[145px] [@media(min-width:1367px)]:-ml-17 [@media(min-width:1367px)]:text-[182px]">
               {selected.name}
             </p>
 
-            <div className="mt-2 flex items-center justify-between [@media(min-width:1367px)]:mt-3">
-              <div className="flex w-[50%] justify-center">
+            <div className="mt-2 flex items-center justify-between [@media(min-width:1367px)]:mt-8">
+              <div className="flex w-[60%] justify-center">
                 <div className="relative h-[285px] w-[390px] [@media(min-width:1367px)]:h-[320px] [@media(min-width:1367px)]:w-[450px]">
                   <Image
                     src={selected.image}
@@ -76,7 +76,7 @@ export default function ProductsGrid({ products }: { products: HomeData["product
                 </div>
               </div>
 
-              <div className="flex w-[45%] flex-col self-start">
+              <div className="flex w-[40%] flex-col self-start mt-8">
                 <h3 className="flex items-center gap-2 text-[30px] font-display leading-tight text-brand-black [@media(min-width:1367px)]:text-[34px]">
                   {selected.name}
                   <span className="text-brand-orange">({selected.type})</span>
@@ -86,12 +86,12 @@ export default function ProductsGrid({ products }: { products: HomeData["product
                 </p>
                 <Link
                   href={`/products/${selected.slug}`}
-                  className="group mt-4 inline-flex h-[82px] w-[146px] items-center justify-between rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-3.5 !text-white transition hover:bg-[#f54f00] hover:!text-white [@media(min-width:1367px)]:h-[88px] [@media(min-width:1367px)]:w-[152px]"
+                  className="group mt-4 inline-flex h-[70px] w-[120px] items-center justify-between rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-3.5 !text-white transition hover:bg-[#f54f00] hover:!text-white [@media(min-width:1367px)]:h-[60px] [@media(min-width:1600px)]:w-[160px]"
                 >
                   <span className="text-left text-[20px] leading-[1.05] text-white">
                     Learn
-                    <br />
-                    More
+                    <br className="[@media(min-width:1600px)]:hidden" />
+                    {" More"}
                   </span>
                   <LearnMoreArrow />
                 </Link>
@@ -115,7 +115,7 @@ export default function ProductsGrid({ products }: { products: HomeData["product
           </div>
         </div>
 
-        <div className="flex w-[5%] items-center bg-[#e1e1e1]">
+        <div className="flex w-[3%] items-center bg-[#e1e1e1]">
           <div className="mx-auto flex flex-col items-center gap-6">
             <button type="button" aria-label="Previous product" onClick={goPrev} disabled={activeIndex === 0} className="h-6 w-6">
               <ArrowIcon direction="prev" disabled={activeIndex === 0} className="scale-75" />
@@ -129,7 +129,7 @@ export default function ProductsGrid({ products }: { products: HomeData["product
 
       <div className="relative flex laptop:hidden">
         <div className="w-[95%] rounded-tl-[25px] bg-[#ebebeb] px-5 py-5 tablet:rounded-tl-[40px] tablet:px-10 tablet:py-8">
-          <p className="font-number text-[45px] leading-none text-white tablet:text-[100px]">{selected.name}</p>
+          <p className="-ml-6 font-number text-[45px] leading-none text-white tablet:text-[100px] tablet:-ml-12">{selected.name}</p>
 
           <div className="mt-3 flex items-center justify-evenly">
             <button type="button" aria-label="Previous product" onClick={goPrev} disabled={activeIndex === 0} className="h-6 w-6 tablet:h-8 tablet:w-8">

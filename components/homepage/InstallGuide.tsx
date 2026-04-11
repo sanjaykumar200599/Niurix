@@ -20,8 +20,10 @@ export default function InstallGuide({ steps }: { steps: HomeData["installSteps"
   const [idx, setIdx] = useState(0);
 
   return (
-    <div className="w-full laptop:mx-auto laptop:max-w-[460px] laptop:self-center laptop:pt-24 [@media(min-width:1025px)_and_(max-width:1366px)]:pt-20">
-      <div className="flex items-center justify-start px-1 tablet:px-2 laptop:px-8 [@media(min-width:1025px)_and_(max-width:1366px)]:px-6">
+    <div className="w-full laptop:self-center laptop:pl-4">
+      <div className="flex items-center justify-start px-1 tablet:px-2 laptop:px-8 [@media(min-width:1025px)_and_(max-width:1366px)]:px-6
+      
+      ">
         {steps.map((_, stepIdx) => (
           <div key={stepIdx} className="flex items-center">
             {stepIdx > 0 ? <DotTrail active={idx === stepIdx} /> : null}

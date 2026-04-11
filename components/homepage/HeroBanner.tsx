@@ -16,7 +16,7 @@ export default function HeroBanner({ banners }: { banners: HomeData["banners"] }
 
           return (
             <SwiperSlide key={item.solutionSlug}>
-              <div className="relative h-[44rem] overflow-hidden tablet:h-[64rem] laptop:h-[68rem] [@media(min-width:768px)_and_(max-width:1024px)_and_(orientation:landscape)]:h-[48rem] [@media(min-width:1025px)_and_(max-width:1366px)]:h-[60rem]">
+              <div className="relative h-176 overflow-hidden tablet:h-256 laptop:h-272 [@media(min-width:768px)_and_(max-width:1024px)_and_(orientation:landscape)]:h-192 [@media(min-width:1025px)_and_(max-width:1366px)]:h-240">
                 <div className="absolute inset-0 hidden tablet:block" data-swiper-parallax="-23%">
                   <Image
                     src={item.image}
@@ -44,10 +44,10 @@ export default function HeroBanner({ banners }: { banners: HomeData["banners"] }
                 <div className="absolute inset-0 bg-black/35 laptop:bg-black/30" />
 
                 <div
-                  className="absolute inset-x-0 top-[11rem] z-10 flex flex-col items-start px-6 text-left text-white tablet:top-[28rem] tablet:items-center tablet:px-19.5 tablet:text-center laptop:top-[24rem] laptop:px-30 [@media(min-width:768px)_and_(max-width:1024px)_and_(orientation:landscape)]:top-[20rem]"
+                  className="absolute inset-x-0 top-44 z-10 flex flex-col items-start px-6 text-left text-white tablet:top-112 tablet:items-center tablet:px-19.5 tablet:text-center laptop:top-96 laptop:px-30 [@media(min-width:768px)_and_(max-width:1024px)_and_(orientation:landscape)]:top-80"
                   data-swiper-parallax="-300"
                 >
-                  <h1 className="max-w-[20rem] text-[30px] font-display leading-[1.12] tablet:max-w-5xl tablet:text-[34px] tablet:leading-tight laptop:text-[48px]">
+                  <h1 className="max-w-[20rem] text-[30px] font-display leading-[1.12] tablet:max-w-5xl tablet:text-[34px] tablet:leading-tight laptop:text-[48px] pb-6">
                     {item.title}
                   </h1>
 
@@ -55,7 +55,7 @@ export default function HeroBanner({ banners }: { banners: HomeData["banners"] }
                     {mobilePara}
                   </p>
 
-                  <p className="mt-3 hidden max-w-4xl text-lg leading-normal font-body-light tablet:block laptop:mt-5 laptop:text-[20px]">
+                  <p className="mt-3 hidden max-w-4xl text-lg leading-normal font-body-light tablet:block laptop:mt-5 laptop:text-[20px] pb-2">
                     {item.para}
                   </p>
 

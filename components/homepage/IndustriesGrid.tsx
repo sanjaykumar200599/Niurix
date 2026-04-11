@@ -32,22 +32,22 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
   return (
     <div>
       <div className="hidden gap-4 px-30 laptop:grid laptop:grid-cols-[58%_19%_18%] wide:gap-8">
-        <div className="relative h-[36rem] overflow-hidden rounded-tl-[35px] rounded-br-[35px]">
+        <div className="relative h-[40rem] overflow-hidden rounded-tl-[35px] rounded-br-[35px]">
           <Image
             src={active.detailImage}
             alt={active.title}
             fill
             sizes="(min-width: 1024px) 58vw, 0px"
-            className={`object-cover ${active.slug === "hospitality" ? "object-[50%_72%]" : "object-center"}`}
+            className="object-cover object-top"
           />
-          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white via-white/96 to-white/78 px-6 pb-6 pt-7 wide:px-7 wide:pb-7">
-            <h3 className="text-[24px] font-sans text-brand-black wide:text-[28px]">{active.title}</h3>
-            <p className="mt-3 max-w-[88%] text-[17px] leading-[1.35] font-body-light text-brand-black wide:mt-4 wide:max-w-[82%] wide:text-[20px]">
+          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white via-white/96 to-white/78 px-6 pb-4 pt-5 wide:px-7 wide:pb-5">
+            <h3 className="text-[22px] font-sans text-brand-black wide:text-[26px]">{active.title}</h3>
+            <p className="mt-2 max-w-[88%] text-[15px] leading-[1.35] font-body-light text-brand-black wide:mt-3 wide:max-w-[82%] wide:text-[18px]">
               {active.desc}
             </p>
             <Link
               href={`/industries/${active.slug}`}
-              className="mt-5 inline-flex min-w-[240px] items-center justify-center gap-3 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-8 py-3 text-[22px] font-sans !text-white transition hover:bg-white hover:!text-brand-black wide:min-w-[255px] wide:px-9 wide:py-3.5"
+              className="mt-3 inline-flex min-w-[200px] items-center justify-center gap-3 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-[19px] font-sans !text-white transition hover:bg-white hover:!text-brand-black wide:min-w-[220px] wide:px-7 wide:py-2.5"
             >
               <span>Learn More</span>
               <ArrowRightIcon />
@@ -60,10 +60,10 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
             key={item.slug}
             type="button"
             onClick={() => setActiveIndex(industries.findIndex((entry) => entry.slug === item.slug))}
-            className="group relative h-[36rem] overflow-hidden rounded-tl-[35px] rounded-br-[35px]"
+            className="group relative h-[40rem] overflow-hidden rounded-tl-[35px] rounded-br-[35px]"
           >
             <Image src={item.cardImage} alt={item.title} fill sizes="(min-width: 1024px) 20vw, 0px" className="object-cover transition duration-500 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-black/45" />
+            <div className="absolute inset-0 bg-black/10" />
             <p className="absolute bottom-0 left-4 w-[18rem] origin-top-left -rotate-90 text-left font-body-light text-[26px] leading-none text-white wide:text-[28px]">
               {item.title}
             </p>
