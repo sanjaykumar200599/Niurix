@@ -48,14 +48,14 @@ export default function Footer() {
 
         <div className="border-t-2 border-[#DFDFDF] pt-7 pb-12 laptop:flex laptop:items-start laptop:justify-between laptop:pt-7 laptop:pb-16">
           
-          <div className="mb-6 shrink-0 laptop:mb-0 laptop:pt-[2px] laptop:w-[160px] laptop:mr-20 [@media(min-width:1600px)]:w-[200px] [@media(min-width:1600px)]:mr-46 [@media(min-width:1800px)]:w-[220px] [@media(min-width:1800px)]:mr-56">
+          <div className="mb-6 shrink-0 laptop:mb-0 laptop:pt-[2px] laptop:w-[140px] laptop:mr-22 [@media(min-width:1600px)]:w-[200px] [@media(min-width:1600px)]:mr-46 [@media(min-width:1800px)]:w-[220px] [@media(min-width:1800px)]:mr-56">
             <Link href="/" className="inline-flex">
               <Image
                 src="/assets/footer/niurixlogo.svg"
                 alt="Niurix"
                 width={124}
                 height={41}
-                className="h-[33px] w-[100px] tablet:h-[37px] tablet:w-[112px] laptop:h-[41px] laptop:w-[124px]"
+                className="h-[30px] w-[92px] tablet:h-[33px] tablet:w-[102px] laptop:h-[25px] laptop:w-[80px]"
               />
             </Link>
           </div>
@@ -63,7 +63,7 @@ export default function Footer() {
           <div className="grid gap-y-6 laptop:flex-1 laptop:grid-cols-[1.22fr_0.7fr_1.05fr_0.72fr] laptop:gap-x-6 [@media(min-width:1600px)]:grid-cols-[1fr_0.7fr_1fr_0.7fr]">
             {sections.map((section) => (
               <div key={section.title} className="min-w-0">
-                <p className=" pt-4 mb-4 text-[18px] leading-none font-display text-black tablet:mb-6 tablet:text-[20px]">
+                <p className="pt-4 mb-4 text-[18px] leading-none font-sans font-medium text-black tablet:mb-6 tablet:text-[20px]">
                   {section.title}
                 </p>
 
@@ -102,7 +102,7 @@ export default function Footer() {
             <Link href="/terms-and-conditions" className="transition hover:text-brand-orange">
               Terms & Conditions
             </Link>
-            <Link href="/privacy-policy" className="transition hover:text-brand-orange">
+            <Link href="/privacy-policy" className="transition hover:text-brand-orange ml-16">
               Privacy Policy
             </Link>
           </div>

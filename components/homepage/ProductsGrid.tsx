@@ -6,7 +6,7 @@ import { useMemo, useState } from "react";
 import type { HomeData } from "@/lib/content/types";
 
 function ArrowIcon({ direction = "next", disabled = false, className = "" }: { direction?: "next" | "prev"; disabled?: boolean; className?: string }) {
-  const stroke = disabled ? "#D9D9D9" : "#FF5B02";
+  const stroke = disabled ? "#FFFFFF" : "#FF5B02";
   return (
     <svg
       viewBox="0 0 12.242 21.483"
@@ -117,10 +117,22 @@ export default function ProductsGrid({ products }: { products: HomeData["product
 
         <div className="flex w-[3%] items-center bg-[#e1e1e1]">
           <div className="mx-auto flex flex-col items-center gap-6">
-            <button type="button" aria-label="Previous product" onClick={goPrev} disabled={activeIndex === 0} className="h-6 w-6">
+            <button
+              type="button"
+              aria-label="Previous product"
+              onClick={goPrev}
+              disabled={activeIndex === 0}
+              className="h-6 w-6 disabled:opacity-100"
+            >
               <ArrowIcon direction="prev" disabled={activeIndex === 0} className="scale-75" />
             </button>
-            <button type="button" aria-label="Next product" onClick={goNext} disabled={activeIndex === products.length - 1} className="h-6 w-6">
+            <button
+              type="button"
+              aria-label="Next product"
+              onClick={goNext}
+              disabled={activeIndex === products.length - 1}
+              className="h-6 w-6 disabled:opacity-100"
+            >
               <ArrowIcon direction="next" disabled={activeIndex === products.length - 1} className="scale-75" />
             </button>
           </div>
@@ -132,7 +144,13 @@ export default function ProductsGrid({ products }: { products: HomeData["product
           <p className="-ml-6 font-number text-[45px] leading-none text-white tablet:text-[100px] tablet:-ml-12">{selected.name}</p>
 
           <div className="mt-3 flex items-center justify-evenly">
-            <button type="button" aria-label="Previous product" onClick={goPrev} disabled={activeIndex === 0} className="h-6 w-6 tablet:h-8 tablet:w-8">
+            <button
+              type="button"
+              aria-label="Previous product"
+              onClick={goPrev}
+              disabled={activeIndex === 0}
+              className="h-6 w-6 disabled:opacity-100 tablet:h-8 tablet:w-8"
+            >
               <ArrowIcon direction="prev" disabled={activeIndex === 0} className="scale-75" />
             </button>
 
@@ -140,7 +158,13 @@ export default function ProductsGrid({ products }: { products: HomeData["product
               <Image src={selected.image} alt={selected.name} fill sizes="(min-width: 768px) 240px, 160px" className="object-contain" />
             </div>
 
-            <button type="button" aria-label="Next product" onClick={goNext} disabled={activeIndex === products.length - 1} className="h-6 w-6 tablet:h-8 tablet:w-8">
+            <button
+              type="button"
+              aria-label="Next product"
+              onClick={goNext}
+              disabled={activeIndex === products.length - 1}
+              className="h-6 w-6 disabled:opacity-100 tablet:h-8 tablet:w-8"
+            >
               <ArrowIcon direction="next" disabled={activeIndex === products.length - 1} className="scale-75" />
             </button>
           </div>
@@ -181,7 +205,4 @@ export default function ProductsGrid({ products }: { products: HomeData["product
     </div>
   );
 }
-
-
-
 

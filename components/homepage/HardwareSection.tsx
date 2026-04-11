@@ -85,7 +85,7 @@ export default function HardwareSection({ titleHtml, items }: HardwareSectionPro
         <div className="absolute left-1/2 top-[4rem] z-40 w-full -translate-x-1/2 tablet:-translate-y-0 laptop:left-auto laptop:right-[78px] laptop:top-[40%] laptop:w-[31%] laptop:translate-x-0 laptop:-translate-y-1/2 wide:right-[86px] wide:w-[28%] [@media(min-width:1920px)_and_(min-height:1800px)]:top-[40%] [@media(min-width:1920px)_and_(min-height:1800px)]:-translate-y-1/2">
           <div className="w-full px-19.5 laptop:px-0">
             <h2
-              className="nx-rich text-left font-sans text-[30px] leading-[1.22] text-brand-black laptop:w-[95%] laptop:text-[26px] laptop:leading-[1.24]"
+              className="nx-rich text-left font-sans text-[30px] leading-[1.22] text-brand-black laptop:w-full laptop:text-[26px] laptop:leading-[1.24] laptop:[text-wrap:balance]"
               dangerouslySetInnerHTML={{ __html: titleHtml }}
             />
           </div>
