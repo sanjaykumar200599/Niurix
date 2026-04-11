@@ -10,7 +10,7 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
     <>
       {/* HERO SECTION */}
       <section className="relative overflow-hidden">
-        <div className="relative h-[820px] tablet:h-[440px] laptop:h-[860px] [@media(min-width:1920px)_and_(min-height:1800px)]:h-[1100px]">
+        <div className="relative h-[820px] tablet:h-[440px] laptop:h-[860px] [@media(min-width:1920px)_and_(min-height:1800px)]:h-[1080px]">
           <Image
             src={solution.heroImage}
             alt={solution.heroTitle}
@@ -31,8 +31,8 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
         </div>
 
         {/* HERO TEXT */}
-        <div className="absolute inset-x-0 top-[47%] z-10 -translate-y-1/2 px-9 tablet:top-auto tablet:bottom-16 tablet:translate-y-0 tablet:px-[78px] laptop:bottom-auto laptop:top-1/2 laptop:-translate-y-1/2 laptop:px-[120px]">
-          <h1 className="text-[28px] font-display leading-[1.14] tracking-tight text-white tablet:text-[42px] tablet:leading-[1.08] laptop:text-[48px] [@media(min-width:1920px)_and_(min-height:1800px)]:text-[52px]">
+        <div className="absolute inset-x-0 top-[47%] z-10 -translate-y-1/2 px-9 tablet:top-auto tablet:bottom-16 tablet:translate-y-0 tablet:px-[78px] laptop:bottom-auto laptop:top-1/2 laptop:-translate-y-1/2 laptop:px-[110px]">
+          <h1 className="text-[28px] font-display leading-[1.14] tracking-tight text-white tablet:text-[42px] tablet:leading-[1.28] laptop:text-[42px] laptop:pt-16 [@media(min-width:1920px)_and_(min-height:1800px)]:text-[48px] pb-22">
             {solution.heroTitle === "Optimized Fiber-Optic Solution" ? (
               <>
                 <span>Optimized Fiber-Optic </span><br className="laptop:hidden" /><span>Solution</span>
