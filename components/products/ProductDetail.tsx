@@ -111,7 +111,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
             </div>
           </div>
 
-          <div className="w-full pt-1 text-left text-[16px] font-normal leading-[1.35] text-brand-black/80 tablet:pt-4 tablet:text-lg tablet:leading-8 laptop:w-[38%] laptop:pt-0 laptop:self-center laptop:text-[20px] laptop:leading-[1.32] [@media(min-width:1920px)_and_(min-height:1800px)]:w-[36%]">
+          <div className="w-full pt-1 text-left text-[16px] font-normal leading-[1.35] text-brand-black/80 tablet:pt-4 tablet:text-lg tablet:leading-8 laptop:w-[38%] laptop:pt-0 laptop:self-center laptop:text-[20px] laptop:leading-[1.32] [@media(min-width:1920px)_and_(min-height:1800px)]:w-[37.5%]">
             <div className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: product.connectParaHtml }} />
           </div>
         </div>
@@ -151,7 +151,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
           {product.highlights.map((item) => (
             <article key={item.title} className="w-full laptop:w-[30%]">
               <h3 className="text-lg font-display text-brand-orange tablet:text-xl laptop:text-2xl">{item.title}</h3>
-              <p className="mt-1 text-base leading-[1.45] text-brand-black tablet:mt-2 tablet:text-lg tablet:leading-7">{item.para}</p>
+              <p className="mt-1 text-base leading-[1.45] laptop:text-xl text-brand-black tablet:mt-2 tablet:text-lg tablet:leading-7">{item.para}</p>
             </article>
           ))}
         </div>
@@ -215,6 +215,21 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
                   rel="noreferrer"
                   className="mt-4 inline-flex w-fit items-center gap-2 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-5 py-[6px] text-lg font-display !text-white transition-colors duration-200 hover:bg-white hover:!text-black"
                 >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="h-4 w-4 shrink-0"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 3v12" />
+                    <path d="m7 10 5 5 5-5" />
+                    <path d="M5 21h14" />
+                  </svg>
                   Download
                 </a>
               </>
