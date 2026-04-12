@@ -316,6 +316,21 @@ main {
 }
 
 @media (min-width: 1025px) {
+  .contact-phone-wrap .react-tel-input .form-control {
+    padding-left: 48px !important;
+  }
+
+  .contact-phone-wrap .react-tel-input .selected-flag {
+    width: 40px !important;
+    padding-left: 10px !important;
+  }
+
+  .contact-phone-wrap .react-tel-input .selected-flag .arrow {
+    left: 26px !important;
+  }
+}
+
+@media (min-width: 1025px) {
   .product-spec-swiper .swiper-button-prev,
   .product-spec-swiper .swiper-button-next {
     color: #ffffff !important;
