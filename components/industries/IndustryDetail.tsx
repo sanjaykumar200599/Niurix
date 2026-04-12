@@ -227,7 +227,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
                   <Image src={card.image} alt={card.title} fill sizes="(min-width: 1024px) 72px, 64px" className="object-contain" />
                 </div>
 
-                <h3 className="text-[13px] font-sans font-medium leading-[1.3] text-brand-black tablet:text-[18px] laptop:text-[20px]  [@media(min-width:1920px)_and_(min-height:1800px)]:pt-5">
+                <h3 className="text-[13px] font-sans font-medium leading-[1.3] text-brand-black tablet:text-[18px] laptop:pt-3 laptop:text-[20px] [@media(min-width:1920px)_and_(min-height:1800px)]:pt-5">
                   {card.title}
                 </h3>
               </div>
