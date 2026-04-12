@@ -56,17 +56,17 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="w-full">
-      <div className="grid gap-4 laptop:grid-cols-2 laptop:gap-5">
-        <div className="laptop:max-w-[310px]">
+      <div className="grid gap-4 laptop:grid-cols-2 laptop:gap-7">
+        <div className="laptop:max-w-[440px]">
           <input
             name="name"
             placeholder="Name"
-            className="h-[47px] w-full rounded-[10px_0px] border border-black/20 px-4 text-base font-normal text-black/55 placeholder:text-black/28 focus:border-black/30 focus:outline-none focus:ring-0"
+            className="h-[48px] w-full rounded-[10px_0px] border border-black/20 px-4 text-base font-normal text-black/55 placeholder:text-black/28 focus:border-black/30 focus:outline-none focus:ring-0"
           />
           {state.fieldErrors?.name ? <p className="mt-1 text-sm text-black">{state.fieldErrors.name}</p> : null}
         </div>
 
-        <div className="contact-phone-wrap laptop:max-w-[400px]">
+        <div className="contact-phone-wrap laptop:max-w-[423px]">
           <PhoneInput
             country="us"
             enableSearch={true}
@@ -78,22 +78,22 @@ export default function ContactForm() {
           />
         </div>
 
-        <div className="laptop:col-start-1 laptop:col-end-2 laptop:max-w-[310px]">
+        <div className="laptop:col-start-1 laptop:col-end-2 laptop:max-w-[440px]">
           <input
             type="email"
             name="email"
             placeholder="Email"
-            className="h-[47px] w-full rounded-[10px_0px] border border-black/20 px-4 text-base font-normal text-black/55 placeholder:text-black/28 focus:border-black/30 focus:outline-none focus:ring-0"
+            className="h-[48px] w-full rounded-[10px_0px] border border-black/20 px-4 text-base font-normal text-black/55 placeholder:text-black/28 focus:border-black/30 focus:outline-none focus:ring-0"
           />
           {state.fieldErrors?.email ? <p className="mt-1 text-sm text-black">{state.fieldErrors.email}</p> : null}
         </div>
 
-        <div className="laptop:col-span-2">
+        <div className="laptop:col-span-2 laptop:max-w-[1054px]">
           <textarea
             name="message"
             placeholder="Message"
             rows={3}
-            className="h-[56px] w-full rounded-[10px_0px] border border-black/20 px-4 py-3 text-base font-normal text-black/55 placeholder:text-black/28 focus:border-black/30 focus:outline-none focus:ring-0"
+            className="h-[50px] w-full rounded-[10px_0px] border border-black/20 px-4 py-3 text-base font-normal text-black/55 placeholder:text-black/28 focus:border-black/30 focus:outline-none focus:ring-0"
           />
         </div>
       </div>
@@ -102,7 +102,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={pending}
-          className="cursor-pointer rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-lg font-display text-white disabled:opacity-60"
+          className="cursor-pointer rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-lg font-sans text-white disabled:opacity-60 laptop:text-[20px]"
         >
           {pending ? "Submitting..." : "Submit"}
         </button>
