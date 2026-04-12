@@ -102,7 +102,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
             ))}
           </div>
 
-          <div className="mt-10 grid grid-cols-6 gap-x-10 gap-y-10 px-4">
+          <div className="mt-10 grid grid-cols-6 gap-x-5 gap-y-10 pl-12 pr-8">
             {industry.devices.slice(4, 10).map((device) => (
               <article key={device.title} className="flex w-full flex-col items-center text-center">
                 <div className="flex h-[96px] items-center justify-center">
