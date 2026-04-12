@@ -187,7 +187,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
               <button
                 type="button"
                 onClick={() => setTab("dim")}
-                className={`border-b-[3px] pb-1 text-[24px] font-display tablet:text-[28px] laptop:ml-30 laptop:w-[170px] laptop:text-left laptop:text-[24px] [@media(min-width:1920px)_and_(min-height:1800px)]:pl-30 ${
+                className={`border-b-[3px] pb-1 text-[24px] font-display tablet:text-[28px] laptop:ml-32 laptop:w-fit laptop:text-left laptop:text-[24px] [@media(min-width:1920px)_and_(min-height:1800px)]:ml-60  ${
                   tab === "dim" ? "border-brand-orange text-brand-orange" : "border-transparent text-brand-black/30"
                 }`}
               >
