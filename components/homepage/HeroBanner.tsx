@@ -11,7 +11,7 @@ export default function HeroBanner({ banners }: { banners: HomeData["banners"] }
     <div className="homepage-swiper relative">
       <Swiper modules={[Pagination, Parallax]} speed={600} parallax pagination={{ clickable: true }}>
         {banners.map((item, index) => {
-          const mobilePara = item.para.replace("Multiple Services", "Multiple\nServices");
+          const mobilePara = item.para.replace("Multiple Services", "Multiple Services");
           const isFirstSlide = index === 0;
 
           return (
