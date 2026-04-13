@@ -39,7 +39,7 @@ export default function SoftwarePage({ software }: SoftwarePageProps) {
           <div className="absolute inset-0 bg-black/10" />
 
           <div className="relative z-10 flex h-full items-center px-9 tablet:items-end tablet:px-[78px] tablet:pb-16 laptop:px-[120px] laptop:pb-28 [@media(min-width:1920px)_and_(min-height:1800px)]:pb-98">
-            <h1 className="w-[85%] text-[32px] font-display leading-tight text-white tablet:w-[70%] tablet:text-[34px] laptop:w-[35%] laptop:text-[48px] [@media(min-width:1920px)_and_(min-height:1800px)]:w-[42%]">
+            <h1 className="w-[85%] text-[32px] font-sans leading-tight text-white tablet:w-[70%] tablet:text-[34px] laptop:w-[35%] laptop:text-[48px] [@media(min-width:1920px)_and_(min-height:1800px)]:w-[42%]">
               {renderSoftwareHeroTitle(software.heroTitle)}
             </h1>
           </div>

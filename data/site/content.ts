@@ -197,6 +197,13 @@ const legacySolutions = [
 
 export const canonicalSolutionSlugs = legacySolutions.map((item) => item.slug);
 
+const solutionHeroTitleBySlug: Record<string, string> = {
+  "optimized-fiber-optic-solution": "Optimized Fiber-Optic Solution",
+  "fibers-edge-over-copper": "Fiber's Edge Over Copper",
+  "scalable-and-future-ready-design": "Scalable and Future Ready Design",
+  "configurations-and-personalized-support": "Configurations and Personalized Support",
+};
+
 export const solutions: SolutionContent[] = legacySolutions.map(({ slug, folder, data }) =>
   SolutionContentSchema.parse({
     slug,
@@ -205,7 +212,7 @@ export const solutions: SolutionContent[] = legacySolutions.map(({ slug, folder,
       description: data.meta_description,
       canonicalPath: `/solutions/${slug}`,
     },
-    heroTitle: data.section1.title,
+    heroTitle: solutionHeroTitleBySlug[slug] ?? data.section1.title,
     heroImage: assetPath("assets", "solutions", folder, `${data.section1.banner}.webp`),
     heroImageMobile: assetPath("assets", "solutions", "mobile_banners", folder, `${data.section1.banner_mobile}.webp`),
     introTitleHtml: data.section2.heading,
@@ -231,14 +238,11 @@ type BaseProductSeed = {
 
 const modelFromProductSlug = (slug: string) => slug.split("-").slice(1).join("-");
 
-const modelFromProductSubHeading = (subHeading: string, slug: string) => {
-  const rightSegment = subHeading.includes("|") ? subHeading.split("|").at(-1) ?? subHeading : subHeading;
-  const withoutBrand = rightSegment.replace(/^\s*Niurix\s+/i, "").trim();
-  const withoutTypeSuffix = withoutBrand.replace(/\s+(ONT|OLT)\s*$/i, "").trim();
-  const normalizedSpaces = withoutTypeSuffix.replace(/\s{2,}/g, " ");
-  const normalizedModel = normalizedSpaces.replace(/\bMOLT\s+XGSPON\b/i, "MOLT-XGSPON");
-
-  return normalizedModel || modelFromProductSlug(slug);
+const productDisplayModelBySlug: Record<string, string> = {
+  "ONT-P4200R": "P4200R",
+  "ONT-T2001": "T2001",
+  "OLT-SOLT33-8P": "SOLT33-08P",
+  "OLT-XGSPON-8P": "MOLT-XGSPON 8P",
 };
 
 const baseProductSeeds: BaseProductSeed[] = [
@@ -253,7 +257,7 @@ const baseProducts: ProductContent[] = baseProductSeeds.map(({ slug, type, data,
   if (!section5) {
     throw new Error(`Product data for ${slug} is missing section5[0]`);
   }
-  const model = modelFromProductSubHeading(data.section2.subHeading, slug);
+  const model = productDisplayModelBySlug[slug] ?? modelFromProductSlug(slug);
 
   return ProductContentSchema.parse({
     slug,
@@ -337,6 +341,12 @@ const mappedIndustries = [
 export const canonicalIndustrySlugs = mappedIndustries.map((item) => item.slug);
 export const legacyIndustrySlugs = mappedIndustries.map((item) => item.legacy);
 
+const industryHeroTitleBySlug: Record<string, string> = {
+  hospitality: "Catering to Exceptional Guest Experiences: Pioneering Next-Gen Networking Solutions to Redefine Hospitality.",
+  "corporate-workspaces": "Corporate Workspaces that Work: Reimagine Connectivity Solutions for Modern Workforce.",
+  "student-living": "Fiber Optic Solutions for Learning: Get the Speed You Need to Succeed.",
+};
+
 export const industries: IndustryContent[] = mappedIndustries.map(({ slug, legacy, data, folder }) =>
   IndustryContentSchema.parse({
     slug,
@@ -346,7 +356,7 @@ export const industries: IndustryContent[] = mappedIndustries.map(({ slug, legac
       description: data.meta_description,
       canonicalPath: `/industries/${slug}`,
     },
-    heroTitle: data.section1.title,
+    heroTitle: industryHeroTitleBySlug[slug] ?? data.section1.title,
     heroImage: assetPath("assets", "industries", folder, `${data.section1.banner_img}.webp`),
     heroImageMobile: assetPath("assets", "industries", "mobile_banners", folder, `${data.section1.banner_img_mobile}.webp`),
     introTitleHtml: data.section2.title,
@@ -373,7 +383,7 @@ export const softwareContent: SoftwareContent = SoftwareContentSchema.parse({
     description: softwareData.meta_description,
     canonicalPath: "/software",
   },
-  heroTitle: softwareData.section1.title,
+  heroTitle: "Fiber for the Future: Advancing Connectivity and Control for the Users Today.",
   heroImage: assetPath("assets", "software", "Banner.webp"),
   heroImageMobile: assetPath("assets", "software", "Software banner Mobile.webp"),
   introTitleHtml: softwareData.section2.title,
