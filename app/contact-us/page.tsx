@@ -98,12 +98,12 @@ export default function ContactUsPage() {
       </section>
 
       <section className="px-9 pb-8 pt-2 tablet:px-20 tablet:pb-12 tablet:pt-4 laptop:px-[120px] laptop:pb-36 laptop:pt-20">
-        <div className="flex flex-col gap-8 laptop:flex-row laptop:justify-between">
+        <div className="flex flex-col gap-8 laptop:flex-row laptop:justify-between mt-7">
           <div className="w-full border-b border-[#d6d6d6] pb-8 laptop:w-[70%] laptop:border-b-0 laptop:border-r laptop:pb-0 laptop:pr-8">
             <h2 className="mt-4 text-[30px] font-sans text-brand-black tablet:mt-5 tablet:text-[29px] laptop:mt-10 laptop:text-[42px] ">
               <span className="text-brand-orange">Get in</span> Touch
             </h2>
-            <p className="mt-4 w-full text-base font-body-light leading-[1.6] text-brand-black/75 tablet:w-[85%] tablet:text-lg laptop:mt-2 laptop:text-[20px] [@media(min-width:1920px)_and_(min-height:1800px)]:w-[90%]">
+            <p className="mt-4 w-full text-base font-body-light leading-[1.2] text-brand-black/75 tablet:w-[85%] tablet:text-lg laptop:mt-2 laptop:text-[20px] [@media(min-width:1920px)_and_(min-height:1800px)]:w-[90%]">
               Let&apos;s connect. Your feedback, questions, and ideas matter to us and we are there to provide answers and support. Enter your details in the form below and we will be in touch with you as soon as possible.
             </p>
 
@@ -112,8 +112,8 @@ export default function ContactUsPage() {
             </div>
           </div>
 
-          <aside className="w-full tablet:flex tablet:justify-center laptop:flex laptop:w-[25%] laptop:items-center laptop:justify-center">
-            <div className="w-full tablet:w-[58%] laptop:w-full laptop:max-w-[360px] rounded-tl-[30px] rounded-br-[30px] border border-[#ff5b0299] px-8 py-8 tablet:px-7 tablet:py-7 laptop:px-8 laptop:py-8 shadow-[0px_3px_30px_#ff5b0233]">
+          <aside className="w-full tablet:flex tablet:justify-center laptop:flex laptop:w-[25%] laptop:items-center laptop:justify-center [@media(min-width:1920px)_and_(min-height:1800px)]:items-start">
+            <div className="w-full tablet:w-[58%] laptop:w-full laptop:max-w-[360px] [@media(min-width:1920px)_and_(min-height:1800px)]:my-[63px] [@media(min-width:1920px)_and_(min-height:1800px)]:max-w-[420px] rounded-tl-[30px] rounded-br-[30px] border border-[#ff5b0299] px-8 py-8 tablet:px-7 tablet:py-7 laptop:px-8 laptop:py-8 [@media(min-width:1920px)_and_(min-height:1800px)]:px-16 [@media(min-width:1920px)_and_(min-height:1800px)]:py-8 shadow-[0px_3px_30px_#ff5b0233]">
               <div className="mb-6 flex items-center gap-4">
                 <Image src="/assets/contactus/Layer 2.svg" alt="Support icon" width={50} height={46} className="h-auto w-auto" />
                 <p className="text-xl font-display whitespace-nowrap tablet:text-2xl">Technical support</p>
