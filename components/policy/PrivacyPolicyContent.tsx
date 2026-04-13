@@ -2,10 +2,10 @@
 
 function InlineHeading({ title, children }: { title: string; children: ReactNode }) {
   return (
-    <p className="text-justify text-[16px] leading-[1.9rem] text-[#3c4452] tablet:text-[16px] laptop:text-[18px]">
+    <p className="text-justify text-[16px] leading-[1.9rem] text-[#1D1D1D] tablet:text-[16px] laptop:text-[20px] laptop:font-body-light">
       <span className="font-sans text-brand-orange text-[22px] tablet:text-[24px] laptop:text-[24px]">{title}</span>
       <span className="mx-2 text-brand-orange">-</span>
-      <span className="font-sans text-[#3c4452] text-[16px] tablet:text-[16px] laptop:text-[18px]">{children}</span>
+      <span className="font-sans text-[#1D1D1D] text-[16px] tablet:text-[16px] laptop:text-[20px] laptop:font-body-light">{children}</span>
     </p>
   );
 }
@@ -13,17 +13,17 @@ function InlineHeading({ title, children }: { title: string; children: ReactNode
 export default function PrivacyPolicyContent() {
   return (
     <section className="bg-[#ececec]">
-      <div className="mx-auto w-full px-4 py-20 text-[#3c4452] tablet:px-8 tablet:py-[88px] laptop:px-[140px] laptop:pb-10 laptop:pt-[180px] [@media(min-width:1025px)_and_(max-width:1367px)]:px-[80px] [@media(min-width:1367px)_and_(max-width:1600px)]:px-[100px]">
+      <div className="mx-auto w-full px-4 py-20 text-[#1D1D1D] tablet:px-8 tablet:py-[88px] laptop:px-[140px] laptop:pb-10 laptop:pt-[180px] laptop:font-body-light [@media(min-width:1025px)_and_(max-width:1367px)]:px-[80px] [@media(min-width:1367px)_and_(max-width:1600px)]:px-[100px]">
         <p className="text-right font-sans text-[16px] text-[#3f4654] tablet:text-[18px] laptop:text-[20px]">
           Effective Date : February 09, 2026
         </p>
 
-        <h1 className="mt-5 text-center font-display font-semibold text-[30px] leading-tight text-brand-orange tablet:text-[32px] laptop:text-[42px]">
+        <h1 className="mt-5 text-center font-display font-semibold text-[30px] leading-tight text-brand-orange tablet:text-[32px] laptop:text-[28px] laptop:font-body-medium">
           Privacy Policy
         </h1>
 
-        <div className="mt-8 space-y-5 text-[16px] leading-[1.9rem] tablet:text-[16px] laptop:text-[18px]">
-          <h2 className="mb-3 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">1. Overview</h2>
+        <div className="mt-8 space-y-5 text-[16px] leading-[1.9rem] tablet:text-[16px] laptop:text-[20px] laptop:font-body-light">
+          <h2 className="mb-3 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[28px] laptop:font-body-medium">1. Overview</h2>
 
           <p className="text-justify">
             Your privacy is important to Niurix. This privacy statement applies to data collected through websites owned and operated by Niurix.
@@ -35,7 +35,7 @@ export default function PrivacyPolicyContent() {
             such as marketing and customer service and support.
           </p>
 
-          <h2 className="mb-2 pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">2. What Information Do We Collect?</h2>
+          <h2 className="mb-2 pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[28px] laptop:font-body-medium">2. What Information Do We Collect?</h2>
 
           <p className="text-justify">
             Niurix collects data to enable us to make our products available to you, and to provide you with the best experience on our website and with our
@@ -80,7 +80,7 @@ export default function PrivacyPolicyContent() {
             we correct them promptly in accordance with documented internal processes.
           </InlineHeading>
 
-          <h2 className="mb-2 pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">3. What Do We Use Your Information For?</h2>
+          <h2 className="mb-2 pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[28px] laptop:font-body-medium">3. What Do We Use Your Information For?</h2>
 
           <p className="text-justify">
             We use the data we collect to operate our business, and to make products available to you. This includes using the data to improve our Niurix product,
@@ -131,7 +131,7 @@ export default function PrivacyPolicyContent() {
             and choose whether you want to receive marketing communications from us.
           </InlineHeading>
 
-          <h2 className="mb-2 pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">4. How Do We Protect Your Information?</h2>
+          <h2 className="mb-2 pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[28px] laptop:font-body-medium">4. How Do We Protect Your Information?</h2>
 
           <p className="text-justify">
             We implement a variety of security measures to help maintain the safety of your information when you enter, submit, or access your information. We
@@ -139,7 +139,7 @@ export default function PrivacyPolicyContent() {
             required to keep the information confidential.
           </p>
 
-          <h2 className="mb-2 pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">
+          <h2 className="mb-2 pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[28px] laptop:font-body-medium">
             5. How Do We Ensure That Our Processing Systems Remain Confidential, Resilient, and Available?
           </h2>
 
@@ -170,7 +170,7 @@ export default function PrivacyPolicyContent() {
             permitted to access the data centres.
           </InlineHeading>
 
-          <h2 className="mb-2 pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">6. Do We Disclose any Information to Outside Parties?</h2>
+          <h2 className="mb-2 pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[28px] laptop:font-body-medium">6. Do We Disclose any Information to Outside Parties?</h2>
 
           <p className="text-justify">
             We share your data with your consent, or as necessary to make our product available to you. We also share your data with vendors working on our behalf;
@@ -195,7 +195,7 @@ export default function PrivacyPolicyContent() {
             your information to third parties.
           </p>
 
-          <h2 className="mb-2 pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">7. How to Access and Control Your personal data?</h2>
+          <h2 className="mb-2 pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[28px] laptop:font-body-medium">7. How to Access and Control Your personal data?</h2>
 
           <p className="text-justify">
             You can view, access, edit, or request a copy of your data. You can also delete certain elements of your data or move certain elements of your data to
@@ -240,7 +240,7 @@ export default function PrivacyPolicyContent() {
             documented procedures. If a request is denied, data subjects will be informed of the reason(s) and any rights to challenge, consistent with Section 7.1.2.
           </InlineHeading>
 
-          <h2 className="mb-2 pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">
+          <h2 className="mb-2 pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[28px] laptop:font-body-medium">
             8. Where Do We Store and Process Personal Data and Conduct International Transfers?
           </h2>
 
@@ -277,7 +277,7 @@ export default function PrivacyPolicyContent() {
             notification. We encourage you to review this Policy periodically to learn how Niurix is protecting your information.
           </InlineHeading>
 
-          <h2 className="mb-2 pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">9. How to Contact Us?</h2>
+          <h2 className="mb-2 pt-1 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[28px] laptop:font-body-medium">9. How to Contact Us?</h2>
 
           <p className="text-justify">
             If you have a technical or support question, please send us an email at{" "}
