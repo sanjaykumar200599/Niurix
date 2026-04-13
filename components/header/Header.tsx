@@ -230,7 +230,7 @@ export default function Header() {
                       ref={(node) => {
                         desktopTriggerRefs.current[tab.menuKey!] = node;
                       }}
-                      className={`whitespace-nowrap text-xl font-sans transition ${open || routeActive ? "text-brand-orange" : "text-black hover:text-brand-orange"}`}
+                      className={`cursor-pointer whitespace-nowrap text-xl font-sans transition ${open || routeActive ? "text-brand-orange" : "text-black hover:text-brand-orange"}`}
                       onClick={() => toggleDesktopMenu(tab.menuKey!)}
                     >
                       {tab.label}
@@ -238,7 +238,7 @@ export default function Header() {
                   ) : (
                     <Link
                       href={tab.href}
-                      className={`whitespace-nowrap text-xl font-sans transition ${routeActive ? "text-brand-orange!" : "text-brand-black! hover:text-brand-orange!"}`}
+                      className={`cursor-pointer whitespace-nowrap text-xl font-sans transition ${routeActive ? "text-brand-orange!" : "text-brand-black! hover:text-brand-orange!"}`}
                       onClick={closeMenus}
                     >
                       {tab.label}
@@ -250,7 +250,7 @@ export default function Header() {
 
             <Link
               href="/contact-us"
-              className={`ml-3 min-w-[150px] rounded-[10px_0px] border-2 border-brand-orange px-2 py-2 text-center text-xl font-sans transition [@media(min-width:1025px)_and_(max-width:1280px)]:min-w-[130px] [@media(min-width:1025px)_and_(max-width:1280px)]:px-3 ${
+              className={`cursor-pointer ml-3 min-w-[150px] rounded-[10px_0px] border-2 border-brand-orange px-2 py-2 text-center text-xl font-sans transition [@media(min-width:1025px)_and_(max-width:1280px)]:min-w-[130px] [@media(min-width:1025px)_and_(max-width:1280px)]:px-3 ${
                 isContactRouteActive
                   ? "bg-white text-brand-black! visited:text-brand-black!"
                   : "bg-brand-orange text-white! visited:text-white! hover:bg-white hover:text-brand-black!"
