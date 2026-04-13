@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Squash as Hamburger } from "hamburger-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { headerNavigation, type HeaderNavigationItem } from "@/data/site/content";
@@ -33,6 +34,7 @@ const HEADER_ARROW_DOWN_THRESHOLD = 22;
 const KEYBOARD_SCROLL_WINDOW_MS = 250;
 
 export default function Header() {
+  const pathname = usePathname();
   const shellRef = useRef<HTMLDivElement | null>(null);
   const desktopTriggerRefs = useRef<Partial<Record<HeaderMenuKey, HTMLButtonElement | null>>>({});
   const arrowDownCountRef = useRef(0);
@@ -182,6 +184,24 @@ export default function Header() {
     });
   };
 
+  const isTabRouteActive = (key: DesktopTab["key"]) => {
+    if (!pathname) return false;
+    const normalizedPath = pathname.toLowerCase();
+
+    if (key === "solutions") return normalizedPath.startsWith("/solutions");
+    if (key === "products") return normalizedPath.startsWith("/products");
+    if (key === "software") return normalizedPath.startsWith("/software");
+    if (key === "industries") return normalizedPath.startsWith("/industries");
+
+    return false;
+  };
+
+  const isContactRouteActive = useMemo(() => {
+    if (!pathname) return false;
+    const normalizedPath = pathname.toLowerCase();
+    return normalizedPath.startsWith("/contact-us");
+  }, [pathname]);
+
   return (
     <header className="relative z-50">
       <div
@@ -200,6 +220,7 @@ export default function Header() {
           <nav className="ml-8 flex flex-1 items-baseline justify-end gap-3 [@media(min-width:1025px)_and_(max-width:1280px)]:pr-6">
             {desktopTabs.map((tab) => {
               const open = tab.menuKey ? activeDesktopMenu === tab.menuKey : false;
+              const routeActive = isTabRouteActive(tab.key);
 
               return (
                 <div key={tab.key} className="relative flex items-center justify-center px-4 [@media(min-width:1025px)_and_(max-width:1280px)]:px-2">
@@ -209,7 +230,7 @@ export default function Header() {
                       ref={(node) => {
                         desktopTriggerRefs.current[tab.menuKey!] = node;
                       }}
-                      className={`whitespace-nowrap text-xl font-sans transition ${open ? "text-brand-orange" : "text-black hover:text-brand-orange"}`}
+                      className={`whitespace-nowrap text-xl font-sans transition ${open || routeActive ? "text-brand-orange" : "text-black hover:text-brand-orange"}`}
                       onClick={() => toggleDesktopMenu(tab.menuKey!)}
                     >
                       {tab.label}
@@ -217,7 +238,7 @@ export default function Header() {
                   ) : (
                     <Link
                       href={tab.href}
-                      className="whitespace-nowrap text-xl font-sans text-brand-black! transition hover:text-brand-orange!"
+                      className={`whitespace-nowrap text-xl font-sans transition ${routeActive ? "text-brand-orange!" : "text-brand-black! hover:text-brand-orange!"}`}
                       onClick={closeMenus}
                     >
                       {tab.label}
@@ -229,7 +250,11 @@ export default function Header() {
 
             <Link
               href="/contact-us"
-              className="ml-3 min-w-[150px] rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-2 py-2 text-center text-xl font-sans text-white! visited:text-white! transition hover:bg-white hover:text-brand-black! [@media(min-width:1025px)_and_(max-width:1280px)]:min-w-[130px] [@media(min-width:1025px)_and_(max-width:1280px)]:px-3"
+              className={`ml-3 min-w-[150px] rounded-[10px_0px] border-2 border-brand-orange px-2 py-2 text-center text-xl font-sans transition [@media(min-width:1025px)_and_(max-width:1280px)]:min-w-[130px] [@media(min-width:1025px)_and_(max-width:1280px)]:px-3 ${
+                isContactRouteActive
+                  ? "bg-white text-brand-black! visited:text-brand-black!"
+                  : "bg-brand-orange text-white! visited:text-white! hover:bg-white hover:text-brand-black!"
+              }`}
               onClick={closeMenus}
             >
               Contact Us
