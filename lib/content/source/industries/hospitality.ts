@@ -5,7 +5,7 @@ export const hospitality = {
     section1: {
         banner_img: "Hospitality Banner",
         banner_img_mobile: "Hosp Banner",
-        title: "Catering to Exceptional Guest Experiences: Pioneering Next-Gen Networking Solutions to Redefine Hospitality.",
+        title: "Hospitality Fiber Networks | GPON Solutions for Hotels",
     },
     section2: {
         img: "HOSPITALITY1",

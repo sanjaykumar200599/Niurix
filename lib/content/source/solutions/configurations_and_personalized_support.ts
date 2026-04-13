@@ -5,7 +5,7 @@ export const configurations_and_personalized_support = {
     section1: {
         banner: "configurations_and_personalized_support_banner",
         banner_mobile: "Configurations and Personalized Support",
-        title: "Configurations and Personalized Support",
+        title: "GPON Network Configuration & Deployment Support | Niurix",
     },
 
     section2: {

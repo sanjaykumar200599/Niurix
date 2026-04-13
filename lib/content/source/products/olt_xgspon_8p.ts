@@ -9,7 +9,7 @@ export const olt_xgspon_8p = {
 
     section2: {
         mainHeading: `<span>Our</span> Product (OLTs)`,
-        subHeading: "Niurix MOLT-XGSPON 8P",
+        subHeading: "GPON & XGSPON OLT | Niurix MOLT XGSPON 8P",
         mainPara: "",
         para: `<p>The Niurix MOLT XGSPON 8P OLT is an advanced, enterprise-ready fiber access platform designed to support GPON and XGPON within a compact and efficient footprint.
         <br>Built for growing properties and mid-scale deployments, it enables organizations to transition from GPON today to higher-bandwidth PON technologies tomorrow - without redesigning the network core.

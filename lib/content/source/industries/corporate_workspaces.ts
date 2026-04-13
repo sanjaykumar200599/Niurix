@@ -5,7 +5,7 @@ export const corporate_workspaces = {
     section1: {
         banner_img: "Corporate Banner",
         banner_img_mobile: "Corporate banner",
-        title: "Corporate Workspaces that Work: Reimagine Connectivity Solutions for Modern Workforce.",
+        title: "Corporate Fiber Network Solutions | GPON for Workspaces",
     },
     section2: {
         img: "CORPORATE WORKSPACES1",

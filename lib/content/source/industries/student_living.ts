@@ -5,7 +5,7 @@ export const student_living = {
     section1: {
         banner_img: "Student Living Banner",
         banner_img_mobile: "Student banner",
-        title: "Fiber Optic Solutions for Learning: Get the Speed You Need to Succeed.",
+        title: "Student Living Fiber Networks | GPON Connectivity Solutions",
     },
     section2: {
         img: "STUDENT LIVING1",

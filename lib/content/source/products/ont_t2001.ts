@@ -9,7 +9,7 @@ export const ont_t2001 = {
 
     section2: {
         mainHeading: `<span>Our</span> Product (ONTs)`,
-        subHeading: "Niurix T2001",
+        subHeading: " Compact GPON Fiber Endpoint | Niurix T2001 ONT",
         para: `<p>The Niurix T2001 is a compact fiber endpoint designed for environments that require streamlined connectivity with essential services. It delivers high-speed internet, voice, and TV over a single fiber connection reducing in-room complexity while maintaining a consistent service experience. Designed for hospitality and residential deployments, this ONT supports clean installations, efficient power usage, and simplified maintenance, making it ideal for properties focused on operational efficiency and modern interiors.</p>`,
         background_img1: "Overview background v2",
         background_img1_mobile: "Product T2001 backg",

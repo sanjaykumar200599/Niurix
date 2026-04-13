@@ -4,7 +4,7 @@ export const optimized_fiber_optic_solution = {
     section1: {
         banner: "optimized_fiber_optic_solution_banner",
         banner_mobile: "Optimized Fiber-Optic Solution baanner",
-        title: "Optimized Fiber-Optic Solution",
+        title: "Optimized GPON Fiber Solutions | Unified Fiber Architecture by Niurix",
     },
 
     section2: {

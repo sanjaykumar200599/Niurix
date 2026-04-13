@@ -202,7 +202,7 @@ export const solutions: SolutionContent[] = legacySolutions.map(({ slug, folder,
   SolutionContentSchema.parse({
     slug,
     seo: {
-      title: `${data.section1.title} | Niurix`,
+      title: `${data.section1.title}`,
       description: data.meta_description,
       canonicalPath: `/solutions/${slug}`,
     },
@@ -246,7 +246,7 @@ const baseProducts: ProductContent[] = baseProductSeeds.map(({ slug, type, data,
   return ProductContentSchema.parse({
     slug,
     seo: {
-      title: `Niurix ${data.section2.subHeading} | Product`,
+      title: `${data.section2.subHeading}`,
       description: data.meta_description,
       canonicalPath: `/products/${slug}`,
       noindex: legacy,
@@ -336,7 +336,7 @@ export const industries: IndustryContent[] = mappedIndustries.map(({ slug, legac
     slug,
     legacySlugs: [legacy],
     seo: {
-      title: `${data.section1.title} | Niurix`,
+      title: `${data.section1.title}`,
       description: data.meta_description,
       canonicalPath: `/industries/${slug}`,
     },
@@ -363,7 +363,7 @@ const softwareData = software as LegacySoftwareSource;
 
 export const softwareContent: SoftwareContent = SoftwareContentSchema.parse({
   seo: {
-    title: "GPON Software | Niurix",
+    title: "GPON Network Monitoring & Management Software | Niurix",
     description: softwareData.meta_description,
     canonicalPath: "/software",
   },
@@ -470,7 +470,7 @@ export const policyPages: PolicyPageContent[] = [
   PolicyPageContentSchema.parse({
     slug: "privacy-policy",
     seo: {
-      title: "Privacy Policy | Niurix",
+      title: "Niurix - Privacy Policy",
       description: "Read how Niurix collects, uses, and protects personal information.",
       canonicalPath: "/privacy-policy",
     },
@@ -492,7 +492,7 @@ export const policyPages: PolicyPageContent[] = [
   PolicyPageContentSchema.parse({
     slug: "terms-and-conditions",
     seo: {
-      title: "Terms and Conditions | Niurix",
+      title: "Niurix - Terms And Conditions",
       description: "Terms and conditions governing the use of Niurix websites and services.",
       canonicalPath: "/terms-and-conditions",
     },

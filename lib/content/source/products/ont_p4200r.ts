@@ -9,7 +9,7 @@ export const ont_p4200r = {
 
     section2: {
         mainHeading: `<span>Our</span> Product (ONTs)`,
-        subHeading: "Niurix P4200R",
+        subHeading: "GPON Optical Network Termination | Niurix P4200R ONT ",
         mainPara: "",
         para: `The Niurix P4200R (Optical Network Terminal) is a full-feature ONT exclusively designed for triple-play services (internet, television, and voice). Typically consisting of 4 Gigabit Ethernet(GbE)/PoE ports can be used extensively for connecting multiple devices over the internet. \n\nP4200R's broad features include one CATV port, and two analog phone ports, and houses the ability to power PoE devices through the ONT. This desktop ONT is commonly used in FTTB (Fiber to the Building) for simplifying FTTR (Fiber to the Room) services.`,
         background_img1: "overview background",

@@ -4,7 +4,7 @@ export const fibers_edge_over_copper = {
     section1: {
         banner: "fibers_edge_over_copper_banner",
         banner_mobile: "Fiber's Edge Over Copper banner",
-        title: "Fiber's Edge Over Copper",
+        title: " Fiber vs Copper Networks | GPON Fiber Advantages Explained",
     },
 
     section2: {

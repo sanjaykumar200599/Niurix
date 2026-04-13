@@ -4,7 +4,7 @@ export const scalable_and_future_ready_design = {
     section1: {
         banner: "scalable_and_future_ready_design_banner",
         banner_mobile: "Scalable andFuture-Ready Design banner",
-        title: "Scalable and Future -Ready Design",
+        title: "Scalable GPON Network Architecture | Future-Ready Fiber Design",
     },
 
     section2: {

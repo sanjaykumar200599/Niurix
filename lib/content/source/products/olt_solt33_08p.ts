@@ -9,7 +9,7 @@ export const olt_solt33_08p = {
 
     section2: {
         mainHeading: `<span>Our</span> Product (OLTs)`,
-        subHeading: "Niurix SOLT33-08P",
+        subHeading: "GPON OLT for Fiber Access Networks | Niurix SOLT33-08P",
         mainPara: "",
         para: `<p>The Niurix SOLT33-08P is an Optical Line Terminal (OLT) designed for GPON networks serving up to 128 Optical Network Terminals (ONTs) per PON port. It consists of eight GPON ports, 4 GE Optical/Electrical uplink ports, along with two 10 Gigabit Ethernet (10GE) uplink ports.\n\nThe higher data throughput in SOLT33-08P serves as a critical component in delivering high-speed internet and other services to end-users. The device has a sleek, compact wall-mount design and can predetermine the simultaneous data management helping you better align your resources to cater to the needs of the OLT.</p>`,
         background_img1: "Overview background v2",

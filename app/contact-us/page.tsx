@@ -4,7 +4,7 @@ import ContactForm from "@/components/contact-us/ContactForm";
 import { toMetadata } from "@/data/site/seo";
 
 const seo = {
-  title: "Contact Us | Niurix",
+  title: "Contact Niurix | GPON Fiber Network Solutions",
   description: "Want to know more about our products? Get in touch with Niurix.",
   canonicalPath: "/contact-us",
   previewImage: "/assets/contactus/banner.webp",
