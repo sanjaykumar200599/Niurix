@@ -299,7 +299,7 @@ export default function TermsAndConditionsContent() {
         <div className="space-y-6 text-[16px] leading-[1.9rem] tablet:text-[16px] laptop:text-[20px] laptop:font-body-light">
           {introduction.map((item) => (
             <div key={item.id} className="flex items-start gap-2.5 laptop:gap-3">
-              <span className="min-w-[22px] font-sans text-brand-orange laptop:min-w-[24px]">{item.id}.</span>
+              <span className="min-w-[22px] font-sans text-brand-orange laptop:min-w-[24px] laptop:text-[28px] laptop:font-body-medium">{item.id}.</span>
               <p className="text-justify">{item.text}</p>
             </div>
           ))}
