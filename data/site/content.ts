@@ -451,7 +451,7 @@ export const homeContent: HomeData = HomeDataSchema.parse({
       slug: "hospitality",
       title: "Hospitality",
       shortTitle: "Hospitality",
-      desc: "Catering to exceptional guest experiences: pioneering next-gen networking solutions to redefine hospitality.",
+      desc: "Catering to Exceptional Guest Experiences: Pioneering Next-Gen Networking Solutions to Redefine Hospitality",
       cardImage: assetPath("assets", "homepage", "hospitality-industries-cropped.webp"),
       detailImage: assetPath("assets", "homepage", "Hospitality.webp"),
       mobileCropImage: assetPath("assets", "homepage", "Hosp 1 home.webp"),
