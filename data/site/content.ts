@@ -25,7 +25,6 @@ import { olt_solt33_08p } from "@/lib/content/source/products/olt_solt33_08p";
 import { olt_xgspon_8p } from "@/lib/content/source/products/olt_xgspon_8p";
 import { hospitality } from "@/lib/content/source/industries/hospitality";
 import { corporate_workspaces } from "@/lib/content/source/industries/corporate_workspaces";
-import { residential_real_estate } from "@/lib/content/source/industries/residential_real_estate";
 import { student_living } from "@/lib/content/source/industries/student_living";
 
 type ProductType = ProductContent["type"];
@@ -230,6 +229,18 @@ type BaseProductSeed = {
   legacy: boolean;
 };
 
+const modelFromProductSlug = (slug: string) => slug.split("-").slice(1).join("-");
+
+const modelFromProductSubHeading = (subHeading: string, slug: string) => {
+  const rightSegment = subHeading.includes("|") ? subHeading.split("|").at(-1) ?? subHeading : subHeading;
+  const withoutBrand = rightSegment.replace(/^\s*Niurix\s+/i, "").trim();
+  const withoutTypeSuffix = withoutBrand.replace(/\s+(ONT|OLT)\s*$/i, "").trim();
+  const normalizedSpaces = withoutTypeSuffix.replace(/\s{2,}/g, " ");
+  const normalizedModel = normalizedSpaces.replace(/\bMOLT\s+XGSPON\b/i, "MOLT-XGSPON");
+
+  return normalizedModel || modelFromProductSlug(slug);
+};
+
 const baseProductSeeds: BaseProductSeed[] = [
   { slug: "ONT-P4200R", type: "ONT", data: ont_p4200r as LegacyProductSource, folder: "ONT-P4200R", legacy: false },
   { slug: "OLT-SOLT33-8P", type: "OLT", data: olt_solt33_08p as LegacyProductSource, folder: "OLT-SOLT33-8P", legacy: false },
@@ -242,6 +253,7 @@ const baseProducts: ProductContent[] = baseProductSeeds.map(({ slug, type, data,
   if (!section5) {
     throw new Error(`Product data for ${slug} is missing section5[0]`);
   }
+  const model = modelFromProductSubHeading(data.section2.subHeading, slug);
 
   return ProductContentSchema.parse({
     slug,
@@ -251,14 +263,14 @@ const baseProducts: ProductContent[] = baseProductSeeds.map(({ slug, type, data,
       canonicalPath: `/products/${slug}`,
       noindex: legacy,
     },
-    model: data.section2.subHeading.replace("Niurix ", ""),
+    model,
     type,
     indexable: !legacy,
     isLegacy: legacy,
     heroImage: assetPath("assets", "products", folder, `${data.section1.background_img}.webp`),
     heroImageMobile: assetPath("assets", "products", "mobile_banners", folder, `${data.section1.background_img_mobile}.webp`),
     overviewHeadingHtml: data.section2.mainHeading,
-    overviewTitle: data.section2.subHeading,
+    overviewTitle: `Niurix ${model}`,
     overviewParaHtml: data.section2.para,
     overviewImage: assetPath("assets", "products", folder, `${data.section2.background_img1}.webp`),
     overviewImageMobile: assetPath("assets", "products", "mobile_banners", folder, `${data.section2.background_img1_mobile}.webp`),
@@ -313,12 +325,6 @@ const mappedIndustries = [
     legacy: "corporate-workspaces-solutions",
     data: corporate_workspaces as LegacyIndustrySource,
     folder: "corporate_workspaces",
-  },
-  {
-    slug: "residential-real-estate",
-    legacy: "residential-real-estate-solutions",
-    data: residential_real_estate as LegacyIndustrySource,
-    folder: "residential_real_estate",
   },
   {
     slug: "student-living",

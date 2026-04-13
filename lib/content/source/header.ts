@@ -71,13 +71,6 @@ const headerData = {
         {
             page: "industries",
 
-            name: "Residential Real Estate",
-            image: "Residential real estate",
-            url: "/industries/residential-real-estate",
-        },
-        {
-            page: "industries",
-
             name: "Student Living",
             image: "Student living",
             url: "/industries/student-living",

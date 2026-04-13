@@ -287,16 +287,16 @@ const serviceTerms: SectionBlock[] = [
 export default function TermsAndConditionsContent() {
   return (
     <section className="bg-[#ececec]">
-      <div className="mx-auto w-full px-4 py-20 text-[#393f4a] tablet:px-8 tablet:py-[88px] laptop:px-[140px] laptop:pb-10 laptop:pt-[180px] [@media(min-width:1025px)_and_(max-width:1367px)]:px-[80px] [@media(min-width:1367px)_and_(max-width:1600px)]:px-[100px]">
-        <h1 className="mb-14 text-center font-display font-semibold text-[26px] leading-tight text-brand-orange tablet:text-[28px] laptop:text-[34px]">
+      <div className="mx-auto w-full px-4 py-20 text-[#1D1D1D] tablet:px-8 tablet:py-[88px] laptop:px-[140px] laptop:pb-10 laptop:pt-[180px] laptop:font-body-light [@media(min-width:1025px)_and_(max-width:1367px)]:px-[80px] [@media(min-width:1367px)_and_(max-width:1600px)]:px-[100px]">
+        <h1 className="mb-14 text-center font-display font-semibold text-[26px] leading-tight text-brand-orange tablet:text-[28px] laptop:text-[28px] laptop:font-body-medium">
           Terms And Conditions
         </h1>
 
-        <h2 className="mb-6 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">
+        <h2 className="mb-6 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[28px] laptop:font-body-medium">
           Introduction
         </h2>
 
-        <div className="space-y-6 text-[16px] leading-[1.9rem] tablet:text-[16px] laptop:text-[18px]">
+        <div className="space-y-6 text-[16px] leading-[1.9rem] tablet:text-[16px] laptop:text-[20px] laptop:font-body-light">
           {introduction.map((item) => (
             <div key={item.id} className="flex items-start gap-2.5 laptop:gap-3">
               <span className="min-w-[22px] font-sans text-brand-orange laptop:min-w-[24px]">{item.id}.</span>
@@ -309,24 +309,24 @@ export default function TermsAndConditionsContent() {
           BY USING OUR SERVICES, YOU AGREE THAT:
         </h2>
 
-        <ul className="mb-9 list-disc space-y-3 pl-8 text-[16px] leading-[1.9rem] tablet:text-[16px] laptop:mb-10 laptop:text-[18px]">
+        <ul className="mb-9 list-disc space-y-3 pl-8 text-[16px] leading-[1.9rem] tablet:text-[16px] laptop:mb-10 laptop:text-[20px] laptop:font-body-light">
           {serviceConsentBullets.map((item) => (
             <li key={item} className="text-justify">{item}</li>
           ))}
         </ul>
 
-        <h2 className="mb-6 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[30px]">
+        <h2 className="mb-6 font-sans text-[22px] leading-tight text-brand-orange tablet:text-[24px] laptop:text-[28px] laptop:font-body-medium">
           SERVICES TERMS
         </h2>
 
         <div className="space-y-10 laptop:space-y-12">
           {serviceTerms.map((section) => (
             <div key={section.title}>
-              <h3 className="mb-5 font-sans text-[20px] leading-tight text-brand-orange tablet:text-[22px] laptop:text-[28px]">
+              <h3 className="mb-5 font-sans text-[20px] leading-tight text-brand-orange tablet:text-[22px] laptop:text-[28px] laptop:font-body-medium">
                 {section.title}
               </h3>
 
-              <div className="space-y-5 text-[16px] leading-[1.9rem] tablet:text-[16px] laptop:text-[18px]">
+              <div className="space-y-5 text-[16px] leading-[1.9rem] tablet:text-[16px] laptop:text-[20px] laptop:font-body-light">
                 {section.clauses.map((clause) => (
                   <div key={clause.id} className="flex items-start gap-2.5 laptop:gap-3">
                     <span className="min-w-[36px] font-sans text-[#2f3744] laptop:min-w-[40px]">{clause.id}</span>
