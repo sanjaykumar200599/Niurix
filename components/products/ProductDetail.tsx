@@ -49,13 +49,13 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
           dangerouslySetInnerHTML={{ __html: product.overviewHeadingHtml }}
         />
 
-        <div className="mt-5 flex flex-col-reverse items-center gap-4 tablet:mt-8 tablet:gap-6 laptop:flex-row laptop:items-start laptop:justify-between laptop:pl-[120px]">
-          <div className="w-full laptop:w-[28%] laptop:max-w-[480px] laptop:pt-30 [@media(min-width:1920px)_and_(min-height:1800px)]:w-[480px] [@media(min-width:1920px)_and_(min-height:1800px)]:max-w-[480px]">
+        <div className="mt-5 flex flex-col-reverse items-center gap-4 tablet:mt-8 tablet:gap-6 laptop:flex-row laptop:items-start laptop:justify-between laptop:pl-[120px] ">
+          <div className="w-full laptop:w-[28%] laptop:max-w-[480px] laptop:pt-10 [@media(min-width:1920px)_and_(min-height:1800px)]:w-[480px] [@media(min-width:1920px)_and_(min-height:1800px)]:max-w-[480px] [@media(min-width:1920px)_and_(min-height:1800px)]:pt-45">
             <h1 className="text-center text-[22px] font-sans text-brand-black tablet:text-[28px] laptop:text-left laptop:text-[24px]">
               {product.overviewTitle}
             </h1>
             <div
-              className="mt-3 whitespace-pre-line text-left text-[16px] font-body-light leading-[1.45] text-brand-black/80 tablet:mt-4 tablet:text-lg tablet:leading-8 laptop:text-[20px] laptop:leading-[1.55]"
+              className="mt-3 whitespace-pre-line text-left text-[16px] font-body-light leading-[1.45] text-color-brand-black/80 tablet:mt-4 tablet:text-lg tablet:leading-8 laptop:text-[20px] laptop:leading-[1.45]"
               dangerouslySetInnerHTML={{ __html: product.overviewParaHtml }}
             />
 
