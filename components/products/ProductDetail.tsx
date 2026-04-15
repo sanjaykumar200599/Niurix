@@ -43,39 +43,39 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
       <section className="px-9 pb-0 pt-4 tablet:px-[78px] laptop:px-0 laptop:pt-30">
         <h2
-          className={`nx-rich text-[24px] font-display leading-tight text-brand-black tablet:text-[30px] laptop:px-[120px] ${
-            isOlt ? "laptop:text-[48px] laptop:leading-[1.05]" : "laptop:text-[44px]"
+          className={`nx-rich text-[24px] font-body-medium leading-tight text-brand-black tablet:text-[30px] laptop:px-[120px] ${
+            isOlt ? "laptop:text-[48px] laptop:leading-[1.05]" : "laptop:text-[40px]"
           }`}
           dangerouslySetInnerHTML={{ __html: product.overviewHeadingHtml }}
         />
 
         <div className="mt-5 flex flex-col-reverse items-center gap-4 tablet:mt-8 tablet:gap-6 laptop:flex-row laptop:items-start laptop:justify-between laptop:pl-[120px]">
-          <div className="w-full laptop:w-[24%] laptop:max-w-[360px] laptop:pt-30">
-            <h1 className="text-center text-[22px] font-display text-brand-black tablet:text-[28px] laptop:text-left laptop:text-[24px]">
+          <div className="w-full laptop:w-[28%] laptop:max-w-[480px] laptop:pt-30 [@media(min-width:1920px)_and_(min-height:1800px)]:w-[480px] [@media(min-width:1920px)_and_(min-height:1800px)]:max-w-[480px]">
+            <h1 className="text-center text-[22px] font-sans text-brand-black tablet:text-[28px] laptop:text-left laptop:text-[24px]">
               {product.overviewTitle}
             </h1>
             <div
-              className="mt-3 whitespace-pre-line text-left text-[16px] font-normal leading-[1.45] text-brand-black/80 tablet:mt-4 tablet:text-lg tablet:leading-8 laptop:text-[16px] laptop:leading-[1.55]"
+              className="mt-3 whitespace-pre-line text-left text-[16px] font-body-light leading-[1.45] text-brand-black/80 tablet:mt-4 tablet:text-lg tablet:leading-8 laptop:text-[20px] laptop:leading-[1.55]"
               dangerouslySetInnerHTML={{ __html: product.overviewParaHtml }}
             />
 
             <div className="mt-6 flex justify-center laptop:mt-8 laptop:justify-start">
               <Link
                 href="/contact-us"
-                className="group inline-flex rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-lg font-display leading-tight text-white transition-colors duration-200 hover:bg-white hover:text-brand-black whitespace-nowrap"
+                className="group inline-flex rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-lg laptop:text-[20px] font-sans leading-tight text-white transition-colors duration-200 hover:bg-white hover:text-brand-black whitespace-nowrap"
               >
                 <span className="text-white transition-colors duration-200 group-hover:text-brand-black">Get in touch</span>
               </Link>
             </div>
           </div>
 
-          <div className="relative h-[360px] w-full overflow-hidden rounded-tl-[30px] tablet:h-[600px] tablet:rounded-tl-[45px] laptop:h-auto laptop:w-[76%] laptop:self-stretch laptop:min-h-[700px]">
+          <div className="relative h-[360px] w-full overflow-hidden rounded-tl-[30px] tablet:h-[600px] tablet:rounded-tl-[45px] laptop:h-auto laptop:w-[min(72vw,1181px)] laptop:aspect-[1181/874] laptop:self-start laptop:min-h-0 [@media(min-width:1920px)_and_(min-height:1800px)]:h-[874px] [@media(min-width:1920px)_and_(min-height:1800px)]:w-[1181px]">
             <Image
               src={product.overviewImage}
               alt={product.overviewTitle}
               fill
-              sizes="(max-width: 767px) 0px, (max-width: 1023px) 100vw, 70vw"
-              className="hidden object-contain object-center tablet:block laptop:object-cover laptop:object-right"
+              sizes="(max-width: 767px) 0px, (max-width: 1023px) 100vw, (min-width: 1920px) 1181px, 76vw"
+              className="hidden object-contain object-center tablet:block"
             />
             <Image
               src={product.overviewImageMobile}
