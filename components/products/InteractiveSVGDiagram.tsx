@@ -2,6 +2,8 @@
 
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import React from "react";
+import type { ReactNode } from "react";
 
 const Product8pLegacy = dynamic(() => import("@/components/products/legacy/Product8pLegacy"), {
   ssr: false,
@@ -26,26 +28,77 @@ type InteractiveSVGDiagramProps = {
   productSlug?: string;
 };
 
-export default function InteractiveSVGDiagram({ src, alt, productSlug }: InteractiveSVGDiagramProps) {
-  if (productSlug === "ONT-P4200R") {
-    return <ProductP4200RLegacy />;
+type DiagramErrorBoundaryProps = {
+  fallback: ReactNode;
+  children: ReactNode;
+};
+
+type DiagramErrorBoundaryState = {
+  hasError: boolean;
+};
+
+class DiagramErrorBoundary extends React.Component<DiagramErrorBoundaryProps, DiagramErrorBoundaryState> {
+  constructor(props: DiagramErrorBoundaryProps) {
+    super(props);
+    this.state = { hasError: false };
   }
 
-  if (productSlug === "ONT-T2001") {
-    return <ProductT2001Legacy />;
+  static getDerivedStateFromError() {
+    return { hasError: true };
   }
 
-  if (productSlug === "OLT-SOLT33-8P") {
-    return <Product8pLegacy />;
+  componentDidCatch(error: unknown) {
+    console.error("Interactive diagram failed to render, using static fallback.", error);
   }
 
-  if (productSlug === "OLT-XGSPON-8P") {
-    return <ProductMolt8pLegacy />;
+  render() {
+    if (this.state.hasError) return this.props.fallback;
+    return this.props.children;
   }
+}
 
+function StaticDiagram({ src, alt }: Pick<InteractiveSVGDiagramProps, "src" | "alt">) {
   return (
     <div className="relative h-[320px] w-full tablet:h-[420px] laptop:h-[520px]">
       <Image src={src} alt={alt} fill sizes="(min-width: 1024px) 40vw, 100vw" className="object-contain" />
     </div>
   );
+}
+
+export default function InteractiveSVGDiagram({ src, alt, productSlug }: InteractiveSVGDiagramProps) {
+  const fallback = <StaticDiagram src={src} alt={alt} />;
+
+  if (productSlug === "ONT-P4200R") {
+    return (
+      <DiagramErrorBoundary fallback={fallback}>
+        <ProductP4200RLegacy />
+      </DiagramErrorBoundary>
+    );
+  }
+
+  if (productSlug === "ONT-T2001") {
+    return (
+      <DiagramErrorBoundary fallback={fallback}>
+        <ProductT2001Legacy />
+      </DiagramErrorBoundary>
+    );
+  }
+
+  if (productSlug === "OLT-SOLT33-8P") {
+    return (
+      <DiagramErrorBoundary fallback={fallback}>
+        <Product8pLegacy />
+      </DiagramErrorBoundary>
+    );
+  }
+
+  if (productSlug === "OLT-XGSPON-8P") {
+    return (
+      <DiagramErrorBoundary fallback={fallback}>
+        <ProductMolt8pLegacy />
+      </DiagramErrorBoundary>
+    );
+  }
+
+  return fallback;
 }
