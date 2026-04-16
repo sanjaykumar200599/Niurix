@@ -29,7 +29,7 @@ function ArrowIcon({ direction = "next", disabled = false, className = "" }: { d
 
 function LearnMoreArrow() {
   return (
-    <svg viewBox="0 0 12.242 21.483" className="h-4 w-4" fill="none" aria-hidden>
+    <svg viewBox="0 0 12.242 21.483" className="h-[21px] w-[12px]" fill="none" aria-hidden>
       <path
         d="M17.24,8.621,8.62,0,0,8.621"
         transform="translate(10.742 2.121) rotate(90)"
@@ -59,7 +59,7 @@ export default function ProductsGrid({ products }: { products: HomeData["product
       <div className="hidden w-full rounded-tl-[50px] bg-[#ebebeb] laptop:flex">
         <div className="w-[97%]">
           <div className="flex min-h-[50rem] flex-col px-5 py-8 laptop:px-10 [@media(min-width:1367px)]:min-h-[50rem] [@media(min-width:1367px)]:px-12">
-            <p className="-ml-5 font-number text-[110px] leading-none whitespace-nowrap text-white [@media(min-width:1025px)_and_(max-width:1366px)]:text-[145px] [@media(min-width:1367px)]:-ml-17 [@media(min-width:1367px)]:text-[182px]">
+            <p className="-ml-5 font-number text-[110px] leading-none whitespace-nowrap text-white [@media(min-width:1025px)_and_(max-width:1366px)]:text-[150px] [@media(min-width:1367px)]:-ml-17 [@media(min-width:1367px)]:text-[200px]">
               {selected.name}
             </p>
 
@@ -77,11 +77,11 @@ export default function ProductsGrid({ products }: { products: HomeData["product
               </div>
 
               <div className="flex w-[40%] flex-col self-start mt-8">
-                <h3 className="flex items-center gap-2 text-[30px] font-display leading-tight text-brand-black [@media(min-width:1367px)]:text-[34px]">
+                <h3 className="flex items-center gap-2 text-[30px] font-body-medium leading-tight text-brand-black [@media(min-width:1367px)]:text-[28px]">
                   {selected.name}
                   <span className="text-brand-orange">({selected.type})</span>
                 </h3>
-                <p className="mt-4 w-[86%] text-[17px] leading-[1.35] font-body-light text-brand-black [@media(min-width:1367px)]:w-[80%] [@media(min-width:1367px)]:text-[18px]">
+                <p className="mt-4 w-[86%] text-[17px] leading-[1.25] font-body-light text-brand-black [@media(min-width:1367px)]:w-[85%] [@media(min-width:1367px)]:text-[20px]">
                   {selected.desc}
                 </p>
                 <Link
@@ -205,4 +205,3 @@ export default function ProductsGrid({ products }: { products: HomeData["product
     </div>
   );
 }
-
