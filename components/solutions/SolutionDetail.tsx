@@ -47,20 +47,26 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
       {/* INTRO SECTION */}
       <section className="my-12 px-9 tablet:my-12 tablet:px-[78px] laptop:my-24 laptop:px-[120px] ">
         <h2
-          className="nx-rich whitespace-pre-wrap text-[26px] font-display leading-tight text-brand-black tablet:text-[30px] laptop:w-[62%] laptop:text-[25px] [@media(min-width:1920px)_and_(min-height:1800px)]:text-[30px]"
+          className="nx-rich whitespace-pre-wrap text-[26px] font-body-medium leading-tight text-brand-black tablet:text-[30px] laptop:w-[62%] laptop:text-[25px] [@media(min-width:1920px)_and_(min-height:1800px)]:text-[28px]"
           dangerouslySetInnerHTML={{ __html: solution.introTitleHtml }}
           
         />
 
         <div className="mt-6 flex flex-col-reverse gap-8 laptop:flex-row">
           <div className="flex w-full items-center laptop:w-[45%] laptop:pt-2 [@media(min-width:1920px)_and_(min-height:1800px)]:pb-10 ">
-            <p className="text-base leading-[1.45] text-brand-black/90 tablet:text-lg tablet:leading-7 laptop:text-l [@media(min-width:1920px)_and_(min-height:1800px)]:max-w-[90%]">
+            <p className="text-base leading-[1.45] text-brand-black/90 font-body-light tablet:text-lg tablet:leading-7 laptop:text-[20px] [@media(min-width:1920px)_and_(min-height:1800px)]:max-w-[98%]">
               {solution.introText}
             </p>
           </div>
 
-          <div className="w-full laptop:w-[65%]">
-            <Image src={solution.introImage} alt={solution.heroTitle} width={1200} height={760} className="h-auto w-full" />
+          <div className="w-full laptop:w-[65%] [@media(min-width:1920px)_and_(min-height:1800px)]:flex [@media(min-width:1920px)_and_(min-height:1800px)]:justify-end">
+            <Image
+              src={solution.introImage}
+              alt={solution.heroTitle}
+              width={1200}
+              height={760}
+              className="h-auto w-full [@media(min-width:1920px)_and_(min-height:1800px)]:h-[300px] [@media(min-width:1920px)_and_(min-height:1800px)]:w-[998px] [@media(min-width:1920px)_and_(min-height:1800px)]:max-w-none [@media(min-width:1920px)_and_(min-height:1800px)]:object-cover"
+            />
           </div>
         </div>
       </section>
@@ -78,7 +84,7 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
                 <span>Solution</span>
               </h2>
               <h2
-                className="nx-rich hidden text-[24px] font-display leading-[1.18] text-brand-black tablet:block tablet:text-[28px] laptop:text-[26px]"
+                className="nx-rich hidden text-[24px] font-body-medium leading-[1.18] text-brand-black tablet:block tablet:text-[28px] laptop:text-[28px]"
                 dangerouslySetInnerHTML={{ __html: solution.cardsHeadingHtml }}
               />
             </>
