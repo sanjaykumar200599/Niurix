@@ -9,7 +9,7 @@ export default function InstallMedia() {
       playsInline
       preload="metadata"
       poster="/assets/homepage/Box Together.webp"
-      className="aspect-[16/9] w-full bg-white object-contain"
+      className="h-[220px] w-full bg-white object-contain tablet:h-[320px] laptop:h-auto laptop:aspect-[16/9]"
       aria-label="Easy to install animation"
     >
       <source src="/assets/homepage/Niurixinstall.mp4" type="video/mp4" />
