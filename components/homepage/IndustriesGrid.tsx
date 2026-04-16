@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import type { HomeData } from "@/lib/content/types";
 
 function ArrowRightIcon() {
@@ -23,52 +23,60 @@ function ArrowRightIcon() {
 
 export default function IndustriesGrid({ industries }: { industries: HomeData["industries"] }) {
   const [activeIndex, setActiveIndex] = useState(0);
-
-  const active = useMemo(() => industries[activeIndex] ?? industries[0], [activeIndex, industries]);
-  const sideItems = useMemo(() => industries.filter((_, index) => index !== activeIndex).slice(0, 2), [activeIndex, industries]);
-
-  if (!active) return null;
+  const hasItems = industries.length > 0;
+  if (!hasItems) return null;
 
   return (
     <div>
-      <div className="hidden gap-4 px-30 laptop:grid laptop:grid-cols-[58%_19%_18%] wide:gap-8">
-        <div className="relative h-[40rem] overflow-hidden rounded-tl-[35px] rounded-br-[35px]">
-          <Image
-            src={active.detailImage}
-            alt={active.title}
-            fill
-            sizes="(min-width: 1024px) 58vw, 0px"
-            className="object-cover object-top"
-          />
-          <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white via-white/96 to-white/78 px-6 pb-4 pt-5 wide:px-7 wide:pb-5">
-            <h3 className="text-[22px] font-sans text-brand-black wide:text-[26px]">{active.title}</h3>
-            <p className="mt-2 max-w-[88%] text-[15px] leading-[1.35] font-body-light text-brand-black wide:mt-3 wide:max-w-[82%] wide:text-[18px]">
-              {active.desc}
-            </p>
-            <Link
-              href={`/industries/${active.slug}`}
-              className="mt-3 inline-flex min-w-[200px] items-center justify-center gap-3 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-[19px] font-sans !text-white transition hover:bg-white hover:!text-brand-black wide:min-w-[220px] wide:px-7 wide:py-2.5"
-            >
-              <span>Learn More</span>
-              <ArrowRightIcon />
-            </Link>
-          </div>
-        </div>
+      <div className="hidden gap-4 px-30 laptop:flex wide:gap-8">
+        {industries.map((item, index) => {
+          const isActive = index === activeIndex;
 
-        {sideItems.map((item) => (
-          <button
-            key={item.slug}
-            type="button"
-            onClick={() => setActiveIndex(industries.findIndex((entry) => entry.slug === item.slug))}
-            className="group relative h-[40rem] overflow-hidden rounded-tl-[35px] rounded-br-[35px]"
-          >
-            <Image src={item.cardImage} alt={item.title} fill sizes="(min-width: 1024px) 20vw, 0px" className="object-cover transition duration-500 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-black/10" />
-            <p className="absolute bottom-0 left-4 w-[18rem] origin-top-left -rotate-90 text-left font-body-light text-[26px] leading-none text-white wide:text-[28px]">
-              {item.title}
-            </p>
-          </button>
-        ))}
+          if (isActive) {
+            return (
+              <article
+                key={item.slug}
+                className="relative h-[40rem] basis-0 overflow-hidden rounded-tl-[35px] rounded-br-[35px] transition-[flex-basis] duration-500 ease-out laptop:flex-[0_0_58%] wide:flex-[0_0_60%]"
+              >
+                <Image
+                  src={item.detailImage}
+                  alt={item.title}
+                  fill
+                  sizes="(min-width: 1440px) 60vw, (min-width: 1024px) 58vw, 0px"
+                  className="object-cover object-top"
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white via-white/96 to-white/78 px-6 pb-4 pt-5 wide:px-7 wide:pb-5">
+                  <h3 className="text-[22px] font-sans text-brand-black wide:text-[26px]">{item.title}</h3>
+                  <p className="mt-2 max-w-[88%] text-[15px] leading-[1.35] font-body-light text-brand-black wide:mt-3 wide:max-w-[82%] wide:text-[18px]">
+                    {item.desc}
+                  </p>
+                  <Link
+                    href={`/industries/${item.slug}`}
+                    className="mt-3 inline-flex min-w-[200px] items-center justify-center gap-3 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-[19px] font-sans !text-white transition hover:bg-white hover:!text-brand-black wide:min-w-[220px] wide:px-7 wide:py-2.5"
+                  >
+                    <span>Learn More</span>
+                    <ArrowRightIcon />
+                  </Link>
+                </div>
+              </article>
+            );
+          }
+
+          return (
+            <button
+              key={item.slug}
+              type="button"
+              onClick={() => setActiveIndex(index)}
+              className="group relative h-[40rem] basis-0 overflow-hidden rounded-tl-[35px] rounded-br-[35px] text-left transition-[flex-basis] duration-500 ease-out laptop:flex-[0_0_19%] wide:flex-[0_0_18%]"
+            >
+              <Image src={item.cardImage} alt={item.title} fill sizes="(min-width: 1024px) 20vw, 0px" className="object-cover transition duration-500 group-hover:scale-105" />
+              <div className="absolute inset-0 bg-black/25" />
+              <p className="absolute bottom-0 left-4 w-[18rem] origin-top-left -rotate-90 text-left font-body-light text-[26px] leading-none text-white wide:text-[28px]">
+                {item.title}
+              </p>
+            </button>
+          );
+        })}
       </div>
 
       <div className="space-y-3 px-5 tablet:px-20 laptop:hidden">
