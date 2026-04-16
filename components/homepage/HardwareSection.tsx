@@ -82,21 +82,21 @@ export default function HardwareSection({ titleHtml, items }: HardwareSectionPro
 
         <HardwareAnimation />
 
-        <div className="absolute left-1/2 top-[4rem] z-40 w-full -translate-x-1/2 tablet:-translate-y-0 laptop:left-auto laptop:right-[50px] laptop:top-[42%] laptop:w-[576px] laptop:translate-x-0 laptop:-translate-y-1/2 wide:right-[86px] wide:top-[41%] wide:w-[596px]">
+        <div className="absolute left-1/2 top-[4rem] z-40 w-full -translate-x-1/2 tablet:-translate-y-0 laptop:left-auto laptop:right-[30px] laptop:top-[42%] laptop:w-[33%] laptop:translate-x-0 laptop:-translate-y-1/2 wide:right-[72px] wide:top-[41%] wide:w-[596px]">
           <div className="w-full px-19.5 laptop:px-0">
             <h2
-              className="nx-rich text-left font-sans text-[30px] leading-[1.22] text-brand-black laptop:w-full laptop:text-[23px] laptop:leading-[1.24] laptop:[text-wrap:balance] wide:text-[24px]"
+              className="nx-rich text-left font-sans text-[30px] leading-[1.22] text-brand-black laptop:w-full laptop:text-[21px] laptop:leading-[1.24] laptop:[text-wrap:balance] wide:text-[24px]"
               dangerouslySetInnerHTML={{ __html: titleHtml }}
             />
           </div>
 
-          <div className="mt-[28rem] grid grid-cols-2 gap-4 px-19.5 laptop:mt-[2rem] laptop:grid-cols-2 laptop:gap-x-[14px] laptop:gap-y-4 laptop:px-0 wide:gap-x-3.5">
+          <div className="mt-[28rem] grid grid-cols-2 gap-4 px-19.5 laptop:mt-[1.5rem] laptop:grid-cols-2 laptop:gap-x-3 laptop:gap-y-3 laptop:px-0 wide:gap-x-3.5">
             {items.map((item) => (
               <article
                 key={item}
-                className="flex items-center justify-center rounded-tl-[16px] rounded-br-[16px] border border-transparent bg-white px-6 text-center shadow-[0px_3px_15px_#0000001F] transition hover:border-brand-orange tablet:h-[120px] laptop:h-[154px] laptop:w-[281px] wide:h-[158px] wide:w-[292px]"
+                className="flex items-center justify-center rounded-tl-[16px] rounded-br-[16px] border border-transparent bg-white px-4 text-center shadow-[0px_3px_15px_#0000001F] transition hover:border-brand-orange tablet:h-[120px] laptop:h-[7.2rem] laptop:w-full wide:h-[158px] wide:w-[292px]"
               >
-                <p className="text-[18px] font-sans leading-[1.3] text-black laptop:w-[84%] laptop:text-[18px] wide:text-[20px]">
+                <p className="text-[18px] font-sans leading-[1.3] text-black laptop:w-[88%] laptop:text-[16px] wide:text-[20px]">
                   {item}
                 </p>
               </article>
