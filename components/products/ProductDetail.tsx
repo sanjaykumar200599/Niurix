@@ -29,7 +29,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
           fill
           sizes="(max-width: 767px) 0px, (max-width: 1023px) 100vw, 0px"
           className="hidden object-contain object-center tablet:block laptop:hidden"
-          priority
+          fetchPriority="high"
         />
         <Image
           src={product.heroImageMobile}
@@ -37,7 +37,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
           fill
           sizes="(max-width: 767px) 100vw, 0px"
           className="object-cover object-[center_30%] tablet:hidden"
-          priority
+          fetchPriority="high"
         />
       </section>
 
