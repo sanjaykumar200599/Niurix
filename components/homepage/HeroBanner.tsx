@@ -25,7 +25,7 @@ export default function HeroBanner({ banners }: { banners: HomeData["banners"] }
                     sizes="(max-width: 767px) 0px, 100vw"
                     priority={isFirstSlide}
                     fetchPriority={isFirstSlide ? "high" : "auto"}
-                    className="object-cover scale-[1.12] object-[42%_44%] laptop:scale-[1.22] laptop:object-[15%_25%]"
+                    className="object-cover scale-100 object-[42%_44%] laptop:scale-[1.00] laptop:object-[15%_25%]"
                   />
                 </div>
 
@@ -37,11 +37,11 @@ export default function HeroBanner({ banners }: { banners: HomeData["banners"] }
                     sizes="(max-width: 767px) 100vw, 0px"
                     priority={isFirstSlide}
                     fetchPriority={isFirstSlide ? "high" : "auto"}
-                    className="object-cover scale-[1.12] object-[42%_44%] laptop:scale-[1.22] laptop:object-[15%_25%]"
+                    className="object-cover scale-100 object-[42%_44%] laptop:scale-[1.06] laptop:object-[15%_25%]"
                   />
                 </div>
 
-                <div className="absolute inset-0 bg-black/35 laptop:bg-black/30" />
+                <div className="absolute inset-0 bg-black/24 laptop:bg-black/20" />
 
                 <div
                   className="absolute inset-x-0 top-44 z-10 flex flex-col items-start px-6 text-left text-white tablet:top-112 tablet:items-center tablet:px-19.5 tablet:text-center laptop:top-96 laptop:px-30 [@media(min-width:768px)_and_(max-width:1024px)_and_(orientation:landscape)]:top-80"
@@ -61,7 +61,7 @@ export default function HeroBanner({ banners }: { banners: HomeData["banners"] }
 
                   <Link
                     href={`/solutions/${item.solutionSlug}`}
-                    className="mt-10 inline-flex self-center rounded-[10px_0px] border-2 border-brand-orange bg-transparent px-6 py-1.5 text-base font-sans text-white transition hover:bg-brand-orange hover:text-black tablet:mt-5 tablet:self-auto tablet:text-lg laptop:mt-7 laptop:text-[20px]"
+                    className="mt-10 inline-flex self-center rounded-[10px_0px] border-2 border-brand-orange bg-transparent px-6 py-1 text-base font-body-light text-white transition hover:bg-brand-orange hover:text-black tablet:mt-5 tablet:self-auto tablet:text-lg laptop:mt-7 laptop:text-[20px]"
                   >
                     Explore
                   </Link>

@@ -24,11 +24,6 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/product",
-        destination: "/products/ONT-P4200R",
-        permanent: true,
-      },
-      {
         source: "/product/:slug",
         destination: "/products/:slug",
         permanent: true,
