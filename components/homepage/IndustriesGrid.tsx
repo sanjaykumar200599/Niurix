@@ -87,7 +87,7 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
             return (
               <article key={item.slug} className="relative mx-auto w-[303px] max-w-full overflow-hidden rounded-tl-[28px] rounded-br-[28px] border border-black/8 bg-[#f7f7f7] tablet:w-full">
                 <div className="relative h-[483px] w-full tablet:h-auto tablet:aspect-[16/10]">
-                  <Image src={item.mobileDetailImage} alt={item.title} fill sizes="100vw" className="object-cover" />
+                  <Image src={item.mobileDetailImage} alt={item.title} fill sizes="(max-width: 767px) 303px, 100vw" className="object-cover" />
                 </div>
                 <div className="absolute inset-x-0 bottom-0 bg-white/95 px-5 pb-4 pt-3 tablet:static tablet:bg-[#f7f7f7] tablet:px-8 tablet:pb-8 tablet:pt-6">
                   <h3 className="text-[20px] font-display text-brand-black tablet:text-[22px]">{item.title}</h3>
@@ -112,7 +112,7 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
               className="relative mx-auto block w-[303px] max-w-full overflow-hidden rounded-tl-[28px] rounded-br-[28px] text-left tablet:w-full"
             >
               <div className="relative h-[64px] tablet:h-48">
-                <Image src={item.mobileCropImage} alt={item.title} fill sizes="100vw" className="object-cover" />
+                <Image src={item.mobileCropImage} alt={item.title} fill sizes="(max-width: 767px) 303px, 100vw" className="object-cover" />
                 <div className="absolute inset-0 bg-black/35" />
                 <p className="absolute bottom-3 left-4 text-[20px] font-body-light text-white tablet:text-[22px]">{item.title}</p>
               </div>
