@@ -36,13 +36,13 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
             return (
               <article
                 key={item.slug}
-                className="relative h-[40rem] basis-0 overflow-hidden rounded-tl-[35px] rounded-br-[35px] transition-[flex-basis] duration-500 ease-out laptop:flex-[0_0_58%] wide:flex-[0_0_60%]"
+                className="relative h-[640px] basis-0 overflow-hidden rounded-tl-[35px] rounded-br-[35px] transition-[flex-basis] duration-500 ease-out laptop:flex-[0_0_58%] wide:flex-[0_0_1008px]"
               >
                 <Image
                   src={item.detailImage}
                   alt={item.title}
                   fill
-                  sizes="(min-width: 1440px) 60vw, (min-width: 1024px) 58vw, 0px"
+                  sizes="(min-width: 1440px) 1008px, (min-width: 1024px) 58vw, 0px"
                   className="object-cover object-top"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white via-white/96 to-white/78 px-6 pb-4 pt-5 wide:px-7 wide:pb-5">
@@ -67,7 +67,7 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
               key={item.slug}
               type="button"
               onClick={() => setActiveIndex(index)}
-              className="group relative h-[40rem] basis-0 overflow-hidden rounded-tl-[35px] rounded-br-[35px] text-left transition-[flex-basis] duration-500 ease-out laptop:flex-[0_0_19%] wide:flex-[0_0_18%]"
+              className="group relative h-[640px] basis-0 overflow-hidden rounded-tl-[35px] rounded-br-[35px] text-left transition-[flex-basis] duration-500 ease-out laptop:flex-[0_0_19%] wide:flex-[0_0_18%]"
             >
               <Image src={item.cardImage} alt={item.title} fill sizes="(min-width: 1024px) 20vw, 0px" className="object-cover transition duration-500 group-hover:scale-105" />
               <div className="absolute inset-0 bg-black/25" />
