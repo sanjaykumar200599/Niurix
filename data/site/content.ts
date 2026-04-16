@@ -413,7 +413,7 @@ export const homeContent: HomeData = HomeDataSchema.parse({
     solutionSlug: banner.url,
   })),
   hardwareTitleHtml:
-    "Empower Spaces with <span class='text-brand-orange'>High-Performance</span> GPON <span class='text-brand-orange'>Fiber Solutions</span>",
+    "Empower Spaces with <span class='text-brand-orange'>High-Performance</span><br />GPON <span class='text-brand-orange'>Fiber Solutions</span>",
   hardwareItems: homePageData.hw_cards.hwcard_items.map((item) => item.text),
   metrics: homePageData.data_count,
   products: [
