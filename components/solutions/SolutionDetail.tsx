@@ -103,11 +103,11 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
                 </p>
 
                 <div className="rounded-tl-[30px] rounded-br-[30px] bg-white px-6 pb-7 pt-14 shadow-[0_0_2px_#00000029] tablet:flex tablet:h-full tablet:min-h-[20rem] tablet:flex-col tablet:px-5 tablet:pb-6 tablet:pt-12 laptop:min-h-[14.5rem] laptop:px-4 laptop:pb-16 laptop:pt-16 [@media(min-width:1920px)_and_(min-height:1800px)]:h-[392px] [@media(min-width:1920px)_and_(min-height:1800px)]:w-[537px] [@media(min-width:1920px)_and_(min-height:1800px)]:min-h-0 [@media(min-width:1920px)_and_(min-height:1800px)]:pb-20">
-                  <h3 className={`text-center text-[23px] font-display text-brand-black tablet:min-h-[4.4rem] laptop:min-h-[3.6rem] laptop:text-[22px] ${card.number === "03" ? "tablet:pb-8" : ""}`}>
+                  <h3 className={`text-center text-[23px] font-body-medium text-brand-black tablet:min-h-[4.4rem] laptop:min-h-[3.6rem] laptop:text-[24px] ${card.number === "03" ? "tablet:pb-8" : ""}`}>
                     {card.title}
                   </h3>
 
-                  <p className="mt-2 text-[19px] leading-[1.55] text-brand-black/90 tablet:min-h-[8rem] tablet:flex-1 laptop:-mt-1 laptop:min-h-[6.8rem] laptop:text-[20px] laptop:leading-[1.52] [@media(min-width:1920px)_and_(min-height:1800px)]:-mt-2">
+                  <p className="mt-2 text-[19px] font-body-light leading-[1.55] text-brand-black/90 tablet:min-h-[8rem] tablet:flex-1 laptop:-mt-1 laptop:min-h-[6.8rem] laptop:text-[20px] laptop:leading-[1.52] [@media(min-width:1920px)_and_(min-height:1800px)]:-mt-2">
                     {card.para}
                   </p>
 
