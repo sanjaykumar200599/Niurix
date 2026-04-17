@@ -203,7 +203,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
         </div>
       </section>
 
-      <section className="my-16 bg-[#f3f3f3] px-9 py-9 tablet:my-16 tablet:px-[80px] tablet:py-12 laptop:relative laptop:mb-24 laptop:mt-64 laptop:min-h-[350px] laptop:px-[120px] laptop:py-10">
+      <section className="my-16 bg-[#ebebeb] px-9 py-9 tablet:my-16 tablet:px-[80px] tablet:py-12 laptop:relative laptop:mb-24 laptop:mt-64 laptop:min-h-[350px] laptop:px-[120px] laptop:py-10">
         <div className="w-full laptop:w-[48%]">
           <h2 className="text-[24px] font-display font-normal leading-[1.28] text-brand-black tablet:text-[30px] laptop:text-[30px] [@media(min-width:1920px)_and_(min-height:1800px)] pt-10">
             <span className="laptop:hidden">{industry.advantagesTitle}</span>
@@ -223,8 +223,8 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
               className="min-h-[170px] rounded-tl-[18px] rounded-br-[18px] bg-white shadow-[0_0_10px_#00000029] tablet:min-h-[168px] laptop:min-h-[236px] [@media(min-width:1920px)_and_(min-height:1800px)]:min-h-[236px]"
             >
               <div className="p-5 tablet:p-7 laptop:p-10 [@media(min-width:1920px)_and_(min-height:1800px)]:p-10 w-[110%]">
-                <div className="relative mb-3 h-[52px] w-[52px] tablet:mb-3 tablet:h-[56px] tablet:w-[56px] laptop:h-[72px] laptop:w-[72px]">
-                  <Image src={card.image} alt={card.title} fill sizes="(min-width: 1024px) 72px, 64px" className="object-contain" />
+                <div className="relative mb-3 h-[80px] w-[80px]">
+                  <Image src={card.image} alt={card.title} fill sizes="80px" className="object-contain" />
                 </div>
 
                 <h3 className="text-[13px] font-sans font-medium leading-[1.3] text-brand-black tablet:text-[18px] laptop:pt-3 laptop:text-[20px] [@media(min-width:1920px)_and_(min-height:1800px)]:pt-5">
