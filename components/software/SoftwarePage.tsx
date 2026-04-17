@@ -57,19 +57,19 @@ export default function SoftwarePage({ software }: SoftwarePageProps) {
       <section className="mb-8 mt-10 px-9 tablet:mb-12 tablet:px-20 laptop:mb-16 laptop:mt-[120px] laptop:px-[120px] ">
         <div className="grid gap-6 tablet:gap-8 laptop:grid-cols-5 laptop:gap-7 [@media(min-width:1920px)_and_(min-height:1800px)]:gap-11">
           {software.features.map((feature) => (
-            <article key={feature.id} className="group relative isolate overflow-hidden rounded-tl-[30px] rounded-br-[30px] tablet:rounded-tl-[50px] tablet:rounded-br-[50px]">
-              <div className="relative h-[18rem] tablet:h-[19rem] laptop:h-[35rem]">
-                <Image src={feature.image} alt={feature.title} fill sizes="(max-width: 1023px) 0px, 20vw" className="hidden object-cover laptop:block" />
+            <article key={feature.id} className="group relative isolate overflow-hidden rounded-tl-[30px] rounded-br-[30px] tablet:rounded-tl-[50px] tablet:rounded-br-[50px] [@media(min-width:1920px)_and_(min-height:1800px)]:h-[600px] [@media(min-width:1920px)_and_(min-height:1800px)]:w-[300px]">
+              <div className="relative h-[18rem] tablet:h-[19rem] laptop:h-[35rem] [@media(min-width:1920px)_and_(min-height:1800px)]:h-[600px]">
+                <Image src={feature.image} alt={feature.title} fill sizes="(max-width: 1023px) 0px, (min-width: 1920px) 300px, 20vw" className="hidden object-cover laptop:block" />
                 <Image src={feature.imageMobile} alt={feature.title} fill sizes="(max-width: 1023px) 100vw, 0px" className="object-cover laptop:hidden" />
                 <div className="absolute inset-0 bg-black/35 transition duration-500 laptop:bg-black/20 laptop:group-hover:bg-black/55" />
               </div>
 
               <div className="absolute inset-0 z-10 flex flex-col px-4 py-5 tablet:px-8 tablet:py-7 laptop:px-5 laptop:py-8">
-                <h3 className="max-w-[94%] text-[20px] leading-tight font-display text-brand-orange tablet:text-[30px] laptop:mt-auto laptop:text-[28px] laptop:leading-[1.2] laptop:text-white laptop:transition-all laptop:duration-500 laptop:group-hover:mt-0 laptop:group-hover:text-brand-orange">
+                <h3 className="max-w-[94%] text-[20px] leading-tight font-sans text-brand-orange tablet:text-[30px] laptop:mt-auto laptop:text-[28px] laptop:leading-[1.2] laptop:text-white laptop:transition-all laptop:duration-500 laptop:group-hover:mt-0 laptop:group-hover:text-brand-orange">
                   {feature.title}
                 </h3>
 
-                <p className="mt-4 max-w-[96%] text-[16px] leading-[1.45] text-white laptop:mt-0 laptop:text-[20px] laptop:max-h-0 laptop:group-hover:mt-4 laptop:overflow-hidden laptop:opacity-0 laptop:transition-all laptop:duration-500 laptop:group-hover:max-h-[30rem] laptop:group-hover:opacity-90">
+                <p className="mt-4 max-w-[96%] text-[16px] font-sans leading-[1.45] text-white laptop:mt-0 laptop:text-[20px] laptop:max-h-0 laptop:group-hover:mt-4 laptop:overflow-hidden laptop:opacity-0 laptop:transition-all laptop:duration-500 laptop:group-hover:max-h-[30rem] laptop:group-hover:opacity-90">
                   {feature.para}
                 </p>
               </div>
