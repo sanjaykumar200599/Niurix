@@ -216,7 +216,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
           </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-2 gap-x-4 gap-y-6 tablet:gap-5 laptop:absolute laptop:right-[120px] laptop:top-[-110px] laptop:mt-0 laptop:w-[620px] laptop:grid-cols-2 laptop:gap-9 [@media(min-width:1920px)_and_(min-height:1800px)]:right-[150px] [@media(min-width:1920px)_and_(min-height:1800px)]:w-[780px] [@media(min-width:1920px)_and_(min-height:1800px)]:gap-12">
+        <div className="mt-10 grid grid-cols-2 gap-x-4 gap-y-6 tablet:gap-5 laptop:absolute laptop:right-[120px] laptop:top-[-80px] laptop:mt-0 laptop:w-[620px] laptop:grid-cols-2 laptop:gap-9 [@media(min-width:1920px)_and_(min-height:1800px)]:right-[150px] [@media(min-width:1920px)_and_(min-height:1800px)]:top-[-110px] [@media(min-width:1920px)_and_(min-height:1800px)]:w-[780px] [@media(min-width:1920px)_and_(min-height:1800px)]:gap-12">
           {industry.advantagesCards.map((card) => (
             <article
               key={card.title}
