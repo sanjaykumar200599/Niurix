@@ -21,11 +21,10 @@ export default function ContactUsPage() {
           <Image src="/assets/contactus/Contact banner mobile.webp" alt="Contact banner" fill sizes="(max-width: 767px) 100vw, 0px" className="object-cover tablet:hidden" priority />
         </div>
         <p
-          className="absolute left-9 right-9 top-1/2 -translate-y-1/2 font-sans text-[28px] font-normal leading-[1.35] text-white
-          tablet:left-[80px] tablet:right-auto tablet:top-0 tablet:w-[70%] tablet:translate-y-0 tablet:font-display tablet:text-[36px] tablet:font-semibold tablet:leading-snug tablet:flex tablet:h-full tablet:items-center
+          className="absolute left-9 right-9 top-1/2 -translate-y-1/2 font-sans text-[28px] leading-[1.25] text-white tablet:left-[80px] tablet:right-auto tablet:top-0 tablet:w-[70%] tablet:translate-y-0 tablet:font-display tablet:text-[36px] tablet:font-semibold tablet:leading-snug tablet:flex tablet:h-full tablet:items-center
           laptop:left-[120px] laptop:w-[47%] laptop:text-[48px] [@media(min-width:1920px)_and_(min-height:1800px)]:top-auto [@media(min-width:1920px)_and_(min-height:1800px)]:bottom-12 [@media(min-width:1920px)_and_(min-height:1800px)]:h-auto [@media(min-width:1920px)_and_(min-height:1800px)]:w-[56%] [@media(min-width:1920px)_and_(min-height:1800px)]:block"
         >
-          <span className="tablet:hidden">
+          <span className="tablet:hidden ">
             Want to know more
             <br />
             about our product?
@@ -68,25 +67,25 @@ export default function ContactUsPage() {
             <span className="text-brand-orange">Contact</span> Us
           </h1>
 
-          <p className="mt-4 w-full text-base nunito-light leading-[1.55] text-brand-black/80 tablet:w-full tablet:text-lg laptop:w-[45%] laptop:text-[20px] laptop:mt-1">
+          <p className="mt-4 w-full text-base font-body-light leading-[1.25] text-brand-black/80 tablet:w-full tablet:text-lg laptop:w-[43%] laptop:text-[20px] laptop:mt-1">
             Niurix is headquartered at the beautiful city of Illinois, USA. To contact us, use any of the below means and we will always be available to assist you.
           </p>
 
           <div className="mt-10 grid gap-y-7 laptop:w-[48%] laptop:grid-cols-[1fr_1fr] laptop:gap-x-18  [@media(min-width:1920px)_and_(min-height:1800px)]:w-[56%]">
             <div>
-              <p className="text-xl font-display laptop:text-2xl">Address</p>
-              <p className="mt-2 laptop:text-[20px]
-              whitespace-pre-line text-base leading-[1.4] text-brand-black/90 tablet:text-lg"><><span className="tablet:hidden">{"2130 Foster Ave\nWheeling IL,\n60090 USA"}</span><span className="hidden whitespace-pre-line tablet:inline laptop:hidden">{"2130 Foster Ave Wheeling IL,\n60090 USA"}</span><span className="hidden whitespace-pre-line laptop:inline">{"2130\nFoster Ave\nWheeling\nIL, 60090\nUSA"}</span></></p>
+              <p className="text-xl font-body-medium laptop:text-[24px]">Address</p>
+              <p className="mt-2 font-body-light laptop:text-[20px]
+              whitespace-pre-line text-base leading-[1.4] text-brand-black/90 tablet:text-lg "><><span className="tablet:hidden">{"2130 Foster Ave\nWheeling IL,\n60090 USA"}</span><span className="hidden whitespace-pre-line tablet:inline laptop:hidden">{"2130 Foster Ave Wheeling IL,\n60090 USA"}</span><span className="hidden whitespace-pre-line laptop:inline">{"2130\nFoster Ave\nWheeling\nIL, 60090\nUSA"}</span></></p>
             </div>
 
             <div>
               <div className="mb-7">
-                <p className="text-xl font-display laptop:text-2xl">Contact No.</p>
-                <p className="text-base text-brand-black tablet:text-lg">+1 847-957-6900</p>
+                <p className="text-xl font-body-medium laptop:text-2xl laptop:text-[24px]">Contact No.</p>
+                <p className="text-base font-body-light text-brand-black tablet:text-lg laptop:text-[20px]">+1 847-957-6900</p>
               </div>
               <div>
-                <p className="text-xl font-display laptop:text-2xl">Email ID</p>
-                <p className="text-base text-brand-black tablet:text-lg">salesinfo@niurix.com</p>
+                <p className="text-xl font-body-medium laptop:text-[24px]">Email ID</p>
+                <p className="text-base font-body-light text-brand-black tablet:text-lg laptop:text-[20px]">salesinfo@niurix.com</p>
               </div>
             </div>
           </div>
