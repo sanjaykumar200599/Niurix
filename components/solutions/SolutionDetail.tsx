@@ -73,7 +73,7 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
 
       {/* CARDS SECTION */}
       <section className="bg-[#f3f3f3] py-10 tablet:py-14 laptop:py-[4.5rem]">
-        <div className="px-5 tablet:px-[78px] laptop:px-[120px]">
+        <div className="px-5 tablet:px-[78px] laptop:px-[112px]">
           {solution.heroTitle === "Optimized Fiber-Optic Solution" ? (
             <>
               <h2 className="text-[24px] font-display leading-[1.2] text-brand-black tablet:hidden">
@@ -95,7 +95,7 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
             />
           )}
 
-          <div className="mt-10 grid gap-8 tablet:grid-cols-3 tablet:gap-4 laptop:mt-22 laptop:gap-5">
+          <div className="mt-10 grid gap-8 tablet:grid-cols-3 tablet:gap-4 laptop:mt-16 laptop:gap-5">
             {solution.cards.map((card) => (
               <article key={card.number + card.title} className="relative pt-8 tablet:flex tablet:h-full tablet:px-0 laptop:px-0">
                 <p className="absolute left-1/2 top-8 -translate-x-1/2 -translate-y-1/2 text-[58px] leading-none font-number text-brand-orange tablet:text-[66px] laptop:text-[90px]">
@@ -107,12 +107,12 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
                     {card.title}
                   </h3>
 
-                  <p className="mt-2 text-[19px] font-body-light leading-[1.55] text-brand-black/90 tablet:min-h-[8rem] tablet:flex-1 laptop:-mt-1 laptop:min-h-[6.8rem] laptop:text-[20px] laptop:leading-[1.52] [@media(min-width:1920px)_and_(min-height:1800px)]:-mt-2">
+                  <p className="mt-2 text-[20px] font-body-light leading-[1.55] text-brand-black/90 tablet:min-h-[8rem] tablet:flex-1 laptop:-mt-1 laptop:min-h-[6.8rem] laptop:text-[20px] laptop:leading-[1.52] [@media(min-width:1920px)_and_(min-height:1800px)]:-mt-2">
                     {card.para}
                   </p>
 
                   <div className="mt-3 flex justify-center laptop:mt-2">
-                    <div className="relative h-16 w-16 laptop:h-14 laptop:w-14">
+                    <div className="relative h-16 w-16 laptop:h-16 laptop:w-16">
                       <Image src={card.image} alt={card.title} fill sizes="64px" className="object-contain" />
                     </div>
                   </div>
