@@ -7,6 +7,18 @@ type HardwareSectionProps = {
 };
 
 export default function HardwareSection({ titleHtml, items }: HardwareSectionProps) {
+  const getLaptopCardText = (item: string) => {
+    if (item === "End to end Gpon solution") {
+      return "End to end\nGpon solution";
+    }
+
+    if (item === "High Throughput and Low latency") {
+      return "High\nThroughput and\nLow latency";
+    }
+
+    return item;
+  };
+
   return (
     <section className="relative w-full overflow-hidden laptop:overflow-visible">
       <div className="relative tablet:hidden">
@@ -94,10 +106,10 @@ export default function HardwareSection({ titleHtml, items }: HardwareSectionPro
             {items.map((item) => (
               <article
                 key={item}
-                className="flex items-center justify-center rounded-tl-[16px] rounded-br-[16px] border border-transparent bg-white px-3 text-center shadow-[0px_3px_15px_#0000001F] transition hover:border-brand-orange tablet:h-[120px] laptop:h-[7.9rem] laptop:w-full [@media(min-width:1920px)_and_(min-height:1800px)]:h-[153px] [@media(min-width:1920px)_and_(min-height:1800px)]:w-[280px]"
+                className="flex items-center justify-center rounded-tl-[16px] rounded-br-[16px] border border-transparent bg-white px-3 text-center shadow-[0px_3px_15px_#0000001F] transition hover:border-brand-orange tablet:h-[120px] laptop:h-[8.7rem] laptop:w-full [@media(min-width:1920px)_and_(min-height:1800px)]:h-[153px] [@media(min-width:1920px)_and_(min-height:1800px)]:w-[280px]"
               >
-                <p className="text-[20px] font-sans leading-[1.25] text-black laptop:w-[90%] laptop:font-sans laptop:text-[20px] laptop:text-black [@media(min-width:1920px)_and_(min-height:1800px)]:text-[20px]  [@media(min-width:1920px)_and_(min-height:1800px)]:w-[75%] ">
-                  {item}
+                <p className="text-[20px] font-sans leading-[1.25] text-black laptop:w-[90%] laptop:font-sans laptop:text-[20px] laptop:text-black laptop:whitespace-pre-line [@media(min-width:1920px)_and_(min-height:1800px)]:whitespace-normal [@media(min-width:1920px)_and_(min-height:1800px)]:w-[75%]">
+                  {getLaptopCardText(item)}
                 </p>
               </article>
             ))}
