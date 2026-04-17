@@ -150,8 +150,8 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
         <div className="mt-[-2px] flex flex-col justify-between gap-5 bg-[#f3f3f3] px-7 py-7 tablet:px-12 tablet:py-10 laptop:h-[220px] laptop:flex-row laptop:items-start laptop:px-14">
           {product.highlights.map((item) => (
             <article key={item.title} className="w-full laptop:w-[30%]">
-              <h3 className="text-lg font-display text-brand-orange tablet:text-xl laptop:text-2xl">{item.title}</h3>
-              <p className="mt-1 text-base leading-[1.45] laptop:text-xl text-brand-black tablet:mt-2 tablet:text-lg tablet:leading-7">{item.para}</p>
+              <h3 className="text-lg font-display text-brand-orange tablet:text-xl laptop:text-[20px]">{item.title}</h3>
+              <p className="mt-1 text-base font-body-light leading-[1.45] laptop:text-xl text-brand-black tablet:mt-2 tablet:text-lg tablet:leading-7">{item.para}</p>
             </article>
           ))}
         </div>
@@ -159,7 +159,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
       <section className="mt-28 flex w-full flex-col-reverse tablet:mt-16 laptop:mt-24 laptop:flex-row">
         <div className="w-full bg-[#f3f3f3] laptop:w-[45%]">
-          <div className="flex h-full flex-col justify-start px-10 pb-10 pt-8 tablet:px-20 tablet:pb-16 tablet:pt-10 laptop:min-h-[50rem] laptop:px-24 laptop:pt-28">
+          <div className="flex h-full flex-col justify-start px-10 pb-10 pt-8 tablet:px-20 tablet:pb-16 tablet:pt-10 laptop:min-h-[50rem] laptop:px-24 laptop:pt-28 laptop:ml-12">
             <h2 className="mb-8 text-[20px] font-sans leading-tight text-brand-black tablet:text-[26px] laptop:text-[28px] ">
               <span className="whitespace-nowrap [@media(min-width:1920px)_and_(min-height:1800px)]:hidden">General Product Specifications</span>
               <span className="hidden whitespace-nowrap [@media(min-width:1920px)_and_(min-height:1800px)]:inline">General Product Specifications of Niurix</span>
@@ -178,7 +178,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
               <button
                 type="button"
                 onClick={() => setTab("spec")}
-                className={`border-b-[3px] pb-1 text-[24px] font-display tablet:text-[28px] laptop:w-[170px] laptop:text-left laptop:text-[24px] ${
+                className={`border-b-[3px] pb-1 text-[24px] font-body-medium tablet:text-[28px] laptop:w-[170px] laptop:text-left laptop:text-[28px] ${
                   tab === "spec" ? "border-brand-orange text-brand-orange" : "border-transparent text-brand-black/30"
                 }`}
               >
@@ -187,7 +187,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
               <button
                 type="button"
                 onClick={() => setTab("dim")}
-                className={`border-b-[3px] pb-1 text-[24px] font-display tablet:text-[28px] laptop:ml-32 laptop:w-fit laptop:text-left laptop:text-[24px] [@media(min-width:1920px)_and_(min-height:1800px)]:ml-60  ${
+                className={`border-b-[3px] pb-1 text-[24px] font-body-medium tablet:text-[28px] laptop:ml-26 laptop:w-fit laptop:text-left laptop:text-[28px] [@media(min-width:1920px)_and_(min-height:1800px)]:ml-54  ${
                   tab === "dim" ? "border-brand-orange text-brand-orange" : "border-transparent text-brand-black/30"
                 }`}
               >
