@@ -38,7 +38,7 @@ export default function SoftwarePage({ software }: SoftwarePageProps) {
 
           <div className="absolute inset-0 bg-black/10" />
 
-          <div className="relative z-10 flex h-full items-center px-9 tablet:items-end tablet:px-[78px] tablet:pb-16 laptop:px-[120px] laptop:pb-28 [@media(min-width:1920px)_and_(min-height:1800px)]:pb-98">
+          <div className="relative z-10 flex h-full items-center px-9 tablet:items-end tablet:px-[78px] tablet:pb-16 laptop:px-[120px] laptop:pb-28 [@media(min-width:1920px)_and_(min-height:1800px)]:pb-105">
             <h1 className="w-[85%] text-[32px] font-sans leading-tight text-white tablet:w-[70%] tablet:text-[34px] laptop:w-[35%] laptop:text-[48px] [@media(min-width:1920px)_and_(min-height:1800px)]:w-[42%]">
               {renderSoftwareHeroTitle(software.heroTitle)}
             </h1>
@@ -48,10 +48,10 @@ export default function SoftwarePage({ software }: SoftwarePageProps) {
 
       <section className="mt-8 px-9 tablet:px-20 laptop:mt-10 laptop:px-[120px]">
        <h2
-          className="nx-rich max-w-[980px] text-[22px] font-display leading-[1.3] text-brand-black tablet:text-[24px] laptop:text-[28px]"
+          className="nx-rich max-w-[980px] text-[22px] font-body-medium leading-[1.3] text-brand-black tablet:text-[24px] laptop:text-[28px]"
           dangerouslySetInnerHTML={{ __html: software.introTitleHtml }}
         />
-        <p className="mt-9 text-base leading-7 text-brand-black/90 tablet:text-lg laptop:text-xl">{software.introText}</p>
+        <p className="mt-9 font-body-light text-base leading-7 text-brand-black/90 tablet:text-lg laptop:text-xl">{software.introText}</p>
       </section>
 
       <section className="mb-8 mt-10 px-9 tablet:mb-12 tablet:px-20 laptop:mb-16 laptop:mt-[120px] laptop:px-[120px] ">
