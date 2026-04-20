@@ -17,7 +17,7 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
             fill
             priority
             sizes="100vw"
-            className="hidden object-cover object-center tablet:block"
+            className="hidden object-cover object-center tablet:block brightness-[1.1]"
           />
           <Image
             src={solution.heroImageMobile}
