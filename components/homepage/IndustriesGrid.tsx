@@ -123,7 +123,7 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
             >
               <div className="relative h-[64px] tablet:h-48">
                 <Image src={item.mobileCropImage} alt={item.title} fill sizes="(max-width: 767px) 303px, 100vw" className="object-cover" />
-                <div className="absolute inset-0 bg-black/35" />
+                <div className="absolute inset-0 bg-black/10" />
                 <p className="absolute bottom-3 left-4 text-[20px] font-body-light text-white tablet:text-[22px]">{item.title}</p>
               </div>
             </button>

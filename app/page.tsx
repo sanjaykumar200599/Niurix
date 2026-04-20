@@ -53,7 +53,7 @@ export default function HomePage() {
       </section>
 
       <section className="px-5 pb-10 pt-6 tablet:px-20 tablet:pb-16 tablet:pt-4 laptop:px-30 laptop:pb-30 laptop:pt-8">
-        <h2 className="mb-8 text-[20px] font-display text-brand-black tablet:text-[22px] laptop:text-[28px]">
+        <h2 className="mb-8 text-[20px]  font-body-medium text-brand-black tablet:text-[22px] laptop:text-[28px]">
           <span className="text-brand-orange">Easy To</span> Install
         </h2>
 

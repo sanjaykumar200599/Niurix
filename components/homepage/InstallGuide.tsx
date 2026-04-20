@@ -21,7 +21,7 @@ export default function InstallGuide({ steps }: { steps: HomeData["installSteps"
 
   return (
     <div className="w-full laptop:self-center laptop:pl-4">
-      <div className="flex items-center justify-start px-1 tablet:px-2 laptop:px-8 [@media(min-width:1025px)_and_(max-width:1366px)]:px-6
+      <div className="flex items-center justify-start px-15 tablet:px-2 laptop:px-8 [@media(min-width:1025px)_and_(max-width:1366px)]:px-6
       
       ">
         {steps.map((_, stepIdx) => (
@@ -40,11 +40,11 @@ export default function InstallGuide({ steps }: { steps: HomeData["installSteps"
         ))}
       </div>
 
-      <div className="mt-5 min-h-[11rem] px-1 font-body-light tablet:min-h-[12rem] tablet:px-2 laptop:min-h-[13rem] laptop:px-8 [@media(min-width:1025px)_and_(max-width:1366px)]:px-6">
-        <h3 className="text-[20px] font-sans font-light text-brand-black tablet:text-[21px] laptop:text-[16px] [@media(min-width:1025px)_and_(max-width:1366px)]:text-[19px]">
+      <div className="mt-5 ml-2 min-h-[11rem] px-1 font-body-light tablet:ml-0 tablet:min-h-[12rem] tablet:px-2 laptop:min-h-[13rem] laptop:px-8 [@media(min-width:1025px)_and_(max-width:1366px)]:px-6">
+        <h3 className="text-[18px] font-sans font-light text-brand-black tablet:text-[21px] laptop:text-[16px] [@media(min-width:1025px)_and_(max-width:1366px)]:text-[19px]">
           {steps[idx]?.title}
         </h3>
-        <p className="mt-3 w-full text-[14px] leading-[1.55] font-body-light text-brand-black tablet:text-[15px] laptop:text-[16px] [@media(min-width:1025px)_and_(max-width:1366px)]:text-[15px]">
+        <p className="mt-3  w-full text-[16px] leading-[1.35] font-body-light text-brand-black tablet:text-[15px] laptop:text-[16px] [@media(min-width:1025px)_and_(max-width:1366px)]:text-[15px]">
           {steps[idx]?.para}
         </p>
       </div>
