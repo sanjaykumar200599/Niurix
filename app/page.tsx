@@ -46,7 +46,7 @@ export default function HomePage() {
       </section>
 
       <section className="pb-10 pt-4 tablet:pb-16 tablet:pt-2 laptop:pb-30 laptop:pt-0">
-        <h2 className="px-5 pb-8 text-[20px] font-display text-brand-black tablet:px-20 tablet:text-[22px] laptop:px-30 laptop:pb-10 laptop:text-[28px]">
+        <h2 className="px-5 pb-8 text-[20px] font-body-medium text-brand-black tablet:px-20 tablet:text-[22px] laptop:px-30 laptop:pb-10 laptop:text-[28px]">
           <span className="text-brand-orange">Our</span> Industries
         </h2>
         <IndustriesGrid industries={homeContent.industries} />

@@ -382,3 +382,13 @@ main {
     transform: rotate(45deg) !important;
   }
 }
+
+@media (min-width: 1920px) and (min-height: 1800px) {
+  .industries-card-active {
+    flex: 0 0 960px !important;
+  }
+
+  .industries-card-inactive {
+    flex: 0 0 320px !important;
+  }
+}
