@@ -32,7 +32,7 @@ export default function HardwareSection({ titleHtml, items }: HardwareSectionPro
           />
         </div>
 
-        <div className="relative z-20 px-5 pb-10 pt-6">
+        <div className="relative z-20 px-5 pb-10 pt-10">
           <h2 className="ml-[2.35rem] mr-auto max-w-[20rem] text-left font-sans text-[20px] leading-[1.34] text-brand-black">
             Empower Spaces with
             <br />
@@ -43,13 +43,13 @@ export default function HardwareSection({ titleHtml, items }: HardwareSectionPro
             <span className="text-brand-orange">Fiber Solutions</span>
           </h2>
 
-          <div className="mt-[22rem] grid grid-cols-1 gap-3">
+          <div className="mt-[22rem] grid grid-cols-1 gap-6 mb-[60px]">
             {items.map((item) => (
               <article
                 key={item}
-                className="mx-auto flex h-[96px] w-[86%] items-center justify-center rounded-tl-[16px] rounded-br-[16px] border border-transparent bg-white px-5 text-center shadow-[0px_3px_15px_#0000001F]"
+                className="mx-auto flex h-[73px] w-[262px] items-center justify-center rounded-tl-[16px] rounded-br-[16px] border border-transparent bg-white px-5 text-center shadow-[0px_3px_15px_#0000001F]"
               >
-                <p className="text-[14px] font-sans leading-[1.3] text-brand-black">{item}</p>
+                <p className="text-[10.4px] font-sans leading-[1.3] text-brand-black">{item}</p>
               </article>
             ))}
           </div>
