@@ -33,10 +33,15 @@ export default function HardwareSection({ titleHtml, items }: HardwareSectionPro
         </div>
 
         <div className="relative z-20 px-5 pb-10 pt-6">
-          <h2
-            className="nx-rich mx-auto max-w-[20rem] text-center font-sans text-[22px] leading-[1.24] text-brand-black"
-            dangerouslySetInnerHTML={{ __html: titleHtml }}
-          />
+          <h2 className="ml-[2.35rem] mr-auto max-w-[20rem] text-left font-sans text-[20px] leading-[1.34] text-brand-black">
+            Empower Spaces with
+            <br />
+            <span className="whitespace-nowrap">
+              <span className="text-brand-orange">High-Performance</span> GPON
+            </span>
+            <br />
+            <span className="text-brand-orange">Fiber Solutions</span>
+          </h2>
 
           <div className="mt-[22rem] grid grid-cols-1 gap-3">
             {items.map((item) => (

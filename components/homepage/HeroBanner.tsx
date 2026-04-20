@@ -47,7 +47,7 @@ export default function HeroBanner({ banners }: { banners: HomeData["banners"] }
                   className="absolute inset-x-0 top-44 z-10 flex flex-col items-start px-6 text-left text-white tablet:top-112 tablet:items-center tablet:px-19.5 tablet:text-center laptop:top-96 laptop:px-30 [@media(min-width:768px)_and_(max-width:1024px)_and_(orientation:landscape)]:top-80"
                   data-swiper-parallax="-300"
                 >
-                  <h1 className="max-w-[20rem] text-[30px] font-display leading-[1.12] tablet:max-w-5xl tablet:text-[34px] tablet:leading-tight laptop:text-[48px] pb-6">
+                  <h1 className="max-w-[22rem] text-[32px] font-display leading-[1.14] tablet:max-w-5xl tablet:text-[34px] tablet:leading-tight laptop:text-[48px] pb-6">
                     {item.title}
                   </h1>
 
@@ -61,7 +61,7 @@ export default function HeroBanner({ banners }: { banners: HomeData["banners"] }
 
                   <Link
                     href={`/solutions/${item.solutionSlug}`}
-                    className="mt-10 inline-flex self-center rounded-[10px_0px] border-2 border-brand-orange bg-transparent px-6 py-1 text-base font-body-light text-white transition hover:bg-brand-orange hover:text-black tablet:mt-5 tablet:self-auto tablet:text-lg laptop:mt-7 laptop:text-[20px]"
+                    className="mt-10 inline-flex self-center rounded-[10px_0px] border-2 border-brand-orange bg-transparent px-6 py-1 text-[20px] font-body-light text-white transition hover:bg-brand-orange hover:text-black tablet:mt-5 tablet:self-auto tablet:text-lg laptop:mt-7 laptop:text-[20px]"
                   >
                     Explore
                   </Link>
