@@ -44,26 +44,26 @@ const sections = [
 export default function Footer() {
   return (
     <footer className="relative w-full pt-3 pb-8 laptop:pt-4 laptop:pb-10">
-      <div className="px-9 tablet:px-20 laptop:px-30">
+      <div className="px-9 pl-12 tablet:px-20 laptop:px-30">
 
         <div className="border-t-2 border-[#DFDFDF] pt-7 pb-12 laptop:flex laptop:items-start laptop:justify-between laptop:pt-7 laptop:pb-16">
           
-          <div className="mb-6 shrink-0 laptop:mb-0 laptop:pt-[2px] laptop:w-[140px] laptop:mr-22 [@media(min-width:1600px)]:w-[200px] [@media(min-width:1600px)]:mr-46 [@media(min-width:1800px)]:w-[220px] [@media(min-width:1800px)]:mr-56">
+          <div className="mb-3 shrink-0 tablet:mb-6 laptop:mb-0 laptop:pt-[2px] laptop:w-[140px] laptop:mr-22 [@media(min-width:1600px)]:w-[200px] [@media(min-width:1600px)]:mr-46 [@media(min-width:1800px)]:w-[220px] [@media(min-width:1800px)]:mr-56">
             <Link href="/" className="inline-flex">
               <Image
                 src="/assets/footer/niurixlogo.svg"
                 alt="Niurix"
-                width={124}
-                height={41}
-                className="h-[30px] w-[92px] tablet:h-[33px] tablet:w-[102px] laptop:h-[25px] laptop:w-[80px]"
+                width={81}
+                height={26}
+                className="h-[26px] w-[81px] tablet:h-[33px] tablet:w-[102px] laptop:h-[25px] laptop:w-[80px]"
               />
             </Link>
           </div>
 
-          <div className="grid gap-y-6 laptop:flex-1 laptop:grid-cols-[1.22fr_0.7fr_1.05fr_0.72fr] laptop:gap-x-6 [@media(min-width:1600px)]:grid-cols-[1fr_0.7fr_1fr_0.7fr]">
+          <div className="grid gap-y-4 tablet:gap-y-2 laptop:flex-1 laptop:grid-cols-[1.22fr_0.7fr_1.05fr_0.72fr] laptop:gap-x-6 [@media(min-width:1600px)]:grid-cols-[1fr_0.7fr_1fr_0.7fr]">
             {sections.map((section) => (
               <div key={section.title} className="min-w-0">
-                <p className="pt-4 mb-4 text-[18px] leading-none font-sans font-medium text-black tablet:mb-6 tablet:text-[20px]">
+                <p className="pt-4 mb-4 text-[16px] leading-none font-sans font-semibold text-black tablet:mb-6 tablet:text-[20px] tablet:font-medium">
                   {section.title}
                 </p>
 
@@ -77,7 +77,7 @@ export default function Footer() {
                       <li key={label + href}>
                         <Link
                           href={href}
-                          className={`block text-[15px] leading-[1.28] font-sans text-black transition hover:text-brand-orange tablet:text-[16px] ${
+                          className={`block text-[14px] leading-[1.28] font-sans text-black transition hover:text-brand-orange tablet:text-[16px] ${
                             isSoftwareFirst ? "laptop:whitespace-nowrap" : ""
                           }`}
                         >
@@ -94,20 +94,20 @@ export default function Footer() {
 
         <div className="border-t border-[#707070] pt-6 pb-2 laptop:grid laptop:grid-cols-[1fr_auto_1fr] laptop:items-center laptop:pt-6 laptop:pb-3">
           
-          <div className="mb-4 text-center text-[16px] leading-none font-sans text-black laptop:mb-0 laptop:text-left">
+          <div className="mb-4 text-center text-[14px] leading-none font-sans text-black laptop:mb-0 laptop:text-left">
             &copy; 2026 All rights reserved
           </div>
 
-          <div className="mb-4 flex items-center justify-center gap-10 text-[16px] leading-none font-sans text-black laptop:mb-0">
+          <div className="mb-4 flex flex-nowrap items-center justify-center gap-8 whitespace-nowrap text-[14px] leading-none font-sans text-black laptop:mb-0 laptop:gap-10">
             <Link href="/terms-and-conditions" className="transition hover:text-brand-orange">
               Terms & Conditions
             </Link>
-            <Link href="/privacy-policy" className="transition hover:text-brand-orange ml-16">
+            <Link href="/privacy-policy" className="ml-8 transition hover:text-brand-orange tablet:ml-16">
               Privacy Policy
             </Link>
           </div>
 
-          <div className="flex items-center justify-center gap-2.5 text-[16px] leading-none font-sans text-black laptop:justify-end">
+          <div className="flex flex-col items-center justify-center gap-2 text-[14px] leading-none font-sans text-black tablet:flex-row tablet:gap-2.5 laptop:justify-end">
             <span>Find us on</span>
             <a
               href="https://www.linkedin.com/company/niurix/"
