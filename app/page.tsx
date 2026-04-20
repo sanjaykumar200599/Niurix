@@ -23,14 +23,14 @@ export default function HomePage() {
       <HardwareSection titleHtml={homeContent.hardwareTitleHtml} items={homeContent.hardwareItems} />
 
       <section className="px-5 py-9 tablet:px-19.5 tablet:py-0 laptop:px-30 laptop:py-30">
-        <h2 className="mb-8 text-[20px] font-body-medium leading-[1.25] text-brand-black tablet:text-center tablet:text-[34px] laptop:mb-16 laptop:text-left laptop:text-[32px]">
+        <h2 className="mb-8 pl-4 text-[20px] font-body-medium leading-[1.25] text-brand-black tablet:pl-0 tablet:text-center tablet:text-[34px] laptop:mb-16 laptop:text-left laptop:text-[32px]">
           Transforming Building <span className="text-brand-orange">Network</span>
           <br className="tablet:hidden" />
           <span className="text-brand-orange">Architecture</span> with <span className="text-brand-orange">Fiber</span>
         </h2>
 
         <div className="grid place-items-center">
-          <BuildingVideo className="w-full overflow-hidden rounded-[20px] tablet:w-full tablet:rounded-[20px] laptop:w-[70%] laptop:rounded-[50px]" />
+          <BuildingVideo className="w-[303.2px] max-w-full aspect-[303.2/170.55] overflow-hidden rounded-[60px] tablet:w-full tablet:aspect-auto tablet:rounded-[20px] laptop:w-[70%] laptop:rounded-[50px]" />
         </div>
       </section>
 
@@ -46,7 +46,7 @@ export default function HomePage() {
       </section>
 
       <section className="pb-10 pt-4 tablet:pb-16 tablet:pt-2 laptop:pb-30 laptop:pt-0">
-        <h2 className="px-5 pb-8 text-[20px] font-body-medium text-brand-black tablet:px-20 tablet:text-[22px] laptop:px-30 laptop:pb-10 laptop:text-[28px]">
+        <h2 className="ml-4 px-5 pb-8 text-[20px] font-body-medium text-brand-black tablet:ml-0 tablet:px-20 tablet:text-[22px] laptop:px-30 laptop:pb-10 laptop:text-[28px]">
           <span className="text-brand-orange">Our</span> Industries
         </h2>
         <IndustriesGrid industries={homeContent.industries} />

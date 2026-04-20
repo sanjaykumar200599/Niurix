@@ -100,11 +100,11 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
                   <Image src={item.mobileDetailImage} alt={item.title} fill sizes="(max-width: 767px) 303px, 100vw" className="object-cover" />
                 </div>
                 <div className="absolute inset-x-0 bottom-0 bg-white/95 px-5 pb-4 pt-3 tablet:static tablet:bg-[#f7f7f7] tablet:px-8 tablet:pb-8 tablet:pt-6">
-                  <h3 className="text-[20px] font-display text-brand-black tablet:text-[22px]">{item.title}</h3>
+                  <h3 className="text-[20px] font-sans text-brand-black tablet:text-[22px]">{item.title}</h3>
                   <p className="mt-3 text-[16px] leading-[1.4] font-body-light text-brand-black tablet:text-[18px]">{item.desc}</p>
                   <Link
                     href={`/industries/${item.slug}`}
-                    className="mt-5 inline-flex min-w-[170px] items-center justify-center gap-3 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-5 py-2.5 text-[16px] font-sans !text-white hover:!text-white tablet:text-[18px]"
+                    className="mt-5 inline-flex min-w-[132px] items-center justify-center gap-1.5 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-3 py-1.5 text-[15px] font-sans !text-white hover:!text-white tablet:min-w-[170px] tablet:gap-3 tablet:px-5 tablet:py-2.5 tablet:text-[18px]"
                   >
                     <span>Learn More</span>
                     <ArrowRightIcon />
