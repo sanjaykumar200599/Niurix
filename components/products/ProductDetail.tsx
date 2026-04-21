@@ -21,7 +21,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
   return (
     <div className="w-full">
-      <section className="relative h-[720px] tablet:h-[490px] laptop:h-[860px] [@media(min-width:1920px)_and_(min-height:1800px)]:h-[1080px]">
+      <section className="relative mx-auto h-[813.21px] w-[375.2px] tablet:h-[490px] tablet:w-full laptop:h-[860px] [@media(min-width:1920px)_and_(min-height:1800px)]:h-[1080px]">
         <Image src={product.heroImage} alt={product.overviewTitle} fill sizes="(max-width: 1023px) 0px, 100vw" className="hidden object-cover laptop:block" priority />
         <Image
           src={product.heroImage}
@@ -36,7 +36,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
           alt={product.overviewTitle}
           fill
           sizes="(max-width: 767px) 100vw, 0px"
-          className="object-cover object-[center_30%] tablet:hidden"
+          className="object-cover tablet:hidden scale-[1.00] -translate-y-18"
           priority
         />
       </section>
