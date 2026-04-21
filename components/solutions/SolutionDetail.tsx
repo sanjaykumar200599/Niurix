@@ -112,7 +112,7 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
                     {card.para}
                   </p>
 
-                  <div className="mt-5 flex justify-center laptop:mt-2">
+                  <div className="m-8 flex justify-center tablet:m-0 laptop:mt-2">
                     <div className="relative h-16 w-16 laptop:h-16 laptop:w-16">
                       <Image src={card.image} alt={card.title} fill sizes="64px" className="object-contain" />
                     </div>
