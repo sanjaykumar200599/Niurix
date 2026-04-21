@@ -93,7 +93,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
       <section className="px-9 pb-5 pt-8 tablet:px-[78px] tablet:pt-12 laptop:px-[120px] laptop:pt-24 [@media(min-width:1920px)_and_(min-height:1800px)]:pb-20">
         <h2
-          className="nx-rich mb-6 flex min-h-[52px] items-center justify-center whitespace-nowrap text-center text-[17px] font-display font-normal leading-tight tracking-normal text-brand-black tablet:mb-10 tablet:min-h-[78px] tablet:whitespace-normal tablet:text-[28px] laptop:mb-12 laptop:min-h-[88px] laptop:text-[40px]"
+          className="nx-rich mb-6 flex min-h-[52px] items-center justify-center whitespace-nowrap text-center text-[20px] font-body-medium font-normal leading-tight tracking-normal text-brand-black tablet:mb-10 tablet:min-h-[78px] tablet:whitespace-normal tablet:text-[28px] laptop:mb-12 laptop:min-h-[88px] laptop:text-[40px]"
           dangerouslySetInnerHTML={{ __html: product.connectHeadingHtml }}
         />
 
@@ -114,23 +114,23 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
             </div>
           </div>
 
-          <div className="w-full pt-1 text-left text-[16px] font-normal leading-[1.35] text-brand-black/80 tablet:pt-4 tablet:text-lg tablet:leading-8 laptop:w-[38%] laptop:pt-0 laptop:self-center laptop:text-[20px] laptop:leading-[1.32] [@media(min-width:1920px)_and_(min-height:1800px)]:w-[37.5%]">
+          <div className="w-full pt-1 text-left text-[16px] font-body-light leading-[1.35] text-[#1D1D1D] tablet:pt-4 tablet:text-lg tablet:leading-8 laptop:w-[38%] laptop:pt-0 laptop:self-center laptop:text-[20px] laptop:leading-[1.32] [@media(min-width:1920px)_and_(min-height:1800px)]:w-[37.5%]">
             <div className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: product.connectParaHtml }} />
           </div>
         </div>
       </section>
 
       <section className="mt-15 px-9 tablet:mt-16 tablet:px-[78px] laptop:mt-24 laptop:px-[120px]">
-        <div className="relative aspect-[4/3] overflow-hidden tablet:h-[520px] tablet:aspect-auto laptop:h-[660px] [@media(min-width:1920px)_and_(min-height:1800px)]:h-[838px]">
+        <div className="relative mx-auto h-[320px] w-[303.2px] overflow-hidden bg-[#bdbdbd] tablet:h-[520px] tablet:w-full tablet:aspect-auto laptop:h-[660px] [@media(min-width:1920px)_and_(min-height:1800px)]:h-[838px]">
           <Image src={product.detailImage} alt={product.detailTitle} fill sizes="100vw" className="hidden object-cover tablet:block" />
           <Image
             src={product.detailImageMobile}
             alt={product.detailTitle}
             fill
             sizes="(max-width: 1023px) 100vw, 0px"
-            className="object-cover object-[center_54%] tablet:hidden"
+            className="object-contain object-center tablet:hidden"
           />
-          <h2 className="absolute left-4 top-5 z-10 w-[76%] pb-2 text-[17px] font-display leading-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.5)] tablet:left-10 tablet:top-12 tablet:w-[64%] tablet:pb-0 tablet:text-[34px] tablet:[text-shadow:none] laptop:left-28 laptop:top-16 laptop:w-[42%] laptop:text-4xl">
+          <h2 className="absolute left-4 top-5 z-10 w-[76%] pb-2 text-[20px] font-sans leading-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.5)] tablet:left-10 tablet:top-12 tablet:w-[64%] tablet:pb-0 tablet:text-[34px] tablet:[text-shadow:none] laptop:left-28 laptop:top-16 laptop:w-[42%] laptop:text-4xl">
             {splitSimplerConnectivity ? (
               <>
                 <span className="laptop:hidden">
