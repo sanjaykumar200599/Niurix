@@ -128,7 +128,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
             alt={product.detailTitle}
             fill
             sizes="(max-width: 1023px) 100vw, 0px"
-            className="object-contain object-center tablet:hidden"
+            className="object-contain object-center scale-x-[1.00] scale-y-[1.76] tablet:hidden"
           />
           <h2 className="absolute left-4 top-5 z-10 w-[76%] pb-2 text-[20px] font-sans leading-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.5)] tablet:left-10 tablet:top-12 tablet:w-[64%] tablet:pb-0 tablet:text-[34px] tablet:[text-shadow:none] laptop:left-28 laptop:top-16 laptop:w-[42%] laptop:text-4xl">
             {splitSimplerConnectivity ? (
@@ -153,8 +153,8 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
         <div className="mt-[-2px] flex flex-col justify-between gap-5 bg-[#f3f3f3] px-7 py-7 tablet:px-12 tablet:py-10 laptop:h-[220px] laptop:flex-row laptop:items-start laptop:px-14">
           {product.highlights.map((item) => (
             <article key={item.title} className="w-full laptop:w-[30%]">
-              <h3 className="text-lg font-display text-brand-orange tablet:text-xl laptop:text-[20px]">{item.title}</h3>
-              <p className="mt-1 text-base font-body-light leading-[1.45] laptop:text-xl text-brand-black tablet:mt-2 tablet:text-lg tablet:leading-7">{item.para}</p>
+              <h3 className="text-[16px] font-body-medium text-brand-orange tablet:text-xl laptop:text-[20px]">{item.title}</h3>
+              <p className="mt-1 text-base font-body-light leading-[1.35] laptop:text-xl text-brand-black tablet:mt-2 tablet:text-lg tablet:leading-7">{item.para}</p>
             </article>
           ))}
         </div>
