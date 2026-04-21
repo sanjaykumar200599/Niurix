@@ -271,7 +271,7 @@ export default function Header() {
         />
       </div>
 
-      <div className="fixed left-0 right-0 top-0 z-50 border-b border-black/10 bg-white px-9 py-4 shadow-[0px_3px_15px_#00000029] laptop:hidden">
+      <div className="fixed left-0 right-0 top-0 z-50 bg-white px-9 py-4 shadow-none laptop:hidden">
         <div className="flex items-center justify-between">
           <Link href="/" className="shrink-0" onClick={closeMenus}>
             <Image src="/assets/header/niurixlogo.svg" alt="Niurix" width={81} height={27} />
