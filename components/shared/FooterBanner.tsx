@@ -34,14 +34,16 @@ export default function FooterBanner() {
           </div>
         </div>
 
-        <div className="absolute inset-0 flex items-end justify-start px-8 pb-7 tablet:hidden">
-          <div className="w-[88%]">
-            <p className="font-display text-[20px] leading-tight text-white">
-              Transform Your Network Architecture With Us!
+        <div className="absolute inset-x-0 bottom-0 flex h-[42%] items-start justify-start px-8 pt-10 tablet:hidden">
+          <div className="w-full max-w-[15.25rem] pl-3.5">
+            <p className="font-sans text-[20px] leading-[1.28] text-white">
+              Transform Your Network
+              <br />
+              Architecture With Us!
             </p>
             <Link
               href="/contact-us"
-              className="mt-4 inline-flex rounded-[10px_0px] border border-brand-orange bg-brand-orange px-4 py-2 text-[16px] font-sans !text-white visited:!text-white transition hover:bg-transparent hover:!text-white"
+              className="mt-4 inline-flex items-center justify-center rounded-[10px_0px] border border-brand-orange bg-brand-orange px-1.5 py-1.5 text-[16px] leading-none font-sans !text-white visited:!text-white transition hover:bg-transparent hover:!text-white"
             >
               Get in touch
             </Link>
