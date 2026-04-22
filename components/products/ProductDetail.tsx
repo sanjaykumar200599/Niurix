@@ -240,12 +240,18 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
           </div>
         </div>
 
-        <div className="w-full laptop:h-[52rem] laptop:w-[55%]"> 
-          <Swiper modules={[Pagination, Navigation]} navigation pagination={{ clickable: true }} loop className="product-spec-swiper h-[420px] tablet:h-[560px] laptop:h-full">
+        <div className="mx-auto h-[480px] w-[375px] tablet:h-[560px] tablet:w-full laptop:h-[52rem] laptop:w-[55%]"> 
+          <Swiper modules={[Pagination, Navigation]} navigation pagination={{ clickable: true }} loop className="product-spec-swiper h-full">
             {product.specSlides.map((slide) => (
               <SwiperSlide key={slide}>
                 <div className="relative h-full w-full">
-                  <Image src={slide} alt={`${product.overviewTitle} spec`} fill sizes="(min-width: 1024px) 55vw, 100vw" className="object-cover" />
+                  <Image
+                    src={slide}
+                    alt={`${product.overviewTitle} spec`}
+                    fill
+                    sizes="(min-width: 1024px) 55vw, 100vw"
+                    className="object-contain scale-x-[1.00] scale-y-[1.51] tablet:scale-100 tablet:object-cover"
+                  />
                 </div>
               </SwiperSlide>
             ))}
