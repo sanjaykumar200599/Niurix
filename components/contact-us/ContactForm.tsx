@@ -56,7 +56,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="w-full">
-      <div className="grid gap-4 laptop:grid-cols-2 laptop:gap-7">
+      <div className="grid gap-7 tablet:gap-4 laptop:grid-cols-2 laptop:gap-7">
         <div className="laptop:max-w-[330px] [@media(min-width:1920px)_and_(min-height:1800px)]:max-w-[440px]">
           <input
             name="name"
@@ -102,7 +102,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={pending}
-          className="cursor-pointer rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-lg font-sans text-white disabled:opacity-60 laptop:text-[20px]"
+          className="cursor-pointer rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-5 py-2 text-[20px] font-sans text-white disabled:opacity-60 tablet:px-6 tablet:text-lg laptop:text-[20px]"
         >
           {pending ? "Submitting..." : "Submit"}
         </button>
