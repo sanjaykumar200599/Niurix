@@ -221,14 +221,14 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
           {industry.advantagesCards.map((card) => (
             <article
               key={card.title}
-              className="min-h-[170px] rounded-tl-[18px] rounded-br-[18px] bg-white shadow-[0_0_10px_#00000029] tablet:min-h-[168px] laptop:min-h-[236px] [@media(min-width:1920px)_and_(min-height:1800px)]:min-h-[236px]"
+              className="h-[144px] w-[135.6px] rounded-tl-[18px] rounded-br-[18px] bg-white shadow-[0_0_10px_#00000029] tablet:h-auto tablet:w-auto tablet:min-h-[168px] laptop:min-h-[236px] [@media(min-width:1920px)_and_(min-height:1800px)]:min-h-[236px]"
             >
-              <div className="w-[110%] p-5 tablet:w-full tablet:p-7 laptop:p-10 [@media(min-width:1920px)_and_(min-height:1800px)]:p-10">
-                <div className="relative mb-3 h-[80px] w-[80px]">
+              <div className="w-full p-4 tablet:w-full tablet:p-7 laptop:p-10 [@media(min-width:1920px)_and_(min-height:1800px)]:p-10">
+                <div className="relative mb-3 h-[32px] w-[32px] tablet:h-[80px] tablet:w-[80px]">
                   <Image src={card.image} alt={card.title} fill sizes="80px" className="object-contain" />
                 </div>
 
-                <h3 className="text-[16px] font-sans font-medium leading-[1.3] text-brand-black tablet:text-[18px] laptop:pt-3 laptop:text-[20px] [@media(min-width:1920px)_and_(min-height:1800px)]:pt-5">
+                <h3 className="text-[16px]  font-sans font-medium leading-[1.3] text-[#000000] tablet:text-[18px] laptop:pt-3 laptop:text-[20px] [@media(min-width:1920px)_and_(min-height:1800px)]:pt-5">
                   {card.title}
                 </h3>
               </div>
