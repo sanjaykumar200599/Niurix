@@ -62,7 +62,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
             <div className="mt-6 flex justify-center laptop:mt-8 laptop:justify-start">
               <Link
                 href="/contact-us"
-                className="group inline-flex rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-[20px] font-sans leading-tight text-white transition-colors duration-200 hover:bg-white hover:text-brand-black laptop:text-[20px]"
+                className="group inline-flex rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange pl-2 pr-14 py-2 text-[20px] font-sans leading-tight text-white transition-colors duration-200 hover:bg-white hover:text-brand-black laptop:text-[20px]"
               >
                 <span className="text-white transition-colors duration-200 group-hover:text-brand-black">
                   <span className="block tablet:inline">Get in</span>
@@ -160,7 +160,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
         </div>
       </section>
 
-      <section className="mt-28 flex w-full flex-col-reverse tablet:mt-16 laptop:mt-24 laptop:flex-row">
+      <section className="mt-16 flex w-full flex-col-reverse tablet:mt-16 laptop:mt-24 laptop:flex-row">
         <div className="w-full bg-[#f3f3f3] laptop:w-[45%]">
           <div className="flex h-full flex-col justify-start px-10 pb-10 pt-8 tablet:px-20 tablet:pb-16 tablet:pt-10 laptop:min-h-[50rem] laptop:px-24 laptop:pt-28 laptop:ml-12">
             <h2 className="mb-8 text-[20px] font-sans leading-tight text-brand-black tablet:text-[26px] laptop:text-[28px] ">
