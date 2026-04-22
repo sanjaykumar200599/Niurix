@@ -35,8 +35,8 @@ export default function MobileMenu({ mobileOpen, mobileSection, setMobileSection
                     className="flex w-full items-center justify-between py-3"
                     onClick={() => setMobileSection((prev) => (prev === section ? null : section))}
                   >
-                    <span className="text-2xl font-display text-brand-black capitalize">{section}</span>
-                    <span className={`text-3xl text-brand-orange transition ${open ? "rotate-45" : ""}`}>+</span>
+                    <span className="text-[26px] font-sans text-brand-black capitalize">{section}</span>
+                    <span className={`text-[30px] text-brand-orange transition ${open ? "rotate-45" : ""}`}>+</span>
                   </button>
 
                   <AnimatePresence>
@@ -48,7 +48,7 @@ export default function MobileMenu({ mobileOpen, mobileSection, setMobileSection
                         className="-mx-9 overflow-hidden bg-[#FF8948]"
                       >
                         {mobileLinks[section].map((item) => (
-                          <Link key={item.href} href={item.href} onClick={onNavigate} className="block px-9 py-3 text-lg !text-white">
+                          <Link key={item.href} href={item.href} onClick={onNavigate} className="block px-9 py-3 text-[20px] !text-white">
                             {item.label}
                           </Link>
                         ))}
@@ -59,7 +59,7 @@ export default function MobileMenu({ mobileOpen, mobileSection, setMobileSection
               );
             })}
 
-            <Link href="/software" onClick={onNavigate} className="block py-3 text-2xl font-display text-brand-black">
+            <Link href="/software" onClick={onNavigate} className="block py-3 text-[26px] font-sans text-brand-black">
               Software
             </Link>
 
@@ -69,7 +69,7 @@ export default function MobileMenu({ mobileOpen, mobileSection, setMobileSection
                 className="flex w-full items-center justify-between py-3"
                 onClick={() => setMobileSection((prev) => (prev === "industries" ? null : "industries"))}
               >
-                <span className="text-2xl font-display text-brand-black capitalize">industries</span>
+                <span className="text-[26px] font-sans text-brand-black capitalize">industries</span>
                 <span className={`text-3xl text-brand-orange transition ${mobileSection === "industries" ? "rotate-45" : ""}`}>+</span>
               </button>
 
@@ -95,7 +95,7 @@ export default function MobileMenu({ mobileOpen, mobileSection, setMobileSection
               <Link
                 href="/contact-us"
                 onClick={onNavigate}
-                className="rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-xl font-display !text-white"
+                className="rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-[20px] font-sans !text-white"
               >
                 Contact Us
               </Link>
