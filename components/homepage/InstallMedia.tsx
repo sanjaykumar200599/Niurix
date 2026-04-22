@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 export default function InstallMedia() {
@@ -25,14 +26,25 @@ export default function InstallMedia() {
   }, []);
 
   return (
-    <div ref={wrapperRef}>
+    <div ref={wrapperRef} className="relative">
+      {!shouldLoadVideo ? (
+        <div className="pointer-events-none absolute inset-0 z-10">
+          <Image
+            src="/assets/homepage/Box Together.webp"
+            alt="Easy to install preview"
+            fill
+            sizes="(max-width: 1023px) 100vw, 60vw"
+            className="object-contain"
+          />
+        </div>
+      ) : null}
+
       <video
         autoPlay={shouldLoadVideo}
         loop
         muted
         playsInline
         preload={shouldLoadVideo ? "metadata" : "none"}
-        poster="/assets/homepage/Box Together.webp"
         className="h-[220px] w-full bg-white object-contain tablet:h-[320px] laptop:h-auto laptop:aspect-[16/9]"
         aria-label="Easy to install animation"
       >
