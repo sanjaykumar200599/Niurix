@@ -181,7 +181,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
               <button
                 type="button"
                 onClick={() => setTab("spec")}
-                className={`border-b-[3px] pb-1 text-[24px] font-body-medium tablet:text-[28px] laptop:w-[170px] laptop:text-left laptop:text-[28px] ${
+                className={`border-b-[3px] pb-1 text-[20px] font-body-medium tablet:text-[28px] laptop:w-[170px] laptop:text-left laptop:text-[28px] ${
                   tab === "spec" ? "border-brand-orange text-brand-orange" : "border-transparent text-brand-black/30"
                 }`}
               >
@@ -190,7 +190,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
               <button
                 type="button"
                 onClick={() => setTab("dim")}
-                className={`border-b-[3px] pb-1 text-[24px] font-body-medium tablet:text-[28px] laptop:ml-26 laptop:w-fit laptop:text-left laptop:text-[28px] [@media(min-width:1920px)_and_(min-height:1800px)]:ml-54  ${
+                className={`border-b-[3px] pb-1 text-[20px] font-body-medium tablet:text-[28px] laptop:ml-26 laptop:w-fit laptop:text-left laptop:text-[28px] [@media(min-width:1920px)_and_(min-height:1800px)]:ml-54  ${
                   tab === "dim" ? "border-brand-orange text-brand-orange" : "border-transparent text-brand-black/30"
                 }`}
               >
@@ -198,7 +198,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
               </button>
             </div>
 
-            <div className="mt-8 min-h-[14rem] space-y-3 tablet:min-h-[17rem] laptop:min-h-[18.5rem]">
+            <div className="mt-8 min-h-[14rem] font-body-light space-y-3 tablet:min-h-[17rem] laptop:min-h-[18.5rem]">
               {rows.map((row) => (
                 <div key={row.title} className="flex w-full justify-between gap-6 text-base tablet:text-lg laptop:text-[20px]">
                   <p className="w-[58%] text-brand-black">{row.title}</p>
@@ -209,14 +209,14 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
             {product.pdf ? (
               <>
-                <p className="mt-12 text-[18px] text-brand-black/75 tablet:mt-8 tablet:text-[20px] laptop:text-[20px] [@media(min-width:1920px)_and_(min-height:1800px)]:pt-16 ">
+                <p className="mt-12 text-[16px] font-body-light text-[#1D1D1D] tablet:mt-8 tablet:text-[20px] laptop:text-[20px] [@media(min-width:1920px)_and_(min-height:1800px)]:pt-16 ">
                   Click to download the full specifications
                 </p>
                 <a
                   href={product.pdf}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-4 inline-flex w-fit items-center gap-2 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-5 py-[6px] text-lg font-display !text-white transition-colors duration-200 hover:bg-white hover:!text-black"
+                  className="mt-4 inline-flex w-fit items-center gap-2 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-4 py-[6px] text-[16px] font-sans !text-white transition-colors duration-200 hover:bg-white hover:!text-black"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -226,7 +226,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="h-4 w-4 shrink-0"
+                    className="h-[18.55px] w-[18.02px] shrink-0"
                     aria-hidden="true"
                   >
                     <path d="M12 3v12" />
