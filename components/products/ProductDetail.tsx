@@ -161,7 +161,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
       </section>
 
       <section className="mt-16 flex w-full flex-col-reverse tablet:mt-16 laptop:mt-24 laptop:flex-row">
-        <div className="w-full bg-[#f3f3f3] laptop:w-[45%]">
+        <div className="w-full p-2 tablet:p-0 bg-[#f3f3f3] laptop:w-[45%]">
           <div className="flex h-full flex-col justify-start px-10 pb-10 pt-8 tablet:px-20 tablet:pb-16 tablet:pt-10 laptop:min-h-[50rem] laptop:px-24 laptop:pt-28 laptop:ml-12">
             <h2 className="mb-8 text-[20px] font-sans leading-tight text-brand-black tablet:text-[26px] laptop:text-[28px] ">
               <span className="whitespace-nowrap [@media(min-width:1920px)_and_(min-height:1800px)]:hidden">General Product Specifications</span>
@@ -201,22 +201,27 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
             <div className="mt-8 min-h-[14rem] font-body-light space-y-3 tablet:min-h-[17rem] laptop:min-h-[18.5rem]">
               {rows.map((row) => (
                 <div key={row.title} className="flex w-full justify-between gap-6 text-base tablet:text-lg laptop:text-[20px]">
-                  <p className="w-[58%] text-brand-black">{row.title}</p>
-                  <p className="w-[38%] text-brand-black">{row.value}</p>
+                  <p className="w-[52%] text-brand-black tablet:w-[58%]">{row.title}</p>
+                  <p className="pl-5 tablet:pl-0 w-[44%] text-brand-black tablet:w-[38%]">{row.value}</p>
                 </div>
               ))}
             </div>
 
             {product.pdf ? (
               <>
-                <p className="mt-12 text-[16px] font-body-light text-[#1D1D1D] tablet:mt-8 tablet:text-[20px] laptop:text-[20px] [@media(min-width:1920px)_and_(min-height:1800px)]:pt-16 ">
-                  Click to download the full specifications
+                <p className="mt-40 text-[16px] font-body-light text-[#1D1D1D] tablet:mt-8 tablet:text-[20px] laptop:text-[20px] [@media(min-width:1920px)_and_(min-height:1800px)]:pt-16 ">
+                  <span className="tablet:hidden">
+                    Click to download the full
+                    <br />
+                    specifications
+                  </span>
+                  <span className="hidden tablet:inline">Click to download the full specifications</span>
                 </p>
                 <a
                   href={product.pdf}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-4 inline-flex w-fit items-center gap-2 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-4 py-[6px] text-[16px] font-sans !text-white transition-colors duration-200 hover:bg-white hover:!text-black"
+                  className="mt-4 inline-flex w-fit items-center gap-2 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-1 py-1 tablet:px-4 tablet:py-[6px] text-[16px] font-sans !text-white transition-colors duration-200 hover:bg-white hover:!text-black"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
