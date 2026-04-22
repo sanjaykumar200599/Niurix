@@ -29,8 +29,8 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
 
   return (
     <>
-      <section className="relative" data-hero-banner="industries">
-        <div className="relative h-[660px] tablet:h-[460px] laptop:h-[860px] [@media(min-width:1920px)_and_(min-height:1800px)]:h-[1080px]">
+      <section className="relative -mt-[72px] tablet:mt-0" data-hero-banner="industries">
+        <div className="relative mx-auto h-[813.21px] w-[375.2px] tablet:h-[460px] tablet:w-full laptop:h-[860px] [@media(min-width:1920px)_and_(min-height:1800px)]:h-[1080px]">
           <Image
             src={industry.heroImage}
             alt={industry.heroTitle}
@@ -49,26 +49,26 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
           />
         </div>
 
-        <h1 className="absolute left-9 top-44 z-10 w-[75%] text-[30px] font-sans font-normal leading-[1.34] tracking-[-0.01em] text-white tablet:left-[80px] tablet:top-1/2 tablet:w-[70%] tablet:-translate-y-1/2 tablet:text-[36px] tablet:font-display laptop:left-[120px] laptop:w-[52%] laptop:text-[48px] [@media(min-width:1920px)_and_(min-height:1800px)]:font-sans [@media(min-width:1920px)_and_(min-height:1800px)]:font-normal [@media(min-width:1920px)_and_(min-height:1800px)]:text-white/95 [@media(min-width:1920px)_and_(min-height:1800px)] pt-14">
+        <h1 className="absolute left-9 top-54 z-10 w-[78%] pt-14 text-[32px] font-sans font-normal leading-[1.34] tracking-[-0.01em] text-brand-white tablet:left-[80px] tablet:top-1/2 tablet:w-[70%] tablet:-translate-y-1/2 tablet:pt-0 tablet:text-[36px] tablet:font-display laptop:left-[120px] laptop:w-[52%] laptop:text-[48px] [@media(min-width:1920px)_and_(min-height:1800px)]:font-sans [@media(min-width:1920px)_and_(min-height:1800px)]:font-normal [@media(min-width:1920px)_and_(min-height:1800px)]:text-white/95 [@media(min-width:1920px)_and_(min-height:1800px)]">
           {industry.heroTitle}
         </h1>
       </section>
 
       <section className="my-12 px-9 tablet:my-12 tablet:px-[80px] laptop:my-24 laptop:px-[120px]">
        <h2
-          className="nx-rich max-w-[920px] text-[22px] font-display leading-[1.3] text-brand-black tablet:text-[24px] laptop:text-[28px]"
+          className="nx-rich max-w-[920px] text-[26px] font-body-medium leading-[1.3] text-brand-black tablet:text-[24px] laptop:text-[28px]"
           dangerouslySetInnerHTML={{ __html: industry.introTitleHtml }}
         />
 
         <div className="mt-3 flex flex-col-reverse gap-8 laptop:mt-4 laptop:flex-row laptop:items-center laptop:justify-between">
           <div className="flex w-full flex-col justify-start laptop:w-[24%]">
-            <p className="pb-3 text-[16px] font-normal leading-[1.4] text-brand-black/80 tablet:pb-4 tablet:text-[17px] laptop:text-[20px] [@media(min-width:1920px)_and_(min-height:1800px)] w-[110%]">
+            <p className="w-[110%] pb-3 text-[16px] font-body-light leading-[1.4] text-[#000000] tablet:w-full tablet:pb-4 tablet:text-[17px] laptop:text-[20px] [@media(min-width:1920px)_and_(min-height:1800px)]">
               {industry.introText}
             </p>
 
             <Link
               href="/contact-us"
-              className="group mt-6 inline-flex w-fit flex-row items-center gap-1 whitespace-nowrap rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-left text-lg font-medium leading-tight text-white transition-colors duration-200 hover:bg-white hover:text-brand-black"
+              className="group mt-6 inline-flex w-fit flex-row items-center gap-1 whitespace-nowrap rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-4 py-1.5 text-left text-[16px] font-medium leading-tight text-white transition-colors duration-200 hover:bg-white hover:text-brand-black"
             >
               <span className="text-white transition-colors duration-200 group-hover:text-brand-black">Get in touch</span>
             </Link>
@@ -205,13 +205,13 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
 
       <section className="my-16 bg-[#ebebeb] px-9 py-9 tablet:my-16 tablet:px-[80px] tablet:py-12 laptop:relative laptop:mb-24 laptop:mt-64 laptop:min-h-[350px] laptop:px-[120px] laptop:py-10">
         <div className="w-full laptop:w-[48%]">
-          <h2 className="text-[24px] font-display font-normal leading-[1.28] text-brand-black tablet:text-[30px] laptop:text-[30px] [@media(min-width:1920px)_and_(min-height:1800px)] pt-10">
+          <h2 className="pt-10 text-[24px] font-display font-normal leading-[1.28] text-brand-black tablet:pt-0 tablet:text-[30px] laptop:text-[30px] [@media(min-width:1920px)_and_(min-height:1800px)]">
             <span className="laptop:hidden">{industry.advantagesTitle}</span>
             <span className="hidden whitespace-pre-line laptop:inline [@media(min-width:1920px)_and_(min-height:1800px)]:hidden">{advantagesHeading}</span>
             <span className="hidden [@media(min-width:1920px)_and_(min-height:1800px)]:inline whitespace-nowrap">{industry.advantagesTitle}</span>
           </h2>
 
-          <p className="mt-4 text-[17px] font-normal leading-[1.62] text-brand-black/80 tablet:text-[18px] laptop:max-w-[560px] laptop:text-[20px] [@media(min-width:1920px)_and_(min-height:1800px)]:max-w-[630px] [@media(min-width:1920px)_and_(min-height:1800px)]:text-[20px] [@media(min-width:1920px)_and_(min-height:1800px)]:leading-[1.55]">
+          <p className="mt-4 text-[17px] font-normal leading-[1.62] text-brand-black/80 tablet:text-[18px] laptop:max-w-[560px] laptop:text-[20px] [@media(min-width:1920px)_and_(min-height:1800px)]:max-w-[630px] [@media(min-width:1920px)_and_(min-height:1800px)]:text-[20px] [@media(min-width:1920px)_and_(min-height:1800px)]:leading-[1.40]">
             {industry.advantagesText}
           </p>
         </div>
@@ -222,7 +222,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
               key={card.title}
               className="min-h-[170px] rounded-tl-[18px] rounded-br-[18px] bg-white shadow-[0_0_10px_#00000029] tablet:min-h-[168px] laptop:min-h-[236px] [@media(min-width:1920px)_and_(min-height:1800px)]:min-h-[236px]"
             >
-              <div className="p-5 tablet:p-7 laptop:p-10 [@media(min-width:1920px)_and_(min-height:1800px)]:p-10 w-[110%]">
+              <div className="w-[110%] p-5 tablet:w-full tablet:p-7 laptop:p-10 [@media(min-width:1920px)_and_(min-height:1800px)]:p-10">
                 <div className="relative mb-3 h-[80px] w-[80px]">
                   <Image src={card.image} alt={card.title} fill sizes="80px" className="object-contain" />
                 </div>
