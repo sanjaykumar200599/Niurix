@@ -57,7 +57,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="w-full">
       <div className="grid gap-7 tablet:gap-4 laptop:grid-cols-2 laptop:gap-7">
-        <div className="laptop:max-w-[330px] [@media(min-width:1920px)_and_(min-height:1800px)]:max-w-[440px]">
+        <div className="laptop:max-w-[330px] [@media(min-width:1920px)_and_(min-height:1080px)]:max-w-[440px]">
           <input
             name="name"
             placeholder="Name"
@@ -66,7 +66,7 @@ export default function ContactForm() {
           {state.fieldErrors?.name ? <p className="mt-1 text-sm text-black">{state.fieldErrors.name}</p> : null}
         </div>
 
-        <div className="contact-phone-wrap laptop:max-w-[400px] laptop:pl-18 [@media(min-width:1920px)_and_(min-height:1800px)]:pl-18 [@media(min-width:1920px)_and_(min-height:1800px)]:max-w-[490px]">
+        <div className="contact-phone-wrap laptop:max-w-[400px] laptop:pl-18 [@media(min-width:1920px)_and_(min-height:1080px)]:pl-18 [@media(min-width:1920px)_and_(min-height:1080px)]:max-w-[490px]">
           <PhoneInput
             country="us"
             enableSearch={true}
@@ -78,7 +78,7 @@ export default function ContactForm() {
           />
         </div>
 
-        <div className="laptop:col-start-1 laptop:col-end-2 laptop:max-w-[330px]  [@media(min-width:1920px)_and_(min-height:1800px)]:max-w-[440px] ">
+        <div className="laptop:col-start-1 laptop:col-end-2 laptop:max-w-[330px]  [@media(min-width:1920px)_and_(min-height:1080px)]:max-w-[440px] ">
           <input
             type="email"
             name="email"

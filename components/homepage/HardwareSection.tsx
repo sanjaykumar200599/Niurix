@@ -86,7 +86,7 @@ export default function HardwareSection({ titleHtml, items }: HardwareSectionPro
         </div>
       </div>
 
-      <div className="relative hidden h-[900px] laptop:block [@media(min-width:1920px)_and_(min-height:1800px)]:h-[880px]">
+      <div className="relative hidden h-[900px] laptop:block [@media(min-width:1920px)_and_(min-height:1080px)]:h-[880px]">
         <div className="absolute inset-0">
           <Image
             src="/assets/homepage/Box section-1.webp"
@@ -99,21 +99,21 @@ export default function HardwareSection({ titleHtml, items }: HardwareSectionPro
 
         <HardwareAnimation />
 
-        <div className="absolute left-1/2 top-[4rem] z-40 w-full -translate-x-1/2 tablet:-translate-y-0 laptop:left-auto laptop:right-[85px] laptop:top-[42%] laptop:w-[28%] laptop:translate-x-0 laptop:-translate-y-1/2 [@media(min-width:1920px)_and_(min-height:1800px)]:right-[72px] [@media(min-width:1920px)_and_(min-height:1800px)]:top-[41%] [@media(min-width:1920px)_and_(min-height:1800px)]:w-[596px]">
+        <div className="absolute left-1/2 top-[4rem] z-40 w-full -translate-x-1/2 tablet:-translate-y-0 laptop:left-auto laptop:right-[85px] laptop:top-[42%] laptop:w-[28%] laptop:translate-x-0 laptop:-translate-y-1/2 [@media(min-width:1920px)_and_(min-height:1080px)]:right-[72px] [@media(min-width:1920px)_and_(min-height:1080px)]:top-[41%] [@media(min-width:1920px)_and_(min-height:1080px)]:w-[596px]">
           <div className="w-full px-19.5 laptop:px-0">
             <h2
-              className="nx-rich text-left font-sans text-[30px] leading-[1.22] text-brand-black laptop:w-full laptop:text-[20px] laptop:leading-[1.24] laptop:[&_br]:block [@media(min-width:1920px)_and_(min-height:1800px)]:text-[24px]"
+              className="nx-rich text-left font-sans text-[30px] leading-[1.22] text-[#000000] laptop:w-full laptop:text-[20px] laptop:leading-[1.24] laptop:[&_br]:block [@media(min-width:1920px)_and_(min-height:1080px)]:text-[24px]"
               dangerouslySetInnerHTML={{ __html: titleHtml }}
             />
           </div>
 
-          <div className="mt-[28rem] grid grid-cols-2 gap-4 px-19.5 laptop:mt-4 laptop:grid-cols-2 laptop:gap-x-2.5 laptop:gap-y-2.5 laptop:px-0 [@media(min-width:1920px)_and_(min-height:1800px)]:gap-x-2.5">
+          <div className="mt-[28rem] grid grid-cols-2 gap-4 px-19.5 laptop:mt-4 laptop:grid-cols-2 laptop:gap-x-2.5 laptop:gap-y-2.5 laptop:px-0 [@media(min-width:1920px)_and_(min-height:1080px)]:gap-x-2.5">
             {items.map((item) => (
               <article
                 key={item}
-                className="flex items-center justify-center rounded-tl-[16px] rounded-br-[16px] border border-transparent bg-white px-3 text-center shadow-[0px_3px_15px_#0000001F] transition hover:border-brand-orange tablet:h-[120px] laptop:h-[8.7rem] laptop:w-full [@media(min-width:1920px)_and_(min-height:1800px)]:h-[153px] [@media(min-width:1920px)_and_(min-height:1800px)]:w-[280px]"
+                className="flex items-center justify-center rounded-tl-[16px] rounded-br-[16px] border border-transparent bg-white px-3 text-center shadow-[0px_3px_15px_#0000001F] transition hover:border-brand-orange tablet:h-[120px] laptop:h-[8.7rem] laptop:w-full [@media(min-width:1920px)_and_(min-height:1080px)]:h-[153px] [@media(min-width:1920px)_and_(min-height:1080px)]:w-[280px]"
               >
-                <p className="text-[20px] font-sans leading-[1.25] text-black laptop:w-[90%] laptop:font-sans laptop:text-[20px] laptop:text-black laptop:whitespace-pre-line [@media(min-width:1920px)_and_(min-height:1800px)]:whitespace-normal [@media(min-width:1920px)_and_(min-height:1800px)]:w-[75%]">
+                <p className="text-[20px] font-sans leading-[1.25] text-black laptop:w-[90%] laptop:font-sans laptop:text-[20px] laptop:text-black laptop:whitespace-pre-line [@media(min-width:1920px)_and_(min-height:1080px)]:whitespace-normal [@media(min-width:1920px)_and_(min-height:1080px)]:w-[75%]">
                   {getLaptopCardText(item)}
                 </p>
               </article>

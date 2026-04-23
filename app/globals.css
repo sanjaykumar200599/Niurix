@@ -443,7 +443,7 @@ main {
   }
 }
 
-@media (min-width: 1920px) and (min-height: 1800px) {
+@media (min-width: 1920px) and (min-height: 1080px) {
   .industries-card-active {
     flex: 0 0 960px !important;
   }

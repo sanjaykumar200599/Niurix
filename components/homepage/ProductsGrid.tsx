@@ -77,16 +77,16 @@ export default function ProductsGrid({ products }: { products: HomeData["product
               </div>
 
               <div className="flex w-[40%] flex-col self-start mt-8">
-                <h3 className="flex items-center gap-2 text-[30px] font-body-medium leading-tight text-brand-black [@media(min-width:1367px)]:text-[28px]">
+                <h3 className="flex items-center gap-2 text-[30px] font-body-medium leading-tight text-[#000000] [@media(min-width:1367px)]:text-[28px]">
                   {selected.name}
                   <span className="text-brand-orange">({selected.type})</span>
                 </h3>
-                <p className="mt-4 w-[86%] text-[17px] leading-[1.25] font-body-light text-brand-black [@media(min-width:1367px)]:w-[85%] [@media(min-width:1367px)]:text-[20px]">
+                <p className="mt-4 w-[86%] text-[17px] leading-[1.25] font-body-light text-[#000000] [@media(min-width:1367px)]:w-[85%] [@media(min-width:1920px)]:text-[20px]">
                   {selected.desc}
                 </p>
                 <Link
                   href={`/products/${selected.slug}`}
-                  className="group mt-4 inline-flex h-[70px] w-[120px] items-center justify-between rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-3.5 !text-white transition hover:bg-[#f54f00] hover:!text-white [@media(min-width:1367px)]:h-[60px] [@media(min-width:1600px)]:w-[160px]"
+                  className="group mt-4 inline-flex h-[70px] w-[120px] items-center justify-between rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-3.5 !text-white transition hover:bg-[#f54f00] hover:!text-white [@media(min-width:1920px)]:h-[50px] [@media(min-width:1600px)]:w-[160px]  [@media(min-width:1920px)_and_(min-height:1080px)]:px-4"
                 >
                   <span className="text-left text-[20px] leading-[1.05] text-white">
                     Learn

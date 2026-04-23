@@ -54,8 +54,8 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
                   </p>
                   <Link
                     href={`/industries/${item.slug}`}
-                    className="mt-3 inline-flex min-w-[200px] items-center justify-center gap-3 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-[19px] font-sans !text-white transition hover:bg-white hover:!text-brand-black wide:min-w-[220px] wide:px-7 wide:py-2.5"
-                  >
+                    className="mt-3 inline-flex min-w-[200px] items-center justify-center gap-3 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-[19px] font-sans !text-white transition hover:bg-white hover:!text-brand-black wide:min-w-[190px] wide:px-7 wide:py-2.5 "
+                    >
                     <span>Learn More</span>
                     <ArrowRightIcon />
                   </Link>

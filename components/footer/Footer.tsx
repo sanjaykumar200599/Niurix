@@ -48,7 +48,7 @@ export default function Footer() {
 
         <div className="border-t-2 border-[#DFDFDF] pt-7 pb-12 laptop:flex laptop:items-start laptop:justify-between laptop:pt-7 laptop:pb-16">
           
-          <div className="mb-3 shrink-0 tablet:mb-6 laptop:mb-0 laptop:pt-[2px] laptop:w-[140px] laptop:mr-22 [@media(min-width:1600px)]:w-[200px] [@media(min-width:1600px)]:mr-46 [@media(min-width:1800px)]:w-[220px] [@media(min-width:1800px)]:mr-56">
+          <div className="mb-3 shrink-0 tablet:mb-6 laptop:mb-0 laptop:pt-[2px] laptop:w-[140px] laptop:mr-22 [@media(min-width:1600px)]:w-[200px] [@media(min-width:1600px)]:mr-46 [@media(min-width:1080px)]:w-[220px] [@media(min-width:1080px)]:mr-56">
             <Link href="/" className="inline-flex">
               <Image
                 src="/assets/footer/niurixlogo.svg"
