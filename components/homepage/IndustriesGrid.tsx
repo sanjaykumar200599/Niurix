@@ -15,7 +15,7 @@ function ArrowRightIcon() {
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeMiterlimit="10"
-        strokeWidth="2.5"
+        strokeWidth="2.8"
       />
     </svg>
   );
@@ -54,10 +54,12 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
                   </p>
                   <Link
                     href={`/industries/${item.slug}`}
-                    className="mt-3 inline-flex min-w-[200px] items-center justify-between rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-7 py-2.5 text-[19px] font-sans !text-white transition hover:bg-white hover:!text-brand-black laptop:px-10"
+                    className="mt-3 inline-flex min-w-[200px] items-center justify-between rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-7 py-2.5 text-[19px] font-sans !text-white transition hover:bg-white hover:!text-brand-black laptop:px-10 laptop:py-2"
                   >
-                    <span className="text-left">Learn More</span>
-                    <ArrowRightIcon />
+                    <span className="text-left laptop:-ml-3">Learn More</span>
+                    <span>
+                      <ArrowRightIcon />
+                    </span>
                   </Link>
                 </div>
               </article>
@@ -133,4 +135,3 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
     </div>
   );
 }
-
