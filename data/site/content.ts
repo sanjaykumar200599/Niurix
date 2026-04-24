@@ -615,7 +615,7 @@ export const headerNavigation: {
       image: "/assets/header/products/OLT SOLT33- 08P.webp",
     },
     {
-      label: "XGSPON-8P",
+      label: "MOLT - XGSPON 8P",
       type: "OLT",
       href: "/products/OLT-XGSPON-8P",
       image: "/assets/products/OLT-XGSPON-8P/Product.webp",

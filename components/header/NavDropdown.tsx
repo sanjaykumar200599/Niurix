@@ -42,7 +42,7 @@ export default function NavDropdown({ activeDesktopMenu, desktopItems, notchLeft
         }`}
       >
         {activeDesktopMenu === "products" ? (
-          <div className="grid h-[13rem] grid-cols-[repeat(4,265px)] justify-center gap-4 px-2 py-2 [@media(min-width:1025px)_and_(max-width:1280px)]:grid-cols-[repeat(4,230px)] [@media(min-width:1440px)]:grid-cols-[repeat(4,290px)] [@media(min-width:1700px)]:grid-cols-[repeat(4,320px)]">
+          <div className="grid h-[13rem] grid-cols-[repeat(4,275px)] justify-center gap-4 px-2 py-2 [@media(min-width:1025px)_and_(max-width:1280px)]:grid-cols-[repeat(4,230px)] [@media(min-width:1440px)]:grid-cols-[repeat(4,300px)] [@media(min-width:1700px)]:grid-cols-[repeat(4,330px)]">
             {desktopItems.map((item, index) => (
               <Link
                 key={item.href}
@@ -66,9 +66,13 @@ export default function NavDropdown({ activeDesktopMenu, desktopItems, notchLeft
                   />
                 </div>
 
-                <div className="flex flex-col leading-[1.08]">
+                <div
+                  className={`flex flex-col leading-[1.08] ${
+                    item.href === "/products/OLT-XGSPON-8P" ? "max-w-[132px]" : ""
+                  }`}
+                >
                   <span className="text-[15px] font-sans text-brand-orange">{item.type}</span>
-                  <span className="mt-1 text-[20px] font-sans text-brand-black">{item.label}</span>
+                  <span className="mt-1 break-words text-[20px] font-sans text-brand-black">{item.label}</span>
                 </div>
               </Link>
             ))}
