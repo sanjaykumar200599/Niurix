@@ -28,7 +28,7 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
 
   return (
     <div>
-      <div className="hidden gap-4 px-30 laptop:flex wide:gap-8">
+      <div className="hidden gap-8 px-30 laptop:flex">
         {industries.map((item, index) => {
           const isActive = index === activeIndex;
 
@@ -36,26 +36,26 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
             return (
               <article
                 key={item.slug}
-                className="relative h-[640px] basis-0 overflow-hidden rounded-tl-[35px] rounded-br-[35px] transition-[flex-basis] duration-500 ease-out laptop:flex-[0_0_960px]"
+                className="relative h-[640px] basis-0 overflow-hidden rounded-tl-[35px] rounded-br-[35px] transition-[flex-basis] duration-500 ease-out laptop:flex-[0_0_58%] [@media(min-width:1600px)_and_(min-height:900px)]:flex-[0_0_960px]"
               >
                 <div className="absolute -inset-4">
                   <Image
                     src={item.detailImage}
                     alt={item.title}
                     fill
-                    sizes="(min-width: 1025px) 960px, 0px"
+                    sizes="(min-width: 1920px) 960px, (min-width: 1025px) 58vw, 0px"
                     className="object-cover object-center scale-[0.96] brightness-[1.02] transition duration-500"
                   />
                 </div>
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white via-white/96 to-white/78 px-6 pb-4 pt-5 wide:px-7 wide:pb-5">
-                  <h3 className="text-[22px] font-sans text-brand-black wide:text-[28px]">{item.title}</h3>
-                  <p className="mt-2 max-w-[88%] text-[15px] leading-[1.35] font-body-light text-brand-black wide:mt-3 wide:max-w-[92%] wide:text-[20px]">
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white via-white/96 to-white/78 px-7 pb-5 pt-5">
+                  <h3 className="text-[28px] font-sans text-brand-black">{item.title}</h3>
+                  <p className="mt-3 max-w-[92%] text-[20px] leading-[1.35] font-body-light text-brand-black">
                     {item.desc}
                   </p>
                   <Link
                     href={`/industries/${item.slug}`}
-                    className="mt-3 inline-flex min-w-[200px] items-center justify-center gap-3 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-6 py-2 text-[19px] font-sans !text-white transition hover:bg-white hover:!text-brand-black wide:min-w-[190px] wide:px-7 wide:py-2.5 "
-                    >
+                    className="mt-3 inline-flex min-w-[190px] items-center justify-center gap-3 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-7 py-2.5 text-[19px] font-sans !text-white transition hover:bg-white hover:!text-brand-black"
+                  >
                     <span>Learn More</span>
                     <ArrowRightIcon />
                   </Link>
@@ -69,19 +69,19 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
               key={item.slug}
               type="button"
               onClick={() => setActiveIndex(index)}
-              className="group relative h-[640px] basis-0 overflow-hidden rounded-tl-[35px] rounded-br-[35px] text-left transition-[flex-basis] duration-500 ease-out laptop:flex-[0_0_320px]"
+              className="group relative h-[640px] basis-0 overflow-hidden rounded-tl-[35px] rounded-br-[35px] text-left transition-[flex-basis] duration-500 ease-out laptop:flex-[1_1_0] [@media(min-width:1600px)_and_(min-height:900px)]:flex-[0_0_320px]"
             >
               <div className="absolute -inset-4">
                 <Image
                   src={item.cardImage}
                   alt={item.title}
                   fill
-                  sizes="(min-width: 1025px) 320px, 0px"
+                  sizes="(min-width: 1920px) 320px, (min-width: 1025px) 21vw, 0px"
                   className="object-cover object-center scale-[0.96] brightness-[1.04] transition duration-500 group-hover:scale-100"
                 />
               </div>
               <div className="absolute inset-0 bg-black/12" />
-              <p className="absolute bottom-0 left-7 w-[18rem] origin-top-left -rotate-90 text-left font-body-light text-[26px] leading-none text-white wide:text-[28px]">
+              <p className="absolute bottom-0 left-7 w-[18rem] origin-top-left -rotate-90 text-left font-body-light text-[28px] leading-none text-white">
                 {item.title}
               </p>
             </button>

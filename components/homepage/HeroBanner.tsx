@@ -25,7 +25,7 @@ export default function HeroBanner({ banners }: { banners: HomeData["banners"] }
                     sizes="(max-width: 767px) 0px, 100vw"
                     priority={isFirstSlide}
                     fetchPriority={isFirstSlide ? "high" : "auto"}
-                    className="object-cover scale-100 object-[42%_44%] brightness-[1.1] laptop:scale-[1.00] laptop:object-[15%_25%]"
+                    className="object-cover scale-100 object-[42%_44%] laptop:scale-[1.00] laptop:object-[15%_25%]"
                   />
                 </div>
 
@@ -37,11 +37,11 @@ export default function HeroBanner({ banners }: { banners: HomeData["banners"] }
                     sizes="(max-width: 767px) 100vw, 0px"
                     priority={isFirstSlide}
                     fetchPriority={isFirstSlide ? "high" : "auto"}
-                    className="object-cover scale-100 object-[42%_44%] brightness-[1.1] laptop:scale-[1.06] laptop:object-[15%_25%]"
+                    className="object-cover scale-100 object-[42%_44%] laptop:scale-[1.06] laptop:object-[15%_25%]"
                   />
                 </div>
 
-                <div className="absolute inset-0 bg-black/16 laptop:bg-black/12" />
+                <div className="absolute inset-0" />
 
                 <div
                   className="absolute inset-x-0 top-44 z-10 flex flex-col items-start px-6 text-left text-white tablet:top-112 tablet:items-center tablet:px-19.5 tablet:text-center laptop:top-96 laptop:px-30 [@media(min-width:768px)_and_(max-width:1024px)_and_(orientation:landscape)]:top-80"

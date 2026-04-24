@@ -12,15 +12,15 @@ function renderSoftwareHeroTitle(title: string) {
 
   return (
     <>
-      <span className="[@media(min-width:1920px)_and_(min-height:1080px)]:hidden">
+      <span className="[@media(min-width:1600px)_and_(min-height:900px)]:hidden">
         <span className="block whitespace-nowrap tablet:inline">Fiber for the Future:</span>{" "}
-        <span className="block whitespace-nowrap tablet:inline tablet:whitespace-normal laptop:block laptop:whitespace-nowrap [@media(min-width:1920px)_and_(min-height:1080px)]:inline">Advancing</span>{" "}
-        <span className="block whitespace-nowrap tablet:inline tablet:whitespace-normal laptop:block laptop:whitespace-nowrap [@media(min-width:1920px)_and_(min-height:1080px)]:inline">Connectivity and</span>{" "}
-        <span className="block whitespace-nowrap tablet:inline tablet:whitespace-normal laptop:block laptop:whitespace-nowrap [@media(min-width:1920px)_and_(min-height:1080px)]:inline">Control for the Users</span>{" "}
-        <span className="block tablet:inline [@media(min-width:1920px)_and_(min-height:1080px)]:whitespace-nowrap">Today.</span>
+        <span className="block whitespace-nowrap tablet:inline tablet:whitespace-normal laptop:block laptop:whitespace-nowrap [@media(min-width:1600px)_and_(min-height:900px)]:inline">Advancing</span>{" "}
+        <span className="block whitespace-nowrap tablet:inline tablet:whitespace-normal laptop:block laptop:whitespace-nowrap [@media(min-width:1600px)_and_(min-height:900px)]:inline">Connectivity and</span>{" "}
+        <span className="block whitespace-nowrap tablet:inline tablet:whitespace-normal laptop:block laptop:whitespace-nowrap [@media(min-width:1600px)_and_(min-height:900px)]:inline">Control for the Users</span>{" "}
+        <span className="block tablet:inline [@media(min-width:1600px)_and_(min-height:900px)]:whitespace-nowrap">Today.</span>
       </span>
 
-      <span className="hidden [@media(min-width:1920px)_and_(min-height:1080px)]:block">
+      <span className="hidden [@media(min-width:1600px)_and_(min-height:900px)]:block">
         <span className="block whitespace-nowrap">Fiber for the Future: Advancing</span>
         <span className="block whitespace-nowrap">Connectivity and Control for</span>
         <span className="block whitespace-nowrap">the Users Today.</span>
@@ -33,14 +33,14 @@ export default function SoftwarePage({ software }: SoftwarePageProps) {
   return (
     <>
       <section className="relative -mt-[72px] overflow-hidden tablet:mt-0">
-        <div className="relative mx-auto h-[813.21px] w-[375.2px] tablet:h-[520px] tablet:w-full laptop:h-[860px] [@media(min-width:1920px)_and_(min-height:1080px)]:h-[1080px]">
+        <div className="relative mx-auto h-[813.21px] w-[375.2px] tablet:h-[520px] tablet:w-full laptop:h-[860px] [@media(min-width:1600px)_and_(min-height:900px)]:h-[1080px]">
           <Image src={software.heroImage} alt="Software banner" fill sizes="(max-width: 767px) 0px, 100vw" className="hidden object-cover tablet:block" priority />
           <Image src={software.heroImageMobile} alt="Software banner" fill sizes="(max-width: 767px) 100vw, 0px" className="origin-top object-cover object-[center_78%] scale-y-[1.0] scale-x-[1.0] tablet:hidden" priority />
 
           <div className="absolute inset-0 bg-black/10" />
 
-          <div className="relative z-10 flex h-full items-center px-9 tablet:items-end tablet:px-[78px] tablet:pb-16 laptop:px-[120px] laptop:pb-28 [@media(min-width:1920px)_and_(min-height:1080px)]:pb-105">
-            <h1 className="h-[216px] w-[318.91px] pt-18 text-[32px] font-sans leading-tight text-white tablet:h-auto tablet:w-[70%] tablet:pt-0 tablet:text-[34px] laptop:w-[35%] laptop:text-[48px] [@media(min-width:1920px)_and_(min-height:1080px)]:w-[42%]">
+          <div className="relative z-10 flex h-full items-center px-9 tablet:items-end tablet:px-[78px] tablet:pb-16 laptop:px-[120px] laptop:pb-28 [@media(min-width:1600px)_and_(min-height:900px)]:pb-105">
+            <h1 className="h-[216px] w-[318.91px] pt-18 text-[32px] font-sans leading-tight text-white tablet:h-auto tablet:w-[70%] tablet:pt-0 tablet:text-[34px] laptop:w-[35%] laptop:text-[48px] [@media(min-width:1600px)_and_(min-height:900px)]:w-[42%]">
               {renderSoftwareHeroTitle(software.heroTitle)}
             </h1>
           </div>
@@ -56,10 +56,10 @@ export default function SoftwarePage({ software }: SoftwarePageProps) {
       </section>
 
       <section className="mb-8 mt-10 px-9 tablet:mb-12 tablet:px-20 laptop:mb-16 laptop:mt-[120px] laptop:px-[120px] ">
-        <div className="grid gap-8 tablet:gap-8 laptop:grid-cols-5 laptop:gap-7 [@media(min-width:1920px)_and_(min-height:1080px)]:gap-11">
+        <div className="grid gap-8 tablet:gap-8 laptop:grid-cols-5 laptop:gap-7 [@media(min-width:1600px)_and_(min-height:900px)]:gap-11">
           {software.features.map((feature) => (
-            <article key={feature.id} className="group relative isolate mx-auto h-[254.08px] w-[303.3px] max-w-full tablet:max-w-none overflow-hidden rounded-tl-[46px] rounded-br-[46px] tablet:mx-0 tablet:h-auto tablet:w-auto tablet:rounded-tl-[50px] tablet:rounded-br-[50px] [@media(min-width:1920px)_and_(min-height:1080px)]:h-[600px] [@media(min-width:1920px)_and_(min-height:1080px)]:w-[300px]">
-              <div className="relative h-full tablet:h-[19rem] laptop:h-[35rem] [@media(min-width:1920px)_and_(min-height:1080px)]:h-[600px]">
+            <article key={feature.id} className="group relative isolate mx-auto h-[254.08px] w-[303.3px] max-w-full tablet:max-w-none overflow-hidden rounded-tl-[46px] rounded-br-[46px] tablet:mx-0 tablet:h-auto tablet:w-auto tablet:rounded-tl-[50px] tablet:rounded-br-[50px] [@media(min-width:1600px)_and_(min-height:900px)]:h-[600px] [@media(min-width:1600px)_and_(min-height:900px)]:w-[300px]">
+              <div className="relative h-full tablet:h-[19rem] laptop:h-[35rem] [@media(min-width:1600px)_and_(min-height:900px)]:h-[600px]">
                 <Image src={feature.image} alt={feature.title} fill sizes="(max-width: 1023px) 0px, (min-width: 1920px) 300px, 20vw" className="hidden object-cover laptop:block" />
                 <Image src={feature.imageMobile} alt={feature.title} fill sizes="(max-width: 1023px) 100vw, 0px" className="object-cover laptop:hidden" />
                 <div className="absolute inset-0 transition duration-500 tablet:bg-black/35 laptop:bg-black/20 laptop:group-hover:bg-black/55" />

@@ -44,7 +44,7 @@ export default function InstallGuide({ steps }: { steps: HomeData["installSteps"
         <h3 className="text-[18px] font-sans font-light text-brand-black tablet:text-[21px] laptop:text-[16px] [@media(min-width:1025px)_and_(max-width:1366px)]:text-[19px]">
           {steps[idx]?.title}
         </h3>
-        <p className="mt-3 w-full text-[16px] leading-[1.35] font-body-light text-[#000000] tablet:text-[15px] laptop:text-[16px] laptop:w-[82%] [@media(min-width:1920px)_and_(min-height:1080px)]:w-[82%]">
+        <p className="mt-3 w-full text-[16px] leading-[1.35] font-body-light text-[#000000] tablet:text-[15px] laptop:text-[16px] laptop:w-[82%] [@media(min-width:1600px)_and_(min-height:900px)]:w-[82%]">
           {steps[idx]?.para}
         </p>
       </div>

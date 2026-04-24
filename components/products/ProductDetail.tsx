@@ -21,7 +21,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
   return (
     <div className="w-full">
-      <section className="relative mx-auto h-[813.21px] w-[375.2px] tablet:h-[490px] tablet:w-full laptop:h-[860px] [@media(min-width:1920px)_and_(min-height:1080px)]:h-[1080px]">
+      <section className="relative mx-auto h-[813.21px] w-[375.2px] tablet:h-[490px] tablet:w-full laptop:h-[860px] [@media(min-width:1600px)_and_(min-height:900px)]:h-[1080px]">
         <Image src={product.heroImage} alt={product.overviewTitle} fill sizes="(max-width: 1023px) 0px, 100vw" className="hidden object-cover laptop:block" priority />
         <Image
           src={product.heroImage}
@@ -50,7 +50,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
         />
 
         <div className="mt-0 flex flex-col-reverse items-center gap-4 tablet:mt-8 tablet:gap-6 laptop:flex-row laptop:items-start laptop:justify-between laptop:pl-[120px] ">
-          <div className="w-full laptop:w-[28%] laptop:max-w-[480px] laptop:pt-10 [@media(min-width:1920px)_and_(min-height:1080px)]:w-[480px] [@media(min-width:1920px)_and_(min-height:1080px)]:max-w-[480px] [@media(min-width:1920px)_and_(min-height:1080px)]:pt-45">
+          <div className="w-full laptop:w-[28%] laptop:max-w-[480px] laptop:pt-10 [@media(min-width:1600px)_and_(min-height:900px)]:w-[480px] [@media(min-width:1600px)_and_(min-height:900px)]:max-w-[480px] [@media(min-width:1600px)_and_(min-height:900px)]:pt-45">
             <h1 className="text-center text-[18px] font-sans text-brand-black tablet:text-[28px] laptop:text-left laptop:text-[24px]">
               {product.overviewTitle}
             </h1>
@@ -62,7 +62,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
             <div className="mt-6 flex justify-center laptop:mt-8 laptop:justify-start">
               <Link
                 href="/contact-us"
-                className="group inline-flex rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange pl-2 pr-14 py-2 text-[20px] font-sans leading-tight text-white transition-colors duration-200 hover:bg-white hover:text-brand-black laptop:text-[20px] [@media(min-width:1920px)_and_(min-height:1080px)]:py-2.5 [@media(min-width:1920px)_and_(min-height:1080px)]:px-6 [@media(min-width:1920px)_and_(min-height:1080px)]:pr-6"
+                className="group inline-flex rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange pl-2 pr-14 py-2 text-[20px] font-sans leading-tight text-white transition-colors duration-200 hover:bg-white hover:text-brand-black laptop:text-[20px] [@media(min-width:1600px)_and_(min-height:900px)]:py-2.5 [@media(min-width:1600px)_and_(min-height:900px)]:px-6 [@media(min-width:1600px)_and_(min-height:900px)]:pr-6"
               >
                 <span className="text-white transition-colors duration-200 group-hover:text-brand-black ">
                   <span className="block tablet:inline">Get in</span>
@@ -72,7 +72,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
             </div>
           </div>
 
-          <div className="relative h-[293.02px] w-[303.2px] overflow-hidden rounded-tl-[30px] tablet:h-[600px] tablet:w-full tablet:rounded-tl-[45px] laptop:h-auto laptop:w-[min(72vw,1181px)] laptop:aspect-[1181/874] laptop:self-start laptop:min-h-0 [@media(min-width:1920px)_and_(min-height:1080px)]:h-[874px] [@media(min-width:1920px)_and_(min-height:1080px)]:w-[1181px]">
+          <div className="relative h-[293.02px] w-[303.2px] overflow-hidden rounded-tl-[30px] tablet:h-[600px] tablet:w-full tablet:rounded-tl-[45px] laptop:h-auto laptop:w-[min(72vw,1181px)] laptop:aspect-[1181/874] laptop:self-start laptop:min-h-0 [@media(min-width:1600px)_and_(min-height:900px)]:h-[874px] [@media(min-width:1600px)_and_(min-height:900px)]:w-[1181px]">
             <Image
               src={product.overviewImage}
               alt={product.overviewTitle}
@@ -91,18 +91,18 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
         </div>
       </section>
 
-      <section className="px-9 pb-5 pt-8 tablet:px-[78px] tablet:pt-12 laptop:px-[120px] laptop:pt-24 [@media(min-width:1920px)_and_(min-height:1080px)]:pb-20">
+      <section className="px-9 pb-5 pt-8 tablet:px-[78px] tablet:pt-12 laptop:px-[120px] laptop:pt-24 [@media(min-width:1600px)_and_(min-height:900px)]:pb-20">
         <h2
           className="nx-rich mb-6 flex min-h-[52px] items-center justify-center whitespace-nowrap text-center text-[20px] font-body-medium font-normal leading-tight tracking-normal text-brand-black tablet:mb-10 tablet:min-h-[78px] tablet:whitespace-normal tablet:text-[28px] laptop:mb-12 laptop:min-h-[88px] laptop:text-[40px]"
           dangerouslySetInnerHTML={{ __html: product.connectHeadingHtml }}
         />
 
-        <div className="flex flex-col gap-3 laptop:flex-row laptop:items-center laptop:justify-between laptop:px-12 [@media(min-width:1920px)_and_(min-height:1080px)]:justify-start [@media(min-width:1920px)_and_(min-height:1080px)]:gap-30 ">
+        <div className="flex flex-col gap-3 laptop:flex-row laptop:items-center laptop:justify-between laptop:px-12 [@media(min-width:1600px)_and_(min-height:900px)]:justify-start [@media(min-width:1600px)_and_(min-height:900px)]:gap-30 ">
           <div className="w-full laptop:w-[50%]">
             <div
               className={
                 isLegacyDiagram
-                  ? "w-full [@media(min-width:1920px)_and_(min-height:1080px)]:origin-top-left [@media(min-width:1920px)_and_(min-height:1080px)]:scale-[1.12] "
+                  ? "w-full [@media(min-width:1600px)_and_(min-height:900px)]:origin-top-left [@media(min-width:1600px)_and_(min-height:900px)]:scale-[1.12] "
                   : "relative h-[300px] w-full tablet:h-[420px] laptop:h-[520px]"
               }
             >
@@ -114,14 +114,14 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
             </div>
           </div>
 
-          <div className="w-full pt-1 text-left text-[16px] font-body-light leading-[1.35] text-[#1D1D1D] tablet:pt-4 tablet:text-lg tablet:leading-8 laptop:w-[38%] laptop:pt-0 laptop:self-center laptop:text-[20px] laptop:leading-[1.32] [@media(min-width:1920px)_and_(min-height:1080px)]:w-[38%] [@media(min-width:1920px)_and_(min-height:1080px)]:mt-22 [@media(min-width:1920px)_and_(min-height:1080px)]:pr-4">
+          <div className="w-full pt-1 text-left text-[16px] font-body-light leading-[1.35] text-[#1D1D1D] tablet:pt-4 tablet:text-lg tablet:leading-8 laptop:w-[38%] laptop:pt-0 laptop:self-center laptop:text-[20px] laptop:leading-[1.32] [@media(min-width:1600px)_and_(min-height:900px)]:w-[38%] [@media(min-width:1600px)_and_(min-height:900px)]:mt-22 [@media(min-width:1600px)_and_(min-height:900px)]:pr-4">
             <div className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: product.connectParaHtml }} />
           </div>
         </div>
       </section>
 
       <section className="mt-15 px-9 tablet:mt-16 tablet:px-[78px] laptop:mt-24 laptop:px-[120px]">
-        <div className="relative mx-auto h-[320px] w-[303.2px] overflow-hidden bg-[#bdbdbd] tablet:h-[520px] tablet:w-full tablet:aspect-auto laptop:h-[660px] [@media(min-width:1920px)_and_(min-height:1080px)]:h-[838px]">
+        <div className="relative mx-auto h-[320px] w-[303.2px] overflow-hidden bg-[#bdbdbd] tablet:h-[520px] tablet:w-full tablet:aspect-auto laptop:h-[660px] [@media(min-width:1600px)_and_(min-height:900px)]:h-[838px]">
           <Image src={product.detailImage} alt={product.detailTitle} fill sizes="100vw" className="hidden object-cover tablet:block" />
           <Image
             src={product.detailImageMobile}
@@ -130,7 +130,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
             sizes="(max-width: 1023px) 100vw, 0px"
             className="object-contain object-center scale-x-[1.00] scale-y-[1.76] tablet:hidden"
           />
-          <h2 className="absolute left-4 top-5 z-10 w-[76%] pb-2 text-[20px] font-sans leading-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.5)] tablet:left-10 tablet:top-12 tablet:w-[64%] tablet:pb-0 tablet:text-[40px] tablet:[text-shadow:none] laptop:left-28 laptop:top-16 laptop:w-[42%] laptop:text-4xl[@media(min-width:1920px)_and_(min-height:1080px)]:text-[40px]">
+          <h2 className="absolute left-4 top-5 z-10 w-[76%] pb-2 text-[20px] font-sans leading-tight text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.5)] tablet:left-10 tablet:top-12 tablet:w-[64%] tablet:pb-0 tablet:text-[40px] tablet:[text-shadow:none] laptop:left-28 laptop:top-16 laptop:w-[42%] laptop:text-4xl[@media(min-width:1600px)_and_(min-height:900px)]:text-[40px]">
             {splitSimplerConnectivity ? (
               <>
                 <span className="laptop:hidden">
@@ -164,14 +164,14 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
         <div className="w-full p-2 tablet:p-0 bg-[#f3f3f3] laptop:w-[45%]">
           <div className="flex h-full flex-col justify-start px-10 pb-10 pt-8 tablet:px-20 tablet:pb-16 tablet:pt-10 laptop:min-h-[50rem] laptop:px-24 laptop:pt-28 laptop:ml-12">
             <h2 className="mb-8 text-[20px] font-sans leading-tight text-brand-black tablet:text-[26px] laptop:text-[28px] ">
-              <span className="whitespace-nowrap [@media(min-width:1920px)_and_(min-height:1080px)]:hidden">General Product Specifications</span>
-              <span className="hidden whitespace-nowrap [@media(min-width:1920px)_and_(min-height:1080px)]:inline">General Product Specifications of Niurix</span>
+              <span className="whitespace-nowrap [@media(min-width:1600px)_and_(min-height:900px)]:hidden">General Product Specifications</span>
+              <span className="hidden whitespace-nowrap [@media(min-width:1600px)_and_(min-height:900px)]:inline">General Product Specifications of Niurix</span>
               <br />
-              <span className="[@media(min-width:1920px)_and_(min-height:1080px)]:hidden">
+              <span className="[@media(min-width:1600px)_and_(min-height:900px)]:hidden">
                 of Niurix {product.model}
                 {product.type === "ONT" ? " ONT" : ""}
               </span>
-              <span className="hidden [@media(min-width:1920px)_and_(min-height:1080px)]:inline">
+              <span className="hidden [@media(min-width:1600px)_and_(min-height:900px)]:inline">
                 {product.model}
                 {product.type === "ONT" ? " ONT" : ""}
               </span>
@@ -190,7 +190,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
               <button
                 type="button"
                 onClick={() => setTab("dim")}
-                className={`border-b-[3px] pb-1 text-[20px] font-body-medium tablet:text-[28px] laptop:ml-26 laptop:w-fit laptop:text-left laptop:text-[28px] [@media(min-width:1920px)_and_(min-height:1080px)]:ml-54  ${
+                className={`border-b-[3px] pb-1 text-[20px] font-body-medium tablet:text-[28px] laptop:ml-26 laptop:w-fit laptop:text-left laptop:text-[28px] [@media(min-width:1600px)_and_(min-height:900px)]:ml-54  ${
                   tab === "dim" ? "border-brand-orange text-brand-orange" : "border-transparent text-brand-black/30"
                 }`}
               >
@@ -209,7 +209,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
             {product.pdf ? (
               <>
-                <p className="mt-40 text-[16px] font-body-light text-[#1D1D1D] tablet:mt-8 tablet:text-[20px] laptop:text-[20px] [@media(min-width:1920px)_and_(min-height:1080px)]:pt-16 ">
+                <p className="mt-40 text-[16px] font-body-light text-[#1D1D1D] tablet:mt-8 tablet:text-[20px] laptop:text-[20px] [@media(min-width:1600px)_and_(min-height:900px)]:pt-16 ">
                   <span className="tablet:hidden">
                     Click to download the full
                     <br />
@@ -221,7 +221,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
                   href={product.pdf}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-4 inline-flex w-fit items-center gap-2 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-1 py-1 tablet:px-4 tablet:py-[6px] text-[16px] font-sans !text-white transition-colors duration-200 hover:bg-white hover:!text-black [@media(min-width:1920px)_and_(min-height:1080px)]:text-[20px]"
+                  className="mt-4 inline-flex w-fit items-center gap-2 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-1 py-1 tablet:px-4 tablet:py-[6px] text-[16px] font-sans !text-white transition-colors duration-200 hover:bg-white hover:!text-black [@media(min-width:1600px)_and_(min-height:900px)]:text-[20px]"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
