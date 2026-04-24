@@ -90,15 +90,21 @@ export default function NavDropdown({ activeDesktopMenu, desktopItems, notchLeft
                 key={item.href}
                 href={item.href}
                 onClick={onNavigate}
-                className="group relative overflow-hidden rounded-[10px_0px]"
+                className="group relative block overflow-hidden rounded-tl-[20px] rounded-br-[20px]"
+                style={{ borderTopLeftRadius: "20px", borderBottomRightRadius: "20px" }}
               >
-                <Image
-                  src={item.image}
-                  alt={item.label}
-                  fill
-                  sizes="(min-width: 1024px) 20vw, 0px"
-                  className="h-full w-full object-contain scale-x-[1.28] transition duration-500 group-hover:scale-y-[1.08]"
-                />
+                <div
+                  className="absolute inset-0 overflow-hidden rounded-tl-[20px] rounded-br-[20px]"
+                  style={{ borderTopLeftRadius: "20px", borderBottomRightRadius: "20px" }}
+                >
+                  <Image
+                    src={item.image}
+                    alt={item.label}
+                    fill
+                    sizes="(min-width: 1024px) 20vw, 0px"
+                    className="h-full w-full object-cover scale-x-[1.28] transition duration-500 group-hover:scale-y-[1.08]"
+                  />
+                </div>
                 <span className="absolute inset-0 transition-colors duration-300 group-hover" />
                 <span className="relative z-10 flex h-full items-center justify-center px-6 text-center text-[20px] leading-[1.2] text-white [text-shadow:0_2px_6px_rgba(0,0,0,0.3)]">
                   {item.label}
