@@ -97,7 +97,7 @@ export default function NavDropdown({ activeDesktopMenu, desktopItems, notchLeft
                   alt={item.label}
                   fill
                   sizes="(min-width: 1024px) 20vw, 0px"
-                  className="h-full w-full object-cover brightness-100 transition duration-500 group-hover:scale-[1.03]"
+                  className="h-full w-full object-contain scale-x-[1.28] transition duration-500 group-hover:scale-y-[1.08]"
                 />
                 <span className="absolute inset-0 transition-colors duration-300 group-hover" />
                 <span className="relative z-10 flex h-full items-center justify-center px-6 text-center text-[20px] leading-[1.2] text-white [text-shadow:0_2px_6px_rgba(0,0,0,0.3)]">
