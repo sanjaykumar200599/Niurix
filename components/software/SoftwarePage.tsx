@@ -14,16 +14,15 @@ function renderSoftwareHeroTitle(title: string) {
     <>
       <span className="[@media(min-width:1600px)_and_(min-height:900px)]:hidden">
         <span className="block whitespace-nowrap tablet:inline">Fiber for the Future:</span>{" "}
-        <span className="block whitespace-nowrap tablet:inline tablet:whitespace-normal laptop:block laptop:whitespace-nowrap [@media(min-width:1600px)_and_(min-height:900px)]:inline">Advancing</span>{" "}
-        <span className="block whitespace-nowrap tablet:inline tablet:whitespace-normal laptop:block laptop:whitespace-nowrap [@media(min-width:1600px)_and_(min-height:900px)]:inline">Connectivity and</span>{" "}
-        <span className="block whitespace-nowrap tablet:inline tablet:whitespace-normal laptop:block laptop:whitespace-nowrap [@media(min-width:1600px)_and_(min-height:900px)]:inline">Control for the Users</span>{" "}
-        <span className="block tablet:inline [@media(min-width:1600px)_and_(min-height:900px)]:whitespace-nowrap">Today.</span>
+        <span className="block whitespace-nowrap tablet:inline tablet:whitespace-normal laptop:block laptop:whitespace-nowrap [@media(min-width:1600px)_and_(min-height:900px)]:inline">Advancing Connectivity </span>{" "}
+        <span className="block whitespace-nowrap tablet:inline tablet:whitespace-normal laptop:block laptop:whitespace-nowrap [@media(min-width:1600px)_and_(min-height:900px)]:inline">and Control for the</span>{" "}
+        <span className="block whitespace-nowrap tablet:inline tablet:whitespace-normal laptop:block laptop:whitespace-nowrap [@media(min-width:1600px)_and_(min-height:900px)]:inline">Users Today</span>{" "}
       </span>
 
       <span className="hidden [@media(min-width:1600px)_and_(min-height:900px)]:block">
-        <span className="block whitespace-nowrap">Fiber for the Future: Advancing</span>
-        <span className="block whitespace-nowrap">Connectivity and Control for</span>
-        <span className="block whitespace-nowrap">the Users Today.</span>
+        <span className="block whitespace-nowrap">Fiber for the Future: </span>
+        <span className="block whitespace-nowrap">Advancing Connectivity and</span>
+        <span className="block whitespace-nowrap">Control for the Users Today.</span>
       </span>
     </>
   );
@@ -62,15 +61,15 @@ export default function SoftwarePage({ software }: SoftwarePageProps) {
               <div className="relative h-full tablet:h-[19rem] laptop:h-[35rem] [@media(min-width:1600px)_and_(min-height:900px)]:h-[600px]">
                 <Image src={feature.image} alt={feature.title} fill sizes="(max-width: 1023px) 0px, (min-width: 1920px) 300px, 20vw" className="hidden object-cover laptop:block" />
                 <Image src={feature.imageMobile} alt={feature.title} fill sizes="(max-width: 1023px) 100vw, 0px" className="object-cover laptop:hidden" />
-                <div className="absolute inset-0 transition duration-500 tablet:bg-black/35 laptop:bg-black/20 laptop:group-hover:bg-black/55" />
+                <div className="absolute inset-0 transition duration-500  laptop:group-hover:bg-black/55" />
               </div>
 
               <div className="absolute inset-0 z-10 flex flex-col px-4 py-5 tablet:px-8 tablet:py-7 laptop:px-5 laptop:py-8">
-                <h3 className="max-w-[100%] text-[20px] leading-tight font-sans text-brand-orange tablet:text-[30px] laptop:mt-auto laptop:text-[28px] laptop:leading-[1.2] laptop:text-white laptop:transition-all laptop:duration-500 laptop:group-hover:mt-0 laptop:group-hover:text-brand-orange">
+                <h3 className="max-w-[100%] text-[20px] leading-tight font-sans text-brand-orange tablet:text-[30px] laptop:mt-auto laptop:pt-0 laptop:text-[28px] laptop:leading-[1.2] laptop:text-white laptop:transition-[margin,padding,color] laptop:duration-500 laptop:group-hover:mt-0 laptop:group-hover:pt-4 laptop:group-hover:text-brand-orange laptop:group-hover:animate-[title-bob_420ms_ease-out]">
                   {feature.title}
                 </h3>
 
-                <p className="mt-4 max-w-[96%] text-[16px] font-sans leading-[1.35] text-white laptop:mt-0 laptop:text-[20px] laptop:max-h-0 laptop:group-hover:mt-4 laptop:overflow-hidden laptop:opacity-0 laptop:transition-all laptop:duration-500 laptop:group-hover:max-h-[30rem] laptop:group-hover:opacity-90">
+                <p className="mt-4 max-w-[96%] text-[16px] font-sans leading-[1.35] text-white laptop:mt-0 laptop:text-[20px] laptop:max-h-0 laptop:group-hover:mt-12 laptop:overflow-hidden laptop:opacity-0 laptop:transition-all laptop:duration-500 laptop:group-hover:max-h-[30rem] laptop:group-hover:opacity-90">
                   {feature.para}
                 </p>
               </div>

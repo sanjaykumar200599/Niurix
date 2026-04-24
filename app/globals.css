@@ -151,6 +151,18 @@ main {
   }
 }
 
+@keyframes title-bob {
+  0% {
+    transform: translateY(0);
+  }
+  55% {
+    transform: translateY(-22px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 1024px) {
   .homepage-swiper .swiper-horizontal > .swiper-pagination-bullets,
   .homepage-swiper .swiper-pagination-bullets.swiper-pagination-horizontal {

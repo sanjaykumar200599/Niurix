@@ -21,8 +21,8 @@ export default function ContactUsPage() {
           <Image src="/assets/contactus/Contact banner mobile.webp" alt="Contact banner" fill sizes="(max-width: 767px) 100vw, 0px" className="object-cover tablet:hidden" priority />
         </div>
         <p
-          className="absolute left-9 right-9 top-83 -translate-y-1/2 font-sans text-[32px] leading-[1.35] text-white tablet:left-[80px] tablet:right-auto tablet:top-0 tablet:w-[70%] tablet:translate-y-0 tablet:font-display tablet:text-[36px] tablet:font-semibold tablet:leading-snug tablet:flex tablet:h-full tablet:items-center
-          laptop:left-[120px] laptop:w-[47%] laptop:text-[48px] [@media(min-width:1600px)_and_(min-height:900px)]:top-auto [@media(min-width:1600px)_and_(min-height:900px)]:bottom-100 [@media(min-width:1600px)_and_(min-height:900px)]:h-auto [@media(min-width:1600px)_and_(min-height:900px)]:w-[56%] [@media(min-width:1600px)_and_(min-height:900px)]:block"
+          className="absolute left-9 right-9 top-83 -translate-y-1/2 font-sans text-[32px] leading-[1.35] text-white tablet:left-[80px] tablet:right-auto tablet:top-0 tablet:w-[70%] tablet:translate-y-0 tablet:font-sans tablet:text-[36px] tablet:leading-snug tablet:flex tablet:h-full tablet:items-center
+          laptop:left-[120px] laptop:w-[47%] laptop:text-[48px] [@media(min-width:1600px)_and_(min-height:900px)]:top-82 [@media(min-width:1600px)_and_(min-height:900px)]:bottom-100 [@media(min-width:1600px)_and_(min-height:900px)]:h-auto [@media(min-width:1600px)_and_(min-height:900px)]:w-[56%] [@media(min-width:1600px)_and_(min-height:900px)]:block"
         >
           <span className="tablet:hidden ">
             Want to know more
