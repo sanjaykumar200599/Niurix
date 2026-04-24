@@ -37,7 +37,7 @@ function LearnMoreArrow() {
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeMiterlimit="10"
-        strokeWidth="2"
+        strokeWidth="2.8"
       />
     </svg>
   );
@@ -59,7 +59,7 @@ export default function ProductsGrid({ products }: { products: HomeData["product
       <div className="hidden w-full rounded-tl-[50px] bg-[#ebebeb] laptop:flex">
         <div className="w-[97%]">
           <div className="flex min-h-[50rem] flex-col px-5 py-8 laptop:px-10 [@media(min-width:1367px)]:min-h-[50rem] [@media(min-width:1367px)]:px-12">
-            <p className="-ml-5 font-number text-[110px] leading-none whitespace-nowrap text-white [@media(min-width:1025px)_and_(max-width:1366px)]:text-[150px] [@media(min-width:1367px)]:-ml-17 [@media(min-width:1367px)]:text-[200px]">
+            <p className="-ml-8 font-number text-[110px] leading-none whitespace-nowrap text-white [text-shadow:0_0_1.2px_#ffffff] [@media(min-width:1025px)_and_(max-width:1366px)]:text-[150px] [@media(min-width:1367px)]:-ml-18 [@media(min-width:1367px)]:text-[200px]">
               {selected.name}
             </p>
 
@@ -86,14 +86,16 @@ export default function ProductsGrid({ products }: { products: HomeData["product
                 </p>
                 <Link
                   href={`/products/${selected.slug}`}
-                  className="group mt-4 inline-flex h-[70px] w-[120px] items-center justify-between rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-3.5 !text-white transition hover:bg-[#f54f00] hover:!text-white [@media(min-width:1920px)]:h-[50px] [@media(min-width:1600px)]:w-[160px]  [@media(min-width:1600px)_and_(min-height:900px)]:px-4"
+                  className="group mt-4 inline-flex h-[70px] w-[120px] items-center justify-between rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-3.5 !text-white transition hover:bg-white hover:!text-brand-black [@media(min-width:1920px)]:h-[50px] [@media(min-width:1600px)]:w-[160px]  [@media(min-width:1600px)_and_(min-height:900px)]:px-4"
                 >
-                  <span className="text-left text-[20px] leading-[1.05] text-white">
+                  <span className="text-left text-[20px] leading-[1.05] text-white group-hover:text-brand-black">
                     Learn
                     <br className="[@media(min-width:1600px)]:hidden" />
                     {" More"}
                   </span>
-                  <LearnMoreArrow />
+                  <span className="text-white group-hover:text-brand-black">
+                    <LearnMoreArrow />
+                  </span>
                 </Link>
               </div>
             </div>
