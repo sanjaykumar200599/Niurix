@@ -48,7 +48,7 @@ export default function Footer() {
 
         <div className="border-t-2 border-[#DFDFDF] pt-7 pb-12 laptop:flex laptop:items-start laptop:justify-between laptop:pt-7 laptop:pb-16">
           
-          <div className="mb-3 shrink-0 tablet:mb-6 laptop:mb-0 laptop:pt-[2px] laptop:w-[140px] laptop:mr-22 [@media(min-width:1600px)]:w-[200px] [@media(min-width:1600px)]:mr-46 [@media(min-width:1080px)]:w-[220px] [@media(min-width:1080px)]:mr-56">
+          <div className="mb-3 shrink-0 tablet:mb-6 laptop:mb-0 laptop:pt-[2px] laptop:w-[140px] laptop:mr-18 [@media(min-width:1600px)]:w-[200px] [@media(min-width:1600px)]:mr-46 [@media(min-width:1080px)]:w-[180px] [@media(min-width:1080px)]:mr-24">
             <Link href="/" className="inline-flex">
               <Image
                 src="/assets/footer/niurixlogo.svg"
@@ -60,7 +60,7 @@ export default function Footer() {
             </Link>
           </div>
 
-          <div className="grid gap-y-4 tablet:gap-y-2 laptop:flex-1 laptop:grid-cols-[1.22fr_0.7fr_1.05fr_0.72fr] laptop:gap-x-6 [@media(min-width:1600px)]:grid-cols-[1fr_0.7fr_1fr_0.7fr]">
+          <div className="grid gap-y-4 tablet:gap-y-2 laptop:flex-1 laptop:pl-0 laptop:grid-cols-[1.22fr_0.7fr_1.05fr_0.72fr] laptop:gap-x-6 [@media(min-width:1600px)]:grid-cols-[1fr_0.7fr_1fr_0.7fr] [@media(min-width:1600px)]:pl-18">
             {sections.map((section) => (
               <div key={section.title} className="min-w-0">
                 <p className="pt-4 mb-4 text-[16px] leading-none font-sans font-semibold text-black tablet:mb-6 tablet:text-[20px] tablet:font-medium">
@@ -98,7 +98,7 @@ export default function Footer() {
             &copy; 2026 All rights reserved
           </div>
 
-          <div className="mb-4 flex flex-nowrap items-center justify-center gap-8 whitespace-nowrap text-[14px] leading-none font-sans text-black laptop:mb-0 laptop:gap-10">
+          <div className="mb-4 flex flex-nowrap items-center justify-center gap-8 whitespace-nowrap text-[16px] leading-none font-sans text-black laptop:mb-0 laptop:gap-10">
             <Link href="/terms-and-conditions" className="transition hover:text-brand-orange">
               Terms & Conditions
             </Link>
