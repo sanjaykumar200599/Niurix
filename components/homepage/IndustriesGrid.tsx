@@ -7,7 +7,7 @@ import type { HomeData } from "@/lib/content/types";
 
 function ArrowRightIcon() {
   return (
-    <svg viewBox="0 0 12.24 21.48" className="h-4 w-4" fill="none" aria-hidden>
+    <svg viewBox="0 0 12.24 21.48" className="h-2 w-3" fill="none" aria-hidden>
       <path
         d="M17.24,8.621,8.62,0,0,8.621"
         transform="translate(10.742 2.121) rotate(90)"
@@ -15,7 +15,7 @@ function ArrowRightIcon() {
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeMiterlimit="10"
-        strokeWidth="2.1"
+        strokeWidth="2.5"
       />
     </svg>
   );
@@ -44,7 +44,7 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
                     alt={item.title}
                     fill
                     sizes="(min-width: 1920px) 960px, (min-width: 1025px) 58vw, 0px"
-                    className="object-cover object-center scale-[0.96] brightness-[1.02] transition duration-500"
+                    className="object-cover object-center scale-[0.96] transition duration-500"
                   />
                 </div>
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white via-white/96 to-white/78 px-7 pb-5 pt-5">
@@ -77,10 +77,10 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
                   alt={item.title}
                   fill
                   sizes="(min-width: 1920px) 320px, (min-width: 1025px) 21vw, 0px"
-                  className="object-cover object-center scale-[0.96] brightness-[1.04] transition duration-500 group-hover:scale-100"
+                  className="object-cover object-center scale-[0.96]  transition duration-500 group-hover:scale-100"
                 />
               </div>
-              <div className="absolute inset-0 bg-black/12" />
+              <div className="absolute inset-0 " />
               <p className="absolute bottom-0 left-7 w-[18rem] origin-top-left -rotate-90 text-left font-body-light text-[28px] leading-none text-white">
                 {item.title}
               </p>
