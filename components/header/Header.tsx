@@ -212,7 +212,7 @@ export default function Header() {
             : "left-[clamp(64px,7.5vw,130px)] right-[clamp(64px,7.5vw,130px)] [@media(min-width:1600px)]:left-30 [@media(min-width:1600px)]:right-30 top-[7%] rounded-tl-[10px] rounded-br-[10px] bg-white shadow-[0px_3px_15px_#00000029]"
         }`}
       >
-        <div className={`flex items-center justify-between ${scrolled ? "px-[clamp(40px,8vw,120px)] py-6 h-25" : "pl-[4%] pr-[3.4%] py-6 h-25"}`}>
+        <div className={`flex items-center justify-between ${scrolled ? "px-[clamp(40px,8vw,120px)] py-6 h-[97.2px]" : "pl-[4%] pr-[3.4%] py-6 h-[97.2px]"}`}>
           <Link href="/" className="shrink-0" onClick={closeMenus}>
             <Image src="/assets/header/niurixlogo.svg" alt="Niurix" width={81} height={27} />
           </Link>
