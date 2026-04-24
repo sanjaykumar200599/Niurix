@@ -3,7 +3,7 @@
 function InlineHeading({ title, children }: { title: string; children: ReactNode }) {
   return (
     <p className="text-justify text-[16px] leading-[1.9rem] text-[#1D1D1D] tablet:text-[16px] laptop:text-[20px] laptop:font-body-light">
-      <span className="font-sans text-brand-orange text-[22px] tablet:text-[24px] laptop:text-[24px]">{title}</span>
+      <span className="font-sans text-brand-orange text-[22px] tablet:text-[24px] laptop:text-[28px] laptop:font-body-medium">{title}</span>
       <span className="mx-2 text-brand-orange">-</span>
       <span className="font-sans text-[#1D1D1D] text-[16px] tablet:text-[16px] laptop:text-[20px] laptop:font-body-light">{children}</span>
     </p>
@@ -12,9 +12,9 @@ function InlineHeading({ title, children }: { title: string; children: ReactNode
 
 export default function PrivacyPolicyContent() {
   return (
-    <section className="bg-[#ececec]">
-      <div className="mx-auto w-full px-4 py-20 text-[#1D1D1D] tablet:px-8 tablet:py-[88px] laptop:px-[140px] laptop:pb-10 laptop:pt-[180px] laptop:font-body-light [@media(min-width:1025px)_and_(max-width:1367px)]:px-[80px] [@media(min-width:1367px)_and_(max-width:1600px)]:px-[100px]">
-        <p className="text-right font-sans text-[16px] text-[#3f4654] tablet:text-[18px] laptop:text-[20px]">
+    <section>
+      <div className="mx-auto w-full  px-4 py-20 text-[#1D1D1D] tablet:px-8 tablet:py-[88px] laptop:px-[140px] laptop:pb-10 laptop:pt-[180px] laptop:font-body-light [@media(min-width:1025px)_and_(max-width:1367px)]:px-[80px] [@media(min-width:1367px)_and_(max-width:1600px)]:px-[100px]">
+        <p className="text-right font-sans text-[16px] text-white tablet:text-[18px] laptop:text-[20px]">
           Effective Date : February 09, 2026
         </p>
 

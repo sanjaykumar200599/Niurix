@@ -286,7 +286,7 @@ const serviceTerms: SectionBlock[] = [
 
 export default function TermsAndConditionsContent() {
   return (
-    <section className="bg-[#ececec]">
+    <section>
       <div className="mx-auto w-full px-4 py-20 text-[#1D1D1D] tablet:px-8 tablet:py-[88px] laptop:px-[140px] laptop:pb-10 laptop:pt-[180px] laptop:font-body-light [@media(min-width:1025px)_and_(max-width:1367px)]:px-[80px] [@media(min-width:1367px)_and_(max-width:1600px)]:px-[100px]">
         <h1 className="mb-14 text-center font-display font-semibold text-[26px] leading-tight text-brand-orange tablet:text-[28px] laptop:text-[28px] laptop:font-body-medium">
           Terms And Conditions
@@ -296,7 +296,7 @@ export default function TermsAndConditionsContent() {
           Introduction
         </h2>
 
-        <div className="space-y-6 text-[16px] leading-[1.9rem] tablet:text-[16px] laptop:text-[20px] laptop:font-body-light">
+        <div className="space-y-6 text-[16px] leading-[1.9rem] tablet:text-[16px] laptop:pl-6 laptop:text-[20px] laptop:font-body-light">
           {introduction.map((item) => (
             <div key={item.id} className="flex items-start gap-2.5 laptop:gap-3">
               <span className="min-w-[22px] font-sans text-brand-orange laptop:min-w-[24px] laptop:text-[28px] laptop:font-body-medium">{item.id}.</span>
@@ -309,7 +309,7 @@ export default function TermsAndConditionsContent() {
           BY USING OUR SERVICES, YOU AGREE THAT:
         </h2>
 
-        <ul className="mb-9 list-disc space-y-3 pl-8 text-[16px] leading-[1.9rem] tablet:text-[16px] laptop:mb-10 laptop:text-[20px] laptop:font-body-light">
+        <ul className="mb-9 list-disc space-y-3 pl-8 text-[16px] leading-[1.9rem] tablet:text-[16px] laptop:mb-10 laptop:pl-14 laptop:text-[20px] laptop:font-body-light">
           {serviceConsentBullets.map((item) => (
             <li key={item} className="text-justify">{item}</li>
           ))}
