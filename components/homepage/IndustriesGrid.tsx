@@ -36,27 +36,27 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
             return (
               <article
                 key={item.slug}
-                className="relative h-[640px] basis-0 overflow-hidden rounded-tl-[35px] rounded-br-[35px] transition-[flex-basis] duration-500 ease-out laptop:flex-[0_0_58%] [@media(min-width:1600px)_and_(min-height:900px)]:flex-[0_0_960px]"
+                className="relative h-[640px] basis-0 overflow-hidden rounded-tl-[48px] rounded-br-[48px] transition-[flex-basis] duration-500 ease-out laptop:flex-[0_0_58%] [@media(min-width:1600px)_and_(min-height:900px)]:flex-[0_0_960px]"
               >
-                <div className="absolute -inset-4">
+                <div className="absolute inset-0">
                   <Image
                     src={item.detailImage}
                     alt={item.title}
                     fill
                     sizes="(min-width: 1920px) 960px, (min-width: 1025px) 58vw, 0px"
-                    className="object-cover object-center scale-[0.96] transition duration-500"
+                    className="object-cover object-[center_20%] transition duration-500"
                   />
                 </div>
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white via-white/96 to-white/78 px-7 pb-5 pt-5">
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white via-white/98 to-white/88 px-7 pb-5 pt-5">
                   <h3 className="text-[28px] font-sans text-brand-black">{item.title}</h3>
-                  <p className="mt-3 max-w-[92%] text-[20px] leading-[1.35] font-body-light text-brand-black">
+                  <p className="mt-3 max-w-[100%] text-[20px] leading-[1.35] font-body-light text-brand-black">
                     {item.desc}
                   </p>
                   <Link
                     href={`/industries/${item.slug}`}
-                    className="mt-3 inline-flex min-w-[190px] items-center justify-center gap-3 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-7 py-2.5 text-[19px] font-sans !text-white transition hover:bg-white hover:!text-brand-black"
+                    className="mt-3 inline-flex min-w-[200px] items-center justify-between rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-7 py-2.5 text-[19px] font-sans !text-white transition hover:bg-white hover:!text-brand-black laptop:px-10"
                   >
-                    <span>Learn More</span>
+                    <span className="text-left">Learn More</span>
                     <ArrowRightIcon />
                   </Link>
                 </div>
@@ -69,15 +69,15 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
               key={item.slug}
               type="button"
               onClick={() => setActiveIndex(index)}
-              className="group relative h-[640px] basis-0 overflow-hidden rounded-tl-[35px] rounded-br-[35px] text-left transition-[flex-basis] duration-500 ease-out laptop:flex-[1_1_0] [@media(min-width:1600px)_and_(min-height:900px)]:flex-[0_0_320px]"
+              className="group relative h-[640px] basis-0 cursor-pointer overflow-hidden rounded-tl-[46px] rounded-br-[46px] text-left transition-[flex-basis] duration-500 ease-out laptop:flex-[1_1_0] [@media(min-width:1600px)_and_(min-height:900px)]:flex-[0_0_320px]"
             >
-              <div className="absolute -inset-4">
+              <div className="absolute inset-0">
                 <Image
                   src={item.cardImage}
                   alt={item.title}
                   fill
                   sizes="(min-width: 1920px) 320px, (min-width: 1025px) 21vw, 0px"
-                  className="object-cover object-center scale-[0.96]  transition duration-500 group-hover:scale-100"
+                  className="object-cover object-[center_10%]"
                 />
               </div>
               <div className="absolute inset-0 " />
@@ -106,7 +106,7 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
                     href={`/industries/${item.slug}`}
                     className="mt-5 inline-flex min-w-[132px] items-center justify-center gap-1.5 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-3 py-1.5 text-[15px] font-sans !text-white hover:!text-white tablet:min-w-[170px] tablet:gap-3 tablet:px-5 tablet:py-2.5 tablet:text-[18px]"
                   >
-                    <span>Learn More</span>
+                    <span className="text-left">Learn More</span>
                     <ArrowRightIcon />
                   </Link>
                 </div>
@@ -122,7 +122,7 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
               className="relative mx-auto block w-[303px] max-w-full overflow-hidden rounded-tl-[28px] rounded-br-[28px] text-left tablet:w-full"
             >
               <div className="relative h-[64px] tablet:h-48">
-                <Image src={item.mobileCropImage} alt={item.title} fill sizes="(max-width: 767px) 303px, 100vw" className="object-cover" />
+                <Image src={item.mobileCropImage} alt={item.title} fill sizes="(max-width: 767px) 303px, 100vw" className="object-cover  object-[center_10%]" />
                 <div className="absolute inset-0 bg-black/10" />
                 <p className="absolute bottom-3 left-4 text-[20px] font-body-light text-white tablet:text-[22px]">{item.title}</p>
               </div>
@@ -133,3 +133,4 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
     </div>
   );
 }
+
