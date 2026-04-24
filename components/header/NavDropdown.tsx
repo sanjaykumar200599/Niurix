@@ -78,7 +78,13 @@ export default function NavDropdown({ activeDesktopMenu, desktopItems, notchLeft
             ))}
           </div>
         ) : (
-          <div className={`grid h-[14rem] gap-5 px-4 py-2 ${activeDesktopMenu === "industries" ? "grid-cols-3" : "grid-cols-4"}`}>
+          <div
+            className={`grid py-2 ${
+              activeDesktopMenu === "solutions"
+                ? "h-[14rem] grid-cols-4 gap-7 px-4 [@media(min-width:1025px)_and_(max-width:1280px)]:gap-6 [@media(min-width:1025px)_and_(max-width:1280px)]:px-3"
+                : "h-[14rem] grid-cols-3 gap-7 px-4 [@media(min-width:1025px)_and_(max-width:1280px)]:gap-6"
+            }`}
+          >
             {desktopItems.map((item) => (
               <Link
                 key={item.href}
