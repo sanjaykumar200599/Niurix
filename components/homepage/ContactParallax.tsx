@@ -25,7 +25,7 @@ export default function ContactParallax() {
       >
         <div className="absolute inset-0 tablet:bg-white/10" />
 
-        <div className="absolute inset-0 flex items-center px-8 tablet:items-center tablet:px-0 tablet:justify-end tablet:pr-14 laptop:items-start laptop:justify-end laptop:pt-28 laptop:pr-88 [@media(min-width:1600px)_and_(min-height:900px)]:items-start [@media(min-width:1600px)_and_(min-height:900px)]:justify-end [@media(min-width:1600px)_and_(min-height:900px)]:pt-34 [@media(min-width:1600px)_and_(min-height:900px)]:pr-50">
+        <div className="bg-white/10 absolute inset-0 flex items-center px-8 tablet:items-center tablet:px-0 tablet:justify-end tablet:pr-14 laptop:items-start laptop:justify-end laptop:pt-28 laptop:pr-88 [@media(min-width:1600px)_and_(min-height:900px)]:items-start [@media(min-width:1600px)_and_(min-height:900px)]:justify-end [@media(min-width:1600px)_and_(min-height:900px)]:pt-34 [@media(min-width:1600px)_and_(min-height:900px)]:pr-50">
           <div className="flex w-full flex-col items-start tablet:w-[58%] tablet:items-start laptop:w-[42%] laptop:max-w-[640px] [@media(min-width:1600px)_and_(min-height:900px)]:w-[42%] [@media(min-width:1600px)_and_(min-height:900px)]:max-w-[640px]">
             <p className="max-w-[15rem] text-left text-[20px] font-sans leading-[1.15] text-white tablet:max-w-none tablet:text-[22px] tablet:leading-tight laptop:whitespace-nowrap laptop:text-[42px] laptop:leading-[1.02] wide:text-[32px]">
               Transform Your Network Architecture With Us!
