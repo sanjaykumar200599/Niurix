@@ -18,9 +18,7 @@ export default function DataCounters({ metrics }: DataCountersProps) {
     if (lastSpaceIndex === -1) {
       return (
         <>
-          <span className="hidden tablet:inline laptop:hidden">{prefix.trimEnd()}</span>
-          <br className="hidden tablet:block laptop:hidden" />
-          <span className="hidden tablet:inline laptop:hidden">{remainder}</span>
+          <span className="hidden tablet:inline laptop:hidden">{`${prefix.trimEnd()} ${remainder}`}</span>
           <span className="hidden laptop:inline whitespace-nowrap">{`${prefix.trimEnd()} ${remainder}`}</span>
         </>
       );
@@ -31,9 +29,7 @@ export default function DataCounters({ metrics }: DataCountersProps) {
 
     return (
       <>
-        <span className="hidden tablet:inline laptop:hidden">Reduction in </span>
-        <br className="hidden tablet:block laptop:hidden" />
-        <span className="hidden tablet:inline laptop:hidden">{remainder}</span>
+        <span className="hidden tablet:inline laptop:hidden">{trimmed}</span>
 
         <span className="hidden laptop:inline whitespace-nowrap">{`${prefix}${firstLineRemainder}`}</span>
         <br className="hidden laptop:block" />
@@ -47,7 +43,7 @@ export default function DataCounters({ metrics }: DataCountersProps) {
       {metrics.map((metric) => (
         <article key={metric.count + metric.desc} className="flex w-full flex-col items-center tablet:items-center laptop:w-1/4 laptop:items-center laptop:pl-10">
           <p className="font-number pb-2 text-[32px] leading-none text-brand-orange tablet:pb-4 tablet:text-[80px]">{metric.count}</p>
-          <p className="mt-0 w-full whitespace-nowrap text-center text-[16px] font-sans text-brand-black tablet:mt-1 tablet:w-auto tablet:whitespace-normal tablet:text-center tablet:text-[18px] laptop:w-[85%] laptop:text-center laptop:text-[20px]">
+          <p className="mt-0 w-full whitespace-nowrap tablet:text-[20px] text-center text-[16px] font-sans text-[#000000] tablet:mt-1 tablet:w-auto tablet:whitespace-nowrap tablet:py-3 tablet:text-center laptop:w-[85%] laptop:whitespace-normal laptop:py-0 laptop:text-center laptop:text-[20px]">
             {metric.desc.trim().startsWith("Reduction in") ? (
               <>
                 <span className="tablet:hidden">{metric.desc}</span>

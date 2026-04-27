@@ -43,7 +43,7 @@ const headerData = {
         {
             page: "products",
             type: "OLT",
-            modelNum: "SOLT33- 8P",
+            modelNum: "SOLT33-08P",
             image: "OLT SOLT33- 08P",
             url: "/products/OLT-SOLT33-8P",
         },

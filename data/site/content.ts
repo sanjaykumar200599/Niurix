@@ -433,9 +433,9 @@ export const homeContent: HomeData = HomeDataSchema.parse({
     },
     {
       slug: "OLT-SOLT33-8P",
-      name: "SOLT33-8P",
+      name: "SOLT33-08P",
       type: "OLT",
-      desc: "The Niurix SOLT33-8P is an Optical Line Terminal (OLT) designed for GPON networks serving up to 128 Optical Network Terminals (ONTs) per PON port. It includes eight GPON ports, 4 GE optical/electrical uplink ports, and two 10 Gigabit Ethernet uplink ports.",
+      desc: "The Niurix SOLT33-08P is an Optical Line Terminal (OLT) designed for GPON networks serving up to 128 Optical Network Terminals (ONTs) per PON port. It includes eight GPON ports, 4 GE optical/electrical uplink ports, and two 10 Gigabit Ethernet uplink ports.",
       image: assetPath("assets", "homepage", "SOLT33-08P.webp"),
     },
     {
@@ -609,7 +609,7 @@ export const headerNavigation: {
       image: "/assets/products/ONT-T2001/Product.webp",
     },
     {
-      label: "SOLT33-8P",
+      label: "SOLT33-08P",
       type: "OLT",
       href: "/products/OLT-SOLT33-8P",
       image: "/assets/header/products/OLT SOLT33- 08P.webp",

@@ -56,22 +56,26 @@ export default function HardwareSection({ titleHtml, items }: HardwareSectionPro
         </div>
       </div>
 
-      <div className="relative hidden h-[64rem] tablet:block laptop:hidden">
+      <div className="relative hidden h-[1180px] tablet:block laptop:hidden">
         <div className="absolute inset-0">
           <Image
             src="/assets/homepage/Box section1-tab.webp"
             alt="Hardware background"
             fill
             sizes="(min-width: 768px) and (max-width: 1023px) 100vw, 0px"
-            className="object-contain object-top scale-[2.1] origin-top"
+            className="object-contain object-top scale-x-[2.34] scale-y-[2.85] origin-top translate-x-[45%] translate-y-[-12%]"
           />
         </div>
 
-        <div className="absolute inset-x-0 top-[35.5rem] z-20 px-19.5">
-          <h2
-            className="nx-rich mx-auto max-w-[42rem] text-center font-sans text-[22px] leading-[1.2] text-brand-black"
-            dangerouslySetInnerHTML={{ __html: titleHtml }}
-          />
+        <div className="absolute inset-x-0 top-[42rem] z-20 px-19.5">
+          <h2 className="mx-auto max-w-[44rem] text-center font-sans text-[27px] leading-[1.2] text-brand-black">
+            <span className="whitespace-nowrap">
+              Empower Spaces with <span className="text-brand-orange">High-Performance</span> GPON{" "}
+              <span className="text-brand-orange">Fiber</span>
+            </span>
+            <br />
+            <span className="text-brand-orange">Solutions</span>
+          </h2>
 
           <div className="mt-8 grid grid-cols-2 gap-5">
             {items.map((item) => (
@@ -79,7 +83,7 @@ export default function HardwareSection({ titleHtml, items }: HardwareSectionPro
                 key={item}
                 className="flex h-[110px] items-center justify-center rounded-tl-[16px] rounded-br-[16px] border border-transparent bg-white px-6 text-center shadow-[0px_3px_15px_#0000001F]"
               >
-                <p className="text-[15px] font-sans leading-[1.3] text-brand-black">{item}</p>
+                <p className="text-[15px] font-sans tablet:text-[24px] leading-[1.3] text-brand-black">{item}</p>
               </article>
             ))}
           </div>

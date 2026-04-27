@@ -17,7 +17,7 @@ const sections = [
     links: [
       ["P4200R", "/products/ONT-P4200R"],
       ["T2001", "/products/ONT-T2001"],
-      ["SOLT33- 8P", "/products/OLT-SOLT33-8P"],
+      ["SOLT33-08P", "/products/OLT-SOLT33-8P"],
       ["MOLT-XGSPON 8P", "/products/OLT-XGSPON-8P"],
     ],
   },

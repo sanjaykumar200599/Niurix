@@ -16,7 +16,7 @@ export default function HeroBanner({ banners }: { banners: HomeData["banners"] }
 
           return (
             <SwiperSlide key={item.solutionSlug}>
-              <div className="relative h-176 overflow-hidden tablet:h-256 laptop:h-272 [@media(min-width:768px)_and_(max-width:1024px)_and_(orientation:landscape)]:h-192 [@media(min-width:1025px)_and_(max-width:1366px)]:h-240">
+              <div className="relative h-176 overflow-hidden [@media(min-width:768px)_and_(max-width:1024px)]:h-[1376px] laptop:h-272 [@media(min-width:768px)_and_(max-width:1024px)_and_(orientation:landscape)]:h-192 [@media(min-width:1025px)_and_(max-width:1366px)]:h-240">
                 <div className="absolute inset-0 hidden tablet:block" data-swiper-parallax="-23%">
                   <Image
                     src={item.image}
@@ -25,7 +25,7 @@ export default function HeroBanner({ banners }: { banners: HomeData["banners"] }
                     sizes="(max-width: 767px) 0px, 100vw"
                     priority={isFirstSlide}
                     fetchPriority={isFirstSlide ? "high" : "auto"}
-                    className="object-cover scale-100 object-[42%_44%] laptop:scale-[1.00] laptop:object-[15%_25%]"
+                    className="object-cover scale-100 [@media(min-width:768px)_and_(max-width:1024px)]:object-contain [@media(min-width:768px)_and_(max-width:1024px)]:scale-x-[1.0] [@media(min-width:768px)_and_(max-width:1024px)]:scale-y-[4.30] object-[42%_44%] laptop:scale-[1.00] laptop:object-[15%_25%]"
                   />
                 </div>
 
@@ -44,7 +44,7 @@ export default function HeroBanner({ banners }: { banners: HomeData["banners"] }
                 <div className="absolute inset-0" />
 
                 <div
-                  className="absolute inset-x-0 top-44 z-10 flex flex-col items-start px-6 text-left text-white tablet:top-112 tablet:items-center tablet:px-19.5 tablet:text-center laptop:top-96 laptop:px-30 [@media(min-width:768px)_and_(max-width:1024px)_and_(orientation:landscape)]:top-80"
+                  className="absolute inset-x-0 top-44 z-10 flex flex-col items-start px-6 text-left text-white [@media(min-width:768px)_and_(max-width:1024px)]:top-134 tablet:items-center tablet:px-19.5 tablet:text-center laptop:top-96 laptop:px-30 [@media(min-width:768px)_and_(max-width:1024px)_and_(orientation:landscape)]:top-80"
                   data-swiper-parallax="-300"
                 >
                   <h1 className="max-w-[22rem] text-[32px] font-display leading-[1.14] tablet:max-w-5xl tablet:text-[34px] tablet:leading-tight laptop:text-[48px] pb-6">
@@ -55,13 +55,13 @@ export default function HeroBanner({ banners }: { banners: HomeData["banners"] }
                     {mobilePara}
                   </p>
 
-                  <p className="mt-3 hidden max-w-4xl text-lg leading-normal font-body-light tablet:block laptop:mt-5 laptop:text-[20px] pb-2">
+                  <p className="mt-3 hidden max-w-4xl [@media(min-width:768px)_and_(max-width:1024px)]:mt-0 text-lg leading-normal font-body-light tablet:block laptop:mt-5 laptop:text-[20px] pb-2">
                     {item.para}
                   </p>
 
                   <Link
                     href={`/solutions/${item.solutionSlug}`}
-                    className="mt-10 inline-flex self-center rounded-[10px_0px] border-2 border-brand-orange bg-transparent px-6 py-1 text-[20px] font-body-light text-white transition hover:bg-brand-orange hover:text-black tablet:mt-5 tablet:self-auto tablet:text-lg laptop:mt-7 laptop:text-[20px]"
+                    className="mt-10 inline-flex self-center rounded-[10px_0px] border-2 border-brand-orange bg-transparent px-6 py-1 text-[20px] font-body-light text-white transition hover:bg-brand-orange hover:text-black tablet:mt-5 tablet:self-auto tablet:text-lg laptop:mt-7 laptop:text-[20px] tablet:text-[20px]"
                   >
                     Explore
                   </Link>
