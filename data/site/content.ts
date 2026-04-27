@@ -58,6 +58,7 @@ type LegacyProductSpec = {
 };
 
 type LegacyProductSpecSection = {
+  title: string;
   specifications: string;
   dimension: string;
   specification: LegacyProductSpec[];
@@ -288,6 +289,7 @@ const baseProducts: ProductContent[] = baseProductSeeds.map(({ slug, type, data,
     detailImageMobile: assetPath("assets", "products", "mobile_banners", folder, `${data.section4.background_img_mobile}.webp`),
     detailTitle: data.section4.title,
     highlights: data.section4.text_content_groups,
+    specTitle: section5.title.trim(),
     specificationHeading: section5.specifications,
     dimensionsHeading: section5.dimension,
     specifications: section5.specification,

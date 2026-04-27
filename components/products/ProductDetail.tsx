@@ -160,24 +160,14 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
         </div>
       </section>
 
-      <section className="mt-16 flex w-full flex-col-reverse tablet:mt-16 laptop:mt-24 laptop:flex-row">
+      <section className="mt-16 flex w-full flex-col-reverse tablet:mt-16 laptop:mt-24 laptop:flex-row laptop:items-stretch">
         <div className="w-full p-2 tablet:p-0 bg-[#f3f3f3] laptop:w-[45%]">
-          <div className="flex h-full flex-col justify-start px-10 pb-10 pt-8 tablet:px-20 tablet:pb-16 tablet:pt-10 laptop:min-h-[50rem] laptop:px-24 laptop:pt-28 laptop:ml-12">
-            <h2 className="mb-8 text-[20px] font-sans leading-tight text-brand-black tablet:text-[26px] laptop:text-[28px] ">
-              <span className="whitespace-nowrap [@media(min-width:1600px)_and_(min-height:900px)]:hidden">General Product Specifications</span>
-              <span className="hidden whitespace-nowrap [@media(min-width:1600px)_and_(min-height:900px)]:inline">General Product Specifications of Niurix</span>
-              <br />
-              <span className="[@media(min-width:1600px)_and_(min-height:900px)]:hidden">
-                of Niurix {product.model}
-                {product.type === "ONT" ? " ONT" : ""}
-              </span>
-              <span className="hidden [@media(min-width:1600px)_and_(min-height:900px)]:inline">
-                {product.model}
-                {product.type === "ONT" ? " ONT" : ""}
-              </span>
+          <div className="flex h-full flex-col justify-start px-10 pb-10 pt-8 tablet:px-20 tablet:pb-16 tablet:pt-10 laptop:min-h-[50rem] laptop:px-24 laptop:pt-30 laptop:ml-12">
+            <h2 className="mb-8 text-[20px] font-sans leading-tight text-brand-black tablet:text-[26px] laptop:text-[28px] [@media(min-width:1600px)_and_(min-height:900px)]:w-[92%]">
+              {product.specTitle}
             </h2>
 
-            <div className="flex w-full justify-between tablet:justify-start tablet:gap-[12.5rem] laptop:justify-start laptop:gap-0">
+            <div className="flex w-full justify-between tablet:justify-start tablet:gap-[12.5rem] laptop:justify-start laptop:gap-12 [@media(min-width:1600px)_and_(min-height:900px)]:gap-40">
               <button
                 type="button"
                 onClick={() => setTab("spec")}
@@ -190,7 +180,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
               <button
                 type="button"
                 onClick={() => setTab("dim")}
-                className={`border-b-[3px] pb-1 text-[20px] font-body-medium tablet:text-[28px] laptop:ml-26 laptop:w-fit laptop:text-left laptop:text-[28px] [@media(min-width:1600px)_and_(min-height:900px)]:ml-54  ${
+                className={`border-b-[3px] pb-1 text-[20px] font-body-medium tablet:text-[28px] laptop:ml-0 laptop:w-fit laptop:text-left laptop:text-[28px] ${
                   tab === "dim" ? "border-brand-orange text-brand-orange" : "border-transparent text-brand-black/30"
                 }`}
               >
@@ -200,9 +190,11 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
             <div className="mt-8 min-h-[14rem] font-body-light space-y-3 tablet:min-h-[17rem] laptop:min-h-[18.5rem]">
               {rows.map((row) => (
-                <div key={row.title} className="flex w-full justify-between gap-6 text-base tablet:text-lg laptop:text-[20px]">
-                  <p className="w-[52%] text-brand-black tablet:w-[58%]">{row.title}</p>
-                  <p className="pl-5 tablet:pl-0 w-[44%] text-brand-black tablet:w-[38%]">{row.value}</p>
+                <div key={row.title} className="flex w-full gap-6 text-base tablet:text-lg laptop:gap-8 laptop:text-[20px]">
+                  <p className="w-[52%] text-brand-black tablet:w-[58%] laptop:w-[35%]">{row.title}</p>
+                  <p className="pl-5 tablet:pl-0 w-[44%] text-brand-black tablet:w-[38%] laptop:w-[56%] laptop:ml-20 [@media(min-width:1600px)_and_(min-height:900px)]:w-[22%] ">
+                    {row.value}
+                  </p>
                 </div>
               ))}
             </div>
@@ -221,7 +213,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
                   href={product.pdf}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-4 inline-flex w-fit items-center gap-2 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-1 py-1 tablet:px-4 tablet:py-[6px] text-[16px] font-sans !text-white transition-colors duration-200 hover:bg-white hover:!text-black [@media(min-width:1600px)_and_(min-height:900px)]:text-[20px]"
+                  className="mt-4 laptop:mb-15 inline-flex w-fit items-center gap-2 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-1 py-1 tablet:px-4 tablet:py-[6px] text-[16px] font-sans !text-white transition-colors duration-200 hover:bg-white hover:!text-black [@media(min-width:1600px)_and_(min-height:900px)]:text-[20px]"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -245,7 +237,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
           </div>
         </div>
 
-        <div className="mx-auto h-[480px] w-[375px] tablet:h-[560px] tablet:w-full laptop:h-[52rem] laptop:w-[55%]"> 
+        <div className="mx-auto h-[480px] w-[375px] tablet:h-[560px] tablet:w-full laptop:h-auto laptop:self-stretch laptop:w-[55%]">
           <Swiper modules={[Pagination, Navigation]} navigation pagination={{ clickable: true }} loop className="product-spec-swiper h-full">
             {product.specSlides.map((slide) => (
               <SwiperSlide key={slide}>

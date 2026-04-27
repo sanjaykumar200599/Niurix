@@ -65,6 +65,7 @@ export const ProductContentSchema = z.object({
   detailImageMobile: z.string(),
   detailTitle: z.string(),
   highlights: z.array(ProductSectionHighlightSchema),
+  specTitle: z.string(),
   specificationHeading: z.string(),
   dimensionsHeading: z.string(),
   specifications: z.array(ProductSpecSchema),
