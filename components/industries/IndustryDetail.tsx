@@ -89,9 +89,9 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
       <section className="mx-11 my-10 rounded-[12px] bg-white px-4 py-4 shadow-[0_0_10px_#00000029] tablet:mx-10 tablet:px-6 tablet:py-10 laptop:mx-[120px] laptop:px-6 laptop:py-12 [@media(min-width:1600px)_and_(min-height:900px)]:px-12 [@media(min-width:1600px)_and_(min-height:900px)]:py-10">
         {/* Laptop-only fixed 3-row layout (exclude 1600x900) */}
         <div className="hidden laptop:block [@media(min-width:1600px)_and_(min-height:900px)]:hidden">
-          <div className="grid grid-cols-4 gap-x-2 gap-y-12 px-20">
+          <div className="flex items-start justify-center gap-20 px-10">
             {industry.devices.slice(0, 4).map((device) => (
-              <article key={device.title} className="flex w-full flex-col items-center text-center">
+              <article key={device.title} className="flex w-auto flex-col items-center text-center">
                 <div className="flex h-[96px] items-center justify-center">
                   <div className={`relative ${getDeviceImageSizeClasses(device.title)}`}>
                     <Image src={device.image} alt={device.title} fill sizes="220px" className="object-contain" />
@@ -102,9 +102,9 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
             ))}
           </div>
 
-          <div className="mt-10 grid grid-cols-6 gap-x-5 gap-y-10 pl-12 pr-8">
+          <div className="mt-10 flex items-start justify-center gap-20 px-10">
             {industry.devices.slice(4, 10).map((device) => (
-              <article key={device.title} className="flex w-full flex-col items-center text-center">
+              <article key={device.title} className="flex w-auto flex-col items-center text-center">
                 <div className="flex h-[96px] items-center justify-center">
                   <div className={`relative ${getDeviceImageSizeClasses(device.title)}`}>
                     <Image src={device.image} alt={device.title} fill sizes="220px" className="object-contain" />
@@ -115,8 +115,8 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
             ))}
           </div>
 
-          <div className="mt-10 grid grid-cols-3 px-8 pb-4">
-            <article className="col-start-2 flex w-full flex-col items-center text-center">
+          <div className="mt-12 flex items-start justify-center px-10 pb-4">
+            <article className="flex w-auto flex-col items-center text-center">
               <div className="flex h-[96px] items-center justify-center">
                 <div className={`relative ${getDeviceImageSizeClasses(industry.devices[10].title)}`}>
                   <Image src={industry.devices[10].image} alt={industry.devices[10].title} fill sizes="220px" className="object-contain" />
