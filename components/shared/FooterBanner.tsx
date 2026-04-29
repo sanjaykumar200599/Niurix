@@ -21,13 +21,22 @@ export default function FooterBanner() {
         />
 
         <div className="absolute inset-0 hidden tablet:flex tablet:items-center tablet:justify-end tablet:px-10 laptop:px-0 laptop:justify-end laptop:pr-51 [@media(min-width:1600px)_and_(min-height:900px)]:justify-end [@media(min-width:1600px)_and_(min-height:900px)]:pr-51">
-          <div className="flex w-[44%] max-w-[420px] flex-col items-start tablet:pr-4 laptop:ml-0 laptop:w-[36%] laptop:max-w-[520px] laptop:pr-0 [@media(min-width:1600px)_and_(min-height:900px)]:ml-0 [@media(min-width:1600px)_and_(min-height:900px)]:w-[36%] [@media(min-width:1600px)_and_(min-height:900px)]:max-w-[520px]">
+          <div className="flex w-[44%] max-w-[420px] flex-col items-start tablet:w-[45%] tablet:max-w-[450px] tablet:pr-4 laptop:ml-0 laptop:w-[36%] laptop:max-w-[520px] laptop:pr-0 [@media(min-width:1600px)_and_(min-height:900px)]:ml-0 [@media(min-width:1600px)_and_(min-height:900px)]:w-[36%] [@media(min-width:1600px)_and_(min-height:900px)]:max-w-[520px]">
             <p className="font-sans text-[20px] leading-tight text-white tablet:text-[22px] laptop:text-[28px]">
-              <span className="laptop:whitespace-nowrap">Transform Your Network Architecture</span> <br /> With Us!
+              <span className="hidden tablet:inline-block tablet:w-[17.5rem] laptop:hidden">
+                Transform Your Network
+                <br />
+                Architecture With Us!
+              </span>
+              <span className="hidden laptop:inline">
+                <span className="whitespace-nowrap">Transform Your Network Architecture</span>
+                <br />
+                With Us!
+              </span>
             </p>
             <Link
               href="/contact-us"
-              className="mt-3 inline-flex items-center justify-center rounded-[10px_0px] border border-brand-orange bg-brand-orange px-4 py-1.5 text-center text-[16px] font-sans !text-white visited:!text-white transition hover:bg-transparent hover:!text-white laptop:mt-4 laptop:px-5 laptop:py-2 laptop:text-[18px]"
+              className="mt-3 inline-flex items-center justify-center rounded-[10px_0px] border border-brand-orange bg-brand-orange px-3 py-1.5 text-center text-[16px] font-sans !text-white visited:!text-white transition hover:bg-transparent hover:!text-white laptop:mt-4 tablet:text-[18px] laptop:px-5 laptop:py-2 laptop:text-[18px]"
             >
               Get in touch
             </Link>

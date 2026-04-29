@@ -35,7 +35,7 @@ export default function MobileMenu({ mobileOpen, mobileSection, setMobileSection
                     className="flex w-full items-center justify-between py-3"
                     onClick={() => setMobileSection((prev) => (prev === section ? null : section))}
                   >
-                    <span className="text-[26px]  font-sans text-brand-black capitalize">{section}</span>
+                    <span className="text-[26px]  font-sans text-brand-black capitalize tablet:text-[28px]">{section}</span>
                     <span className={`text-[30px] text-brand-orange transition tablet:mr-3 ${open ? "rotate-45" : ""}`}>+</span>
                   </button>
 
@@ -48,7 +48,7 @@ export default function MobileMenu({ mobileOpen, mobileSection, setMobileSection
                         className="-mx-9 overflow-hidden bg-[#FF8948] tablet:ml-[-70px] tablet:mr-[-1.25rem]"
                       >
                         {mobileLinks[section].map((item) => (
-                          <Link key={item.href} href={item.href} onClick={onNavigate} className="block px-9 py-3 text-[20px] !text-white tablet:pl-[70px] tablet:pr-5">
+                          <Link key={item.href} href={item.href} onClick={onNavigate} className="block px-9 py-3 text-[20px] !text-white tablet:pl-[70px] tablet:pr-5 tablet:text-[22px]">
                             {item.label}
                           </Link>
                         ))}
@@ -59,7 +59,7 @@ export default function MobileMenu({ mobileOpen, mobileSection, setMobileSection
               );
             })}
 
-            <Link href="/software" onClick={onNavigate} className="block py-3 text-[26px] font-sans text-brand-black">
+            <Link href="/software" onClick={onNavigate} className="block py-3 text-[26px] font-sans text-brand-black tablet:text-[28px]">
               Software
             </Link>
 
@@ -69,7 +69,7 @@ export default function MobileMenu({ mobileOpen, mobileSection, setMobileSection
                 className="flex w-full items-center justify-between py-3"
                 onClick={() => setMobileSection((prev) => (prev === "industries" ? null : "industries"))}
               >
-                <span className="text-[26px] font-sans text-brand-black capitalize">industries</span>
+                <span className="text-[26px] font-sans text-brand-black capitalize tablet:text-[28px]">industries</span>
                 <span className={`text-3xl text-brand-orange transition tablet:mr-3 ${mobileSection === "industries" ? "rotate-45" : ""}`}>+</span>
               </button>
 
@@ -82,7 +82,7 @@ export default function MobileMenu({ mobileOpen, mobileSection, setMobileSection
                     className="-mx-9 overflow-hidden bg-[#FF8948] tablet:ml-[-70px] tablet:mr-[-1.25rem]"
                   >
                     {mobileLinks.industries.map((item) => (
-                      <Link key={item.href} href={item.href} onClick={onNavigate} className="block px-9 py-3 text-lg !text-white tablet:pl-[70px] tablet:pr-5">
+                      <Link key={item.href} href={item.href} onClick={onNavigate} className="block px-9 py-3 text-lg !text-white tablet:pl-[70px] tablet:pr-5 tablet:text-[22px]">
                         {item.label}
                       </Link>
                     ))}

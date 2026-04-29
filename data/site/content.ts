@@ -611,7 +611,7 @@ export const headerNavigation: {
       image: "/assets/products/ONT-T2001/Product.webp",
     },
     {
-      label: "SOLT33-08P",
+      label: "SOLT33-8P",
       type: "OLT",
       href: "/products/OLT-SOLT33-8P",
       image: "/assets/header/products/OLT SOLT33- 08P.webp",
