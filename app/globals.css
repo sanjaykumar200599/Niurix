@@ -276,6 +276,39 @@ main {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+  .product-spec-swiper {
+    --swiper-navigation-size: 76px !important;
+    
+  }
+
+  .product-spec-swiper .swiper-button-prev,
+  .product-spec-swiper .swiper-button-next {
+    width: 30px !important;
+    height: 40px !important;
+    padding: 0 !important;
+    display: grid !important;
+    place-items: center !important;
+  }
+
+  .product-spec-swiper .swiper-button-prev {
+    left: 6% !important;
+  }
+
+  .product-spec-swiper .swiper-button-next {
+    right: 6% !important;
+  }
+
+  .product-spec-swiper .swiper-button-prev::after,
+  .product-spec-swiper .swiper-button-next::after {
+    font-size: 56px !important;
+    font-weight: 1900 !important;
+    -webkit-text-stroke: 3.6px rgba(255, 255, 255, .98) !important;
+    text-shadow: none !important;
+    color: #ffffff !important;
+    line-height: 1 !important;
+    opacity: 1 !important;
+  }
+
   .product-spec-swiper .swiper-pagination,
   .product-spec-swiper .swiper-pagination.swiper-pagination-horizontal {
     bottom: 28px !important;
