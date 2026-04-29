@@ -97,7 +97,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
                     <Image src={device.image} alt={device.title} fill sizes="220px" className="object-contain" />
                   </div>
                 </div>
-                <p className="mt-3 font-display text-[17px] text-brand-black">{device.title}</p>
+                <p className="mt-3 font-sans text-[16px] text-brand-black">{device.title}</p>
               </article>
             ))}
           </div>
@@ -110,7 +110,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
                     <Image src={device.image} alt={device.title} fill sizes="220px" className="object-contain" />
                   </div>
                 </div>
-                <p className="mt-3 font-display text-[17px] text-brand-black">{device.title}</p>
+                <p className="mt-3 font-sans text-[16px] text-brand-black">{device.title}</p>
               </article>
             ))}
           </div>
@@ -122,22 +122,22 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
                   <Image src={industry.devices[10].image} alt={industry.devices[10].title} fill sizes="220px" className="object-contain" />
                 </div>
               </div>
-              <p className="mt-3 font-display text-[17px] text-brand-black">{industry.devices[10].title}</p>
+              <p className="mt-3 font-sans text-[16px] text-brand-black">{industry.devices[10].title}</p>
             </article>
           </div>
         </div>
 
         {/* 1600x900 original layout */}
         <div className="hidden [@media(min-width:1600px)_and_(min-height:900px)]:block">
-          <div className="grid grid-cols-6 gap-x-10 gap-y-10 px-8">
+          <div className="flex items-start justify-center gap-22 px-12">
             {industry.devices.slice(0, 6).map((device) => (
-              <article key={device.title} className="flex w-full flex-col items-center text-center">
+              <article key={device.title} className="flex w-auto flex-col items-center text-center">
                 <div className="flex h-[96px] items-center justify-center">
                   <div className={`relative ${getDeviceImageSizeClasses(device.title)}`}>
                     <Image src={device.image} alt={device.title} fill sizes="220px" className="object-contain" />
                   </div>
                 </div>
-                <p className="mt-3 font-display text-[17px] text-brand-black">{device.title}</p>
+                <p className="mt-3 font-sans text-[16px] text-brand-black">{device.title}</p>
               </article>
             ))}
           </div>
@@ -151,7 +151,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
                     <Image src={device.image} alt={device.title} fill sizes="220px" className="object-contain" />
                   </div>
                 </div>
-                <p className="mt-3 font-display text-[17px] text-brand-black">{device.title}</p>
+                <p className="mt-3 font-sans text-[16px] text-brand-black">{device.title}</p>
               </article>
             ))}
           </div>
