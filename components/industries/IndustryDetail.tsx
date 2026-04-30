@@ -29,14 +29,14 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
 
   return (
     <>
-      <section className="relative -mt-[72px] tablet:mt-0" data-hero-banner="industries">
-        <div className="relative mx-auto h-[813.21px] w-[375.2px] tablet:h-[460px] tablet:w-full laptop:h-[860px] [@media(min-width:1600px)_and_(min-height:900px)]:h-[1080px]">
+      <section className="relative -mt-[72px] tablet:-mt-[72px] laptop:mt-0" data-hero-banner="industries">
+        <div className="relative mx-auto h-[813.21px] w-[375.2px] tablet:h-[432px] tablet:w-full laptop:h-[860px] [@media(min-width:1600px)_and_(min-height:900px)]:h-[1080px]">
           <Image
             src={industry.heroImage}
             alt={industry.heroTitle}
             fill
             sizes="(max-width: 767px) 0px, 100vw"
-            className="hidden object-cover brightness-[0.58] tablet:block"
+            className="hidden object-cover brightness-[0.58] tablet:block tablet:object-top laptop:object-center"
             priority
           />
           <Image
@@ -49,26 +49,26 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
           />
         </div>
 
-        <h1 className="absolute left-9 top-54 z-10 w-[78%] pt-14 text-[32px] font-sans font-normal leading-[1.34] tracking-[-0.01em] text-brand-white tablet:left-[80px] tablet:top-1/2 tablet:w-[70%] tablet:-translate-y-1/2 tablet:pt-0 tablet:text-[36px] tablet:font-display laptop:left-[120px] laptop:w-[52%] laptop:text-[48px] [@media(min-width:1600px)_and_(min-height:900px)]:font-sans [@media(min-width:1600px)_and_(min-height:900px)]:font-normal [@media(min-width:1600px)_and_(min-height:900px)]:text-white/95 [@media(min-width:1600px)_and_(min-height:900px)]">
+        <h1 className="absolute left-9 top-54 z-10 w-[78%] pt-14 text-[32px] font-sans font-normal leading-[1.34] tracking-[-0.01em] text-brand-white tablet:left-[80px] tablet:top-[66%] laptop:top-1/2 tablet:w-[70%] tablet:-translate-y-1/2 tablet:pt-0 tablet:text-[34px] tablet:font-sans laptop:left-[120px] laptop:w-[52%] laptop:text-[48px] [@media(min-width:1600px)_and_(min-height:900px)]:font-sans [@media(min-width:1600px)_and_(min-height:900px)]:font-normal [@media(min-width:1600px)_and_(min-height:900px)]:text-white/95 [@media(min-width:1600px)_and_(min-height:900px)]">
           {industry.heroTitle}
         </h1>
       </section>
 
-      <section className="my-12 px-9 tablet:my-12 tablet:px-[80px] laptop:my-24 laptop:px-[120px]">
+      <section className="my-12 px-9 tablet:my-12 tablet:px-[75px] laptop:my-24 laptop:px-[120px]">
        <h2
-          className="nx-rich w-[92%] max-w-[920px] text-[26px] font-body-medium leading-[1.3] text-brand-black tablet:w-auto tablet:text-[24px] laptop:text-[28px]"
+          className="nx-rich w-[92%] max-w-[920px] text-[26px] font-body-medium leading-[1.3] text-[#000000] tablet:w-auto tablet:text-[28px] laptop:text-[28px]"
           dangerouslySetInnerHTML={{ __html: industry.introTitleHtml }}
         />
 
         <div className="mt-3 flex flex-col-reverse gap-8 laptop:mt-4 laptop:flex-row laptop:items-center laptop:justify-between">
           <div className="flex w-full flex-col justify-start laptop:w-[24%]">
-            <p className="w-[100%] pb-3 text-[16px] font-body-light leading-[1.4] text-[#000000] tablet:w-full tablet:pb-4 tablet:text-[17px] laptop:text-[20px] [@media(min-width:1600px)_and_(min-height:900px)]:w-[110%]">
+            <p className="w-[100%] pb-3 text-[16px] font-body-light leading-[1.4] text-[#000000] tablet:w-full tablet:pb-4 tablet:text-[18px] laptop:text-[20px] [@media(min-width:1600px)_and_(min-height:900px)]:w-[110%]">
               {industry.introText}
             </p>
 
             <Link
               href="/contact-us"
-              className="group mt-6 inline-flex w-fit flex-row items-center gap-1 whitespace-nowrap rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-4 py-1.5 text-left text-[16px] font-medium leading-tight text-white transition-colors duration-200 hover:bg-white hover:text-brand-black  [@media(min-width:1600px)_and_(min-height:900px)]:py-3 [@media(min-width:1600px)_and_(min-height:900px)]:px-3 [@media(min-width:1600px)_and_(min-height:900px)]:text-[20px]"
+              className="group mt-6 inline-flex w-fit flex-row items-center gap-1 whitespace-nowrap rounded-[10px_0px] border-2 border-brand-orange  tablet:text-[18px] bg-brand-orange px-4 py-1.5 text-left text-[16px] font-medium leading-tight text-white transition-colors duration-200 hover:bg-white hover:text-brand-black  [@media(min-width:1600px)_and_(min-height:900px)]:py-3 [@media(min-width:1600px)_and_(min-height:900px)]:px-3 [@media(min-width:1600px)_and_(min-height:900px)]:text-[20px]"
             >
               <span className="text-white transition-colors duration-200 group-hover:text-brand-black">Get in touch</span>
             </Link>
@@ -166,7 +166,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
                   <Image src={device.image} alt={device.title} fill sizes="220px" className="object-contain" />
                 </div>
               </div>
-              <p className="mt-2 font-sans text-[14px] text-brand-black tablet:mt-4 tablet:text-[17px] laptop:text-[18px]">
+              <p className="mt-2 font-sans text-[14px] text-brand-black tablet:mt-4 tablet:text-[14px] laptop:text-[18px]">
                 {device.title}
               </p>
             </article>
@@ -182,7 +182,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
                   <Image src={device.image} alt={device.title} fill sizes="220px" className="object-contain" />
                 </div>
               </div>
-              <p className="mt-2 font-sans text-[14px] text-brand-black tablet:mt-4 tablet:text-[17px] laptop:text-[18px]">
+              <p className="mt-2 font-sans text-[14px] text-brand-black tablet:mt-4 tablet:text-[14px] laptop:text-[18px]">
                 {device.title}
               </p>
             </article>
@@ -197,34 +197,34 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
                 <Image src={industry.devices[10].image} alt={industry.devices[10].title} fill sizes="220px" className="object-contain" />
               </div>
             </div>
-            <p className="mt-2 font-sans text-[14px] text-brand-black tablet:mt-4 tablet:text-[17px] laptop:text-[18px]">
+            <p className="mt-2 font-sans text-[14px] text-brand-black tablet:mt-4 tablet:text-[14px] laptop:text-[18px]">
               {industry.devices[10].title}
             </p>
           </article>
         </div>
       </section>
 
-      <section className="my-16 bg-[#ebebeb] px-9 py-9 tablet:my-16 tablet:px-[80px] tablet:py-12 laptop:relative laptop:mb-24 laptop:mt-64 laptop:min-h-[350px] laptop:px-[120px] laptop:py-10">
+      <section className="my-16 bg-[#ebebeb] px-9 py-9 tablet:mt-16 tablet:my-0 tablet:pb-20 tablet:px-[80px] tablet:py-12 laptop:relative laptop:mb-24 laptop:mt-64 laptop:min-h-[350px] laptop:px-[120px] laptop:py-10">
         <div className="w-full laptop:w-[48%]">
-          <h2 className="pt-10 text-[26px] font-sans font-normal leading-[1.28] text-brand-black tablet:pt-0 tablet:text-[30px] laptop:text-[30px] [@media(min-width:1600px)_and_(min-height:900px)]:text-[28px]  [@media(min-width:1600px)_and_(min-height:900px)]:mt-8">
+          <h2 className="pt-10 text-[26px] font-sans font-normal leading-[1.28] text-brand-black tablet:pt-0 tablet:text-[28px] laptop:text-[30px] [@media(min-width:1600px)_and_(min-height:900px)]:text-[28px]  [@media(min-width:1600px)_and_(min-height:900px)]:mt-8">
             <span className="laptop:hidden">{industry.advantagesTitle}</span>
             <span className="hidden whitespace-pre-line laptop:inline [@media(min-width:1600px)_and_(min-height:900px)]:hidden">{advantagesHeading}</span>
             <span className="hidden [@media(min-width:1600px)_and_(min-height:900px)]:inline whitespace-nowrap">{industry.advantagesTitle}</span>
           </h2>
 
-          <p className="mt-4 text-[16px] font-body-light leading-[1.42] text-[#000000] tablet:text-[18px] tablet:leading-[1.62] laptop:max-w-[560px] laptop:text-[20px] [@media(min-width:1600px)_and_(min-height:900px)]:max-w-[630px] [@media(min-width:1600px)_and_(min-height:900px)]:text-[20px] [@media(min-width:1600px)_and_(min-height:900px)]:leading-[1.40]">
+          <p className="mt-4 text-[16px] font-body-light leading-[1.42] text-[#000000] tablet:text-[18px] tablet:leading-[1.35] laptop:leading-[1.62] laptop:max-w-[560px] laptop:text-[20px] [@media(min-width:1600px)_and_(min-height:900px)]:max-w-[630px] [@media(min-width:1600px)_and_(min-height:900px)]:text-[20px] [@media(min-width:1600px)_and_(min-height:900px)]:leading-[1.40]">
             {industry.advantagesText}
           </p>
         </div>
 
-        <div className="mt-10 grid grid-cols-2 gap-x-4 gap-y-6 tablet:gap-5 laptop:absolute laptop:right-[120px] laptop:top-[-80px] laptop:mt-0 laptop:w-[620px] laptop:grid-cols-2 laptop:gap-9 [@media(min-width:1600px)_and_(min-height:900px)]:right-[150px] [@media(min-width:1600px)_and_(min-height:900px)]:top-[-110px] [@media(min-width:1600px)_and_(min-height:900px)]:w-[780px] [@media(min-width:1600px)_and_(min-height:900px)]:gap-12">
+        <div className="mt-10 grid grid-cols-2 gap-x-4 gap-y-6 tablet:gap-8 laptop:absolute laptop:right-[120px] laptop:top-[-80px] laptop:mt-0 laptop:w-[620px] laptop:grid-cols-2 laptop:gap-9 [@media(min-width:1600px)_and_(min-height:900px)]:right-[150px] [@media(min-width:1600px)_and_(min-height:900px)]:top-[-110px] [@media(min-width:1600px)_and_(min-height:900px)]:w-[780px] [@media(min-width:1600px)_and_(min-height:900px)]:gap-12">
           {industry.advantagesCards.map((card) => (
             <article
               key={card.title}
-              className="h-[144px] w-[135.6px] rounded-tl-[18px] rounded-br-[18px] bg-white shadow-[0_0_10px_#00000029] tablet:h-auto tablet:w-auto tablet:min-h-[168px] laptop:min-h-[236px] [@media(min-width:1600px)_and_(min-height:900px)]:min-h-[236px]"
+              className="h-[144px] w-[135.6px] rounded-tl-[18px] rounded-br-[18px] bg-white shadow-[0_0_10px_#00000029] tablet:h-[122px] tablet:w-auto tablet:min-h-0 laptop:min-h-[236px] [@media(min-width:1600px)_and_(min-height:900px)]:min-h-[236px]"
             >
-              <div className="w-full p-4 tablet:w-full tablet:p-7 laptop:p-10 [@media(min-width:1600px)_and_(min-height:900px)]:p-10">
-                <div className="relative mb-3 h-[32px] w-[32px] tablet:h-[80px] tablet:w-[80px]">
+              <div className="w-full p-4 tablet:w-full tablet:p-4 laptop:p-10 [@media(min-width:1600px)_and_(min-height:900px)]:p-10">
+                <div className="relative mb-3 h-[32px] w-[32px] tablet:h-[40px] tablet:w-[40px] laptop:h-[80px] laptop:w-[80px]">
                   <Image src={card.image} alt={card.title} fill sizes="80px" className="object-contain" />
                 </div>
 
