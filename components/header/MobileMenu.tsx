@@ -25,7 +25,7 @@ export default function MobileMenu({ mobileOpen, mobileSection, setMobileSection
           transition={{ duration: 0.2 }}
           className="fixed inset-0 z-40 bg-white pt-20 laptop:hidden"
         >
-          <div className="h-full overflow-auto px-9 pb-8 tablet:pl-[70px] tablet:pr-5">
+          <div className="h-full overflow-auto px-9 pb-8 tablet:pl-[76px] tablet:pr-9">
             {(["solutions", "products"] as HeaderMenuKey[]).map((section) => {
               const open = mobileSection === section;
               return (
@@ -36,7 +36,7 @@ export default function MobileMenu({ mobileOpen, mobileSection, setMobileSection
                     onClick={() => setMobileSection((prev) => (prev === section ? null : section))}
                   >
                     <span className="text-[26px]  font-sans text-brand-black capitalize tablet:text-[28px]">{section}</span>
-                    <span className={`text-[30px] text-brand-orange transition tablet:mr-3 ${open ? "rotate-45" : ""}`}>+</span>
+                    <span className={`text-[30px] text-brand-orange transition tablet:mr-12 ${open ? "rotate-45" : ""}`}>+</span>
                   </button>
 
                   <AnimatePresence>
@@ -45,10 +45,10 @@ export default function MobileMenu({ mobileOpen, mobileSection, setMobileSection
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="-mx-9 overflow-hidden bg-[#FF8948] tablet:ml-[-70px] tablet:mr-[-1.25rem]"
+                        className="-mx-9 overflow-hidden bg-[#FF8948] tablet:ml-[-76px] tablet:mr-[-2.25rem]"
                       >
                         {mobileLinks[section].map((item) => (
-                          <Link key={item.href} href={item.href} onClick={onNavigate} className="block px-9 py-3 text-[20px] !text-white tablet:pl-[70px] tablet:pr-5 tablet:text-[22px]">
+                          <Link key={item.href} href={item.href} onClick={onNavigate} className="block px-9 py-3 text-[20px] !text-white tablet:pl-[76px] tablet:pr-9 tablet:text-[22px]">
                             {item.label}
                           </Link>
                         ))}
@@ -70,7 +70,7 @@ export default function MobileMenu({ mobileOpen, mobileSection, setMobileSection
                 onClick={() => setMobileSection((prev) => (prev === "industries" ? null : "industries"))}
               >
                 <span className="text-[26px] font-sans text-brand-black capitalize tablet:text-[28px]">industries</span>
-                <span className={`text-3xl text-brand-orange transition tablet:mr-3 ${mobileSection === "industries" ? "rotate-45" : ""}`}>+</span>
+                <span className={`text-3xl text-brand-orange transition tablet:mr-12 ${mobileSection === "industries" ? "rotate-45" : ""}`}>+</span>
               </button>
 
               <AnimatePresence>
@@ -79,10 +79,10 @@ export default function MobileMenu({ mobileOpen, mobileSection, setMobileSection
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: "auto" }}
                     exit={{ opacity: 0, height: 0 }}
-                    className="-mx-9 overflow-hidden bg-[#FF8948] tablet:ml-[-70px] tablet:mr-[-1.25rem]"
+                    className="-mx-9 overflow-hidden bg-[#FF8948] tablet:ml-[-76px] tablet:mr-[-2.25rem]"
                   >
                     {mobileLinks.industries.map((item) => (
-                      <Link key={item.href} href={item.href} onClick={onNavigate} className="block px-9 py-3 text-lg !text-white tablet:pl-[70px] tablet:pr-5 tablet:text-[22px]">
+                      <Link key={item.href} href={item.href} onClick={onNavigate} className="block px-9 py-3 text-lg !text-white tablet:pl-[76px] tablet:pr-9 tablet:text-[22px]">
                         {item.label}
                       </Link>
                     ))}
