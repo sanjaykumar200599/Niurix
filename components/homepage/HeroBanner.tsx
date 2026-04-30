@@ -25,7 +25,7 @@ export default function HeroBanner({ banners }: { banners: HomeData["banners"] }
                     sizes="(max-width: 767px) 0px, 100vw"
                     priority={isFirstSlide}
                     fetchPriority={isFirstSlide ? "high" : "auto"}
-                    className="object-cover scale-100 [@media(min-width:768px)_and_(max-width:1024px)]:object-contain [@media(min-width:768px)_and_(max-width:1024px)]:scale-x-[1.0] [@media(min-width:768px)_and_(max-width:1024px)]:scale-y-[4.30] object-[42%_44%] laptop:scale-[1.00] laptop:object-[15%_25%]"
+                    className="object-cover scale-100 [@media(min-width:768px)_and_(max-width:1024px)]:object-contain [@media(min-width:768px)_and_(max-width:1024px)]:scale-x-[1.0] [@media(min-width:768px)_and_(max-width:1024px)]:scale-y-[3.2] [@media(min-width:768px)_and_(max-width:1024px)]:object-[42%_50%] laptop:scale-[1.00] laptop:object-[15%_25%]"
                   />
                 </div>
 
@@ -44,7 +44,7 @@ export default function HeroBanner({ banners }: { banners: HomeData["banners"] }
                 <div className="absolute inset-0" />
 
                 <div
-                  className="absolute inset-x-0 top-44 z-10 flex flex-col items-start px-6 text-left text-white [@media(min-width:768px)_and_(max-width:1024px)]:top-134 tablet:items-center tablet:px-19.5 tablet:text-center laptop:top-96 laptop:px-30 [@media(min-width:768px)_and_(max-width:1024px)_and_(orientation:landscape)]:top-80"
+                  className="absolute inset-x-0 top-44 z-10 flex flex-col items-start px-6 text-left text-white [@media(min-width:768px)_and_(max-width:1024px)]:top-152 tablet:items-center tablet:px-19.5 tablet:text-center laptop:top-96 laptop:px-30 [@media(min-width:768px)_and_(max-width:1024px)_and_(orientation:landscape)]:top-80"
                   data-swiper-parallax="-300"
                 >
                   <h1 className="max-w-[22rem] text-[32px] font-display leading-[1.14] tablet:max-w-5xl tablet:text-[34px] tablet:leading-tight laptop:text-[48px] pb-6">

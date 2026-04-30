@@ -18,7 +18,9 @@ export const metadata: Metadata = toMetadata({ ...homeContent.seo, previewImage:
 export default function HomePage() {
   return (
     <div>
-      <HeroBanner banners={homeContent.banners} />
+      <div className="tablet:-mt-[72px] laptop:mt-0">
+        <HeroBanner banners={homeContent.banners} />
+      </div>
 
       <HardwareSection titleHtml={homeContent.hardwareTitleHtml} items={homeContent.hardwareItems} />
 
