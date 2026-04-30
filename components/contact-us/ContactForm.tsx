@@ -56,12 +56,12 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="w-full">
-      <div className="grid gap-7 tablet:gap-4 laptop:grid-cols-2 laptop:gap-7">
+      <div className="grid gap-7 tablet:gap-7 laptop:grid-cols-2 laptop:gap-7">
         <div className="laptop:max-w-[330px] [@media(min-width:1600px)_and_(min-height:900px)]:max-w-[440px]">
           <input
             name="name"
             placeholder="Name"
-            className="h-[48px] w-full rounded-[10px_0px] border border-black/20 px-4 text-base font-normal text-black/55 placeholder:text-black/28 focus:border-black/30 focus:outline-none focus:ring-0"
+            className="h-[48px] w-full rounded-[10px_0px] border border-black/20 px-4 text-base font-normal tablet:text-[18px] text-black/55 placeholder:text-black/28 focus:border-black/30 focus:outline-none focus:ring-0"
           />
           {state.fieldErrors?.name ? <p className="mt-1 text-sm text-black">{state.fieldErrors.name}</p> : null}
         </div>
@@ -83,7 +83,7 @@ export default function ContactForm() {
             type="email"
             name="email"
             placeholder="Email"
-            className="h-[48px] w-full rounded-[10px_0px] border border-black/20 px-4 text-base font-normal text-black/55 placeholder:text-black/28 focus:border-black/30 focus:outline-none focus:ring-0"
+            className="h-[48px] w-full rounded-[10px_0px] border border-black/20 px-4 text-base font-normal tablet:text-[18px]  text-black/55 placeholder:text-black/28 focus:border-black/30 focus:outline-none focus:ring-0"
           />
           {state.fieldErrors?.email ? <p className="mt-1 text-sm text-black">{state.fieldErrors.email}</p> : null}
         </div>
@@ -93,7 +93,7 @@ export default function ContactForm() {
             name="message"
             placeholder="Message"
             rows={3}
-            className="h-[50px] w-full rounded-[10px_0px] border border-black/20 px-4 py-3 text-base font-normal text-black/55 placeholder:text-black/28 focus:border-black/30 focus:outline-none focus:ring-0"
+            className="h-[50px] w-full rounded-[10px_0px] border border-black/20 px-4 py-3 text-base font-normal tablet:resize-none tablet:overflow-hidden tablet:text-[18px] text-black/55 placeholder:text-black/28 focus:border-black/30 focus:outline-none focus:ring-0"
           />
         </div>
       </div>
@@ -102,7 +102,7 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={pending}
-          className="cursor-pointer rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-5 py-2 text-[20px] font-sans text-white disabled:opacity-60 tablet:px-6 tablet:text-lg laptop:text-[20px]"
+          className="cursor-pointer rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-5 py-2 text-[20px] font-sans text-white disabled:opacity-60 tablet:px-6 tablet:text-[20px] laptop:text-[20px]"
         >
           {pending ? "Submitting..." : "Submit"}
         </button>
