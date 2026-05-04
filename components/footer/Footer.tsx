@@ -48,22 +48,22 @@ export default function Footer() {
 
         <div className="border-t-2 border-[#DFDFDF] pt-7 pb-12 laptop:flex laptop:items-start laptop:justify-between laptop:pt-7 laptop:pb-16">
           
-          <div className="mb-3 shrink-0 tablet:mb-6 laptop:mb-0 laptop:pt-[2px] laptop:w-[140px] laptop:mr-18 [@media(min-width:1600px)]:w-[200px] [@media(min-width:1600px)]:mr-46 [@media(min-width:1080px)]:w-[180px] [@media(min-width:1080px)]:mr-24">
+          <div className="mb-3 shrink-0 tablet:mb-6 laptop:mb-0 laptop:pt-[2px] laptop:w-[140px] laptop:mr-18 tablet:pl-3 laptop:pl-0 [@media(min-width:1600px)]:w-[200px] [@media(min-width:1600px)]:mr-46 [@media(min-width:1080px)]:w-[180px] [@media(min-width:1080px)]:mr-24">
             <Link href="/" className="inline-flex">
               <Image
                 src="/assets/footer/niurixlogo.svg"
                 alt="Niurix"
                 width={81}
                 height={26}
-                className="h-[26px] w-[81px] tablet:h-[33px] tablet:w-[102px] laptop:h-[25px] laptop:w-[80px]"
+                className="h-[26px] w-[81px] tablet:h-[26.43px] tablet:w-[80.54px] laptop:h-[25px] laptop:w-[80px]"
               />
             </Link>
           </div>
 
-          <div className="grid gap-y-4 tablet:gap-y-2 laptop:flex-1 laptop:pl-0 laptop:grid-cols-[1.22fr_0.7fr_1.05fr_0.72fr] laptop:gap-x-6 [@media(min-width:1600px)]:grid-cols-[1fr_0.7fr_1fr_0.7fr] [@media(min-width:1600px)]:pl-18">
+          <div className="grid gap-y-4 tablet:gap-y-2 tablet:pl-3 laptop:flex-1 laptop:pl-0 laptop:pb-0 tablet:pb-12 laptop:grid-cols-[1.22fr_0.7fr_1.05fr_0.72fr] laptop:gap-x-6 [@media(min-width:1600px)]:grid-cols-[1fr_0.7fr_1fr_0.7fr] [@media(min-width:1600px)]:pl-18">
             {sections.map((section) => (
               <div key={section.title} className="min-w-0">
-                <p className="pt-4 mb-4 text-[16px] leading-none font-sans font-semibold text-black tablet:mb-6 tablet:text-[20px] tablet:font-medium">
+                <p className="pt-4 mb-4 laptop:pt-4 tablet:pt-5 text-[16px] laptop:text-[20px] leading-none font-sans font-semibold text-black tablet:mb-6 tablet:text-[18px] tablet:font-semibold laptop:font-medium">
                   {section.title}
                 </p>
 
@@ -98,7 +98,7 @@ export default function Footer() {
             &copy; 2026 All rights reserved
           </div>
 
-          <div className="mb-4 flex flex-nowrap items-center justify-center gap-10 whitespace-nowrap text-[16px] leading-none font-sans text-black laptop:mb-0 laptop:gap-14 [@media(min-width:1400px)]:gap-30   [@media(min-width:1400px)]:ml-32">
+          <div className="mb-4 flex flex-nowrap items-center justify-center gap-10 whitespace-nowrap text-[16px] leading-none font-sans text-black laptop:mb-0 tablet:p-5 tablet:gap-45 laptop:p-0 laptop:gap-14 [@media(min-width:1400px)]:gap-30   [@media(min-width:1400px)]:ml-32">
             <Link href="/terms-and-conditions" className="transition hover:text-brand-orange">
               Terms & Conditions
             </Link>
@@ -107,7 +107,7 @@ export default function Footer() {
             </Link>
           </div>
 
-          <div className="flex flex-col items-center justify-center gap-2 text-[16px] leading-none font-sans text-black tablet:flex-row tablet:gap-2.5 laptop:justify-end  [@media(min-width:1400px)]:mr-8  [@media(min-width:1400px)]:gap-5">
+          <div className="flex flex-col items-center justify-center gap-2 text-[16px] leading-none font-sans text-black tablet:flex-col tablet:gap-8 laptop:gap-2.5 laptop:flex-row laptop:justify-end [@media(min-width:1400px)]:mr-8 [@media(min-width:1400px)]:gap-5">
             <span>Find us on</span>
             <a
               href="https://www.linkedin.com/company/niurix/"
