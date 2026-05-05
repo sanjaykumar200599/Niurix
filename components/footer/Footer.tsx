@@ -94,11 +94,12 @@ export default function Footer() {
 
         <div className="border-t border-[#707070] pt-6 pb-2 laptop:grid laptop:grid-cols-[1fr_auto_1fr] laptop:items-center laptop:pt-6 laptop:pb-3">
           
-          <div className="mb-4 text-center text-[16px] leading-none font-sans text-black laptop:mb-0 laptop:text-left">
+          <div className="mb-4 text-center text-[14px]
+          laptop:text-[16px] tablet:text-[16px] leading-none font-sans text-black laptop:mb-0 laptop:text-left">
             &copy; 2026 All rights reserved
           </div>
 
-          <div className="mb-4 flex flex-nowrap items-center justify-center gap-10 whitespace-nowrap text-[16px] leading-none font-sans text-black laptop:mb-0 tablet:p-5 tablet:gap-45 laptop:p-0 laptop:gap-14 [@media(min-width:1400px)]:gap-30   [@media(min-width:1400px)]:ml-32">
+          <div className="mb-4 flex flex-nowrap items-center justify-center gap-10 whitespace-nowrap text-[14px]  laptop:text-[16px] tablet:text-[16px] leading-none font-sans text-black laptop:mb-0 tablet:p-5 tablet:gap-45 laptop:p-0 laptop:gap-14 [@media(min-width:1400px)]:gap-30   [@media(min-width:1400px)]:ml-32">
             <Link href="/terms-and-conditions" className="transition hover:text-brand-orange">
               Terms & Conditions
             </Link>
@@ -107,7 +108,7 @@ export default function Footer() {
             </Link>
           </div>
 
-          <div className="flex flex-col items-center justify-center gap-2 text-[16px] leading-none font-sans text-black tablet:flex-col tablet:gap-8 laptop:gap-2.5 laptop:flex-row laptop:justify-end [@media(min-width:1400px)]:mr-8 [@media(min-width:1400px)]:gap-5">
+          <div className="flex flex-col items-center justify-center gap-2 text-[14px]  laptop:text-[16px] tablet:text-[16px] leading-none font-sans text-black tablet:flex-col tablet:gap-8 laptop:gap-2.5 laptop:flex-row laptop:justify-end [@media(min-width:1400px)]:mr-8 [@media(min-width:1400px)]:gap-5">
             <span>Find us on</span>
             <a
               href="https://www.linkedin.com/company/niurix/"

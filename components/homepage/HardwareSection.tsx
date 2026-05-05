@@ -111,7 +111,7 @@ export default function HardwareSection({ titleHtml, items }: HardwareSectionPro
             />
           </div>
 
-          <div className="mt-[28rem] grid grid-cols-2 gap-4 px-19.5 laptop:mt-4 laptop:grid-cols-2 laptop:gap-x-2.5 laptop:gap-y-2.5 laptop:px-0 [@media(min-width:1600px)_and_(min-height:900px)]:gap-x-2.5">
+          <div className="mt-[28rem] grid grid-cols-2 gap-4 px-19.5 laptop:mt-4 laptop:grid-cols-2 laptop:gap-x-2.5 laptop:gap-y-5.5 laptop:px-0 [@media(min-width:1600px)_and_(min-height:900px)]:gap-x-2.5">
             {items.map((item) => (
               <article
                 key={item}
