@@ -42,21 +42,30 @@ export default function SoftwarePage({ software }: SoftwarePageProps) {
       <section className="mb-8 mt-10 px-9 tablet:mb-12 tablet:px-20 laptop:mb-16 laptop:mt-[120px] laptop:px-[120px]">
         <div className="grid gap-8 tablet:gap-8 laptop:grid-cols-5 laptop:gap-7 [@media(min-width:1600px)_and_(min-height:900px)]:gap-11">
           {software.features.map((feature) => (
-            <article key={feature.id} className="group relative isolate mx-auto h-[254.08px] w-[303.3px] max-w-full tablet:max-w-none overflow-hidden rounded-tl-[46px] rounded-br-[46px] tablet:mx-0 tablet:h-[16rem] laptop:h-auto laptop:mt-0 tablet:mt-8 tablet:w-auto tablet:rounded-tl-[50px] tablet:rounded-br-[50px] [@media(min-width:1600px)_and_(min-height:900px)]:h-[600px] [@media(min-width:1600px)_and_(min-height:900px)]:w-[300px]">
+            <article
+              key={feature.id}
+              className="group relative isolate mx-auto h-[254.08px] w-[303.3px] max-w-full overflow-hidden rounded-tl-[46px] rounded-br-[46px] tablet:mx-0 tablet:mt-8 tablet:h-[16rem] tablet:max-w-none tablet:w-auto tablet:rounded-tl-[50px] tablet:rounded-br-[50px] laptop:mt-0 laptop:h-auto [@media(min-width:1600px)_and_(min-height:900px)]:h-[600px] [@media(min-width:1600px)_and_(min-height:900px)]:w-[300px]"
+            >
               <div className="relative h-full tablet:h-[16rem] laptop:h-[35rem] [@media(min-width:1600px)_and_(min-height:900px)]:h-[600px]">
                 <Image src={feature.image} alt={feature.title} fill sizes="(max-width: 1023px) 0px, (min-width: 1920px) 300px, 20vw" className="hidden object-cover laptop:block" />
                 <Image src={feature.imageMobile} alt={feature.title} fill sizes="(max-width: 1023px) 100vw, 0px" className="object-cover laptop:hidden" />
-                <div className="absolute inset-0 transition duration-500  laptop:group-hover:bg-black/55" />
+                <div className="absolute inset-0 transition duration-500 laptop:bg-transparent laptop:group-hover:bg-black/60" />
               </div>
 
-              <div className="absolute inset-0 z-10 flex flex-col px-4 py-5 tablet:px-8 tablet:py-7 laptop:px-5 laptop:py-8">
-                <h3 className="max-w-[100%] text-[20px] leading-tight font-sans text-brand-orange tablet:pt-4  tablet:text-[22px] laptop:mt-auto laptop:pt-0 laptop:text-[28px] laptop:leading-[1.2] laptop:text-white laptop:transition-[margin,padding,color] laptop:duration-500 laptop:group-hover:mt-0 laptop:group-hover:pt-4 laptop:group-hover:text-brand-orange laptop:group-hover:animate-[title-bob_420ms_ease-out]">
+              <div className="absolute inset-0 z-10 px-4 py-5 tablet:px-8 tablet:py-7 laptop:px-5 laptop:py-8">
+                <h3 className="max-w-[100%] font-sans text-[20px] leading-tight text-brand-orange tablet:pt-4 tablet:text-[22px] laptop:absolute laptop:left-5 laptop:right-5 laptop:top-[80%] laptop:pt-0 laptop:text-[28px] laptop:leading-[1.2] laptop:text-white laptop:transition-[top,color] laptop:duration-[600ms] laptop:ease-[cubic-bezier(0.45,-0.35,0.27,1.25)] laptop:group-hover:top-[10%] laptop:group-hover:text-brand-orange laptop:group-hover:ease-[cubic-bezier(0.4,-0.55,0.27,1.35)] [@media(min-width:1025px)_and_(max-width:1366px)]:top-[75%] [@media(min-width:1025px)_and_(max-width:1366px)]:group-hover:top-[5%]">
                   {feature.title}
                 </h3>
 
-                <p className="mt-4 max-w-[96%] text-[16px] tablet:pt-4 laptop:pt-0 tablet:text-[18px] font-sans leading-[1.35] text-white laptop:mt-0 laptop:text-[20px] laptop:max-h-0 laptop:group-hover:mt-12 laptop:overflow-hidden laptop:opacity-0 laptop:transition-all laptop:duration-500 laptop:group-hover:max-h-[30rem] laptop:group-hover:opacity-90">
+                <p className="mt-4 max-w-[96%] font-sans text-[16px] leading-[1.35] text-white tablet:pt-4 tablet:text-[18px] laptop:hidden">
                   {feature.para}
                 </p>
+
+                <div className="hidden laptop:absolute laptop:left-4 laptop:right-4 laptop:top-[30%] laptop:block">
+                  <p className="w-[90%] font-sans text-[20px] leading-[1.35] text-white opacity-0 transition-opacity duration-500 delay-300 group-hover:opacity-80">
+                    {feature.para}
+                  </p>
+                </div>
               </div>
             </article>
           ))}
