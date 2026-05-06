@@ -190,9 +190,7 @@ export default function Header() {
 
     if (key === "solutions") return normalizedPath.startsWith("/solutions");
     if (key === "products") return normalizedPath.startsWith("/products");
-    if (key === "software") return normalizedPath.startsWith("/software");
     if (key === "industries") return normalizedPath.startsWith("/industries");
-
     return false;
   };
 
@@ -213,8 +211,10 @@ export default function Header() {
 
           <nav className="ml-8 flex flex-1 items-baseline justify-end gap-3 [@media(min-width:1025px)_and_(max-width:1280px)]:pr-6">
             {desktopTabs.map((tab) => {
-              const open = tab.menuKey ? activeDesktopMenu === tab.menuKey : false;
               const routeActive = isTabRouteActive(tab.key);
+              const tabIsActive = tab.menuKey
+                ? activeDesktopMenu === tab.menuKey || (!activeDesktopMenu && routeActive)
+                : false;
 
               return (
                 <div key={tab.key} className="relative flex items-center justify-center px-4 [@media(min-width:1025px)_and_(max-width:1280px)]:px-2">
@@ -224,7 +224,7 @@ export default function Header() {
                       ref={(node) => {
                         desktopTriggerRefs.current[tab.menuKey!] = node;
                       }}
-                      className={`cursor-pointer whitespace-nowrap text-xl font-sans transition ${open || routeActive ? "text-brand-orange" : "text-black hover:text-brand-orange"}`}
+                      className={`cursor-pointer whitespace-nowrap text-xl font-sans transition ${tabIsActive ? "text-brand-orange" : "text-black hover:text-brand-orange"}`}
                       onClick={() => toggleDesktopMenu(tab.menuKey!)}
                     >
                       {tab.label}
@@ -232,7 +232,7 @@ export default function Header() {
                   ) : (
                     <Link
                       href={tab.href}
-                      className={`cursor-pointer whitespace-nowrap text-xl font-sans transition ${routeActive ? "text-brand-orange!" : "text-brand-black! hover:text-brand-orange!"}`}
+                      className="cursor-pointer whitespace-nowrap text-xl font-sans text-brand-black! transition hover:text-brand-orange!"
                       onClick={closeMenus}
                     >
                       {tab.label}
