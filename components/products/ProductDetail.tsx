@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import InteractiveSVGDiagram from "@/components/products/InteractiveSVGDiagram";
@@ -17,8 +17,6 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
   const isSolt33_8p = product.slug === "OLT-SOLT33-8P";
   const isLegacyDiagram = isP4200R || isT2001 || isSolt33_8p || isXgspon8p;
   const splitSimplerConnectivity = product.detailTitle.includes("Simpler Connectivity");
-  const rows = useMemo(() => (tab === "spec" ? product.specifications : product.dimensions), [product, tab]);
-
   return (
     <div className="w-full">
       <section className="relative mx-auto h-[813.21px] w-[375.2px] tablet:-mt-[72px] tablet:h-[800px] tablet:w-full [@media(width:768px)]:w-[768px] laptop:mt-0 laptop:h-[860px] laptop:w-full [@media(min-width:1600px)_and_(min-height:900px)]:h-[1080px]">
@@ -193,15 +191,34 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
               </button>
             </div>
 
-            <div className="mt-8 min-h-[14rem] font-body-light space-y-3 tablet:min-h-[17rem] laptop:min-h-[18.5rem]">
-              {rows.map((row) => (
-                <div key={row.title} className="flex w-full gap-6 text-base tablet:text-lg [@media(min-width:768px)_and_(max-width:1024px)]:leading-[1.5] laptop:gap-8 laptop:text-[20px]">
-                  <p className="w-[52%] text-brand-black tablet:w-[45%] [@media(min-width:768px)_and_(max-width:1024px)]:leading-[2.25] laptop:w-[35%]">{row.title}</p>
-                  <p className="pl-5 tablet:pl-0 w-[44%] text-brand-black tablet:w-[38%] [@media(min-width:768px)_and_(max-width:1024px)]:leading-[1.55] laptop:w-[56%] laptop:ml-20 [@media(min-width:1600px)_and_(min-height:900px)]:w-[22%] ">
-                    {row.value}
-                  </p>
-                </div>
-              ))}
+            <div className="mt-8 grid font-body-light [grid-template-areas:'stack']">
+              <div
+                aria-hidden={tab !== "spec"}
+                className={`space-y-3 [grid-area:stack] ${tab === "spec" ? "visible" : "invisible pointer-events-none"}`}
+              >
+                {product.specifications.map((row) => (
+                  <div key={`spec-${row.title}`} className="flex w-full gap-6 text-base tablet:text-lg [@media(min-width:768px)_and_(max-width:1024px)]:leading-[1.5] laptop:gap-8 laptop:text-[20px]">
+                    <p className="w-[52%] text-brand-black tablet:w-[45%] [@media(min-width:768px)_and_(max-width:1024px)]:leading-[2.25] laptop:w-[35%]">{row.title}</p>
+                    <p className="w-[44%] pl-5 text-brand-black tablet:w-[38%] tablet:pl-0 [@media(min-width:768px)_and_(max-width:1024px)]:leading-[1.55] laptop:ml-20 laptop:w-[56%] [@media(min-width:1600px)_and_(min-height:900px)]:w-[22%]">
+                      {row.value}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <div
+                aria-hidden={tab !== "dim"}
+                className={`space-y-3 [grid-area:stack] ${tab === "dim" ? "visible" : "invisible pointer-events-none"}`}
+              >
+                {product.dimensions.map((row) => (
+                  <div key={`dim-${row.title}`} className="flex w-full gap-6 text-base tablet:text-lg [@media(min-width:768px)_and_(max-width:1024px)]:leading-[1.5] laptop:gap-8 laptop:text-[20px]">
+                    <p className="w-[52%] text-brand-black tablet:w-[45%] [@media(min-width:768px)_and_(max-width:1024px)]:leading-[2.25] laptop:w-[35%]">{row.title}</p>
+                    <p className="w-[44%] pl-5 text-brand-black tablet:w-[38%] tablet:pl-0 [@media(min-width:768px)_and_(max-width:1024px)]:leading-[1.55] laptop:ml-20 laptop:w-[56%] [@media(min-width:1600px)_and_(min-height:900px)]:w-[22%]">
+                      {row.value}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
 
             {product.pdf ? (
