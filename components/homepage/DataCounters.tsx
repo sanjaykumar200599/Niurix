@@ -19,7 +19,9 @@ export default function DataCounters({ metrics }: DataCountersProps) {
       return (
         <>
           <span className="hidden tablet:inline laptop:hidden">{`${prefix.trimEnd()} ${remainder}`}</span>
-          <span className="hidden laptop:inline whitespace-nowrap">{`${prefix.trimEnd()} ${remainder}`}</span>
+          <span className="hidden laptop:inline whitespace-nowrap">{prefix.trimEnd()}</span>
+          <br className="hidden laptop:block" />
+          <span className="hidden laptop:inline">{remainder}</span>
         </>
       );
     }
