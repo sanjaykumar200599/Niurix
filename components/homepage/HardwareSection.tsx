@@ -56,19 +56,19 @@ export default function HardwareSection({ titleHtml, items }: HardwareSectionPro
         </div>
       </div>
 
-      <div className="relative hidden h-[1180px] tablet:block laptop:hidden">
+      <div className="relative hidden h-[1280px] tablet:block laptop:hidden">
         <div className="absolute inset-0">
           <Image
-            src="/assets/homepage/Box section1-tab.webp"
+            src="/assets/homepage/mobbackground.png"
             alt="Hardware background"
             fill
             sizes="(min-width: 768px) and (max-width: 1023px) 100vw, 0px"
-            className="object-contain object-top scale-x-[2.34] scale-y-[2.85] origin-top translate-x-[45%] translate-y-[-12%]"
+            className="object-cover"
           />
         </div>
 
         <div className="absolute inset-x-0 top-[42rem] z-20 px-19.5">
-          <h2 className="mx-auto max-w-[44rem] text-center font-sans text-[27px] leading-[1.2] text-brand-black">
+          <h2 className="mx-auto max-w-[44rem] text-center font-sans text-[28px] leading-[1.2] text-brand-black">
             <span className="whitespace-nowrap">
               Empower Spaces with <span className="text-brand-orange">High-Performance</span> GPON{" "}
               <span className="text-brand-orange">Fiber</span>

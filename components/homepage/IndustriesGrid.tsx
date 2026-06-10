@@ -99,12 +99,18 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
             return (
               <article
                 key={item.slug}
-                className="relative mx-auto w-[303px] max-w-full overflow-hidden rounded-tl-[28px] rounded-br-[28px] border border-black/8 bg-[#f7f7f7] tablet:w-full tablet:rounded-tl-[34px] tablet:rounded-br-[34px]"
+                className="relative mx-auto h-[483px] w-[303px] max-w-full overflow-hidden rounded-tl-[28px] rounded-br-[28px] border border-black/8 bg-[#f7f7f7] tablet:h-auto tablet:min-h-[36rem] tablet:aspect-[18/10] tablet:w-full tablet:rounded-tl-[34px] tablet:rounded-br-[34px]"
               >
-                <div className="relative h-[483px] w-full tablet:h-auto tablet:aspect-[16/10]">
-                  <Image src={item.mobileDetailImage} alt={item.title} fill sizes="(max-width: 767px) 303px, 100vw" className="object-cover" />
+                <div className="absolute inset-0">
+                  <Image
+                    src={item.mobileDetailImage}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 767px) 303px, 100vw"
+                    className="object-cover tablet:object-contain tablet:scale-y-[1.00] [@media(min-width:768px)_and_(max-width:820px)]:scale-x-[1.68] [@media(min-width:821px)_and_(max-width:1024px)]:scale-x-[2.1]"
+                  />
                 </div>
-                <div className="absolute inset-x-0 bottom-0 bg-white/95 px-5 pb-4 pt-3 tablet:static tablet:bg-[#f7f7f7] tablet:px-8 tablet:pb-8 tablet:pt-6">
+                <div className="absolute inset-x-0 bottom-0  bg-white/95 tablet:bg-transparent tablet:bg-gradient-to-t from-white/98 via-white/95 to-white/80 px-5 pb-4 pt-3 tablet:px-8 tablet:pb-8 tablet:pt-10">
                   <h3 className="text-[20px] font-sans text-brand-black tablet:text-[22px]">{item.title}</h3>
                   <p className="mt-3 text-[16px] leading-[1.4] font-body-light text-brand-black tablet:text-[18px]">{item.desc}</p>
                   <Link
