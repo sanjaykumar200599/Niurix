@@ -25,7 +25,7 @@ export default function HomePage() {
       <HardwareSection titleHtml={homeContent.hardwareTitleHtml} items={homeContent.hardwareItems} />
 
       <section className="px-5 py-9 tablet:px-19.5 tablet:py-0 laptop:px-30 laptop:py-30">
-        <h2 className="mb-8 pl-4 text-[20px] font-body-medium leading-[1.25] text-brand-black tablet:pl-0 tablet:text-center tablet:pt-2 tablet:text-[28px] laptop:mb-16 laptop:text-left laptop:text-[32px]">
+        <h2 className="mb-8 pl-4 text-[20px] font-body-medium leading-[1.25] text-brand-black tablet:pl-0 tablet:text-center tablet:pt-2 tablet:text-[28px] laptop:mb-16 laptop:text-left [@media(width:1024px)]:text-[31px] laptop:text-[32px] [@media(width:1024px)]:mb-15">
           Transforming Building <span className="text-brand-orange">Network</span>
           <br className="tablet:hidden" />
           <span className="text-brand-orange">Architecture</span> with <span className="text-brand-orange">Fiber</span>

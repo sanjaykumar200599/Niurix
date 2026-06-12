@@ -143,7 +143,7 @@ export default function ProductsGrid({ products }: { products: HomeData["product
 
       <div className="relative flex laptop:hidden">
         <div className="w-[95%] rounded-tl-[25px] bg-[#ebebeb] px-5 py-5 tablet:rounded-tl-[40px] tablet:px-10 tablet:py-8">
-          <p className="-ml-6 font-number text-[45px] leading-none text-white tablet:text-[100px] tablet:-ml-12">{selected.name}</p>
+          <p className="-ml-6 font-number text-[45px] leading-none text-white tablet:text-[100px] tablet:-ml-12 [@media(width:1024px)]:-ml-13 [@media(width:1024px)]:[text-shadow:3_3_1.9px_#ffffff]">{selected.name}</p>
 
           <div className="mt-3 flex items-center justify-evenly">
             <button
@@ -153,7 +153,7 @@ export default function ProductsGrid({ products }: { products: HomeData["product
               disabled={activeIndex === 0}
               className="h-6 w-6 disabled:opacity-100 tablet:h-8 tablet:w-8"
             >
-              <ArrowIcon direction="prev" disabled={activeIndex === 0} className="scale-75" />
+              <ArrowIcon direction="prev" disabled={activeIndex === 0} className="scale-75 [@media(width:1024px)]:scale-[0.55]" />
             </button>
 
             <div className="relative h-40 w-40 tablet:h-60 tablet:w-60">
@@ -167,26 +167,26 @@ export default function ProductsGrid({ products }: { products: HomeData["product
               disabled={activeIndex === products.length - 1}
               className="h-6 w-6 disabled:opacity-100 tablet:h-8 tablet:w-8"
             >
-              <ArrowIcon direction="next" disabled={activeIndex === products.length - 1} className="scale-75" />
+              <ArrowIcon direction="next" disabled={activeIndex === products.length - 1} className="scale-75 [@media(width:1024px)]:scale-[0.55]" />
             </button>
           </div>
 
-          <div className="mt-5 flex flex-col items-center">
-            <h3 className="flex items-center gap-1 text-[20px] font-display text-brand-black tablet:text-[22px]">
+          <div className="mt-5 flex flex-col items-center  [@media(width:1024px)]:mt-8">
+            <h3 className="flex items-center gap-1 text-[20px] font-display [@media(width:1024px)]:font-body-medium text-brand-black tablet:text-[22px]">
               {selected.name}
-              <span className="text-brand-orange">({selected.type})</span>
+              <span className="text-brand-orange [@media(width:1024px)]:text-[28px] [@media(width:1024px)]:font-body-medium">({selected.type})</span>
             </h3>
-            <p className="mt-3 text-center text-[16px] font-body-light text-brand-black tablet:text-[18px]">{selected.desc}</p>
+            <p className="mt-3 text-center text-[16px] font-body-light text-brand-black tablet:text-[18px][@media(width:1024px)]:px-9 [@media(width:1024px)]:w-[86%] [@media(width:1024px)]:text-[18px]">{selected.desc}</p>
             <Link
               href={`/products/${selected.slug}`}
-              className="group mt-4 inline-flex items-center gap-2 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-4 py-2 !text-white transition hover:bg-[#f54f00] hover:!text-white tablet:text-[18px]"
+              className="group mt-4 inline-flex items-center gap-2 rounded-[10px_0px] border-2 border-brand-orange bg-brand-orange px-4 py-2 !text-white transition hover:bg-[#f54f00] hover:!text-white tablet:text-[18px]  [@media(width:1024px)]:px-12 [@media(width:1024px)]:pr-8"
             >
-              <span className="text-white">Learn More</span>
+              <span className="text-white [@media(width:1024px)]:-translate-x-5">Learn More</span>
               <LearnMoreArrow />
             </Link>
           </div>
 
-          <div className="mt-4 flex justify-around gap-3 tablet:mt-6 tablet:justify-center tablet:gap-8">
+          <div className="mt-4 flex justify-around gap-3 tablet:mt-6 tablet:justify-center tablet:gap-8  [@media(width:1024px)]:mt-10">
             {options.map((item) => (
               <button
                 key={item.slug}
@@ -194,8 +194,8 @@ export default function ProductsGrid({ products }: { products: HomeData["product
                 onClick={() => setActiveIndex(products.findIndex((prod) => prod.slug === item.slug))}
                 className="rounded-[10px_0px] border-2 border-white px-5 py-3 tablet:px-10 tablet:py-4"
               >
-                <div className="relative h-8 w-10 tablet:h-12 tablet:w-16">
-                  <Image src={item.image} alt={item.name} fill sizes="(min-width: 768px) 64px, 40px" className="object-contain" />
+                <div className="relative h-8 w-10 tablet:h-12 tablet:w-16 [@media(width:1024px)]:h-16 [@media(width:1024px)]:w-16">
+                  <Image src={item.image} alt={item.name} fill sizes="(min-width: 768px) 64px, 40px" className="object-contain [@media(width:1024px)]:scale-y-[1.3] [@media(width:1024px)]:scale-x-[1.3]" />
                 </div>
               </button>
             ))}

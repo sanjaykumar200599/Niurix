@@ -25,7 +25,7 @@ export default function HeroBanner({ banners }: { banners: HomeData["banners"] }
                     sizes="(max-width: 767px) 0px, 100vw"
                     priority={isFirstSlide}
                     fetchPriority={isFirstSlide ? "high" : "auto"}
-                    className="object-cover scale-100 [@media(min-width:768px)_and_(max-width:1024px)]:object-contain [@media(min-width:768px)_and_(max-width:1024px)]:scale-x-[1.0] [@media(min-width:768px)_and_(max-width:1024px)]:scale-y-[3.2] [@media(min-width:768px)_and_(max-width:1024px)]:object-[42%_50%] laptop:scale-[1.00] laptop:object-[15%_25%]"
+                    className="object-cover scale-100 [@media(min-width:768px)_and_(max-width:1024px)]:object-contain [@media(min-width:768px)_and_(max-width:1024px)]:scale-x-[1.0] [@media(min-width:768px)_and_(max-width:1024px)]:scale-y-[3.2]  [@media(min-width:768px)_and_(max-width:1024px)]:object-[42%_50%] laptop:scale-[1.00] laptop:object-[15%_25%] [@media(width:1024px)]:scale-y-[2.4]"
                   />
                 </div>
 

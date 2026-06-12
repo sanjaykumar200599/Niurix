@@ -67,21 +67,21 @@ export default function HardwareSection({ titleHtml, items }: HardwareSectionPro
           />
         </div>
 
-        <div className="absolute inset-x-0 top-[42rem] z-20 px-19.5">
-          <h2 className="mx-auto max-w-[44rem] text-center font-sans text-[28px] leading-[1.2] text-brand-black">
+        <div className="absolute inset-x-0 top-[42rem] z-20 px-19.5 [@media(width:1024px)]:top-[40rem] [@media(width:1024px)]:px-12">
+          <h2 className="mx-auto max-w-[44rem] text-center font-sans text-[28px] leading-[1.2] text-brand-black [@media(width:1024px)]:max-w-none [@media(width:1024px)]:whitespace-nowrap">
             <span className="whitespace-nowrap">
               Empower Spaces with <span className="text-brand-orange">High-Performance</span> GPON{" "}
               <span className="text-brand-orange">Fiber</span>
             </span>
-            <br />
-            <span className="text-brand-orange">Solutions</span>
+            <br className="[@media(width:1024px)]:hidden" />
+            <span className="text-brand-orange [@media(width:1024px)]:inline">Solutions</span>
           </h2>
 
-          <div className="mt-8 grid grid-cols-2 gap-5">
+          <div className="mt-8 grid grid-cols-2 gap-5 [@media(width:1024px)]:mx-auto [@media(width:1024px)]:max-w-[860px] [@media(width:1024px)]:grid-cols-3 [@media(width:1024px)]:gap-4">
             {items.map((item) => (
               <article
                 key={item}
-                className="flex h-[110px] items-center justify-center rounded-tl-[16px] rounded-br-[16px] border border-transparent bg-white px-6 text-center shadow-[0px_3px_15px_#0000001F]"
+                className={`flex h-[110px] items-center justify-center rounded-tl-[16px] rounded-br-[16px] border border-transparent bg-white px-6 text-center shadow-[0px_3px_15px_#0000001F] [@media(width:1024px)]:h-[114px] [@media(width:1024px)]:px-12 ${item === items[3] ? "[@media(width:1024px)]:col-start-1" : ""}`}
               >
                 <p className="text-[15px] font-sans tablet:text-[24px] leading-[1.3] text-brand-black">{item}</p>
               </article>

@@ -132,10 +132,10 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
               onClick={() => setActiveIndex(index)}
               className="relative mx-auto block w-[303px] max-w-full overflow-hidden rounded-tl-[28px] rounded-br-[28px] text-left tablet:w-full tablet:rounded-tl-[34px] tablet:rounded-br-[34px]"
             >
-              <div className="relative h-[64px] tablet:h-28">
+              <div className="relative h-[64px] tablet:h-28 [@media(width:1024px)]:h-45">
                 <Image src={item.mobileCropImage} alt={item.title} fill sizes="(max-width: 767px) 303px, 100vw" className="object-cover  object-[center_10%]" />
-                <div className="absolute inset-0 bg-black/10" />
-                <p className="absolute bottom-3 left-4 text-[20px] font-body-light text-white tablet:bottom-auto tablet:left-1/2 tablet:top-1/2 tablet:w-full tablet:-translate-x-1/2 tablet:-translate-y-1/2 tablet:pl-4  tablet:text-[22px]">
+                <div className="absolute inset-0" />
+                <p className="absolute bottom-3 left-4 text-[20px] font-body-light text-white tablet:bottom-auto tablet:left-1/2 tablet:top-1/2 tablet:w-full tablet:-translate-x-1/2 tablet:-translate-y-1/2 tablet:pl-4  tablet:text-[22px] [@media(width:1024px)]:translate-y-2">
                   {item.title}
                 </p>
               </div>
