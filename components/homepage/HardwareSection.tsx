@@ -68,13 +68,13 @@ export default function HardwareSection({ titleHtml, items }: HardwareSectionPro
         </div>
 
         <div className="absolute inset-x-0 top-[42rem] z-20 px-19.5 [@media(width:1024px)]:top-[40rem] [@media(width:1024px)]:px-12">
-          <h2 className="mx-auto max-w-[44rem] text-center font-sans text-[28px] leading-[1.2] text-brand-black [@media(width:1024px)]:max-w-none [@media(width:1024px)]:whitespace-nowrap">
+          <h2 className="mx-auto max-w-[44rem] text-center font-sans text-[28px] leading-[1.2] text-brand-black [@media(width:1024px)]:max-w-none [@media(width:1024px)]:whitespace-nowrap [@media(min-width:768px)_and_(max-width:1023px)]:-translate-x-6">
             <span className="whitespace-nowrap">
               Empower Spaces with <span className="text-brand-orange">High-Performance</span> GPON{" "}
               <span className="text-brand-orange">Fiber</span>
             </span>
             <br className="[@media(width:1024px)]:hidden" />
-            <span className="text-brand-orange [@media(width:1024px)]:inline">Solutions</span>
+            <span className="text-brand-orange [@media(width:1024px)]:inline"> Solutions</span>
           </h2>
 
           <div className="mt-8 grid grid-cols-2 gap-5 [@media(width:1024px)]:mx-auto [@media(width:1024px)]:max-w-[860px] [@media(width:1024px)]:grid-cols-3 [@media(width:1024px)]:gap-4">

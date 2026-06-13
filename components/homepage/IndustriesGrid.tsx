@@ -107,10 +107,10 @@ export default function IndustriesGrid({ industries }: { industries: HomeData["i
                     alt={item.title}
                     fill
                     sizes="(max-width: 767px) 303px, 100vw"
-                    className="object-cover tablet:object-contain tablet:scale-y-[1.00] [@media(min-width:768px)_and_(max-width:820px)]:scale-x-[1.68] [@media(min-width:821px)_and_(max-width:1024px)]:scale-x-[2.1]"
+                    className="object-cover tablet:object-contain tablet:scale-y-[1.00] [@media(min-width:768px)_and_(max-width:1023px)]:scale-x-[1.48] [@media(min-width:821px)_and_(max-width:1024px)]:scale-x-[2.1]"
                   />
                 </div>
-                <div className="absolute inset-x-0 bottom-0  bg-white/95 tablet:bg-transparent tablet:bg-gradient-to-t from-white/98 via-white/95 to-white/80 px-5 pb-4 pt-3 tablet:px-8 tablet:pb-8 tablet:pt-10">
+                <div className="absolute inset-x-0 bottom-0  bg-white/95 tablet:bg-transparent tablet:bg-gradient-to-t from-white/98 via-white/95 to-white/90 px-5 pb-4 pt-3 tablet:px-8 tablet:pb-8 tablet:pt-10">
                   <h3 className="text-[20px] font-sans text-brand-black tablet:text-[22px]">{item.title}</h3>
                   <p className="mt-3 text-[16px] leading-[1.4] font-body-light text-brand-black tablet:text-[18px]">{item.desc}</p>
                   <Link
