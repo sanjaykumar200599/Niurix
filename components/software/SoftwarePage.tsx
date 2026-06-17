@@ -8,24 +8,30 @@ type SoftwarePageProps = {
 export default function SoftwarePage({ software }: SoftwarePageProps) {
   return (
     <>
-      <section className="relative -mt-[72px] overflow-hidden tablet:-mt-[72px] laptop:mt-0">
-        <div className="relative mx-auto h-[813.21px] min-h-[813.21px] w-full tablet:h-[432px] tablet:min-h-0 tablet:max-h-none tablet:w-full laptop:h-[860px] [@media(min-width:1600px)_and_(min-height:900px)]:h-[1080px]">
-          <Image src={software.heroImage} alt="Software banner" fill sizes="(max-width: 767px) 0px, 100vw" className="hidden object-cover object-top tablet:block laptop:object-center" priority />
+      <section className="relative -mt-[72px] tablet:-mt-[72px] laptop:mt-0">
+        <div className="relative mx-auto h-[813.21px] min-h-[813.21px] w-full tablet:h-[432px]  tablet:min-h-0 tablet:max-h-none tablet:w-full laptop:h-[860px] [@media(min-width:1600px)_and_(min-height:900px)]:h-[1080px]">
+          <Image src={software.heroImage} alt="Software banner" fill sizes="(max-width: 767px) 0px, 100vw" className="hidden object-contain [@media(min-width:1024px)_and_(max-width:1366px)]:scale-[1.08]  object-top tablet:block laptop:object-center " priority />
           <Image src={software.heroImageMobile} alt="Software banner" fill sizes="(max-width: 767px) 100vw, 0px" className="origin-top object-cover object-[center_78%] scale-y-[1.0] scale-x-[1.0] tablet:hidden" priority />
 
           <div className="absolute inset-0 " />
 
-          <div className="relative z-10 flex h-full items-center px-9 tablet:items-end tablet:px-[78px] tablet:pb-24 laptop:px-[120px] laptop:pb-52 [@media(min-width:1600px)_and_(min-height:900px)]:pb-114">
-            <h1 className="h-[216px] w-full pt-18 text-[32px] font-sans leading-tight text-white [@media(min-width:768px)_and_(max-width:1024px)]:hidden laptop:w-[40%] laptop:max-w-none laptop:text-[48px] [@media(min-width:1600px)_and_(min-height:900px)]:w-[38%]">
+          <div className="relative z-10 flex h-full items-center px-9 tablet:items-end tablet:px-[78px] tablet:pb-24 laptop:px-[120px] laptop:pb-52 [@media(min-width:1600px)_and_(min-height:900px)]:pb-114 ">
+            <h1 className="h-[216px] w-full pt-18 text-[32px] font-sans leading-tight text-white [@media(min-width:768px)_and_(max-width:1024px)]:hidden laptop:w-[40%] laptop:max-w-none laptop:text-[48px] [@media(min-width:1600px)_and_(min-height:900px)]:w-[38%] ">
               {software.heroTitle}
             </h1>
 
-            <h1 className="hidden [@media(min-width:768px)_and_(max-width:1024px)]:block [@media(min-width:768px)_and_(max-width:1024px)]:h-auto [@media(min-width:768px)_and_(max-width:1024px)]:w-[80%] [@media(min-width:768px)_and_(max-width:1024px)]:pt-0 [@media(min-width:768px)_and_(max-width:1024px)]:text-[34px] [@media(min-width:768px)_and_(max-width:1024px)]:leading-[1.35] text-white">
-              Fiber for the Future: Advancing
-              <br />
-              Connectivity and Control for the
-              <br />
-              Users Today
+            <h1 className="hidden [@media(min-width:768px)_and_(max-width:1024px)]:block [@media(min-width:768px)_and_(max-width:1024px)]:h-auto [@media(min-width:768px)_and_(max-width:1024px)]:w-[80%] [@media(min-width:768px)_and_(max-width:1024px)]:pt-0 [@media(min-width:768px)_and_(max-width:1024px)]:text-[34px] [@media(min-width:768px)_and_(max-width:1024px)]:leading-[1.35] text-white ">
+              <span className="[@media(width:1024px)]:hidden">
+                 Fiber for the Future: Advancing
+                  <br />
+                Connectivity and Control for the
+                <br />
+                 Users Today
+              </span>
+
+            <span className="hidden [@media(width:1024px)]:block [@media(width:1024px)]:w-full [@media(width:1024px)]:-translate-y-48">
+              Fiber for the Future: Advancing Connectivity and Control for the Users Today
+            </span>
             </h1>
           </div>
         </div>
@@ -33,7 +39,7 @@ export default function SoftwarePage({ software }: SoftwarePageProps) {
 
       <section className="mt-8 px-9 tablet:px-20 laptop:mt-10 laptop:px-[120px] tablet:pt-4 laptop:pt-0">
        <h2
-          className="nx-rich max-w-[980px] text-[20px] font-body-medium leading-[1.3] text-brand-black tablet:text-[22px] laptop:text-[28px]"
+          className="nx-rich max-w-[980px] text-[20px] font-body-medium leading-[1.3] text-brand-black tablet:text-[22px] laptop:text-[28px] tablet:whitespace-nowrap"
           dangerouslySetInnerHTML={{ __html: software.introTitleHtml }}
         />
         <p className="mt-9 font-body-light text-base leading-5.5 text-brand-black tablet:text-lg tablet:leading-[1.35] laptop:text-xl laptop:leading-7">{software.introText}</p>
@@ -48,7 +54,7 @@ export default function SoftwarePage({ software }: SoftwarePageProps) {
             >
               <div className="relative h-full tablet:h-[16rem] laptop:h-[35rem] [@media(min-width:1600px)_and_(min-height:900px)]:h-[600px]">
                 <Image src={feature.image} alt={feature.title} fill sizes="(max-width: 1023px) 0px, (min-width: 1920px) 300px, 20vw" className="hidden object-cover laptop:block" />
-                <Image src={feature.imageMobile} alt={feature.title} fill sizes="(max-width: 1023px) 100vw, 0px" className="object-cover laptop:hidden" />
+                <Image src={feature.imageMobile} alt={feature.title} fill sizes="(max-width: 1023px) 100vw, 0px" className="object-cover laptop:hidden tablet:scale-x-[2.15] tablet:scale-y-[1.00] tablet:object-contain [@media(width:1024px)]:scale-x-[2.85]" />
                 <div className="absolute inset-0 transition duration-500 laptop:bg-transparent laptop:group-hover:bg-black/60" />
               </div>
 

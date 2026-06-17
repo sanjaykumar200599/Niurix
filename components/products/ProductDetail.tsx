@@ -22,7 +22,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
       <section className="relative mx-auto h-[813.21px] w-[375.2px] tablet:-mt-[72px] tablet:h-[800px] tablet:w-full [@media(width:768px)]:w-[768px] laptop:mt-0 laptop:h-[860px] laptop:w-full [@media(min-width:1600px)_and_(min-height:900px)]:h-[1080px]">
         <Image src={product.heroImage} alt={product.overviewTitle} fill sizes="(max-width: 1023px) 0px, 100vw" className="hidden object-cover laptop:block" priority />
         <div className="absolute inset-0 hidden overflow-hidden tablet:block laptop:hidden">
-          <div className="relative h-full w-full tablet:scale-y-[1.85] laptop:scale-y-100">
+          <div className="relative h-full w-full tablet:scale-y-[1.85] laptop:scale-y-100 [@media(width:1024px)]:scale-y-[1.4]">
             <Image
               src={product.heroImage}
               alt={product.overviewTitle}
@@ -74,13 +74,13 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
             </div>
           </div>
 
-          <div className="relative h-[293.02px] w-[303.2px] overflow-hidden rounded-tl-[30px] tablet:h-[449px] tablet:w-[608px] tablet:rounded-tl-[45px] laptop:h-auto laptop:w-[min(72vw,1181px)] laptop:aspect-[1181/874] laptop:self-start laptop:min-h-0 [@media(min-width:1600px)_and_(min-height:900px)]:h-[874px] [@media(min-width:1600px)_and_(min-height:900px)]:w-[1181px]">
+          <div className="relative h-[293.02px] w-[303.2px] overflow-hidden rounded-tl-[30px] tablet:h-[449px] tablet:w-[608px] tablet:rounded-tl-[45px] laptop:h-auto laptop:w-[min(72vw,1181px)] laptop:aspect-[1181/874] laptop:self-start laptop:min-h-0 [@media(min-width:1600px)_and_(min-height:900px)]:h-[874px] [@media(min-width:1600px)_and_(min-height:900px)]:w-[1181px] [@media(width:1024px)]:h-[639.4px] [@media(width:1024px)]:w-[864px]">
             <Image
               src={product.overviewImage}
               alt={product.overviewTitle}
               fill
               sizes="(max-width: 767px) 0px, (max-width: 1023px) 100vw, (min-width: 1920px) 1181px, 76vw"
-              className="hidden object-contain object-center tablet:block"
+              className="hidden object-contain object-center tablet:block ["
             />
             <Image
               src={product.overviewImageMobile}
@@ -100,12 +100,12 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
         />
 
         <div className="flex flex-col gap-3 laptop:flex-row laptop:items-center laptop:justify-between laptop:px-12 [@media(min-width:1600px)_and_(min-height:900px)]:justify-start [@media(min-width:1600px)_and_(min-height:900px)]:gap-30 ">
-          <div className="w-full laptop:w-[50%]">
+          <div className="w-full laptop:w-[50%] laptop:flex laptop:justify-start">
             <div
               className={
                 isLegacyDiagram
-                  ? "w-full [@media(min-width:1600px)_and_(min-height:900px)]:origin-top-left [@media(min-width:1600px)_and_(min-height:900px)]:scale-[1.12] "
-                  : "relative h-[300px] w-full tablet:h-[420px] laptop:h-[520px]"
+                  ? "w-fit max-w-[830px] [@media(min-width:1600px)_and_(min-height:900px)]:origin-top-left [@media(min-width:1600px)_and_(min-height:900px)]:scale-[1.12] [@media(width:1024px)]:w-[844px] [@media(width:1024px)]:max-w-[844px] "
+                  : "relative h-[300px] w-full tablet:h-[420px] laptop:h-[520px]  cursor-default"
               }
             >
               <InteractiveSVGDiagram
@@ -116,8 +116,8 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
             </div>
           </div>
 
-          <div className="w-full pt-1 text-left text-[16px] font-body-light leading-[1.35] text-[#1D1D1D] tablet:pt-4 tablet:text-lg tablet:leading-[1.35] laptop:w-[38%] laptop:pt-0 laptop:self-center laptop:text-[20px] laptop:leading-[1.32] [@media(min-width:1600px)_and_(min-height:900px)]:w-[38%] [@media(min-width:1600px)_and_(min-height:900px)]:mt-22 [@media(min-width:1600px)_and_(min-height:900px)]:pr-4">
-            <div className="whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: product.connectParaHtml }} />
+          <div className="w-full pt-1 text-left text-[16px] font-body-light leading-[1.35] text-[#1D1D1D] tablet:pt-4 tablet:text-lg tablet:leading-[1.35] laptop:w-[38%] laptop:pt-0 laptop:self-center laptop:text-[20px] laptop:leading-[1.32] [@media(min-width:1600px)_and_(min-height:900px)]:w-[38%] [@media(min-width:1600px)_and_(min-height:900px)]:mt-22 [@media(min-width:1600px)_and_(min-height:900px)]:pr-4 !cursor-default">
+            <div className="whitespace-pre-wrap select-none" dangerouslySetInnerHTML={{ __html: product.connectParaHtml }} />
           </div>
         </div>
       </section>
@@ -156,7 +156,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
         <div className="mt-[-2px] flex flex-col justify-between gap-5 bg-[#f3f3f3] px-7 py-7 tablet:px-12 tablet:py-10 laptop:h-[220px] laptop:flex-row laptop:items-start laptop:px-14">
           {product.highlights.map((item) => (
             <article key={item.title} className="w-full laptop:w-[30%]">
-              <h3 className="text-[16px] font-body-light text-brand-orange tablet:text-[18px] tablet:font-display laptop:font-body-light laptop:text-[20px]">{item.title}</h3>
+              <h3 className="text-[16px] font-body-light text-brand-orange tablet:text-[18px] tablet:font-display laptop:font-body-light laptop:text-[20px] [@media(width:1024px)]:font-body-light">{item.title}</h3>
               <p className="mt-1 text-base font-body-light leading-[1.35] laptop:text-xl text-[#000000] tablet:mt-1 tablet:text-lg tablet:leading-[1.35]">{item.para}</p>
             </article>
           ))}
@@ -170,7 +170,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
               {product.specTitle}
             </h2>
 
-            <div className="flex w-full justify-between tablet:justify-start tablet:gap-[10.5rem] laptop:justify-start laptop:gap-12 [@media(min-width:1600px)_and_(min-height:900px)]:gap-40">
+            <div className="flex w-full justify-between tablet:justify-start tablet:gap-[10.5rem] laptop:justify-start laptop:gap-12 [@media(min-width:1600px)_and_(min-height:900px)]:gap-40 [@media(width:1024px)]:gap-84">
               <button
                 type="button"
                 onClick={() => setTab("spec")}
@@ -183,7 +183,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
               <button
                 type="button"
                 onClick={() => setTab("dim")}
-                className={`border-b-[3px] pb-1 text-[20px] font-body-medium tablet:text-[22px] laptop:ml-0 laptop:w-fit laptop:text-left laptop:text-[28px] ${
+                className={`border-b-[3px] pb-1 text-[20px]  font-body-medium tablet:text-[22px] laptop:ml-0 laptop:w-fit laptop:text-left laptop:text-[28px] ${
                   tab === "dim" ? "border-brand-orange text-brand-orange" : "border-transparent text-brand-black/30"
                 }`}
               >
@@ -223,7 +223,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
 
             {product.pdf ? (
               <>
-                <p className="mt-40 text-[16px] font-body-light text-[#1D1D1D] tablet:mt-45 laptop:mt-0 tablet:text-[18px] laptop:text-[20px] [@media(min-width:1600px)_and_(min-height:900px)]:pt-16 ">
+                <p className="mt-40 text-[16px] font-body-light text-[#1D1D1D] tablet:mt-45 laptop:mt-0 tablet:text-[18px] laptop:text-[20px] [@media(min-width:1600px)_and_(min-height:900px)]:pt-46 laptop:pt-15">
                   <span className="tablet:hidden">
                     Click to download the full
                     <br />
@@ -235,7 +235,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
                   href={product.pdf}
                   target="_blank"
                   rel="noreferrer"
-                  className="mt-4 [@media(min-width:768px)_and_(max-width:1024px)]:mb-8 laptop:mb-15 inline-flex w-fit items-center gap-2 rounded-[10px_0px] border-2 tablet:text-[20px] border-brand-orange bg-brand-orange px-1 py-1 tablet:px-4 tablet:py-[6px] text-[16px] font-sans !text-white transition-colors duration-200 hover:bg-white hover:!text-black [@media(min-width:1600px)_and_(min-height:900px)]:text-[20px]"
+                  className="mt-4 [@media(min-width:768px)_and_(max-width:1024px)]:mb-8 laptop:mb-15 inline-flex w-fit items-center gap-2 rounded-[10px_0px] border-2 tablet:text-[20px] border-brand-orange bg-brand-orange px-1 py-1 tablet:px-4 tablet:py-[6px] text-[16px] font-sans !text-white transition-colors duration-200 hover:bg-white hover:!text-black [@media(min-width:1600px)_and_(min-height:900px)]:text-[20px] "
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -269,7 +269,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
                     alt={`${product.overviewTitle} spec`}
                     fill
                     sizes="(min-width: 1024px) 55vw, 100vw"
-                    className="object-contain scale-x-[1.00] scale-y-[1.51] tablet:scale-100 tablet:object-cover"
+                    className="object-contain scale-x-[1.00] scale-y-[1.51] tablet:scale-x-[1.0] tablet:scale-y-[1.3] tablet:object-contain  laptop:object-cover laptop:scale-x-[0.82] laptop:scale-y-[1.6] wide:scale-x-[1] wide:scale-y-[1] [@media(width:1024px)]:object-cover [@media(width:1024px)]:scale-x-[1.0] [@media(width:1024px)]:scale-y-[1.0] "
                   />
                 </div>
               </SwiperSlide>

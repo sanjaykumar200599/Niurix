@@ -17,11 +17,11 @@ export default function ContactUsPage() {
     <div>
       <section className="relative -mt-[72px] mb-6 tablet:-mt-[72px] laptop:mt-0 tablet:mb-0 ">
         <div className="relative mx-auto h-[813.21px] w-[375.2px] tablet:mx-0 tablet:h-[432px] tablet:w-full laptop:h-[850px] [@media(min-width:1600px)_and_(min-height:900px)]:h-[1080px]">
-          <Image src="/assets/contactus/banner.webp" alt="Contact banner" fill sizes="(max-width: 767px) 0px, 100vw" className="hidden object-cover tablet:object-top laptop:object-center tablet:block" priority />
+          <Image src="/assets/contactus/banner.webp" alt="Contact banner" fill sizes="(max-width: 767px) 0px, 100vw" className="hidden object-cover [@media(width:1024px)]:object-contain [@media(width:1024px)]:scale-x-[1.35]  tablet:object-top laptop:object-center tablet:block " priority />
           <Image src="/assets/contactus/Contact banner mobile.webp" alt="Contact banner" fill sizes="(max-width: 767px) 100vw, 0px" className="object-cover tablet:hidden" priority />
         </div>
         <p
-          className="absolute left-9 right-9 top-83 -translate-y-1/2 font-sans text-[32px] leading-[1.35] text-white tablet:left-[80px] tablet:right-auto tablet:top-0 tablet:w-[80%] tablet:translate-y-0 tablet:font-sans tablet:text-[34px] tablet:leading-snug tablet:flex tablet:h-full tablet:items-center laptop:left-[120px] laptop:w-[47%] laptop:text-[48px] [@media(min-width:1600px)_and_(min-height:900px)]:top-82 [@media(min-width:1600px)_and_(min-height:900px)]:bottom-100 [@media(min-width:1600px)_and_(min-height:900px)]:h-auto [@media(min-width:1600px)_and_(min-height:900px)]:w-[56%] [@media(min-width:1600px)_and_(min-height:900px)]:block"
+          className="absolute left-9 right-9 top-83 -translate-y-1/2 font-sans text-[32px] leading-[1.35] text-white tablet:left-[80px] tablet:right-auto tablet:top-0 tablet:w-[80%] tablet:translate-y-0 tablet:font-sans tablet:text-[34px] tablet:leading-snug tablet:flex tablet:h-full tablet:items-center laptop:left-[120px] laptop:w-[47%] laptop:text-[48px] [@media(min-width:1600px)_and_(min-height:900px)]:top-82 [@media(min-width:1600px)_and_(min-height:900px)]:bottom-100 [@media(min-width:1600px)_and_(min-height:900px)]:h-auto [@media(min-width:1600px)_and_(min-height:900px)]:w-[56%] [@media(min-width:1600px)_and_(min-height:900px)]:block [@media(width:1024px)]:w-[85%]"
         >
           <span className="tablet:hidden ">
             Want to know more
@@ -70,11 +70,13 @@ export default function ContactUsPage() {
             Niurix is headquartered at the beautiful city of Illinois, USA. To contact us, use any of the below means and we will always be available to assist you.
           </p>
 
-          <div className="mt-8 grid gap-y-7 tablet:gap-y-5 tablet:mt-10 laptop:w-[48%] laptop:grid-cols-[1fr_1fr] laptop:gap-x-18  [@media(min-width:1600px)_and_(min-height:900px)]:w-[56%]">
+          <div className="mt-8 grid gap-y-7 tablet:gap-y-5 tablet:mt-10 laptop:w-[48%] laptop:grid-cols-[1fr_1fr] laptop:gap-x-18  [@media(min-width:1600px)_and_(min-height:900px)]:w-[56%] [@media(min-width:768px)_and_(max-width:1023px)]:w-[40%]">
             <div>
               <p className="text-[16px] font-body-medium tablet:text-[18px] laptop:text-[24px]">Address</p>
               <p className="mt-2 font-body-light laptop:text-[20px]
-              whitespace-pre-line text-base leading-[1.3] text-[#000000] tablet:text-lg tablet:leading-[1.35] tablet:text-[#000000] "><><span className="tablet:hidden">{"2130 Foster Ave\nWheeling IL,\n60090 USA"}</span><span className="hidden whitespace-pre-line tablet:inline laptop:hidden">{"2130 Foster Ave Wheeling IL,\n60090 USA"}</span><span className="hidden whitespace-pre-line laptop:inline">{"2130\nFoster Ave\nWheeling\nIL, 60090\nUSA"}</span></></p>
+              whitespace-pre-line text-base leading-[1.3] text-[#000000] tablet:text-lg tablet:leading-[1.35] tablet:text-[#000000] "><><span className="tablet:hidden">{"2130 Foster Ave\nWheeling IL,\n60090 USA"}</span>
+              <span className="hidden whitespace-pre-line tablet:inline laptop:hidden ">{"2130 Foster Ave Wheeling IL, 60090 USA"}</span>
+              <span className="hidden whitespace-pre-line laptop:inline ">{"2130\nFoster Ave\nWheeling\nIL, 60090\nUSA"}</span></></p>
             </div>
 
             <div className="-mt-4 tablet:mt-0">
@@ -101,7 +103,7 @@ export default function ContactUsPage() {
         </div>
       </section>
 
-      <section className="mt-22 px-9 pb-8 pt-2 tablet:mt-0 tablet:mb-0 tablet:px-20 tablet:pb-12 tablet:pt-0 laptop:px-[120px] laptop:pb-36 laptop:pt-20">
+      <section className="mt-22 px-9 pb-8 pt-2 tablet:mt-0 tablet:mb-0 tablet:px-20 tablet:pb-12 tablet:pt-0 laptop:px-[120px] laptop:pb-36 laptop:pt-20 [@media(width:1024px)]:pb-28">
         <div className="flex flex-col gap-8 laptop:flex-row laptop:justify-between mt-7">
           <div className="w-full border-b border-[#d6d6d6] pb-8 laptop:w-[70%] laptop:border-b-0 laptop:border-r laptop:pb-0 laptop:pr-8">
             <h2 className="mt-1 text-[26px] font-sans text-brand-black tablet:mt-5 tablet:text-[28px] laptop:mt-10 laptop:text-[42px] ">
@@ -117,8 +119,8 @@ export default function ContactUsPage() {
           </div>
 
           <aside className="w-full tablet:flex tablet:justify-center laptop:flex laptop:w-[25%] laptop:items-center laptop:justify-center [@media(min-width:1600px)_and_(min-height:900px)]:items-start">
-            <div className="mt-6 w-full tablet:mt-18 tablet:w-[58%] laptop:w-full laptop:max-w-[360px] [@media(min-width:1600px)_and_(min-height:900px)]:my-[63px] [@media(min-width:1600px)_and_(min-height:900px)]:max-w-[420px] rounded-tl-[30px] rounded-br-[30px] border border-[#ff5b0299] px-8 py-8 tablet:px-9 tablet:py-6 laptop:px-8 tablet:mb-14 laptop:py-8 [@media(min-width:1600px)_and_(min-height:900px)]:px-16 [@media(min-width:1600px)_and_(min-height:900px)]:py-8 shadow-[0px_3px_30px_#ff5b0233]">
-              <div className="mb-6 flex items-center gap-4">
+            <div className="mt-6 w-full tablet:mt-18 tablet:w-[58%] laptop:w-full laptop:max-w-[360px] [@media(min-width:1600px)_and_(min-height:900px)]:my-[63px] [@media(min-width:1600px)_and_(min-height:900px)]:max-w-[420px] rounded-tl-[30px] rounded-br-[30px] border border-[#ff5b0299] px-8 py-8 tablet:px-9 tablet:py-6 laptop:px-8 tablet:mb-14 laptop:py-8 [@media(min-width:1600px)_and_(min-height:900px)]:px-16 [@media(min-width:1600px)_and_(min-height:900px)]:py-8 shadow-[0px_3px_30px_#ff5b0233] [@media(width:1024px)]:w-[53%]">
+              <div className="mb-6 flex items-center gap-4 ">
                 <Image
                   src="/assets/contactus/Layer 2.svg"
                   alt="Support icon"
@@ -128,7 +130,7 @@ export default function ContactUsPage() {
                   className="max-w-none tablet:hidden"
                 />
                 <Image src="/assets/contactus/Layer 2.svg" alt="Support icon" width={50} height={46} className="hidden tablet:block tablet:shrink-0  tablet:!h-[46px] tablet:!w-[48.01px] " />
-                <p className="pt-2 max-w-[120px] text-[22px] leading-[1.15] font-sans text-[#000000] whitespace-normal laptop:max-w-none laptop:whitespace-nowrap tablet:pt-4 tablet:pl-0 tablet:max-w-[130px] tablet:text-[#000000] tablet:font-sans tablet:whitespace-normal tablet:text-[26px]">Technical support</p>
+                <p className="pt-2 max-w-[120px] text-[22px] leading-[1.15] font-sans text-[#000000] whitespace-normal laptop:max-w-none laptop:whitespace-nowrap tablet:pt-4 tablet:pl-0 tablet:max-w-[130px] tablet:text-[#000000] tablet:font-sans tablet:whitespace-normal tablet:text-[26px] [@media(width:1024px)]:max-w-[300px] [@media(width:1024px)]:pl-20">Technical support</p>
               </div>
 
               <div className="mb-7">

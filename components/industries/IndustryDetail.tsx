@@ -30,7 +30,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
   return (
     <>
       <section className="relative -mt-[72px] tablet:-mt-[72px] laptop:mt-0" data-hero-banner="industries">
-        <div className="relative mx-auto h-[813.21px] w-[375.2px] tablet:h-[432px] tablet:w-full laptop:h-[860px] [@media(min-width:1600px)_and_(min-height:900px)]:h-[1080px]">
+        <div className="relative mx-auto h-[813.21px] w-[375.2px] tablet:h-[432px] tablet:w-full laptop:h-[860px] [@media(min-width:1600px)_and_(min-height:900px)]:h-[1080px] [@media(width:1024px)]:h-[575px]">
           <Image
             src={industry.heroImage}
             alt={industry.heroTitle}
@@ -49,7 +49,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
           />
         </div>
 
-        <h1 className="absolute left-9 top-54 z-10 w-[78%] pt-14 text-[32px] font-sans font-normal leading-[1.34] tracking-[-0.01em] text-brand-white tablet:left-[80px] tablet:top-[66%] laptop:top-1/2 tablet:w-[70%] tablet:-translate-y-1/2 tablet:pt-0 tablet:text-[34px] tablet:font-sans laptop:left-[120px] laptop:w-[52%] laptop:text-[48px] [@media(min-width:1600px)_and_(min-height:900px)]:font-sans [@media(min-width:1600px)_and_(min-height:900px)]:font-normal [@media(min-width:1600px)_and_(min-height:900px)]:text-white/95 [@media(min-width:1600px)_and_(min-height:900px)]">
+        <h1 className="absolute left-9 top-54 z-10 w-[78%] pt-14 text-[32px] font-sans font-normal leading-[1.34] tracking-[-0.01em] text-brand-white tablet:left-[80px] tablet:top-[66%] laptop:top-1/2 tablet:w-[70%] tablet:-translate-y-1/2 tablet:pt-0 tablet:text-[34px] tablet:font-sans laptop:left-[120px] laptop:w-[52%] laptop:text-[48px] [@media(min-width:1600px)_and_(min-height:900px)]:font-sans [@media(min-width:1600px)_and_(min-height:900px)]:font-normal [@media(min-width:1600px)_and_(min-height:900px)]:text-white/95 [@media(min-width:1600px)_and_(min-height:900px)] [@media(width:1024px)]:-translate-y-48">
           {industry.heroTitle}
         </h1>
       </section>
@@ -68,7 +68,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
 
             <Link
               href="/contact-us"
-              className="group mt-6 inline-flex w-fit flex-row items-center gap-1 whitespace-nowrap rounded-[10px_0px] border-2 border-brand-orange  tablet:text-[18px] bg-brand-orange px-4 py-1.5 text-left text-[16px] font-medium leading-tight text-white transition-colors duration-200 hover:bg-white hover:text-brand-black  [@media(min-width:1600px)_and_(min-height:900px)]:py-3 [@media(min-width:1600px)_and_(min-height:900px)]:px-3 [@media(min-width:1600px)_and_(min-height:900px)]:text-[20px]"
+              className="group mt-6 inline-flex w-fit flex-row items-center gap-1 whitespace-nowrap rounded-[10px_0px] border-2 border-brand-orange  tablet:text-[18px] bg-brand-orange px-4 py-1.5 text-left text-[16px] font-medium leading-tight text-white transition-colors duration-200 hover:bg-white hover:text-brand-black  [@media(min-width:1600px)_and_(min-height:900px)]:py-3 [@media(min-width:1600px)_and_(min-height:900px)]:px-3 [@media(min-width:1600px)_and_(min-height:900px)]:text-[20px] [@media(width:1024px)]:px-10 [@media(width:1024px)]:py-2"
             >
               <span className="text-white transition-colors duration-200 group-hover:text-brand-black">Get in touch</span>
             </Link>
@@ -158,50 +158,27 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
         </div>
 
         {/* Row 1 */}
-        <div className="grid grid-cols-2 gap-x-6 gap-y-2 tablet:grid-cols-2 tablet:gap-y-10 laptop:hidden">
-          {industry.devices.slice(0, 4).map((device) => (
-            <article key={device.title} className="flex w-full flex-col items-center text-center">
-              <div className="flex h-[90px] items-center justify-center tablet:h-[96px] laptop:h-[96px]">
-                <div className={`relative ${getDeviceImageSizeClasses(device.title)}`}>
-                  <Image src={device.image} alt={device.title} fill sizes="220px" className="object-contain" />
+      <div className="grid grid-cols-2 gap-x-6 gap-y-8 tablet:grid-cols-2 [@media(width:1024px)]:grid-cols-3 laptop:hidden">
+            {industry.devices.map((device) => (
+              <article key={device.title} className="flex w-full flex-col items-center text-center">
+                <div className="flex h-[90px] items-center justify-center tablet:h-[96px] laptop:h-[96px]">
+                  <div className={`relative ${getDeviceImageSizeClasses(device.title)}`}>
+                    <Image
+                      src={device.image}
+                      alt={device.title}
+                      fill
+                      sizes="220px"
+                      className="object-contain"
+                    />
+                  </div>
                 </div>
-              </div>
-              <p className="mt-2 font-sans text-[14px] text-brand-black tablet:mt-4 tablet:text-[14px] laptop:text-[18px]">
-                {device.title}
-              </p>
-            </article>
-          ))}
-        </div>
 
-        {/* Row 2 */}
-        <div className="mt-5 grid grid-cols-2 gap-x-6 gap-y-2 tablet:mt-10 tablet:grid-cols-2 tablet:gap-y-10 laptop:hidden">
-          {industry.devices.slice(4, 10).map((device) => (
-            <article key={device.title} className="flex w-full flex-col items-center text-center">
-              <div className="flex h-[90px] items-center justify-center tablet:h-[96px] laptop:h-[96px]">
-                <div className={`relative ${getDeviceImageSizeClasses(device.title)}`}>
-                  <Image src={device.image} alt={device.title} fill sizes="220px" className="object-contain" />
-                </div>
-              </div>
-              <p className="mt-2 font-sans text-[14px] text-brand-black tablet:mt-4 tablet:text-[14px] laptop:text-[18px]">
-                {device.title}
-              </p>
-            </article>
-          ))}
-        </div>
-
-        {/* Row 3 */}
-        <div className="mt-4 grid grid-cols-2 tablet:mt-10 laptop:hidden">
-          <article className="col-start-1 justify-self-center flex w-full max-w-[50%] flex-col items-center text-center tablet:max-w-none laptop:w-auto">
-            <div className="flex h-[90px] items-center justify-center tablet:h-[96px] laptop:h-[96px]">
-              <div className={`relative ${getDeviceImageSizeClasses(industry.devices[10].title)}`}>
-                <Image src={industry.devices[10].image} alt={industry.devices[10].title} fill sizes="220px" className="object-contain" />
-              </div>
-            </div>
-            <p className="mt-2 font-sans text-[14px] text-brand-black tablet:mt-4 tablet:text-[14px] laptop:text-[18px]">
-              {industry.devices[10].title}
-            </p>
-          </article>
-        </div>
+                <p className="mt-2 font-sans text-[14px] text-brand-black tablet:mt-4 tablet:text-[14px] laptop:text-[18px]">
+                  {device.title}
+                </p>
+              </article>
+            ))}
+          </div>
       </section>
 
       <section className="my-16 bg-[#ebebeb] px-9 py-9 tablet:mt-16 tablet:my-0 tablet:pb-20 tablet:px-[80px] tablet:py-12 laptop:relative laptop:mb-24 laptop:mt-64 laptop:min-h-[350px] laptop:px-[120px] laptop:py-10">

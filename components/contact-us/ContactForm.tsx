@@ -72,7 +72,7 @@ export default function ContactForm() {
             enableSearch={true}
             value={phoneNumber}
             onChange={handlePhoneChange}
-            placeholder="Phone Number"
+            placeholder="+1"
             inputClass={hasLocalPhoneNumber ? "contact-phone-input-filled" : "contact-phone-input-empty"}
             inputProps={{ id: "phoneNumber", "aria-label": "Phone Number" }}
           />

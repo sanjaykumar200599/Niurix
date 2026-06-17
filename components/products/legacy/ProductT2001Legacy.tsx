@@ -257,7 +257,7 @@ function Product_T2001() {
                         opacity: 1;
                     }
                 }
-
+               
                 .animated_image {
                     animation: myAnimation 1s;
                 }
@@ -268,6 +268,20 @@ function Product_T2001() {
 
                 .bg_image {
                     transform: rotate(180deg) !important;
+                }
+                @media (width: 1024px) {
+                    .container {
+                        width: 844px;
+                        max-width: 844px;
+                        height: 816px;
+                        margin: 0 auto;
+                    }
+
+                    .container svg {
+                        width: 844px;
+                        height: 816px;
+                        display: block;
+                    }
                 }
             `}</style>        </div>
     );

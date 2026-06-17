@@ -749,6 +749,20 @@ function Product_Molt8p() {
                     animation: rotateAndShrink2 1.6s ease-in-out forwards;
                     transform-origin: center center;
                 }
+                    @media (width: 1024px) {
+                        .container {
+                            width: 844px;
+                            max-width: 844px;
+                            margin: 0 auto;
+                            overflow: hidden;
+                        }
+
+                        .container svg {
+                            width: 844px;
+                            height: auto;
+                            display: block;
+                        }
+                    }
 
                 .container {
                     cursor: pointer;

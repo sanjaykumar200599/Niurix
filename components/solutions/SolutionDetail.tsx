@@ -31,8 +31,8 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
         </div>
 
         {/* HERO TEXT */}
-        <div className="absolute inset-x-0 top-[47%] z-10 -translate-y-1/2 px-9 tablet:top-auto tablet:bottom-36 tablet:translate-y-0 tablet:px-[70px] laptop:bottom-auto laptop:top-1/2 laptop:-translate-y-1/2 laptop:px-[110px]">
-          <h1 className="text-[32px] font-sans leading-[1.14] tracking-tight text-white tablet:w-[360px] tablet:text-[34px] tablet:leading-[1.28] laptop:w-auto laptop:min-w-0 laptop:max-w-none laptop:text-[42px] laptop:pt-16 [@media(min-width:1600px)_and_(min-height:900px)]:text-[48px] [@media(min-width:1600px)_and_(min-height:900px)]:pb-30 pl-2">
+        <div className="absolute inset-x-0 top-[47%] z-10 -translate-y-1/2 px-9 tablet:top-auto tablet:bottom-36 tablet:translate-y-0 tablet:px-[70px] laptop:bottom-auto laptop:top-1/2 laptop:-translate-y-1/2 laptop:px-[110px] [@media(width:1024px)]:-translate-y-48">
+          <h1 className="text-[32px] font-sans leading-[1.14] tracking-tight text-white tablet:w-[360px] tablet:text-[34px] tablet:leading-[1.28] laptop:w-auto laptop:min-w-0 laptop:max-w-none laptop:text-[42px] laptop:pt-16 [@media(min-width:1600px)_and_(min-height:900px)]:text-[48px] [@media(min-width:1600px)_and_(min-height:900px)]:pb-30 pl-2 [@media(width:1024px)]:whitespace-nowrap">
             {solution.heroTitle === "Optimized Fiber-Optic Solution" ? (
               <>
                 <span className="tablet:hidden">Optimized Fiber-<br />Optic Solution</span>
@@ -74,7 +74,7 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
 
       {/* CARDS SECTION */}
       <section className="bg-[#f3f3f3] py-10 tablet:py-16 laptop:py-[4.5rem]">
-        <div className="px-5 tablet:px-[78px] laptop:px-[112px]">
+        <div className="px-5 tablet:px-[78px] laptop:px-[112px] [@media(width:1024px)]:pb-6">
           {solution.heroTitle === "Optimized Fiber-Optic Solution" ? (
             <>
               <h2 className="text-[26px] font-body-medium leading-[1.2] text-brand-black tablet:hidden">
@@ -104,11 +104,11 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
                 </p>
 
                 <div className="rounded-tl-[30px] rounded-br-[30px] bg-white px-6 pb-7 pt-14 shadow-[0_0_2px_#00000029] tablet:flex tablet:h-full tablet:min-h-[20rem] tablet:flex-col tablet:px-5 tablet:pb-6 tablet:pt-12 laptop:min-h-[14.5rem] laptop:px-4 laptop:pb-16 laptop:pt-16 [@media(min-width:1600px)_and_(min-height:900px)]:h-[392px] [@media(min-width:1600px)_and_(min-height:900px)]:w-[537px] [@media(min-width:1600px)_and_(min-height:900px)]:min-h-0 [@media(min-width:1600px)_and_(min-height:900px)]:pb-20">
-                  <h3 className={`text-center tablet:text-[22px] text-[20px] font-body-medium text-[#000000] tablet:min-h-[4.4rem] laptop:min-h-[3.6rem] laptop:text-[24px] ${card.number === "03" ? "tablet:pb-8" : ""}`}>
+                  <h3 className={`text-center tablet:text-[22px] text-[20px] font-body-medium text-[#000000] tablet:min-h-[4.4rem] laptop:min-h-[3.6rem]  laptop:text-[24px] ${card.number === "03" ? "tablet:pb-8" : ""} [@media(width:1024px)]:pb-6 [@media(width:1024px)]:min-h-[5.5rem]`}>
                     {card.title}
                   </h3>
 
-                  <p className="mt-2 text-[16px] tablet:pt-4 font-body-light leading-[1.35] text-[#000000] tablet:min-h-[8rem] tablet:flex-1 laptop:-mt-1 laptop:min-h-[6.8rem] laptop:pt-0 tablet:text-[18px] laptop:text-[20px] laptop:leading-[1.52] [@media(min-width:1600px)_and_(min-height:900px)]:-mt-2">
+                  <p className="mt-2 text-[16px] tablet:pt-4 font-body-light leading-[1.35] text-[#000000] tablet:min-h-[8rem] tablet:flex-1 laptop:-mt-1 laptop:min-h-[6.8rem] laptop:pt-0 tablet:text-[18px] laptop:text-[20px] laptop:leading-[1.52] [@media(min-width:1600px)_and_(min-height:900px)]:-mt-2 [@media(width:1024px)]:pb-18">
                     {card.para}
                   </p>
 
