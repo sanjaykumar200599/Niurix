@@ -9,8 +9,8 @@ export default function SoftwarePage({ software }: SoftwarePageProps) {
   return (
     <>
       <section className="relative -mt-[72px] tablet:-mt-[72px] laptop:mt-0">
-        <div className="relative mx-auto h-[813.21px] min-h-[813.21px] w-full tablet:h-[432px]  tablet:min-h-0 tablet:max-h-none tablet:w-full laptop:h-[860px] [@media(min-width:1600px)_and_(min-height:900px)]:h-[1080px]">
-          <Image src={software.heroImage} alt="Software banner" fill sizes="(max-width: 767px) 0px, 100vw" className="hidden object-contain [@media(min-width:1024px)_and_(max-width:1366px)]:scale-[1.08]  object-top tablet:block laptop:object-center " priority />
+        <div className="relative mx-auto h-[813.21px] min-h-[813.21px] w-full tablet:h-[56vw] [@media(width:1024px)]:h-[576px] tablet:min-h-0 tablet:max-h-none tablet:w-full laptop:h-[860px] [@media(min-width:1600px)_and_(min-height:900px)]:h-[1080px]">
+          <Image src={software.heroImage} alt="Software banner" fill sizes="(max-width: 767px) 0px, 100vw" className="hidden object-cover [@media(min-width:1024px)_and_(max-width:1366px)]:scale-[1.0]  object-top tablet:block laptop:object-center [@media(width:1024px)]:scale-[1.0]" priority />
           <Image src={software.heroImageMobile} alt="Software banner" fill sizes="(max-width: 767px) 100vw, 0px" className="origin-top object-cover object-[center_78%] scale-y-[1.0] scale-x-[1.0] tablet:hidden" priority />
 
           <div className="absolute inset-0 " />
