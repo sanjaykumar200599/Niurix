@@ -19,7 +19,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
   const splitSimplerConnectivity = product.detailTitle.includes("Simpler Connectivity");
   return (
     <div className="w-full">
-      <section className="relative mx-auto h-[813.21px] w-[375.2px] tablet:-mt-[72px] tablet:h-[800px] tablet:w-full [@media(width:768px)]:w-[768px] laptop:mt-0 laptop:h-[860px] laptop:w-full [@media(min-width:1600px)_and_(min-height:900px)]:h-[1080px]">
+      <section className="relative -mt-[72px] mx-auto h-[100svh] w-full tablet:-mt-[72px] tablet:h-[800px] tablet:w-full [@media(width:768px)]:w-[768px] laptop:mt-0 laptop:h-[860px] laptop:w-full [@media(min-width:1600px)_and_(min-height:900px)]:h-[1080px]">
         <Image src={product.heroImage} alt={product.overviewTitle} fill sizes="(max-width: 1023px) 0px, 100vw" className="hidden object-cover laptop:block" priority />
         <div className="absolute inset-0 hidden overflow-hidden tablet:block laptop:hidden">
           <div className="relative h-full w-full tablet:scale-y-[1.85] laptop:scale-y-100 [@media(width:1024px)]:scale-y-[1.4]">
@@ -38,7 +38,7 @@ export default function ProductDetail({ product }: { product: ProductContent }) 
           alt={product.overviewTitle}
           fill
           sizes="(max-width: 767px) 100vw, 0px"
-          className="object-cover tablet:hidden scale-[1.00] -translate-y-18"
+          className="object-cover object-[50%_0%] tablet:hidden"
           priority
         />
       </section>

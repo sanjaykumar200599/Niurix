@@ -16,7 +16,7 @@ export default function ContactUsPage() {
   return (
     <div>
       <section className="relative -mt-[72px] mb-6 tablet:-mt-[72px] laptop:mt-0 tablet:mb-0 ">
-        <div className="relative mx-auto h-[813.21px] w-[375.2px] tablet:mx-0 tablet:h-[432px] tablet:w-full laptop:h-[850px] [@media(min-width:1600px)_and_(min-height:900px)]:h-[1080px]">
+        <div className="relative mx-auto h-[100svh] w-full [@media(max-height:700px)]:h-[120svh] tablet:mx-0 tablet:h-[432px] tablet:w-full laptop:h-[850px] [@media(min-width:1600px)_and_(min-height:900px)]:h-[1080px]">
           <Image src="/assets/contactus/banner.webp" alt="Contact banner" fill sizes="(max-width: 767px) 0px, 100vw" className="hidden object-cover [@media(width:1024px)]:object-contain [@media(width:1024px)]:scale-x-[1.35]  tablet:object-top laptop:object-center tablet:block " priority />
           <Image src="/assets/contactus/Contact banner mobile.webp" alt="Contact banner" fill sizes="(max-width: 767px) 100vw, 0px" className="object-cover tablet:hidden" priority />
         </div>

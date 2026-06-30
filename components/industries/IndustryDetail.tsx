@@ -30,7 +30,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
   return (
     <>
       <section className="relative -mt-[72px] tablet:-mt-[72px] laptop:mt-0" data-hero-banner="industries">
-        <div className="relative mx-auto h-[813.21px] w-[375.2px] tablet:h-[432px] tablet:w-full laptop:h-[860px] [@media(min-width:1600px)_and_(min-height:900px)]:h-[1080px] [@media(width:1024px)]:h-[575px]">
+        <div className="relative mx-auto h-[100svh] w-full [@media(max-height:700px)]:h-[120svh] tablet:h-[432px] tablet:w-full laptop:h-[860px] [@media(min-width:1600px)_and_(min-height:900px)]:h-[1080px] [@media(width:1024px)]:h-[575px]">
           <Image
             src={industry.heroImage}
             alt={industry.heroTitle}
@@ -44,7 +44,7 @@ export default function IndustryDetail({ industry }: IndustryDetailProps) {
             alt={industry.heroTitle}
             fill
             sizes="(max-width: 767px) 100vw, 0px"
-            className="object-cover brightness-[0.58] tablet:hidden"
+            className="object-cover brightness-[0.6]  object-[50%_0%] tablet:hidden"
             priority
           />
         </div>

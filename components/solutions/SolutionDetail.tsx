@@ -9,8 +9,8 @@ export default function SolutionDetail({ solution }: SolutionDetailProps) {
   return (
     <>
       {/* HERO SECTION */}
-      <section className="relative overflow-hidden tablet:-mt-[72px] laptop:mt-0">
-        <div className="relative mx-auto h-[813px] w-[375px] max-w-full tablet:h-[clamp(432px,56vw,620px)] tablet:w-full laptop:h-[860px] [@media(min-width:1600px)_and_(min-height:900px)]:h-[1080px]">
+      <section className="relative -mt-[72px] overflow-hidden tablet:-mt-[72px] laptop:mt-0">
+        <div className="relative mx-auto h-[120svh] w-full max-w-full tablet:h-[clamp(432px,56vw,620px)] tablet:w-full laptop:h-[860px] [@media(min-width:1600px)_and_(min-height:900px)]:h-[1080px]">
           <Image
             src={solution.heroImage}
             alt={solution.heroTitle}
