@@ -24,7 +24,7 @@ export default function MobileMenu({ mobileOpen, mobileSection, setMobileSection
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
           className="fixed inset-0 z-40 bg-white pt-20 laptop:hidden"
-        >
+          >
           <div className="h-full overflow-auto px-9 pb-8 tablet:pl-[76px] tablet:pr-9">
             {(["solutions", "products"] as HeaderMenuKey[]).map((section) => {
               const open = mobileSection === section;
@@ -41,10 +41,26 @@ export default function MobileMenu({ mobileOpen, mobileSection, setMobileSection
 
                   <AnimatePresence>
                     {open ? (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        exit={{ opacity: 0, height: 0 }}
+                     <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{
+                          height: 0,
+                          opacity: 0,
+                          transition: {
+                            height: { duration: 0.05 },
+                            opacity: { duration: 0.05 },
+                          },
+                        }}
+                        transition={{
+                          height: {
+                            duration: 0.9,
+                            ease: "easeInOut",
+                          },
+                          opacity: {
+                            duration: 0.2,
+                          },
+                        }}
                         className="-mx-9 overflow-hidden bg-[#FF8948] tablet:ml-[-76px] tablet:mr-[-2.25rem]"
                       >
                         {mobileLinks[section].map((item) => (
@@ -76,9 +92,25 @@ export default function MobileMenu({ mobileOpen, mobileSection, setMobileSection
               <AnimatePresence>
                 {mobileSection === "industries" ? (
                   <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{
+                      height: 0,
+                      opacity: 0,
+                      transition: {
+                        height: { duration: 0.05 },
+                        opacity: { duration: 0.05 },
+                      },
+                    }}
+                    transition={{
+                      height: {
+                        duration: 0.9,
+                        ease: "easeInOut",
+                      },
+                      opacity: {
+                        duration: 0.2,
+                      },
+                    }}
                     className="-mx-9 overflow-hidden bg-[#FF8948] tablet:ml-[-76px] tablet:mr-[-2.25rem]"
                   >
                     {mobileLinks.industries.map((item) => (
